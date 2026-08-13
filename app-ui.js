@@ -319,7 +319,8 @@ function renderHome(){
       '<span class="emoji">⚖️</span><span class="info">'+
       '<span class="name">'+t('judgmentBtn').replace('⚖️ ','')+'</span>'+
       '<span class="meta">'+t('judgmentSub')+'</span></span><span class="arrow">›</span></button>') +
-    '<button class="btn-plain" onclick="renderSettings()">⚙ '+t('settings')+'</button>';
+    '<button class="btn-plain" onclick="renderSettings()">⚙ '+t('settings')+'</button>'+
+    '<button class="btn-plain" onclick="if(confirm(\'Reset all data? This cannot be undone.\')) { localStorage.clear(); location.reload(); }">🔄 Reset all data</button>';
 
   footerEl.textContent = t('footer', totalQuestions());
 }
