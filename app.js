@@ -11,7 +11,7 @@ const LANG_KEY  = 'gorillaPrepLang';
 const THEME_KEY = 'gorillaPrepTheme';
 const PREFS_KEY = 'gorillaPrepPrefs';
 const STORE_KEY = 'gorillaPrepStats_v3';   /* v3: adds byType, times, spaced retirement */
-const DAILY_GOAL = 11;
+const DAILY_GOAL = 20;
 
 /* Mastery rule (audit #9): a missed question is only retired after two correct
    recalls on DIFFERENT days. One correct answer straight after seeing the
