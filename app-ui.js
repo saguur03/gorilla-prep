@@ -327,7 +327,8 @@ function renderHome(){
 
 /* ==================== MODES ==================== */
 function startMixed(){
-  const qs = pickQuestions(null, 11);
+  /* One mixed session covers the whole daily goal, as it did when the goal was 11. */
+  const qs = pickQuestions(null, DAILY_GOAL);
   if(!qs.length) return;
   session = { mode:'mixed', queue:qs, index:0, correctCount:0, log:[] };
   renderQuestion();

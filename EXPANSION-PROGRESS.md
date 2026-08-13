@@ -1,87 +1,65 @@
-# Expansión del banco a ~706 preguntas — Registro de progreso
+# Expansión del banco a 690 preguntas — Registro
 
-> Documento de estado para poder retomar en otra sesión.
-> Iniciado: 13 ago 2026. Objetivo: 20 preguntas/día durante 34 días sin repetir.
+> Iniciado y completado el 13 ago 2026. Objetivo: 20 preguntas/día durante 34 días sin repetir.
 
-## Objetivo
+## Resultado
 
-Duplicar el banco: 353 → ~706 preguntas. `DAILY_GOAL` ya cambiado de 11 a **20** en `app.js:14`.
-
-## Inventario base (antes de la expansión)
-
-| Sección | Archivo | Preguntas |
-|---|---|---|
-| Critical Thinking | `questions-ct.js` | 100 |
-| Numerical Reasoning | `questions-num.js` | 82 |
-| English | `questions-eng.js` | 88 |
-| Working with Data | `questions-data.js` (67) + `questions-charts.js` (16) | 67* |
-| Business Judgment | `questions-judgment.js` | 16 |
-| **Total** | | **353** |
-
-\* el conteo de 67 en `questions-data.js`; los 16 de charts se suman aparte al mismo banco.
-
-### Distribución por tipo a replicar
-
-**CT (100 nuevas):** weaken 14 · inference 13 · flaw 12 · arrangement 10 · assumption 10 · strengthen 10 · argument-strength 8 · paradox 8 · syllogism 8 · evaluate 7
-
-**Numerical (82 nuevas):** multistep 15 · series 10 · percent 9 · margin 8 · business 8 · rates 7 · growth 6 · estimation 6 · average 5 · ratio 4 · probability 4
-
-**English (88 nuevas):** grammar 32 · vocabulary 22 · sentence correction 17 · idiom 9 · reading 8
-
-**Data (67 nuevas):** table 46 · statistics 11 · validation 10
-
-**Judgment (16 nuevas):** judgment 16
-
-## Arquitectura de la expansión
-
-Las preguntas nuevas van en archivos **separados** que hacen `push` sobre los arrays existentes:
-
-- `questions-ct-2.js`
-- `questions-num-2.js`
-- `questions-data-2.js`
-- `questions-eng-2.js`
-- `questions-judgment-2.js`
-
-Cargados en `index.html` **después** de los originales (y de `questions-charts.js`) y **antes** de `app.js`.
-
-**Por qué así:** `app.js:99` asigna ids por índice (`cat + '-' + i`). Al añadir al final, los ids existentes no se mueven, así que `es-explanations.js` y `es-takeaways.js` siguen apuntando al sitio correcto.
-
-**Regla obligatoria:** cada pregunta nueva debe traer `type` y `d` explícitos. Los IIFE de dificultad por defecto viven al final de los archivos originales y ya se ejecutaron; no alcanzan a las nuevas.
-
-**Regla de `type`:** solo usar tipos que ya existen (ver `TYPE_NAMES` en `app.js:43`). Un tipo nuevo obliga a añadir su tema a `guide-en.js` Y `guide-es.js` o el botón de técnica desaparece.
-
-**Formato:** `{type, prompt, choices, answer, explanation, d, table?}` — `answer` es índice 0-based.
-
-**Estilo CT:** enunciados de 75–95 palabras con contexto de negocio realista (criterio del Paso 6 ya aplicado al banco original).
-
-**Opciones numéricas:** no se barajan en runtime cuando todas empiezan con dígito o `$`. Evitar que la respuesta correcta caiga siempre en la posición media.
-
-## Estado por paso
-
-- [x] **Paso 1 — Análisis del banco actual.** Completado.
-- [ ] **Paso 2 — Generación (~353 preguntas).** En curso, ver tabla abajo.
-- [ ] **Paso 3 — Integración técnica** (`<script src>` en `index.html`, verificar carga).
-- [ ] **Paso 4 — Revisión de calidad TestGorilla** de todas las nuevas.
-- [ ] **Paso 5 — Prueba técnica** (chequeos de consola, 20 preguntas seguidas).
-
-### Detalle del Paso 2
-
-| Archivo | Meta | Escritas | Estado |
+| Sección | Antes | Nuevas | Ahora |
 |---|---|---|---|
-| `questions-ct-2.js` | 100 | 49 | en curso — hechas: weaken 14, strengthen 10, inference 13, flaw 12. Faltan: assumption 10, arrangement 10, paradox 8, syllogism 8, argument-strength 8, evaluate 7 |
-| `questions-num-2.js` | 82 | 0 | pendiente |
-| `questions-data-2.js` | 67 | 0 | pendiente |
-| `questions-eng-2.js` | 88 | 0 | pendiente |
-| `questions-judgment-2.js` | 16 | 0 | pendiente |
+| Critical Thinking | 100 | +100 | 200 |
+| Numerical Reasoning | 82 | +82 | 164 |
+| English | 88 | +88 | 176 |
+| Working with Data | 83 | +67 | 150 |
+| **Total (4 módulos reales)** | **353** | **+337** | **690** |
+| Business Judgment (opcional) | 16 | +16 | 32 |
 
-## Verificación final (Paso 5)
+`DAILY_GOAL` = 20 (`app.js:14`). La práctica mixta ahora usa `DAILY_GOAL` en lugar de un 11 fijo (`app-ui.js:331`), así que una sesión mixta cubre la meta del día. **690 ÷ 20 = 34 días sin repetir.**
 
-Cargar la app y correr en consola:
-1. Chequeo estructural: `answer` dentro de rango, `d` en 1–3, opciones duplicadas.
-2. Cobertura guía↔banco en ambos idiomas (todo `type` debe tener tema en las dos guías).
-3. Alineación de traducciones ES vs EN (comparar números de cada explicación).
+## Arquitectura
+
+Las preguntas nuevas viven en archivos separados que hacen `push` sobre los arrays existentes:
+
+`questions-ct-2.js` · `questions-num-2.js` · `questions-data-2.js` · `questions-eng-2.js` · `questions-judgment-2.js`
+
+Cargados en `index.html` después de los originales (y de `questions-charts.js`), antes de `app.js`.
+
+**Por qué así:** `app.js:99` asigna ids por índice (`cat + '-' + i`). Al añadir al final, los ids existentes no se mueven, así que `es-explanations.js` y `es-takeaways.js` siguen apuntando al sitio correcto. Verificado: la primera pregunta sin traducción ES es `ct-100`, exactamente la primera nueva.
+
+**Reglas seguidas:**
+- Cada pregunta nueva trae `type` y `d` explícitos (los IIFE de dificultad por defecto viven al final de los archivos originales y ya se ejecutaron).
+- Solo se usaron tipos que ya existían — 31 tipos, todos con tema en `guide-en.js` y `guide-es.js`. Ningún tipo nuevo, así que el botón de técnica funciona en todas.
+- Distribución por tipo replicada exactamente de cada banco original.
+- CT: enunciados de 75–95 palabras con contexto de negocio (criterio del Paso 6).
+- Opciones numéricas en orden ascendente, con la posición de la respuesta correcta variada a propósito.
+
+## Distribución por tipo de las preguntas nuevas
+
+**CT (100):** weaken 14 · inference 13 · flaw 12 · arrangement 10 · assumption 10 · strengthen 10 · argument-strength 8 · paradox 8 · syllogism 8 · evaluate 7
+
+**Numerical (82):** multistep 15 · series 10 · percent 9 · margin 8 · business 8 · rates 7 · growth 6 · estimation 6 · average 5 · ratio 4 · probability 4
+
+**English (88):** grammar 32 · vocabulary 22 · sentence correction 17 · idiom 9 · reading 8
+
+**Data (67):** table 46 · statistics 11 · validation 10 — sobre 10 datasets nuevos (`T2_QUARTER`, `T2_HEADCOUNT`, `T2_COSTS`, `T2_STORES`, `T2_COUNTRY`, `T2_MONTHLY`, `T2_PROJECT`, `T2_MARKET`, `T2_DEALS`, `T2_DIRTY2`)
+
+**Judgment (16):** judgment 16, con `takeaway` en línea como en el archivo original
+
+## Verificación ejecutada (13 ago 2026)
+
+Servidor local `powershell -File server.ps1` en el puerto 8420 (config en `.claude/launch.json`), chequeos en consola:
+
+- **Estructural: 0 errores** sobre las 722 preguntas — `answer` dentro de rango, `d` entre 1 y 3, `type`, `prompt` y `explanation` presentes, sin opciones duplicadas.
+- **Cobertura de guías: completa.** Los 31 tipos tienen tema en las dos guías (`missingIn_en` y `missingIn_es` vacíos).
+- **Estabilidad de ids: confirmada.** Las 353 preguntas originales conservan su traducción ES; la primera sin traducción es `ct-100`.
+- **Sesgo posicional:** en las 238 preguntas con opciones de orden fijo, la respuesta correcta cae en las posiciones 1/2/3/4 en 61/67/59/51 casos. Sin sesgo material.
+- **Consola: sin errores.** Sesión mixta de 20 preguntas respondida de principio a fin sin excepciones.
+
+## Pendiente (opcional, no bloquea el uso)
+
+- Las 337 preguntas nuevas no tienen traducción al español. La app hace *fallback* automático al inglés, así que funcionan en ambos idiomas; solo la explicación sale en inglés con el toggle en ES.
+- Las preguntas nuevas no tienen campo `takeaway` (salvo las de judgment, que lo traen en línea).
 
 ## Despliegue
 
 Repo: `https://github.com/saguur03/gorilla-prep` · URL: `https://gorilla-prep.vercel.app`
-Push a `main` redespliega solo. El service worker es network-first, así que los cambios llegan al recargar.
+Push a `main` redespliega solo. El service worker es network-first, así que basta con recargar.
