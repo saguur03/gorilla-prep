@@ -49,6 +49,17 @@
     -webkit-tap-highlight-color:transparent; overscroll-behavior-y:none;
   }
   #app{max-width:480px;margin:0 auto;min-height:100vh;padding-bottom:24px;display:flex;flex-direction:column;}
+  @media (min-width:768px){
+    #app{max-width:1000px;padding-left:20px;padding-right:20px;}
+    header{border-radius:12px;margin-top:12px;}
+    header h1{font-size:1.8rem;}
+    header p{font-size:1rem;}
+    main{padding:24px;}
+    .stats-grid{grid-template-columns:repeat(6,1fr);}
+    .readiness-grid{grid-template-columns:repeat(4,1fr);}
+    .cat-btn{padding:18px;}
+    .choice{padding:16px;}
+  }
   header{
     background:linear-gradient(135deg,var(--maroon),var(--red));
     color:#fff;padding:18px 20px 16px;border-radius:0 0 18px 18px;position:relative;
