@@ -223,6 +223,7 @@ function recordAnswer(q, correct, elapsedMs){
   rec.lastSeen = today;
   rec.times = (rec.times || []).concat(Math.round(elapsedMs||0)).slice(-5);
 
+  const targetMs = targetSecFor(q) * 1000;
   /* Track the classification (fast-correct, on-target, slow-correct, fast-wrong, slow-wrong) */
   rec.classifications = (rec.classifications || []).concat(classificationOf(correct, elapsedMs, targetMs)).slice(-5);
 
