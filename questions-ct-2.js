@@ -610,6 +610,607 @@ var Q = [
   answer: 0,
   explanation: "Shifting price quotes are a reason for caution about the vendor generally, but they are not evidence about the platform's processing performance, which can be tested directly. Rejecting the claim on that basis conflates the source's reliability with the truth of a separable, checkable assertion."
 }
+,
+
+/* ---------- ASSUMPTION ---------- */
+{
+  type: "assumption", d: 3,
+  prompt: "A city transport authority is deciding how to reduce congestion in the centre. Officials note that 40% of morning journeys into the core are made by single-occupancy car, and that the tram network runs at 60% of capacity at the same hour. They have concluded that raising the city-centre parking charge will cut congestion, because drivers facing the higher charge will switch to the tram.\n\nThe officials' conclusion depends on which of the following assumptions?",
+  choices: [
+    "The tram network could be expanded further if demand required it.",
+    "A significant number of drivers currently paying to park have a tram route that is a workable alternative for their journey.",
+    "Parking charges in the city centre are currently lower than in comparable cities.",
+    "Congestion in the city centre has worsened over the past five years."
+  ],
+  answer: 1,
+  explanation: "The plan only works if the drivers being priced out can actually reach their destination by tram. Spare capacity on the network says nothing about whether it serves the right origins and destinations at the right times. Expansion potential, comparative pricing and historical trends are irrelevant to whether the switch is available to today's drivers."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A consulting firm is choosing between two scheduling systems. The partner responsible argues that the cheaper system is the better choice: over a three-year horizon its licence fees are $180,000 lower than the alternative's, and the firm's technology budget is under pressure after two years of overspend.\n\nThe partner's argument depends on which of the following assumptions?",
+  choices: [
+    "The cheaper system will not generate additional costs elsewhere that offset the licence saving.",
+    "The technology budget will remain under pressure for the next three years.",
+    "The more expensive system is the market leader in its category.",
+    "Both systems were evaluated by the same group of staff."
+  ],
+  answer: 0,
+  explanation: "Licence fees are one line in a total cost of ownership. If the cheaper system needs more configuration, more support staff or more training, the $180,000 evaporates and the argument collapses. The partner must be assuming it does not. Future budget pressure, market position and evaluator identity leave the cost comparison intact."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A charity is planning next year's fundraising. Its analysis shows that donors acquired through the door-to-door programme give an average of $340 in their first year, against $210 for donors acquired online. The fundraising director has proposed shifting the acquisition budget towards door-to-door on the grounds that it will raise total income.\n\nThe director's proposal depends on which of the following assumptions?",
+  choices: [
+    "Door-to-door fundraising is well received in the areas where the charity operates.",
+    "The cost of acquiring a donor door-to-door is not so much higher than the online cost that it eliminates the difference in donations.",
+    "The charity's online donors are younger on average than its door-to-door donors.",
+    "First-year giving is a reliable predictor of lifetime giving."
+  ],
+  answer: 1,
+  explanation: "The comparison is gross giving, not net contribution. Door-to-door acquisition is labour-intensive and typically far more expensive per donor, so a $130 advantage in first-year gifts could easily be wiped out. The proposal silently assumes it is not. Public reception, donor age and lifetime value are secondary to that arithmetic."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A hospital trust is reviewing its outpatient clinics. Managers observe that clinics using the new appointment-reminder service have a missed-appointment rate of 6%, against 14% for clinics that have not adopted it. They plan to roll the service out across all clinics, expecting missed appointments to fall to around 6% everywhere.\n\nThe managers' expectation depends on which of the following assumptions?",
+  choices: [
+    "The clinics that adopted the service early do not differ from the others in ways that affect attendance.",
+    "The reminder service can be delivered at the same cost in every clinic.",
+    "Patients prefer receiving reminders by text rather than by telephone.",
+    "The 14% figure has been stable over the past three years."
+  ],
+  answer: 0,
+  explanation: "Early adopters are rarely a random sample: they may serve more affluent, more settled or better-connected patient populations, any of which would lower missed appointments regardless of reminders. Without comparability, the 6% cannot be transported to the remaining clinics. Cost, channel preference and trend stability do not repair that."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A publisher is deciding whether to close its print magazine. The finance team notes that print circulation has fallen 45% in four years while the digital edition has grown steadily, and argues that closing print and redirecting the editorial budget to digital will improve overall profitability.\n\nThe finance team's argument depends on which of the following assumptions?",
+  choices: [
+    "Digital subscriptions will continue to grow at their current rate.",
+    "A substantial share of the revenue currently attached to the print edition would not be lost when print closes.",
+    "The editorial team can produce digital content without additional training.",
+    "Competing publishers have also reduced their print output."
+  ],
+  answer: 1,
+  explanation: "Print typically carries advertising and bundled-subscription revenue that does not migrate automatically to digital. If most of that revenue simply disappears with the magazine, closing it could reduce profit even as costs fall. The argument assumes otherwise. Growth rates, training and competitor behaviour do not address the revenue that closure destroys."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A manufacturer is considering moving assembly of its mid-range line from Germany to Portugal. The operations director points out that fully loaded labour cost per assembled unit is 38% lower in Portugal and concludes that the move will reduce the cost of each unit produced.\n\nThe director's conclusion depends on which of the following assumptions?",
+  choices: [
+    "Portuguese labour law is comparable to German labour law in relevant respects.",
+    "The move will not increase non-labour costs per unit by enough to offset the labour saving.",
+    "The mid-range line is the manufacturer's most profitable product family.",
+    "Demand for the mid-range line will remain stable after the move."
+  ],
+  answer: 1,
+  explanation: "Unit cost includes freight, duties, scrap during ramp-up, supplier proximity and quality rework, all of which typically rise when production moves. The 38% labour advantage only survives if those do not eat it. Legal comparability, product profitability and demand stability sit outside the unit-cost calculation."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A software company is planning its pricing for next year. Analysts note that the firm's churn rate is 4% a year, well below the 9% industry average, and conclude that a 15% price increase can be implemented without material customer loss, since the customer base is evidently unusually loyal.\n\nThe analysts' conclusion depends on which of the following assumptions?",
+  choices: [
+    "The loyalty reflected in the current churn rate would survive a change in the price customers pay.",
+    "Competitors will not reduce their prices in response.",
+    "The 15% increase would apply to all customer segments equally.",
+    "The industry churn average has been calculated on a comparable basis."
+  ],
+  answer: 0,
+  explanation: "Low churn observed at today's price is evidence about behaviour at today's price. It does not establish that customers are insensitive to price, since the very thing that keeps them may be the value-for-money they currently get. The argument treats historical loyalty as if it were price inelasticity. The other options are real risks but not the load-bearing assumption."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A university is evaluating its new admissions test. Administrators report that students admitted under the test achieved higher first-year grades than the previous cohort, and conclude that the test is a better predictor of academic ability than the interview process it replaced.\n\nThe administrators' conclusion depends on which of the following assumptions?",
+  choices: [
+    "The test is cheaper to administer than the interview process.",
+    "First-year grading standards did not change between the two cohorts.",
+    "Students admitted under the test came from a wider range of schools.",
+    "The interview process had been in use for many years."
+  ],
+  answer: 1,
+  explanation: "The comparison is between grades awarded to two different cohorts. If marking became more lenient, the higher grades reflect the grading, not the students, and the argument has no evidence at all. Constant standards is the unstated bridge. Administration cost, intake diversity and the interview's longevity do not affect the comparability of the grades."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "A supermarket chain is deciding whether to extend its home-delivery service to rural areas. The commercial team calculates that rural households order a larger average basket than urban ones and concludes that rural delivery will be more profitable per order than the existing urban service.\n\nThe commercial team's conclusion depends on which of the following assumptions?",
+  choices: [
+    "Rural households will order as frequently as urban households.",
+    "The cost of fulfilling and delivering a rural order will not exceed the extra margin the larger basket generates.",
+    "Rural customers are willing to accept longer delivery windows.",
+    "The chain's rural competitors do not currently offer delivery."
+  ],
+  answer: 1,
+  explanation: "Profit per order is margin minus fulfilment cost. Rural delivery means longer drive times and fewer drops per route, which raises cost per order sharply. The conclusion holds only if that increase stays below the extra margin from the bigger basket. Order frequency affects total profit, not profit per order; delivery windows and competition are separate issues."
+},
+{
+  type: "assumption", d: 3,
+  prompt: "An airline is considering replacing meal service on short-haul routes with a paid buy-on-board menu. The commercial director argues that this will improve short-haul profitability, citing $22m of annual catering cost currently absorbed into the ticket price and the fact that two competitors have made the same change.\n\nThe director's argument depends on which of the following assumptions?",
+  choices: [
+    "The competitors that made the change did so for the same reasons.",
+    "Passengers will not shift enough business to airlines still offering complimentary meals to outweigh the catering saving.",
+    "Buy-on-board menus can be operated with the existing cabin crew complement.",
+    "Catering costs will continue to rise in future years."
+  ],
+  answer: 1,
+  explanation: "The saving is certain; the revenue risk is not. If enough price-comparable passengers defect to airlines that still include a meal, lost ticket revenue can exceed $22m and profitability falls. The argument assumes that does not happen. Competitor motives, crewing arrangements and future cost inflation do not carry the conclusion."
+},
+
+/* ---------- ARRANGEMENT ---------- */
+{
+  type: "arrangement", d: 2,
+  prompt: "Five departments occupy the five floors of an office building, one department per floor, numbered 1 (ground) to 5 (top).\n\n· Finance is directly above Legal.\n· Marketing is on floor 5.\n· HR is not on a floor adjacent to Finance.\n· Operations is on floor 1.\n\nWhich floor is Legal on?",
+  choices: ["Floor 2", "Floor 3", "Floor 4", "Floor 5"],
+  answer: 1,
+  explanation: "Operations takes floor 1 and Marketing floor 5, leaving floors 2, 3 and 4 for Finance, Legal and HR. Finance directly above Legal allows Legal 2 / Finance 3 or Legal 3 / Finance 4. In the first case HR lands on floor 4, adjacent to Finance on 3, which is barred. So Legal is on floor 3, Finance on 4 and HR on 2."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Four candidates — Novak, Okafor, Patel and Reyes — are interviewed on four consecutive days from Monday to Thursday, one candidate per day.\n\n· Reyes is interviewed before Novak.\n· Patel is interviewed on Wednesday.\n· Okafor is not interviewed on Monday.\n\nWhich of the following must be true?",
+  choices: [
+    "Novak is interviewed on Thursday.",
+    "Okafor is interviewed on Tuesday.",
+    "Reyes is interviewed on Monday.",
+    "Novak is interviewed on Tuesday."
+  ],
+  answer: 2,
+  explanation: "Patel takes Wednesday, leaving Monday, Tuesday and Thursday for Reyes, Novak and Okafor. Okafor cannot take Monday, so Monday goes to Reyes or Novak; since Reyes precedes Novak, Novak cannot be first, so Reyes is on Monday. Novak then takes Tuesday or Thursday depending on where Okafor sits, so only the Reyes placement is forced."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Five trainees — Nadia, Omar, Priya, Rafael and Sena — were ranked first to fifth on an assessment, with no ties.\n\n· Nadia scored higher than Omar.\n· Priya had the lowest score.\n· Omar scored higher than Rafael.\n· Sena scored higher than Nadia.\n\nWho ranked third?",
+  choices: ["Nadia", "Omar", "Rafael", "Sena"],
+  answer: 1,
+  explanation: "The three comparisons chain into Sena above Nadia above Omar above Rafael, and Priya is fixed in fifth. That leaves exactly one possible order: Sena first, Nadia second, Omar third, Rafael fourth, Priya fifth."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Five files are stored in a drawer in positions 1 to 5, position 1 being at the front.\n\n· The contracts file is immediately in front of the invoices file.\n· The payroll file is in position 1.\n· The tax file is somewhere behind the invoices file.\n· The audit file is not in position 5.\n\nWhich of the following must be true?",
+  choices: [
+    "The contracts file is in position 2.",
+    "The audit file is in position 2.",
+    "The tax file is in position 5.",
+    "The invoices file is in position 3."
+  ],
+  answer: 2,
+  explanation: "Payroll fixes position 1, so contracts/invoices sit at 2-3, 3-4 or 4-5. The 4-5 option leaves no room behind invoices for tax. With contracts 2 / invoices 3, tax and audit take 4 and 5, and since audit cannot be 5, tax is 5. With contracts 3 / invoices 4, tax must be behind 4, so again 5. Tax in position 5 holds in both."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Five speakers — Kaur, Lindqvist, Mbeki, Novak and Oyelaran — present one after another in five slots.\n\n· Kaur presents immediately before Lindqvist.\n· Mbeki presents fifth.\n· Novak presents at some point before Kaur.\n· Oyelaran presents second.\n\nWho presents first?",
+  choices: ["Kaur", "Lindqvist", "Novak", "Oyelaran"],
+  answer: 2,
+  explanation: "Mbeki takes slot 5 and Oyelaran slot 2, leaving slots 1, 3 and 4 for Kaur, Lindqvist and Novak. The only consecutive pair among those slots is 3-4, so Kaur presents third and Lindqvist fourth. Novak takes the remaining slot 1, which also satisfies the requirement that Novak precedes Kaur."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "An executive visits five cities — Lisbon, Madrid, Oslo, Prague and Rome — on five consecutive days, one city per day.\n\n· Lisbon is visited the day after Madrid.\n· Oslo is visited on day 1.\n· Prague is visited before Madrid.\n· Rome is visited on day 5.\n\nOn which day is Madrid visited?",
+  choices: ["Day 2", "Day 3", "Day 4", "Day 5"],
+  answer: 1,
+  explanation: "Oslo and Rome fix days 1 and 5, leaving days 2, 3 and 4. Madrid immediately followed by Lisbon gives either Madrid 2 / Lisbon 3 or Madrid 3 / Lisbon 4. The first leaves Prague on day 4, after Madrid, which the constraints forbid. So Madrid is day 3, Lisbon day 4 and Prague day 2."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Five colleagues — Ana, Bruno, Carla, Diego and Elena — sit in a row of five chairs numbered 1 to 5 from left to right.\n\n· Ana sits in chair 1.\n· Bruno sits immediately to the right of Carla.\n· Diego sits in chair 5.\n\nWhich of the following must be true?",
+  choices: [
+    "Carla sits in chair 2.",
+    "Elena does not sit in chair 3.",
+    "Bruno sits in chair 4.",
+    "Elena sits in chair 4."
+  ],
+  answer: 1,
+  explanation: "Ana and Diego occupy the ends, leaving chairs 2, 3 and 4 for Carla, Bruno and Elena. Carla immediately left of Bruno gives either Carla 2 / Bruno 3 with Elena 4, or Carla 3 / Bruno 4 with Elena 2. Elena therefore never occupies chair 3, while every other option holds in only one of the two arrangements."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "An audit is carried out in five steps — fieldwork, reporting, review, sampling and scoping — performed one at a time in some order.\n\n· Sampling is performed immediately after scoping.\n· Reporting is performed last.\n· Fieldwork is performed before sampling.\n\nWhich of the following could be true?",
+  choices: [
+    "Sampling is performed second.",
+    "Scoping is performed first.",
+    "Review is performed first.",
+    "Fieldwork is performed fourth."
+  ],
+  answer: 2,
+  explanation: "Reporting takes step 5, so the scoping-sampling pair sits at 1-2, 2-3 or 3-4. Fieldwork must precede sampling, which rules out the pair at 1-2 and therefore rules out scoping first and sampling second. Fieldwork always lands at step 1 or 2, never fourth. With scoping 3 and sampling 4, fieldwork can take step 2 and review step 1."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Four regional offices — Kraków, Lyon, Malmö and Turin — are ranked first to fourth by annual revenue, with no ties.\n\n· The Lyon office ranks higher than the Turin office.\n· The Malmö office ranks lower than the Turin office.\n· The Kraków office does not rank first.\n\nWhich of the following must be true?",
+  choices: [
+    "Turin ranks second.",
+    "Malmö ranks fourth.",
+    "Lyon ranks first.",
+    "Kraków ranks third."
+  ],
+  answer: 2,
+  explanation: "The two comparisons chain into Lyon above Turin above Malmö, so neither Turin nor Malmö can rank first, and Kraków is barred from first by the third condition. Lyon is the only office left for the top position. Kraków can then sit second, third or fourth, which unfixes every other option."
+},
+{
+  type: "arrangement", d: 2,
+  prompt: "Four training sessions — compliance, ethics, finance and safety — are held on four consecutive days from Monday to Thursday, one per day.\n\n· The compliance session is held neither on Monday nor on Thursday.\n· The safety session is held the day before the ethics session.\n· The finance session is held on Monday.\n\nOn which day is the safety session held?",
+  choices: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+  answer: 2,
+  explanation: "Finance takes Monday, so compliance must be Tuesday or Wednesday. The safety-ethics pair must occupy consecutive days among Tuesday, Wednesday and Thursday. If safety were Tuesday and ethics Wednesday, compliance would be pushed to Thursday, which is barred. So safety is Wednesday, ethics Thursday and compliance Tuesday."
+}
+,
+
+/* ---------- PARADOX ---------- */
+{
+  type: "paradox", d: 3,
+  prompt: "A retailer redesigned its checkout page to remove three form fields and one confirmation step. Usability testing had shown the shorter flow was faster and less error-prone, and it was expected to lift completed purchases. After launch, the share of shoppers who reached the checkout page and completed a purchase fell by four percentage points, even though the average time spent on the page dropped as predicted.\n\nWhich of the following, if true, best explains this result?",
+  choices: [
+    "The removed confirmation step had let shoppers review their order and correct mistakes before paying, and many now abandon at the payment screen instead.",
+    "The redesign was released to all markets at the same time.",
+    "Some shoppers took longer than the average on the new page.",
+    "The retailer's competitors also use short checkout flows."
+  ],
+  answer: 0,
+  explanation: "The paradox is that a faster page converts worse. If the deleted confirmation step was doing real work — letting shoppers catch errors before committing — then removing it moves the moment of doubt to the payment screen, where abandonment is final. Simultaneous release, variance in page time and competitor practice describe the situation without explaining the drop."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A manufacturer invested heavily in automated inspection at the end of its production line, and the equipment performs exactly as specified: it now detects far more defective units than the manual inspectors it replaced. Yet in the two years since installation, the number of defective units reaching customers has risen rather than fallen.\n\nWhich of the following, if true, best explains this outcome?",
+  choices: [
+    "The automated system is more expensive to maintain than manual inspection was.",
+    "Confident that the automated system would catch problems, the plant scaled back the in-process checks that had previously prevented defects from being produced at all.",
+    "The automated system inspects units more quickly than the manual inspectors did.",
+    "Some manual inspectors were redeployed to other parts of the plant."
+  ],
+  answer: 1,
+  explanation: "End-of-line detection cannot improve outcomes if upstream prevention degrades faster than detection improves. Removing in-process checks raises the number of defects created, and even a very good final filter passes a fraction of a much larger population. Maintenance cost, inspection speed and redeployment do not connect detection quality to customer outcomes."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A national employment agency reports that the number of people in work rose by 180,000 last quarter, and no significant change occurred in the size of the working-age population or in the definitions used. Yet the published unemployment rate also rose over the same quarter, from 5.1% to 5.4%.\n\nWhich of the following, if true, best explains these two figures?",
+  choices: [
+    "A large number of people who had previously stopped looking for work began actively seeking jobs, entering the labour force.",
+    "Average wages grew more slowly than in the previous quarter.",
+    "Employment growth was concentrated in part-time roles.",
+    "Some regions saw employment fall while others saw it rise."
+  ],
+  answer: 0,
+  explanation: "The unemployment rate is unemployed people divided by the labour force, and only active job-seekers count in the labour force. If discouraged workers re-enter and start searching, both the numerator and the denominator grow, and the ratio can rise even as employment climbs. Wages, hours and regional mix leave the rate arithmetic untouched."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A software firm doubled the size of its customer-support team after complaints about slow responses. Average first-response time duly halved. Yet in the following two quarters the proportion of customers rating support as satisfactory declined, and the volume of formal escalations to account managers increased.\n\nWhich of the following, if true, best explains this pattern?",
+  choices: [
+    "The firm's product range expanded during the same period.",
+    "The new hires answered quickly but, lacking product depth, frequently gave answers that did not resolve the underlying issue.",
+    "The support team now works across more time zones than before.",
+    "Support costs rose in line with the increase in headcount."
+  ],
+  answer: 1,
+  explanation: "First-response time measures speed, not resolution. Doubling headcount with inexperienced staff buys speed while lowering the share of contacts that actually solve the problem, so customers get a fast answer, remain stuck, and escalate. Product breadth, time-zone coverage and cost do not explain why faster replies satisfied customers less."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A city introduced a scheme paying households a rebate for every kilogram by which their annual landfill waste fell below the previous year's figure. Measured landfill waste from participating households dropped sharply in the first year. However, the total tonnage arriving at the city's landfill from all sources was almost unchanged.\n\nWhich of the following, if true, best explains this discrepancy?",
+  choices: [
+    "Participating households placed a substantial share of their waste in commercial skips and neighbouring districts' bins rather than reducing what they discarded.",
+    "The rebate was smaller than some households had expected.",
+    "Not every household in the city chose to participate.",
+    "The city's recycling facilities operated at full capacity during the year."
+  ],
+  answer: 0,
+  explanation: "The scheme measures waste at the household's own collection point, so waste displaced elsewhere still reaches the landfill while disappearing from the measured figure. That reconciles a sharp measured fall with flat total tonnage. Rebate size and partial participation would dampen the measured drop, which did occur; recycling capacity is unrelated."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "An insurer tightened the underwriting criteria for its motor policies, declining applicants whose claims history suggested elevated risk. The measure worked as designed: the average claims frequency among newly written policies fell noticeably. Nevertheless, the insurer's overall loss ratio on the motor book worsened over the following two years.\n\nWhich of the following, if true, best explains this outcome?",
+  choices: [
+    "The insurer's marketing budget was reduced during the period.",
+    "The stricter criteria also priced out many low-risk customers who shopped elsewhere, leaving a smaller book over which fixed claims-handling costs and remaining large losses were spread.",
+    "Motor insurance is a competitive market.",
+    "Claims frequency is only one component of underwriting risk."
+  ],
+  answer: 1,
+  explanation: "Loss ratio is losses over premium, so shrinking the book matters as much as improving its quality. If tightening drove away good risks along with bad, premium income falls faster than losses, and the ratio deteriorates despite a cleaner claims frequency. The last option is a true generality but names no mechanism; budget and market competitiveness explain nothing."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A hospital introduced a rapid-triage protocol in its emergency department. Audits confirm the protocol is followed correctly and that patients are now assessed by a clinician within twenty minutes of arrival, down from fifty. Yet the average total time patients spend in the department before admission or discharge has increased.\n\nWhich of the following, if true, best explains this result?",
+  choices: [
+    "The protocol requires additional documentation from triage nurses.",
+    "Faster assessment identified more patients needing diagnostic imaging, and the imaging department's capacity was unchanged, so waits simply moved downstream.",
+    "The emergency department sees more patients in winter than in summer.",
+    "Some patients arrive by ambulance rather than on foot."
+  ],
+  answer: 1,
+  explanation: "Speeding up one stage of a process does not shorten the whole unless the bottleneck moves with it. Earlier assessment pushes more patients into an imaging queue of fixed capacity, so the wait is relocated rather than removed and total time can rise. Documentation, seasonality and arrival mode do not explain a systematic increase."
+},
+{
+  type: "paradox", d: 3,
+  prompt: "A supermarket chain launched a widely advertised price-cut campaign on 400 everyday products. Customer research confirms that shoppers noticed the cuts and rated the chain better on value than before. Nevertheless, the chain's total sales revenue and its transaction count both fell slightly over the campaign period.\n\nWhich of the following, if true, best explains this pattern?",
+  choices: [
+    "The 400 products were concentrated in categories that shoppers buy in fixed quantities regardless of price, and the cuts reduced the value of those same baskets.",
+    "The campaign was advertised on television and radio.",
+    "Some competitors also reduced prices during the period.",
+    "The chain operates stores of varying sizes."
+  ],
+  answer: 0,
+  explanation: "Cutting prices on inelastic staples lowers revenue per basket without generating extra volume, so revenue falls even when the value perception improves. It also explains why transactions did not rise: nobody makes an extra trip for milk they were already buying. Advertising channels, competitor moves and store size do not connect the perception gain to the revenue loss."
+},
+
+/* ---------- SYLLOGISM ---------- */
+{
+  type: "syllogism", d: 2,
+  prompt: "All members of the risk committee are directors of the company. No director of the company is an external auditor.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "No member of the risk committee is an external auditor.",
+    "All directors of the company are members of the risk committee.",
+    "Some external auditors are directors of the company.",
+    "No external auditor is qualified to sit on a committee."
+  ],
+  answer: 0,
+  explanation: "Risk-committee members are a subset of directors, and directors are entirely excluded from the auditors. A subset of an excluded group is itself excluded, so no committee member is an auditor. The second reverses the subset relation, the third contradicts the second premise, and the fourth introduces a claim about qualifications that appears nowhere."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "All approved suppliers have passed a financial check. Some approved suppliers are based overseas.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "All suppliers based overseas have passed a financial check.",
+    "Some suppliers that have passed a financial check are based overseas.",
+    "All suppliers that have passed a financial check are approved.",
+    "No overseas supplier has failed a financial check."
+  ],
+  answer: 1,
+  explanation: "The overseas suppliers mentioned are approved, and every approved supplier passed the check, so those particular suppliers are both overseas and financially checked — an existential conclusion. The first and fourth generalise to all overseas suppliers, including unapproved ones the premises never mention; the third reverses the conditional."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "No contract signed this year contains an arbitration clause. Some contracts held by the legal department contain an arbitration clause.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "No contract held by the legal department was signed this year.",
+    "Some contracts held by the legal department were not signed this year.",
+    "All contracts signed this year are held by the legal department.",
+    "Some contracts signed this year contain no clauses at all."
+  ],
+  answer: 1,
+  explanation: "The legal department's arbitration-clause contracts cannot be among this year's signings, since none of those has such a clause. That establishes that some of its contracts predate this year, but not that all do — the department may well hold other contracts signed this year without arbitration clauses, which is why the first option overreaches."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "All projects that received board approval have a named sponsor. Some projects with a named sponsor are behind schedule.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "Some board-approved projects are behind schedule.",
+    "All projects with a named sponsor received board approval.",
+    "No project without a sponsor received board approval.",
+    "Most projects behind schedule have a sponsor."
+  ],
+  answer: 2,
+  explanation: "The contrapositive of the first premise is exact: if board approval guarantees a sponsor, then lacking a sponsor guarantees no board approval. The first option is tempting but invalid, because the delayed sponsored projects need not be the approved ones. The second reverses the conditional and the fourth asserts a proportion nothing supports."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "All certified technicians may operate the pressure line. No temporary staff member is a certified technician.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "No temporary staff member may operate the pressure line.",
+    "Some temporary staff members are certified technicians.",
+    "Anyone who may operate the pressure line is a certified technician.",
+    "Some people who may operate the pressure line are not temporary staff."
+  ],
+  answer: 3,
+  explanation: "Temporary staff are excluded from certification, but certification is only a sufficient condition for operating the line, so the first option does not follow — someone could be authorised by another route. What does follow is that the certified technicians, who may operate the line, are not temporary staff. The second contradicts a premise and the third reverses the conditional."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "Some regional managers have completed the leadership programme. All who have completed the leadership programme are eligible for the international assignment.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "All regional managers are eligible for the international assignment.",
+    "Some regional managers are eligible for the international assignment.",
+    "Only those who completed the programme are eligible.",
+    "All those eligible for the assignment are regional managers."
+  ],
+  answer: 1,
+  explanation: "The regional managers who completed the programme are eligible, which supports an existential but not a universal claim: nothing tells us about regional managers who did not complete it. The third turns a sufficient condition into a necessary one, and the fourth reverses the relation between eligibility and role."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "No product in the discontinued range is stocked in the flagship store. All products launched this season are stocked in the flagship store.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "No product launched this season is in the discontinued range.",
+    "All products stocked in the flagship store were launched this season.",
+    "Some discontinued products are stocked elsewhere.",
+    "The flagship store stocks every product not discontinued."
+  ],
+  answer: 0,
+  explanation: "This season's products are all in the flagship store, and nothing discontinued is in that store, so no product from this season can be discontinued. The second reverses the subset relation; the third asserts stocking elsewhere, which the premises never mention; the fourth turns a one-way condition into a guarantee about all non-discontinued products."
+},
+{
+  type: "syllogism", d: 2,
+  prompt: "All loans reviewed by the workout team are classified as non-performing. Some loans classified as non-performing were originated before 2020.\n\nWhich conclusion follows necessarily?",
+  choices: [
+    "Some loans reviewed by the workout team were originated before 2020.",
+    "Every loan originated before 2020 is non-performing.",
+    "Any loan not classified as non-performing was not reviewed by the workout team.",
+    "Most non-performing loans predate 2020."
+  ],
+  answer: 2,
+  explanation: "Only the contrapositive is guaranteed: review implies non-performing, so not non-performing implies not reviewed. The first is invalid because the pre-2020 non-performing loans need not be the reviewed ones. The second reverses the conditional and the fourth invents a proportion."
+},
+
+/* ---------- ARGUMENT STRENGTH ---------- */
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the company require all new software to pass an accessibility audit before release?\n\nWhich is the STRONGEST argument in favour?",
+  choices: [
+    "Accessibility is an important value for a modern organisation",
+    "An internal review found that 14% of the company's users rely on assistive technology, and three of the last five releases were unusable with a screen reader",
+    "Several competitors have published accessibility commitments",
+    "Requiring audits would demonstrate the company's seriousness about inclusion"
+  ],
+  answer: 1,
+  explanation: "The second argument is both relevant and substantial: it establishes a large affected user base and a demonstrated failure rate, which together show the audit would fix a real and recurring problem. The others assert values, imitate competitors or appeal to appearances without evidence that the audit would change anything."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the firm move its annual conference from a physical venue to an online format?\n\nWhich is the WEAKEST argument in favour?",
+  choices: [
+    "Attendance data shows that 40% of invited clients declined last year specifically because of travel time",
+    "Online delivery would cut the event budget from $600,000 to roughly $90,000",
+    "Virtual conferences have become far more common since 2020",
+    "Session recordings would remain available to clients who could not attend live"
+  ],
+  answer: 2,
+  explanation: "That virtual events have become common is a bandwagon observation: it reports what others do without giving any reason the change would serve this firm. The other three each identify a concrete benefit — removing a documented barrier to attendance, a large cost saving, and extended reach — that bears directly on the decision."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the hospital adopt a single electronic records system across all its sites?\n\nWhich is the STRONGEST argument in favour?",
+  choices: [
+    "A single system would be simpler to describe to regulators",
+    "An incident review attributed 61 medication errors last year to clinicians being unable to see records created at another site",
+    "Most large hospital groups now operate a unified system",
+    "Staff have complained about having to remember several logins"
+  ],
+  answer: 1,
+  explanation: "Sixty-one medication errors traced directly to fragmented records is both relevant and serious: it names a specific harm the unified system would address and quantifies it. Regulatory simplicity and multiple logins are genuine but minor, and what other hospital groups do is not an argument about this hospital's patients."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the manufacturer bring its currently outsourced customer service back in house?\n\nWhich is the WEAKEST argument in favour?",
+  choices: [
+    "In-house agents could be trained on the products in far greater depth than the outsourcer permits",
+    "The outsourcing contract has become more expensive each year for six consecutive years",
+    "Bringing the function back would give the company more direct control over quality",
+    "The outsourcer is based in a country the company's executives rarely visit"
+  ],
+  answer: 3,
+  explanation: "The outsourcer's location relative to executive travel says nothing about service quality, cost or capability — it is an irrelevance dressed as a reason. Deeper product training, six years of cost escalation and direct control over quality all bear on whether the change would improve outcomes."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the university introduce a compulsory statistics course for all undergraduate degrees?\n\nWhich is the STRONGEST argument in favour?",
+  choices: [
+    "Statistics is a demanding subject that develops rigorous thinking",
+    "A survey of graduate employers ranked data interpretation as the skill most often lacking in new hires from the university, ahead of eight other skills",
+    "Several peer universities already require a quantitative course",
+    "The statistics department has capacity to teach additional students"
+  ],
+  answer: 1,
+  explanation: "The employer survey supplies exactly the evidence the decision needs: it identifies a specific deficit in this university's graduates and ranks it as the most serious one. Rigour is a vague virtue, peer practice is imitation, and departmental capacity addresses feasibility rather than whether the course is worth requiring."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the retailer stop accepting cash payments in its city-centre stores?\n\nWhich is the WEAKEST argument in favour?",
+  choices: [
+    "Cash handling, banking and security cost the chain approximately $2.3m a year across its city-centre estate",
+    "Cash accounts for under 4% of transactions in these stores and the share has fallen every year since 2019",
+    "Card payments are more modern than cash",
+    "Removing cash drawers would free roughly 1.5 square metres of counter space per store for self-service terminals"
+  ],
+  answer: 2,
+  explanation: "Calling card payments 'more modern' is an appeal to novelty: modernity is not itself a benefit, and the argument gives no consequence that would follow. The other three quantify a cost, establish that the affected volume is small and shrinking, and identify a concrete operational gain."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the bank close its smallest twenty branches?\n\nWhich is the STRONGEST argument against?",
+  choices: [
+    "Branch closures are unpopular with the public",
+    "Fourteen of the twenty branches are the only banking facility within twenty miles, and internal analysis shows customers in such locations close their accounts at four times the normal rate when a branch shuts",
+    "The branches have served their communities for many years",
+    "Closing branches would require redundancy consultations with staff"
+  ],
+  answer: 1,
+  explanation: "The second argument quantifies the downside in the bank's own terms: fourteen closures would strand customers with no alternative, and the fourfold attrition figure shows the revenue consequence. Unpopularity, longevity and consultation requirements are real but do not weigh against the closure with comparable force or evidence."
+},
+{
+  type: "argument-strength", d: 2,
+  prompt: "Question: Should the company replace its open-plan office with a mix of quiet rooms and collaboration spaces?\n\nWhich is the WEAKEST argument in favour?",
+  choices: [
+    "Internal surveys over three years consistently rank noise as the top obstacle to focused work",
+    "The current lease permits reconfiguration without landlord consent",
+    "Observation studies found meeting rooms booked out 94% of the working week, forcing discussions onto the open floor",
+    "The existing layout was chosen by a facilities manager who has since left the company"
+  ],
+  answer: 3,
+  explanation: "Who chose the current layout, and whether they still work there, tells us nothing about whether the layout works. It is an argument about the source rather than the substance. The other three offer survey evidence of the problem, evidence that collaboration space is genuinely short, and confirmation that the change is permissible."
+},
+
+/* ---------- EVALUATE ---------- */
+{
+  type: "evaluate", d: 2,
+  prompt: "A regional bakery chain is deciding whether to install solar panels on the roofs of its twelve production sites. The proposal costs $2.4m up front and the energy team projects annual electricity savings of $310,000, implying a payback period of under eight years. The board has asked for further analysis before committing, since the company has not previously made an investment of this length.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "Whether the panels would be visible from the street at each site",
+    "How much of each site's electricity demand falls during daylight hours, when the panels generate",
+    "Which supplier manufactures the panels",
+    "How many other bakeries in the region have installed solar panels"
+  ],
+  answer: 1,
+  explanation: "Rooftop solar only offsets consumption that coincides with generation; anything else is either exported at a lower rate or wasted. If the bakery's heaviest load is overnight baking, the $310,000 figure collapses and so does the payback. Visibility, supplier identity and peer adoption do not touch the savings calculation."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A logistics company is considering replacing its diesel delivery vans with electric ones across its urban fleet. The finance team calculates that lower fuel and maintenance costs would recover the higher purchase price within five years. The operations director supports the change in principle but has asked for one further piece of analysis before the board decides.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "Whether the electric vans' range covers the daily distance of the company's typical urban routes without mid-shift charging",
+    "What colour scheme the new vans would carry",
+    "How many manufacturers currently produce electric delivery vans",
+    "Whether the company's drivers have driven electric vehicles before"
+  ],
+  answer: 0,
+  explanation: "If the vans cannot complete a shift without stopping to charge, the fleet loses productive hours and may need more vehicles, which destroys the five-year payback the whole case rests on. Livery and the number of manufacturers are irrelevant, and driver familiarity is a short training matter rather than a structural risk."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A publisher is deciding whether to acquire a small competitor for $18m. The strategy team argues that the combined business would eliminate $4m of duplicated overhead within two years, and that the target's catalogue complements the publisher's own. The board is broadly supportive but wants one further question answered before approving the deal.\n\nAnswering which of the following would be most useful in evaluating the acquisition?",
+  choices: [
+    "How long the target company has been trading",
+    "What proportion of the target's revenue depends on author contracts that permit termination on a change of control",
+    "Which advisers the publisher would appoint for the transaction",
+    "Whether the target's offices are close to the publisher's own"
+  ],
+  answer: 1,
+  explanation: "A publisher's value is largely its author relationships. If a large share of the target's revenue sits under contracts authors can walk away from once ownership changes, the acquirer may pay $18m for a catalogue that leaves. Trading history, adviser selection and office proximity are minor beside that risk."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A hotel group is deciding whether to convert two floors of a city property from guest rooms into serviced offices. The development team projects that office rents would exceed the rooms' current contribution by about $500,000 a year, based on prevailing commercial rents in the district. The board has asked for one further analysis before approving the conversion.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "What the current vacancy rate is for serviced offices in the district",
+    "How long the conversion works would take",
+    "Which architect would design the office floors",
+    "Whether the hotel's restaurant is used by non-residents"
+  ],
+  answer: 0,
+  explanation: "The projection uses prevailing rents, which are what occupied space earns. If the district's serviced offices already sit substantially vacant, achievable rent and occupancy will both fall short and the $500,000 is fictional. Construction duration affects timing, and the architect and restaurant are unrelated to whether the rent is achievable."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A retailer is deciding whether to open on Sundays at its forty high-street stores. The commercial team estimates additional weekly revenue of $190,000 against $120,000 of extra staffing and operating cost, giving a clear positive contribution. The finance director has asked for one further question to be answered before the trial is extended chain-wide.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "Whether staff would prefer to work Sundays rather than Saturdays",
+    "What proportion of Sunday revenue represents purchases customers would otherwise have made on another day",
+    "How many competing retailers already open on Sundays",
+    "Whether the stores' suppliers deliver at weekends"
+  ],
+  answer: 1,
+  explanation: "If most Sunday spending is simply shifted from Saturday or Monday, the extra revenue is largely cannibalised while the extra staffing cost is entirely new, turning a positive contribution negative. Staff preferences, competitor hours and delivery schedules affect implementation rather than whether the revenue is genuinely incremental."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A software firm is deciding whether to move its customer data from its own servers to a cloud provider. The infrastructure team projects savings of $700,000 a year in hardware, power and maintenance once the migration is complete, and notes that the provider offers stronger uptime guarantees than the firm currently achieves.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "How much the firm would pay the cloud provider in data transfer and storage charges at its actual usage volumes",
+    "Which programming languages the firm's engineers prefer",
+    "How many other firms in the sector use cloud providers",
+    "When the firm's current servers were purchased"
+  ],
+  answer: 0,
+  explanation: "The $700,000 counts only the costs removed, not the costs added. Cloud billing scales with storage and especially with data egress, and at high volumes those charges routinely consume the entire saving. Language preferences and sector adoption are irrelevant, and server purchase dates matter only for residual value."
+},
+{
+  type: "evaluate", d: 2,
+  prompt: "A manufacturer is deciding whether to offer an extended five-year warranty on its flagship appliance, in place of the current two-year cover. Marketing projects that the longer warranty would lift unit sales by 12%, on the basis of a survey in which customers rated warranty length as an important purchase factor.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  choices: [
+    "What the appliance's failure rate is between years two and five",
+    "Which retailers stock the appliance",
+    "How long the two-year warranty has been offered",
+    "Whether competitors advertise their warranty terms prominently"
+  ],
+  answer: 0,
+  explanation: "The whole economics of the proposal turn on how many units fail in the three extra years being covered. A low failure rate makes the warranty a cheap sales tool; a high one makes it a large unfunded liability that the 12% volume gain would not cover. Retail distribution, warranty history and competitor advertising do not size that exposure."
+}
 
 /* END-CT-2 */
 ];
