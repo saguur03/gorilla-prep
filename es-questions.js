@@ -2882,6 +2882,186 @@ var T = {
     "Exactamente la mitad de las tiendas fuera de centros comerciales superó su meta.",
     "La mayoría de las tiendas que no alcanzaron su meta está en centros comerciales."
   ]
+},
+'ct-130': {
+  prompt: "Todo asunto abierto por la firma se asigna exactamente a uno de dos equipos, litigio o asesoría, y nunca a ambos. Ningún asunto manejado por el equipo de asesoría se factura con honorarios de éxito. El informe financiero muestra que algunos asuntos abiertos el año pasado se facturaron con honorarios de éxito.\n\n¿Cuál de las siguientes opciones puede inferirse correctamente?",
+  choices: [
+    "Algunos asuntos abiertos el año pasado fueron manejados por el equipo de litigio.",
+    "Todo asunto manejado por el equipo de litigio se factura con honorarios de éxito.",
+    "El equipo de litigio abrió más asuntos que el de asesoría.",
+    "Ningún asunto de asesoría fue rentable."
+  ]
+},
+'ct-131': {
+  prompt: "Las reglas de compras de una universidad son absolutas: a ningún proveedor de la lista restringida se le puede emitir una nueva orden de compra, y todo proveedor que reprueba el filtro de ética queda en la lista restringida. El sistema financiero muestra que la semana pasada se emitió una nueva orden de compra a Halden Instruments.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Halden Instruments no reprobó el filtro de ética.",
+    "Halden Instruments nunca ha sido evaluada frente al filtro de ética.",
+    "Halden Instruments aprobó el filtro de ética con la calificación más alta posible.",
+    "La lista restringida no contiene proveedor alguno."
+  ]
+},
+'ct-132': {
+  prompt: "Una naviera comparó los márgenes operativos de cuatro rutas el año pasado. La ruta del Báltico obtuvo un margen mayor que la ruta del Adriático. La ruta del Egeo obtuvo un margen menor que la ruta del Adriático. La ruta del Mar del Norte obtuvo un margen mayor que la ruta del Báltico. Ninguna de las rutas obtuvo el mismo margen.\n\n¿Cuál de las siguientes opciones puede inferirse correctamente?",
+  choices: [
+    "La ruta del Egeo obtuvo el margen más bajo de las cuatro.",
+    "La ruta del Adriático obtuvo el segundo margen más alto.",
+    "La ruta del Báltico obtuvo un margen mayor que la del Mar del Norte.",
+    "Las rutas del Mar del Norte y del Báltico juntas obtuvieron más de la mitad del margen total."
+  ]
+},
+'ct-133': {
+  prompt: "Una empresa de energía revisó sus contratos. Todo contrato firmado antes de la reforma tarifaria incluye una cláusula de indexación por inflación. Algunos contratos con cláusula de indexación son con clientes del sector público. Ningún cliente del sector público aceptó un contrato de menos de cinco años.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Algunos contratos con cláusula de indexación duran cinco años o más.",
+    "Todo contrato con cláusula de indexación se firmó antes de la reforma.",
+    "Ningún contrato firmado después de la reforma es con un cliente del sector público.",
+    "Todos los contratos a cinco años son con clientes del sector público."
+  ]
+},
+'ct-134': {
+  prompt: "Un productor de alimentos revisó las 400 líneas de producto que tiene. El setenta por ciento de las líneas lleva etiqueta de azúcar reducida, y el sesenta por ciento se vende a través de minoristas de descuento.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Al menos 120 líneas llevan etiqueta de azúcar reducida y además se venden a través de minoristas de descuento.",
+    "Exactamente 120 líneas llevan la etiqueta y se venden a través de minoristas de descuento.",
+    "Al menos 120 líneas llevan la etiqueta pero no se venden a través de minoristas de descuento.",
+    "El treinta por ciento de las líneas de minoristas de descuento no lleva etiqueta de azúcar reducida."
+  ]
+},
+'ct-135': {
+  prompt: "Bajo el acuerdo marco del grupo, la acreditación de un contratista se renueva automáticamente cada año a menos que el contratista registre un incidente de seguridad reportable durante el periodo. El registro muestra que a Verrand Civils no se le renovó la acreditación este año.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Verrand Civils registró un incidente de seguridad reportable durante el periodo.",
+    "Verrand Civils registró más incidentes reportables que cualquier otro contratista.",
+    "Verrand Civils no podrá licitar por trabajos en años futuros.",
+    "Todo contratista que registró un incidente perdió su acreditación."
+  ]
+},
+'ct-136': {
+  prompt: "Un grupo de medios revisó sus productos de suscripción. Todo producto que creció en suscriptores el trimestre pasado ofrece descuento estudiantil. Algunos productos que ofrecen descuento estudiantil vienen empaquetados con un servicio aliado. Ningún producto empaquetado con un servicio aliado está disponible en más de dos países.\n\n¿Cuál de las siguientes opciones puede inferirse correctamente?",
+  choices: [
+    "Todo producto que ofrece descuento estudiantil creció en suscriptores.",
+    "Algunos productos que ofrecen descuento estudiantil están disponibles en no más de dos países.",
+    "Ningún producto que creció en suscriptores viene empaquetado con un servicio aliado.",
+    "Los productos disponibles en tres o más países no crecieron."
+  ]
+},
+'ct-137': {
+  prompt: "Un director de retail se dirige a la junta sobre la línea sostenible, lanzada hace dieciocho meses en las 240 tiendas. 'Nuestra investigación encargada encuestó a 4.000 compradores y encontró que el 78% dice que pagaría más por productos de origen sostenible, una cifra que ha subido seis puntos en dos años. Sin embargo, la línea todavía representa solo el 12% de las ventas, y esa participación ha estado plana desde el lanzamiento. Los compradores claramente quieren estos productos, así que no deben estar encontrándolos. Propongo que invirtamos en señalización más clara en tienda.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento del director?",
+  choices: [
+    "Supone sin respaldo que la disposición declarada a pagar más se traduce en comportamiento real de compra.",
+    "No especifica cuánto más dijeron los compradores que pagarían.",
+    "No compara el desempeño de la empresa contra el de los competidores.",
+    "Se apoya en investigación realizada entre clientes existentes y no potenciales."
+  ]
+},
+'ct-138': {
+  prompt: "Un gerente de operaciones presenta al comité ejecutivo. 'He revisado la producción por hora de trabajo en las catorce plantas durante los últimos tres años. Cada una de nuestras cinco plantas de mejor desempeño usa métodos de manufactura esbelta, y nuestras dos peores nunca los han adoptado. La brecha entre esos dos grupos es sustancial y se ha ampliado cada uno de los tres años. Los métodos esbeltos son por lo tanto lo que separa una planta fuerte de una débil, y recomiendo que los hagamos obligatorios en toda la red dentro de doce meses.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el argumento?",
+  choices: [
+    "Trata una correlación observada en un conjunto pequeño y seleccionado de plantas como si estableciera causalidad.",
+    "No define qué cuenta como manufactura esbelta.",
+    "No considera el costo de implementar los métodos esbeltos.",
+    "Supone que todas las plantas producen los mismos productos."
+  ]
+},
+'ct-139': {
+  prompt: "Un director financiero se dirige a una reunión de comité sobre una plataforma de clientes que va en su tercer año de desarrollo. 'Ya hemos gastado USD 6 millones del presupuesto de USD 9 millones, y la construcción está aproximadamente a dos tercios. El proveedor ha confirmado que puede entregar la funcionalidad restante por los USD 3 millones que quedan. Si abandonamos el programa ahora, esos USD 6 millones se pierden por completo y no tenemos nada que mostrarle a la junta por tres años de trabajo. Por lo tanto deberíamos aprobar el gasto restante y terminar la construcción.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento del director?",
+  choices: [
+    "Trata el dinero ya gastado como razón para continuar, en lugar de comparar el costo restante contra el beneficio futuro esperado.",
+    "No indica si el presupuesto de USD 9 millones fue aprobado por la junta.",
+    "Supone que la plataforma puede completarse por exactamente USD 3 millones.",
+    "No considera si un proveedor externo podría terminar el trabajo más barato."
+  ]
+},
+'ct-140': {
+  prompt: "Un líder de marketing defiende el presupuesto del próximo año. 'Nuestra participación ha caído en cada uno de los últimos cinco trimestres, y nuestros dos competidores más grandes han duplicado aproximadamente su gasto digital en el mismo periodo. La situación es sencilla: o duplicamos nuestro propio presupuesto de publicidad digital, o aceptamos que nuestra participación seguirá cayendo. Nadie en esta sala está dispuesto a pararse frente a la junta y aceptar una participación decreciente, así que el aumento de presupuesto es la única decisión responsable.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el argumento?",
+  choices: [
+    "Presenta solo dos opciones cuando pueden existir otros medios de defender la participación de mercado.",
+    "No cuantifica cuánta participación se ha perdido.",
+    "Supone que la sala tiene autoridad sobre el presupuesto de publicidad.",
+    "Se apoya en las opiniones de los presentes y no en datos."
+  ]
+},
+'ct-141': {
+  prompt: "Un socio defiende una reestructuración propuesta en una reunión de liderazgo. 'He leído con cuidado las objeciones escritas, y noto de dónde vienen. Casi todas fueron presentadas por los gerentes regionales, cada uno de los cuales perdería una línea de reporte directo si la reestructuración avanza, y varios de los cuales quedarían un grado más abajo en la nueva estructura. Su oposición es exactamente lo que predeciríamos de personas en su posición, y por lo tanto no nos dice nada sobre si la reestructuración es una buena idea.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento del socio?",
+  choices: [
+    "Descarta las objeciones con base en quién las planteó y no en los méritos de lo que dijeron.",
+    "No indica cuántos gerentes regionales objetaron.",
+    "No explica en qué consiste la reestructuración.",
+    "Supone que los gerentes regionales entendieron la propuesta."
+  ]
+},
+'ct-142': {
+  prompt: "Un gerente de calidad presenta el informe mensual de servicio. 'Encuestamos a todos los clientes que contactaron nuestra línea de soporte durante marzo, y el 91% calificó el servicio recibido como bueno o excelente, frente a 88% en febrero. La muestra es grande —poco más de 2.000 respuestas— y la redacción del cuestionario no ha cambiado en dos años, así que la comparación es justa. Con esta evidencia nuestra base de clientes está claramente muy satisfecha con el soporte que damos, y no veo motivo para la inversión adicional que se propone.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el informe?",
+  choices: [
+    "Generaliza de los clientes que eligieron contactar a soporte al conjunto de la base de clientes.",
+    "No distingue entre las calificaciones de 'bueno' y 'excelente'.",
+    "No compara la cifra de este mes con la de meses anteriores.",
+    "No especifica cuántos clientes fueron encuestados."
+  ]
+},
+'ct-143': {
+  prompt: "Un asesor de políticas responde a una solicitud del área de ingeniería para trasladar USD 400.000 de presupuesto no ejecutado al año siguiente. 'Entiendo el razonamiento del área, y la solicitud específica no es irrazonable en sí misma: el retraso lo causó un proveedor, no una mala planeación. Pero si permitimos esta única excepción, todas las demás áreas exigirán el mismo trato el próximo año. Nuestra disciplina presupuestal colapsará, la proyección se volverá irrelevante, y en pocos años la organización no tendrá control financiero real alguno. La solicitud debe rechazarse.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el argumento?",
+  choices: [
+    "Supone sin respaldo que el primer paso llevará inevitablemente al resultado final.",
+    "No indica cuánto presupuesto no ejecutado está en juego.",
+    "No considera las razones del área para la solicitud.",
+    "Supone que las demás áreas se enteran de la solicitud."
+  ]
+},
+'ct-144': {
+  prompt: "Una directora de Recursos Humanos presenta los resultados anuales de compromiso al equipo ejecutivo. 'Encuestamos a 3.200 empleados de todas las funciones y regiones. Los equipos cuyos jefes tienen reuniones individuales semanales puntúan once puntos más en compromiso que los equipos cuyos jefes no las tienen, y el patrón se sostiene en las seis regiones sin excepción. La diferencia es mayor que la producida por cualquier otro factor que medimos, incluidos satisfacción salarial y carga de trabajo. Las reuniones individuales semanales por lo tanto elevan el compromiso, y recomiendo que las exijamos en toda la organización desde el próximo trimestre.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento?",
+  choices: [
+    "Pasa por alto la posibilidad de que los equipos comprometidos sean, en primer lugar, más propensos a sostener reuniones individuales regulares.",
+    "No reporta la tasa de respuesta de la encuesta.",
+    "No define qué cuenta como una reunión individual.",
+    "Supone que los jefes tienen tiempo para reuniones semanales."
+  ]
+},
+'ct-145': {
+  prompt: "Un consultor asesora a una junta que considera una fusión. 'El caso descansa casi enteramente en USD 40 millones de sinergias de costo anuales identificadas por el propio equipo financiero de la empresa objetivo. Ese modelo nunca ha sido auditado de forma independiente. Dos de sus supuestos centrales —el ritmo de integración de sistemas y la retención de la fuerza de ventas combinada— han sido cuestionados por nuestros analistas, y la empresa objetivo aún no ha entregado los cálculos subyacentes. Hasta que el modelo sea verificado por un tercero, debemos concluir que los ahorros proyectados no existen, y la fusión no puede justificarse por razones de costo.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el argumento?",
+  choices: [
+    "Trata la ausencia de evidencia verificada de los ahorros como evidencia de que no los hay.",
+    "No identifica cuáles dos supuestos fueron cuestionados.",
+    "Supone que una auditoría independiente sería concluyente.",
+    "Considera solo razones de costo e ignora las estratégicas."
+  ]
+},
+'ct-146': {
+  prompt: "Un gerente de ventas le escribe al director comercial. 'La nueva presentación de ventas debe estar funcionando. La introdujimos a comienzos de abril, y en los cuatro meses desde entonces hemos cerrado once negocios, mientras que en los cuatro meses previos a abril cerramos solo seis. El equipo además reporta sentirse más seguro presentándola, y dos clientes comentaron favorablemente sobre el diseño en sus reuniones finales. Bajo cualquier lectura razonable, la presentación es el activo comercial más fuerte que hemos construido en años y debería desplegarse en todas las regiones.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento?",
+  choices: [
+    "Infiere que la presentación causó el aumento solo porque el aumento vino después de su introducción.",
+    "No reporta el valor de los negocios cerrados.",
+    "No indica cuántos prospectos vieron la presentación.",
+    "Compara un número desigual de meses de cada lado."
+  ]
+},
+'ct-147': {
+  prompt: "Un miembro de junta habla en contra de una propuesta para encargar una revisión independiente del programa de transformación. 'Nuestra directora ejecutiva le dijo a esta junta el mes pasado que el programa va en camino y que los hitos restantes son alcanzables dentro del presupuesto actual. Ella tiene treinta años de experiencia en esta industria, ha liderado dos reestructuraciones exitosas en negocios comparables, y fue reclutada precisamente por ese historial. Una revisión externa costaría varios cientos de miles de dólares y tomaría tres meses en reportar. Por lo tanto no hay necesidad de que la junta encargue una.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el argumento?",
+  choices: [
+    "Sustituye la evidencia sobre el programa mismo por las credenciales de quien habla.",
+    "No especifica en qué consiste el programa de transformación.",
+    "Supone que una revisión independiente sería costosa.",
+    "No considera las opiniones de otros ejecutivos."
+  ]
+},
+'ct-148': {
+  prompt: "Un oficial de compras resume una evaluación de proveedores para el comité de selección. 'Su propuesta afirma que la plataforma recortará 60% nuestro tiempo de procesamiento, y han entregado tres referencias de clientes que parecen respaldar esa cifra. Sin embargo, durante la negociación comercial su vendedor cotizó tres costos de licencia distintos en el lapso de quince días, y dos veces no entregó confirmación escrita cuando la pedimos. Dado ese historial del lado comercial, deberíamos rechazar su afirmación sobre el tiempo de procesamiento y sacarlos de la lista corta.'\n\n¿Cuál de las siguientes opciones describe con más precisión una falla en el razonamiento?",
+  choices: [
+    "Trata la inconsistencia en un punto como suficiente para rechazar una afirmación no relacionada sobre otro.",
+    "No verifica si la cifra de 60% vino del vendedor.",
+    "Supone que el tiempo de procesamiento es el criterio más importante.",
+    "No considera las propuestas de otros proveedores."
+  ]
+},
+'ct-149': {
+  prompt: "Una autoridad de transporte urbano está decidiendo cómo reducir la congestión en el centro, donde las velocidades promedio de tráfico han caído cuatro años consecutivos. Los funcionarios señalan que el 40% de los viajes matutinos hacia el núcleo se hacen en carro con un solo ocupante, y que la red de tranvía opera al 60% de su capacidad a esa misma hora. Una consulta pública el año pasado encontró que las tarifas de estacionamiento eran la medida a la que menos se oponían los residentes. Han concluido que subir la tarifa de estacionamiento del centro recortará la congestión, porque los conductores que enfrenten la tarifa más alta se pasarán al tranvía.\n\n¿La conclusión de los funcionarios depende de cuál de los siguientes supuestos?",
+  choices: [
+    "La red de tranvía podría expandirse más si la demanda lo requiriera.",
+    "Un número significativo de conductores que hoy pagan por estacionar tiene una ruta de tranvía que es una alternativa viable para su viaje.",
+    "Las tarifas de estacionamiento del centro son actualmente más bajas que en ciudades comparables.",
+    "La congestión en el centro ha empeorado en los últimos cinco años."
+  ]
 }
 
 };
