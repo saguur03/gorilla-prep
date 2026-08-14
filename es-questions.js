@@ -3062,6 +3062,154 @@ var T = {
     "Las tarifas de estacionamiento del centro son actualmente más bajas que en ciudades comparables.",
     "La congestión en el centro ha empeorado en los últimos cinco años."
   ]
+},
+
+/* Most of the assumption items in this block share one shape: a saving is quantified on
+   one dimension and the conclusion silently assumes nothing offsets it on another. The
+   correct option is always the offsetting-cost one, so its phrasing has to stay a
+   conditional about magnitude ("no… lo suficiente como para anular") rather than becoming a
+   flat denial that other costs exist, which would overstate what the argument needs. */
+'ct-150': {
+  prompt: "Una firma consultora está eligiendo entre dos sistemas de programación para sus 400 consultores. El socio responsable argumenta que el sistema más barato es la mejor opción: en un horizonte de tres años sus cuotas de licencia son USD 180.000 menores que las de la alternativa, y el presupuesto de tecnología de la firma está bajo presión tras dos años de sobregasto. Ambos sistemas cumplen los requisitos funcionales fijados por el equipo de operaciones, y ambos proveedores han ofrecido el mismo cronograma de implementación.\n\n¿El argumento del socio depende de cuál de los siguientes supuestos?",
+  choices: [
+    "El sistema más barato no generará costos adicionales en otras partes que anulen el ahorro en licencias.",
+    "El presupuesto de tecnología seguirá bajo presión durante los próximos tres años.",
+    "El sistema más caro es el líder de mercado en su categoría.",
+    "Ambos sistemas fueron evaluados por el mismo grupo de personas."
+  ]
+},
+'ct-151': {
+  prompt: "Una fundación está planeando la recaudación del próximo año con un presupuesto total de captación de USD 2 millones. Su análisis de los últimos tres años muestra que los donantes captados por el programa puerta a puerta dan en promedio USD 340 en su primer año, frente a USD 210 de los donantes captados en línea. La brecha ha sido consistente año tras año y se sostiene en varios miles de donantes. El director de recaudación ha propuesto desplazar el presupuesto de captación hacia el puerta a puerta con el argumento de que eso elevará el ingreso total.\n\n¿La propuesta del director depende de cuál de los siguientes supuestos?",
+  choices: [
+    "La recaudación puerta a puerta es bien recibida en las zonas donde opera la fundación.",
+    "El costo de captar un donante puerta a puerta no es tanto mayor que el costo en línea como para eliminar la diferencia en donaciones.",
+    "Los donantes en línea de la fundación son en promedio más jóvenes que los de puerta a puerta.",
+    "La donación del primer año es un predictor confiable de la donación de por vida."
+  ]
+},
+'ct-152': {
+  prompt: "Un sistema hospitalario está revisando sus consultas externas, donde las citas incumplidas cuestan unos USD 3 millones al año en tiempo clínico desperdiciado. Los gerentes observan que las consultas que usan el nuevo servicio de recordatorio de citas tienen una tasa de inasistencia de 6%, frente a 14% en las consultas que no lo han adoptado. El servicio lleva dieciocho meses disponible y cerca de un tercio de las consultas lo usa hoy. Planean desplegarlo en todas las consultas, esperando que la inasistencia caiga a cerca de 6% en todas partes.\n\n¿La expectativa de los gerentes depende de cuál de los siguientes supuestos?",
+  choices: [
+    "Las consultas que adoptaron el servicio temprano no difieren de las demás en formas que afecten la asistencia.",
+    "El servicio de recordatorio puede entregarse al mismo costo en todas las consultas.",
+    "Los pacientes prefieren recibir recordatorios por mensaje de texto y no por teléfono.",
+    "La cifra de 14% ha sido estable durante los últimos tres años."
+  ]
+},
+'ct-153': {
+  prompt: "Una editorial está decidiendo si cierra su revista impresa, que ha aparecido de forma continua durante treinta y un años. El equipo financiero señala que la circulación impresa ha caído 45% en cuatro años mientras la edición digital ha crecido de forma sostenida en el mismo periodo, y que la operación impresa hoy opera con una pequeña pérdida antes de cualquier asignación de gastos generales centrales. Argumenta que cerrar la edición impresa y redirigir el presupuesto editorial a lo digital mejorará la rentabilidad general.\n\n¿El argumento del equipo financiero depende de cuál de los siguientes supuestos?",
+  choices: [
+    "Las suscripciones digitales seguirán creciendo a su ritmo actual.",
+    "Una parte sustancial de los ingresos hoy atados a la edición impresa no se perdería al cerrarla.",
+    "El equipo editorial puede producir contenido digital sin capacitación adicional.",
+    "Editoriales competidoras también han reducido su producción impresa."
+  ]
+},
+'ct-154': {
+  prompt: "Un fabricante está considerando mover el ensamblaje de su línea de gama media de Alemania a Portugal, donde ya opera una planta de componentes. El director de operaciones señala que el costo laboral totalmente cargado por unidad ensamblada es 38% menor en Portugal, que la sede portuguesa tiene espacio de piso disponible de inmediato, y que la fuerza laboral local puede reclutarse sin dificultad. Concluye que el traslado reducirá el costo de cada unidad producida.\n\n¿La conclusión del director depende de cuál de los siguientes supuestos?",
+  choices: [
+    "La legislación laboral portuguesa es comparable a la alemana en los aspectos relevantes.",
+    "El traslado no aumentará los costos no laborales por unidad lo suficiente como para anular el ahorro laboral.",
+    "La línea de gama media es la familia de productos más rentable del fabricante.",
+    "La demanda de la línea de gama media se mantendrá estable tras el traslado."
+  ]
+},
+'ct-155': {
+  prompt: "Una empresa de software está planeando sus precios del próximo año, tras haber mantenido los precios de lista planos durante tres años. Los analistas señalan que la tasa anual de cancelación de la firma es 4%, muy por debajo del promedio de la industria de 9%, y que la retención neta de ingresos ha superado el 100% en cada uno de esos tres años. Concluyen que un aumento de precio de 15% puede implementarse sin pérdida material de clientes, ya que la base de clientes es evidentemente inusualmente leal.\n\n¿La conclusión de los analistas depende de cuál de los siguientes supuestos?",
+  choices: [
+    "La lealtad reflejada en la tasa de cancelación actual sobreviviría a un cambio en el precio que pagan los clientes.",
+    "Los competidores no reducirán sus precios en respuesta.",
+    "El aumento de 15% aplicaría por igual a todos los segmentos de clientes.",
+    "El promedio de cancelación de la industria se ha calculado sobre una base comparable."
+  ]
+},
+'ct-156': {
+  prompt: "Una universidad está evaluando la nueva prueba de admisión que introdujo hace dos años en lugar de una entrevista estructurada. Los administradores reportan que los estudiantes admitidos con la prueba obtuvieron notas promedio más altas en primer año que la cohorte admitida el año anterior, y que la brecha apareció en todas las facultades. Las postulaciones totales subieron levemente en el mismo periodo. Concluyen que la prueba es mejor predictor de la capacidad académica que el proceso de entrevista que reemplazó.\n\n¿La conclusión de los administradores depende de cuál de los siguientes supuestos?",
+  choices: [
+    "La prueba es más barata de administrar que el proceso de entrevista.",
+    "Los estándares de calificación de primer año no cambiaron entre las dos cohortes.",
+    "Los estudiantes admitidos con la prueba venían de un rango más amplio de colegios.",
+    "El proceso de entrevista llevaba muchos años en uso."
+  ]
+},
+'ct-157': {
+  prompt: "Una cadena de supermercados está decidiendo si extiende su servicio de domicilios a zonas rurales, tras haber operado el servicio en ciudades durante seis años. El equipo comercial calcula que los hogares rurales, donde han sido encuestados, piden una canasta promedio mayor que los urbanos —cerca de USD 95 frente a USD 62— y que los clientes rurales reportan menos opciones competidoras cerca. Concluye que el domicilio rural será más rentable por pedido que el servicio urbano existente.\n\n¿La conclusión del equipo comercial depende de cuál de los siguientes supuestos?",
+  choices: [
+    "Los hogares rurales pedirán con la misma frecuencia que los urbanos.",
+    "El costo de alistar y entregar un pedido rural no superará el margen adicional que genera la canasta más grande.",
+    "Los clientes rurales están dispuestos a aceptar ventanas de entrega más largas.",
+    "Los competidores rurales de la cadena no ofrecen domicilios actualmente."
+  ]
+},
+'ct-158': {
+  prompt: "Una aerolínea está considerando reemplazar el servicio de comida de cortesía en rutas de corta distancia por un menú de compra a bordo. El director comercial argumenta que esto mejorará la rentabilidad de corta distancia, citando USD 22 millones de costo anual de catering hoy absorbido en el precio del tiquete, el hecho de que dos de sus tres principales competidores ya hicieron el mismo cambio, e investigación interna que indica que la mayoría de los pasajeros de corta distancia come poco de lo que hoy se sirve.\n\n¿El argumento del director depende de cuál de los siguientes supuestos?",
+  choices: [
+    "Los competidores que hicieron el cambio lo hicieron por las mismas razones.",
+    "Los pasajeros no trasladarán suficiente negocio a aerolíneas que aún ofrecen comida de cortesía como para superar el ahorro en catering.",
+    "Los menús de compra a bordo pueden operarse con la dotación actual de tripulación de cabina.",
+    "Los costos de catering seguirán subiendo en los próximos años."
+  ]
+},
+'ct-159': {
+  prompt: "Cinco áreas ocupan los cinco pisos de un edificio de oficinas, un área por piso, numerados del 1 (planta baja) al 5 (último).\n\n· Finanzas está directamente encima de Jurídica.\n· Marketing está en el piso 5.\n· Recursos Humanos no está en un piso adyacente a Finanzas.\n· Operaciones está en el piso 1.\n\n¿En qué piso está Jurídica?",
+  choices: ["Piso 2", "Piso 3", "Piso 4", "Piso 5"]
+},
+'ct-160': {
+  prompt: "Cuatro candidatos —Novak, Okafor, Patel y Reyes— son entrevistados en cuatro días consecutivos de lunes a jueves, un candidato por día.\n\n· Reyes es entrevistado antes que Novak.\n· Patel es entrevistado el miércoles.\n· Okafor no es entrevistado el lunes.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Novak es entrevistado el jueves.",
+    "Okafor es entrevistado el martes.",
+    "Reyes es entrevistado el lunes.",
+    "Novak es entrevistado el martes."
+  ]
+},
+'ct-161': {
+  prompt: "Cinco aprendices —Nadia, Omar, Priya, Rafael y Sena— fueron clasificados del primero al quinto en una evaluación, sin empates.\n\n· Nadia puntuó más alto que Omar.\n· Priya tuvo el puntaje más bajo.\n· Omar puntuó más alto que Rafael.\n· Sena puntuó más alto que Nadia.\n\n¿Quién quedó tercero?",
+  choices: ["Nadia", "Omar", "Rafael", "Sena"]
+},
+'ct-162': {
+  prompt: "Cinco carpetas se guardan en un cajón en las posiciones 1 a 5, siendo la posición 1 la del frente.\n\n· La carpeta de contratos está inmediatamente delante de la de facturas.\n· La carpeta de nómina está en la posición 1.\n· La carpeta de impuestos está en algún lugar detrás de la de facturas.\n· La carpeta de auditoría no está en la posición 5.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "La carpeta de contratos está en la posición 2.",
+    "La carpeta de auditoría está en la posición 2.",
+    "La carpeta de impuestos está en la posición 5.",
+    "La carpeta de facturas está en la posición 3."
+  ]
+},
+'ct-163': {
+  prompt: "Cinco ponentes —Kaur, Lindqvist, Mbeki, Novak y Oyelaran— presentan uno tras otro en cinco turnos.\n\n· Kaur presenta inmediatamente antes que Lindqvist.\n· Mbeki presenta de quinto.\n· Novak presenta en algún momento antes que Kaur.\n· Oyelaran presenta de segundo.\n\n¿Quién presenta primero?",
+  choices: ["Kaur", "Lindqvist", "Novak", "Oyelaran"]
+},
+'ct-164': {
+  prompt: "Un ejecutivo visita cinco ciudades —Lisboa, Madrid, Oslo, Praga y Roma— en cinco días consecutivos, una ciudad por día.\n\n· Lisboa se visita el día después de Madrid.\n· Oslo se visita el día 1.\n· Praga se visita antes que Madrid.\n· Roma se visita el día 5.\n\n¿Qué día se visita Madrid?",
+  choices: ["Día 2", "Día 3", "Día 4", "Día 5"]
+},
+'ct-165': {
+  prompt: "Cinco colegas —Ana, Bruno, Carla, Diego y Elena— se sientan en una fila de cinco sillas numeradas del 1 al 5 de izquierda a derecha.\n\n· Ana se sienta en la silla 1.\n· Bruno se sienta inmediatamente a la derecha de Carla.\n· Diego se sienta en la silla 5.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Carla se sienta en la silla 2.",
+    "Elena no se sienta en la silla 3.",
+    "Bruno se sienta en la silla 4.",
+    "Elena se sienta en la silla 4."
+  ]
+},
+'ct-166': {
+  prompt: "Una auditoría se realiza en cinco pasos —trabajo de campo, reporte, revisión, muestreo y alcance— ejecutados uno a la vez en algún orden.\n\n· El muestreo se realiza inmediatamente después del alcance.\n· El reporte se realiza de último.\n· El trabajo de campo se realiza antes del muestreo.\n\n¿Cuál de las siguientes afirmaciones podría ser cierta?",
+  choices: [
+    "El muestreo se realiza de segundo.",
+    "El alcance se realiza de primero.",
+    "La revisión se realiza de primera.",
+    "El trabajo de campo se realiza de cuarto."
+  ]
+},
+'ct-167': {
+  prompt: "Cuatro oficinas regionales —Cracovia, Lyon, Malmö y Turín— están clasificadas de la primera a la cuarta por ingresos anuales, sin empates.\n\n· La oficina de Lyon queda más arriba que la de Turín.\n· La oficina de Malmö queda más abajo que la de Turín.\n· La oficina de Cracovia no queda primera.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Turín queda segunda.",
+    "Malmö queda cuarta.",
+    "Lyon queda primera.",
+    "Cracovia queda tercera."
+  ]
 }
 
 };
