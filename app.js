@@ -431,7 +431,12 @@ function pickOneMixed(){
   const c = pickQuestions(null, 20);
   return c.length ? c[Math.floor(Math.random()*c.length)] : null;
 }
-function looksNumeric(ch){ return ch.every(c => /^[$€£]?\s*[\d]/.test(String(c).trim())); }
+/* Decides whether an option set keeps its authored ascending order (as the real test
+   presents numbers) or gets shuffled. The currency alternatives matter: the Spanish bank
+   writes amounts as "USD 255.000" in places, and without those prefixes such a set would
+   stop looking numeric and start being shuffled — a behaviour change visible only in
+   Spanish, which is exactly the kind of bug that survives testing in one language. */
+function looksNumeric(ch){ return ch.every(c => /^(?:USD|COP|EUR|[$€£])?\s*[\d]/.test(String(c).trim())); }
 function prepare(q){
   /* Numeric option sets stay in their authored (ascending) order, as on the real
      test. Positional balance is handled in the bank itself — see AUDIT #1. */

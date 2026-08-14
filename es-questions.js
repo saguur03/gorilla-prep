@@ -321,6 +321,674 @@ var T = {
     "Cómo se compara el aumento con la inflación reciente",
     "Si el equipo comercial cree que el aumento es alcanzable"
   ]
+},
+
+/* ---------------- NUMERICAL ----------------
+   Decimals take a comma (33,3%) and thousands a period (255.000), which is the Colombian
+   convention and the reverse of the English bank. The currency is written USD in the
+   stem, where the ambiguity actually matters, but the options keep a bare $ — repeating
+   "USD" four times makes an option list slower to scan, and the stem has already fixed
+   the currency. Options starting with $ or a digit keep their ascending order rather than
+   being shuffled, exactly as in English. */
+'num-0': {
+  prompt: "Los ingresos de una empresa crecieron de USD 2,4 millones a USD 3,0 millones. ¿En qué porcentaje crecieron los ingresos?",
+  choices: ["12%", "18%", "20%", "25%"]
+},
+'num-1': {
+  prompt: "Tras un descuento de 20%, un producto se vende en USD 200. ¿Cuál era el precio original?",
+  choices: ["$220", "$240", "$250", "$260"]
+},
+'num-2': {
+  prompt: "Un precio se aumenta 20% y luego se reduce 20%. ¿Cuál es el cambio neto respecto al precio original?",
+  choices: ["Sin cambio", "Disminución de 4%", "Aumento de 4%", "Disminución de 2%"]
+},
+'num-3': {
+  prompt: "Un número aumentado en 15% es igual a 460. ¿Cuál era el número original?",
+  choices: ["391", "400", "410", "445"]
+},
+'num-4': {
+  prompt: "Los ingresos de la Empresa A son 40% más altos que los de la Empresa B. ¿En qué porcentaje son más bajos los ingresos de la Empresa B respecto a los de la Empresa A?",
+  choices: ["28,6%", "30%", "40%", "60%"]
+},
+'num-5': {
+  prompt: "Si x es el 25% de y, ¿y es qué porcentaje de x?",
+  choices: ["75%", "125%", "250%", "400%"]
+},
+'num-6': {
+  prompt: "Una empresa reduce su planta de 250 a 200 empleados. ¿Cuál es la reducción porcentual?",
+  choices: ["20%", "25%", "40%", "50%"]
+},
+'num-7': {
+  prompt: "Un aumento de precio de 25% debe revertirse por completo. ¿Qué reducción porcentual devuelve el precio a su nivel original?",
+  choices: ["20%", "22,5%", "25%", "30%"]
+},
+'num-8': {
+  prompt: "El 15% de 240 es igual a cierto número. ¿Ese número es qué porcentaje de 300?",
+  choices: ["9%", "10%", "12%", "15%"]
+},
+'num-9': {
+  prompt: "Un producto se vende en USD 120 y cuesta USD 90 producirlo. ¿Cuál es el margen bruto como porcentaje del precio de venta?",
+  choices: ["25%", "30%", "33,3%", "75%"]
+},
+'num-10': {
+  prompt: "Los costos de una empresa equivalen al 60% de sus ingresos. Los ingresos son USD 850.000. ¿Cuál es la utilidad de la empresa?",
+  choices: ["$255.000", "$340.000", "$425.000", "$510.000"]
+},
+'num-11': {
+  prompt: "Una tienda aplica un sobreprecio de 40% sobre su costo y luego ofrece 25% de descuento sobre el precio marcado. ¿Cuál es la utilidad de la tienda como porcentaje del costo?",
+  choices: ["5%", "10%", "15%", "La tienda queda en punto de equilibrio"]
+},
+'num-12': {
+  prompt: "El Producto A representa el 30% de las ventas con un margen de 40%. El Producto B representa el 70% de las ventas con un margen de 20%. ¿Cuál es el margen combinado de ambos productos?",
+  choices: ["24%", "26%", "28%", "30%"]
+},
+'num-13': {
+  prompt: "Un negocio tiene costos fijos de USD 50.000, un costo variable de USD 30 por unidad y vende cada unidad en USD 50. ¿Cuántas unidades debe vender para alcanzar el punto de equilibrio?",
+  choices: ["1.000", "1.500", "2.000", "2.500"]
+},
+'num-14': {
+  prompt: "Una empresa tiene costos fijos de USD 120.000 y un margen de contribución de 30% sobre los ingresos. ¿Qué ingresos se requieren para alcanzar el punto de equilibrio?",
+  choices: ["$156.000", "$360.000", "$400.000", "$460.000"]
+},
+'num-15': {
+  prompt: "El margen de utilidad de una empresa es 15% y sus ingresos son USD 2 millones. ¿Cuáles son sus costos totales?",
+  choices: ["$300.000", "$1,5 millones", "$1,7 millones", "$1,85 millones"]
+},
+'num-16': {
+  prompt: "La razón entre los costos y los ingresos de una empresa es 3:5. Los ingresos son USD 250.000. ¿Cuál es la utilidad de la empresa?",
+  choices: ["$100.000", "$150.000", "$180.000", "$200.000"]
+},
+'num-17': {
+  prompt: "Tres máquinas producen 600 unidades en 4 horas, todas trabajando al mismo ritmo. ¿Cuántas unidades producirán cinco máquinas en 6 horas?",
+  choices: ["600", "900", "1.200", "1.500"]
+},
+'num-18': {
+  prompt: "Un equipo de 8 personas completa un proyecto en 15 días. Al mismo ritmo, ¿cuánto tardarían 12 personas?",
+  choices: ["10 días", "12 días", "15 días", "22,5 días"]
+},
+'num-19': {
+  prompt: "Cinco trabajadores pueden pintar 3 habitaciones en 6 horas. ¿Cuánto tardarán 10 trabajadores en pintar 12 habitaciones?",
+  choices: ["9 horas", "12 horas", "15 horas", "24 horas"]
+},
+'num-20': {
+  prompt: "La tubería A llena un tanque en 6 horas; la tubería B llena el mismo tanque en 12 horas. ¿Cuánto tardarán ambas tuberías trabajando juntas?",
+  choices: ["4 horas", "6 horas", "9 horas", "18 horas"]
+},
+'num-21': {
+  prompt: "Un auto recorre 180 km a 60 km/h y luego otros 180 km a 90 km/h. ¿Cuál es la velocidad promedio de todo el trayecto?",
+  choices: ["72 km/h", "75 km/h", "80 km/h", "84 km/h"]
+},
+'num-22': {
+  prompt: "Un consultor cobra USD 250 por hora, trabaja 6 horas facturables al día y trabaja 22 días al mes. ¿Cuál es su facturación mensual?",
+  choices: ["$27.500", "$30.000", "$33.000", "$36.000"]
+},
+'num-23': {
+  prompt: "Una fábrica produce 480 unidades en 8 horas. La producción debe aumentarse a 900 unidades por día sin cambiar el ritmo por hora. ¿Cuántas horas diarias debe operar la fábrica?",
+  choices: ["12 horas", "13 horas", "15 horas", "18 horas"]
+},
+'num-24': {
+  prompt: "El promedio de 5 números es 20. Se elimina uno de los números, que es igual a 12. ¿Cuál es el promedio de los 4 números restantes?",
+  choices: ["20", "21", "22", "23"]
+},
+'num-25': {
+  prompt: "Un grupo de 20 personas tiene una edad promedio de 30 años. Se suma una persona más y el promedio sube a 31. ¿Qué edad tiene la nueva persona?",
+  choices: ["31", "41", "51", "61"]
+},
+'num-26': {
+  prompt: "Un comprador adquiere 100 unidades a USD 8 cada una y 300 unidades a USD 12 cada una. ¿Cuál es el costo promedio ponderado por unidad?",
+  choices: ["$9,00", "$10,00", "$10,50", "$11,00"]
+},
+'num-27': {
+  prompt: "Un inversionista tiene USD 20.000 que rinden 5% y USD 30.000 que rinden 8%. ¿Cuál es el rendimiento del portafolio combinado?",
+  choices: ["6,5%", "6,8%", "7,0%", "7,2%"]
+},
+'num-28': {
+  prompt: "El salario promedio en un área de 12 personas es USD 60.000. Se contrata a alguien nuevo por USD 86.000. ¿Cuál es el nuevo salario promedio?",
+  choices: ["$62.000", "$62.500", "$63.000", "$64.600"]
+},
+'num-29': {
+  prompt: "La razón entre gerentes y analistas en una firma es 2:7. Hay 63 analistas. ¿Cuántos gerentes hay?",
+  choices: ["9", "12", "14", "18"]
+},
+'num-30': {
+  prompt: "Un costo de proyecto de USD 240.000 se reparte entre tres áreas en razón 3:4:5. ¿Cuánto paga el área con la mayor porción?",
+  choices: ["$60.000", "$80.000", "$100.000", "$120.000"]
+},
+'num-31': {
+  prompt: "En una empresa de 500 empleados, el 60% trabaja en operaciones, y el 25% de esos empleados de operaciones son gerentes. ¿Cuántos gerentes de operaciones hay?",
+  choices: ["75", "100", "125", "150"]
+},
+'num-32': {
+  prompt: "El 40% de los empleados de una empresa son mujeres. El 30% de las mujeres y el 50% de los hombres tienen MBA. ¿Qué porcentaje del total de empleados tiene MBA?",
+  choices: ["38%", "40%", "42%", "45%"]
+},
+'num-33': {
+  prompt: "Una inversión de USD 50.000 crece 8% al año, con capitalización anual. ¿Cuál es su valor después de 2 años?",
+  choices: ["$54.000", "$56.000", "$58.000", "$58.320"]
+},
+'num-34': {
+  prompt: "Se invierten USD 10.000 al 6% de interés simple durante 3 años. ¿Cuánto interés se gana?",
+  choices: ["$1.600", "$1.800", "$1.910", "$2.000"]
+},
+'num-35': {
+  prompt: "Se invierten USD 10.000 al 10% con capitalización anual durante 3 años. ¿Cuánto interés se gana en total?",
+  choices: ["$2.800", "$3.000", "$3.100", "$3.310"]
+},
+'num-36': {
+  prompt: "Los ingresos de una empresa son USD 5 millones y crecen 20% al año. ¿Después de cuántos años completos superarán por primera vez los USD 10 millones?",
+  choices: ["4 años", "5 años", "6 años", "7 años"]
+},
+'num-37': {
+  prompt: "Los ingresos de una empresa crecieron de USD 100 millones a USD 121 millones en dos años. ¿Cuál fue la tasa de crecimiento anual compuesta?",
+  choices: ["10%", "10,5%", "11%", "21%"]
+},
+'num-38': {
+  prompt: "Una máquina que vale USD 50.000 se deprecia 20% de su valor restante cada año. ¿Cuánto vale después de 3 años?",
+  choices: ["$18.000", "$20.000", "$24.000", "$25.600"]
+},
+'num-39': {
+  prompt: "Una empresa vende 45.000 unidades en un mercado total de 300.000 unidades. ¿Cuál es su participación de mercado?",
+  choices: ["12%", "15%", "18%", "20%"]
+},
+'num-40': {
+  prompt: "Las ventas en unidades de una empresa suben de 45.000 a 50.400 mientras el mercado total crece de 300.000 a 360.000 unidades. ¿Qué pasó con la participación de mercado de la empresa?",
+  choices: ["Subió de 15% a 14%", "Bajó de 15% a 14%", "Se mantuvo en 15%", "Subió de 14% a 15%"]
+},
+'num-41': {
+  prompt: "El inventario de un minorista rota 6 veces al año, con un inventario promedio valorado en USD 200.000. ¿Cuál es el costo anual de la mercancía vendida?",
+  choices: ["$600.000", "$1,2 millones", "$1,8 millones", "$2,4 millones"]
+},
+'num-42': {
+  prompt: "Las ventas trimestrales son: T1 USD 100.000, T2 USD 120.000, T3 USD 90.000, T4 USD 130.000. ¿T4 representa aproximadamente qué porcentaje de las ventas anuales?",
+  choices: ["25,0%", "27,5%", "29,5%", "32,5%"]
+},
+'num-43': {
+  prompt: "Un salario de USD 60.000 recibe un aumento de 10% y, un año después, otro aumento de 5%. ¿Cuál es el salario final?",
+  choices: ["$66.000", "$67.500", "$69.000", "$69.300"]
+},
+'num-44': {
+  prompt: "Las ventas en unidades aumentan 50% mientras el precio por unidad cae 20%. ¿Cuál es el cambio en los ingresos totales?",
+  choices: ["Aumento de 10%", "Aumento de 20%", "Aumento de 30%", "Sin cambio"]
+},
+'num-45': {
+  prompt: "El precio de un producto se reduce de USD 80 a USD 68. ¿Cuál es la reducción porcentual?",
+  choices: ["15%", "17,6%", "20%", "25%"]
+},
+'num-46': {
+  prompt: "La tasa de cambio es 1 USD = 4.000 COP. ¿Cuántos dólares estadounidenses valen 2.600.000 COP?",
+  choices: ["$260", "$450", "$520", "$650"]
+},
+'num-47': {
+  prompt: "Una bolsa contiene 4 canicas rojas y 6 azules. Se sacan dos canicas sin reposición. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  choices: ["2/15", "3/20", "4/25", "1/5"]
+},
+'num-48': {
+  prompt: "Se lanza una moneda equilibrada tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
+  choices: ["1/4", "3/8", "1/2", "2/3"]
+},
+'num-49': {
+  prompt: "En un grupo de 40 consultores, 25 hablan inglés y 20 hablan portugués. Cada consultor habla al menos uno de los dos idiomas. ¿Cuántos hablan ambos?",
+  choices: ["5", "10", "15", "20"]
+},
+'num-50': {
+  prompt: "Un equipo de proyecto debe seleccionar 2 personas de un grupo de 6 candidatos. ¿Cuántas parejas distintas son posibles?",
+  choices: ["15", "20", "30", "36"]
+},
+'num-51': {
+  prompt: "Una consultora cobra USD 180 por hora. Un proyecto requiere 3 consultores trabajando 25 horas cada uno, más USD 4.500 en gastos. ¿Cuál es el costo total para el cliente?",
+  choices: ["$13.500", "$15.750", "$17.100", "$18.900"]
+},
+'num-52': {
+  prompt: "Una tienda compra un artículo en USD 60, le aplica un sobreprecio de 50% y luego lo vende con 20% de descuento sobre el precio marcado. ¿Cuál es el precio final de venta?",
+  choices: ["$54", "$63", "$68", "$72"]
+},
+'num-53': {
+  prompt: "Una empresa tiene 3 oficinas. La oficina de Bogotá genera el 45% de los ingresos, Medellín el 30% y Cali el resto. Los ingresos totales son USD 12 millones. ¿Cuánto más genera Bogotá que Cali?",
+  choices: ["$2,4 millones", "$3,0 millones", "$3,6 millones", "$5,4 millones"]
+},
+'num-54': {
+  prompt: "Un servicio de suscripción tiene 8.000 suscriptores que pagan USD 25 al mes. Sube el precio a USD 30 y pierde el 10% de sus suscriptores. ¿Cómo cambian los ingresos mensuales?",
+  choices: ["Caen USD 8.000", "No cambian", "Suben USD 16.000", "Suben USD 40.000"]
+},
+'num-55': {
+  prompt: "Una fábrica opera 20 días al mes y produce 250 unidades diarias. Cada unidad se vende en USD 40 y los costos variables son USD 28 por unidad. Los costos fijos mensuales son USD 30.000. ¿Cuál es la utilidad mensual?",
+  choices: ["$30.000", "$45.000", "$60.000", "$90.000"]
+},
+'num-56': {
+  prompt: "Un fondo de inversión cobra una comisión de administración anual de 2% sobre los activos. Administra USD 450 millones y espera que los activos crezcan 10% el próximo año. ¿Aproximadamente qué comisión cobrará el próximo año sobre el valor de los activos al cierre del año?",
+  choices: ["$8,1 millones", "$9,0 millones", "$9,5 millones", "$9,9 millones"]
+},
+'num-57': {
+  prompt: "Los ingresos de una empresa subieron 25% mientras sus costos subieron 10%. Los ingresos eran originalmente USD 800.000 y los costos, USD 600.000. ¿Cuál es la nueva utilidad?",
+  choices: ["$200.000", "$220.000", "$340.000", "$360.000"]
+},
+'num-58': {
+  prompt: "Dos consultores reparten un honorario de USD 90.000 en razón 5:4. El de la porción mayor paga 30% de ella en impuestos. ¿Cuánto le queda después de impuestos?",
+  choices: ["$35.000", "$40.000", "$45.000", "$50.000"]
+},
+'num-59': {
+  prompt: "Las ventas de una tienda fueron USD 40.000 en enero. Subieron 20% en febrero y luego cayeron 25% en marzo. ¿Cuáles fueron las ventas de marzo?",
+  choices: ["$36.000", "$38.000", "$40.000", "$44.000"]
+},
+'num-60': {
+  prompt: "Una firma factura el 70% de las horas disponibles de sus consultores. Cada uno de sus 12 consultores tiene 160 horas disponibles al mes, y la tarifa de facturación es USD 200 por hora. ¿Cuáles son los ingresos mensuales?",
+  choices: ["$268.800", "$288.000", "$336.000", "$384.000"]
+},
+'num-61': {
+  prompt: "Un producto cuesta USD 45 fabricarlo. La empresa quiere un margen bruto de 40% sobre el precio de venta. ¿Cuál debería ser el precio de venta?",
+  choices: ["$54", "$63", "$67,50", "$75"]
+},
+'num-62': {
+  prompt: "Una empresa planea recortar sus costos totales en 12%. Los costos son USD 8 millones, de los cuales el 60% es mano de obra. Si protege por completo los costos de mano de obra, ¿en qué porcentaje deben caer los costos que no son de mano de obra?",
+  choices: ["12%", "20%", "24%", "30%"]
+},
+'num-63': {
+  prompt: "Una empresa adquiere a un competidor por USD 60 millones. El competidor genera USD 9 millones de utilidad anual, que se espera constante. ¿Cuántos años tardará la adquisición en pagarse sola, ignorando intereses?",
+  choices: ["Entre 5 y 6 años", "Entre 6 y 7 años", "Entre 7 y 8 años", "Entre 8 y 9 años"]
+},
+'num-64': {
+  prompt: "Las ventas subieron de 2.400 unidades a 3.000 unidades mientras los ingresos subieron de USD 96.000 a USD 105.000. ¿Qué pasó con el precio promedio por unidad?",
+  choices: ["Subió de $35 a $40", "Bajó de $40 a $35", "Se mantuvo en $40", "Bajó de $40 a $37,50"]
+},
+'num-65': {
+  prompt: "Los costos operativos de una empresa son USD 2,5 millones al año y crecen 4% anual. Los ingresos son USD 3,0 millones al año y crecen 2% anual. ¿Aproximadamente cuál es la utilidad dentro de dos años?",
+  choices: ["$0,30 millones", "$0,42 millones", "$0,50 millones", "$0,58 millones"]
+},
+
+/* Series keep their digits unseparated, as the English bank does. A thousands separator
+   inside a sequence puzzle adds visual noise to the very thing being pattern-matched, and
+   203.616 also invites a misread as a decimal. */
+'num-66': {
+  prompt: "¿Qué número sigue en la serie?\n\n3,  8,  15,  24,  35,  ?",
+  choices: ["42", "44", "46", "48"]
+},
+'num-67': {
+  prompt: "¿Qué número sigue en la serie?\n\n203616,  101808,  50904,  25452,  12726,  ?",
+  choices: ["6362", "6363", "6371", "6374"]
+},
+'num-68': {
+  prompt: "¿Qué número sigue en la serie?\n\n3,  4,  7,  11,  18,  29,  ?",
+  choices: ["47", "51", "55", "58"]
+},
+'num-69': {
+  prompt: "¿Qué número sigue en la serie?\n\n100,  92,  76,  52,  ?",
+  choices: ["16", "20", "24", "28"]
+},
+'num-70': {
+  prompt: "¿Qué número sigue en la serie?\n\n5,  11,  23,  47,  ?",
+  choices: ["71", "83", "89", "95"]
+},
+'num-71': {
+  prompt: "¿Qué número sigue en la serie?\n\n120,  60,  20,  5,  ?",
+  choices: ["1", "2", "2,5", "4"]
+},
+'num-72': {
+  prompt: "¿Qué número sigue en la serie?\n\n2,  5,  10,  17,  26,  ?",
+  choices: ["37", "39", "41", "43"]
+},
+'num-73': {
+  prompt: "¿Qué número sigue en la serie?\n\n12,  15,  21,  30,  42,  ?",
+  choices: ["48", "51", "54", "57"]
+},
+'num-74': {
+  prompt: "¿Qué número sigue en la serie?\n\n1,  2,  6,  24,  120,  ?",
+  choices: ["240", "480", "600", "720"]
+},
+'num-75': {
+  prompt: "Un número de esta secuencia rompe el patrón. ¿Cuál es?\n\n123,  234,  345,  465,  567",
+  choices: ["234", "345", "465", "567"]
+},
+'num-76': {
+  prompt: "Estima: ¿cuánto es el 19,8% de 4.050?",
+  choices: ["aproximadamente 600", "aproximadamente 700", "aproximadamente 800", "aproximadamente 900"]
+},
+'num-77': {
+  prompt: "Estima: 3.960 ÷ 41",
+  choices: ["aproximadamente 80", "aproximadamente 97", "aproximadamente 110", "aproximadamente 125"]
+},
+'num-78': {
+  prompt: "Estima: 1.240 × 19",
+  choices: ["aproximadamente 21.800", "aproximadamente 23.600", "aproximadamente 25.400", "aproximadamente 27.200"]
+},
+'num-79': {
+  prompt: "¿Cuál de estas fracciones es la mayor?",
+  choices: ["3/7", "4/9", "5/11", "7/16"]
+},
+'num-80': {
+  prompt: "Un mercado que vale USD 2,94 mil millones crece cerca de 10% al año. Estima su tamaño después de 3 años.",
+  choices: ["aproximadamente $3,2 mil millones", "aproximadamente $3,6 mil millones", "aproximadamente $3,9 mil millones", "aproximadamente $4,3 mil millones"]
+},
+'num-81': {
+  prompt: "Estima: el 48% de 6.120",
+  choices: ["aproximadamente 2.450", "aproximadamente 2.940", "aproximadamente 3.400", "aproximadamente 3.800"]
+},
+'num-82': {
+  prompt: "Un proveedor sube el precio unitario de un componente de USD 85 a USD 102. ¿En qué porcentaje ha aumentado el precio?",
+  choices: ["16,7%", "17,0%", "18,5%", "20,0%"]
+},
+'num-83': {
+  prompt: "La planta de personal de una empresa cae de 640 a 512 en un año. ¿En qué porcentaje ha disminuido?",
+  choices: ["12,8%", "20,0%", "25,0%", "32,0%"]
+},
+'num-84': {
+  prompt: "Un minorista reduce un precio 20% en una primera promoción y luego reduce el precio ya rebajado en un 15% adicional. ¿Cuál es la reducción porcentual total respecto al precio original?",
+  choices: ["27,0%", "32,0%", "33,0%", "35,0%"]
+},
+'num-85': {
+  prompt: "Tras un aumento de 25%, una suscripción mensual cuesta USD 60. ¿Cuál era el precio antes del aumento?",
+  choices: ["$45,00", "$48,00", "$50,00", "$75,00"]
+},
+'num-86': {
+  prompt: "Una firma emplea a 1.240 personas, de las cuales el 35% trabaja de forma remota. ¿Cuántas trabajan de manera presencial?",
+  choices: ["434", "620", "806", "1.240"]
+},
+'num-87': {
+  prompt: "Las ventas trimestrales de una división suben 40% en un trimestre y luego caen 40% en el siguiente. ¿Cuál es el cambio neto en los dos trimestres?",
+  choices: ["Una disminución de 16%", "Una disminución de 20%", "Sin cambio", "Un aumento de 16%"]
+},
+'num-88': {
+  prompt: "Un minorista compra un artículo en USD 40 y lo vende en USD 55. ¿Cuál es el sobreprecio expresado como porcentaje del costo?",
+  choices: ["27,3%", "33,3%", "37,5%", "40,0%"]
+},
+'num-89': {
+  prompt: "Se aplica un IVA de 21% a un precio neto de USD 340. ¿Cuál es el precio bruto con impuesto incluido?",
+  choices: ["$351,40", "$361,40", "$401,40", "$411,40"]
+},
+'num-90': {
+  prompt: "El presupuesto anual de un área, de USD 180.000, se recorta 12,5%. ¿Cuál es el nuevo presupuesto?",
+  choices: ["$157.500", "$160.000", "$162.000", "$202.500"]
+},
+'num-91': {
+  prompt: "Un negocio reporta ingresos de USD 2,4 millones y un costo de mercancía vendida de USD 1,56 millones. ¿Cuál es su margen bruto?",
+  choices: ["30,0%", "35,0%", "46,2%", "65,0%"]
+},
+'num-92': {
+  prompt: "Un producto se vende en USD 80 y tiene un margen bruto de 45%. ¿Cuánto cuesta fabricarlo?",
+  choices: ["$35,00", "$36,00", "$44,00", "$55,20"]
+},
+'num-93': {
+  prompt: "Una empresa reporta ingresos de USD 5 millones, utilidad bruta de USD 1,75 millones y gastos operativos de USD 900.000. ¿Cuál es su margen operativo?",
+  choices: ["15,0%", "16,0%", "16,5%", "17,0%"]
+},
+'num-94': {
+  prompt: "Un fabricante quiere un margen bruto de 40% en un artículo que cuesta USD 18 producir. ¿Qué precio de venta lo logra?",
+  choices: ["$25,20", "$28,80", "$30,00", "$32,40"]
+},
+'num-95': {
+  prompt: "Un negocio tiene actualmente ingresos de USD 1.000 y un costo de mercancía vendida de USD 600. El próximo año los ingresos suben 10% y el costo de mercancía vendida sube 5%. ¿Cuál será el margen bruto el próximo año?",
+  choices: ["40,0%", "41,5%", "42,7%", "45,0%"]
+},
+'num-96': {
+  prompt: "Una empresa reporta ingresos de USD 12,5 millones y un margen neto de 6%. ¿Cuál es su utilidad neta?",
+  choices: ["$750.000", "$833.000", "$1.250.000", "$2.083.000"]
+},
+'num-97': {
+  prompt: "Un minorista compra un artículo en USD 24 y aplica un sobreprecio de 60% sobre el costo. ¿Qué margen bruto representa el precio de venta resultante?",
+  choices: ["37,5%", "40,0%", "60,0%", "62,5%"]
+},
+'num-98': {
+  prompt: "Una empresa vende dos líneas de producto. La Línea A genera USD 600.000 de ingresos con un margen bruto de 30%; la Línea B genera USD 400.000 con un margen bruto de 50%. ¿Cuál es el margen bruto combinado de ambas líneas?",
+  choices: ["30,0%", "35,0%", "36,0%", "38,0%"]
+},
+'num-99': {
+  prompt: "Los ingresos de una empresa crecen de USD 4,0 millones a USD 6,4 millones en dos años. ¿Cuál es la tasa de crecimiento anual compuesta?",
+  choices: ["20,0%", "24,0%", "25,0%", "26,5%"]
+},
+'num-100': {
+  prompt: "Una base de suscriptores crece 8% al año. Usando la regla del 72, ¿aproximadamente cuánto tardará en duplicarse?",
+  choices: ["6 años", "9 años", "12 años", "15 años"]
+},
+'num-101': {
+  prompt: "Un producto vendió 250 unidades en el año 1. Las ventas en unidades crecieron 20% en el año 2 y un 15% adicional en el año 3. ¿Cuántas unidades se vendieron en el año 3?",
+  choices: ["331", "337", "345", "350"]
+},
+'num-102': {
+  prompt: "Los ingresos de una empresa crecieron de USD 50 millones a USD 86,4 millones en tres años. ¿Cuál fue la tasa de crecimiento anual compuesta?",
+  choices: ["20,0%", "24,3%", "28,8%", "72,8%"]
+},
+'num-103': {
+  prompt: "Un mercado que vale USD 800 millones crecerá 5% al año. ¿Cuánto valdrá después de tres años, redondeado al millón más cercano?",
+  choices: ["$840 millones", "$920 millones", "$926 millones", "$940 millones"]
+},
+'num-104': {
+  prompt: "Una inversión duplica su valor en seis años. Usando la regla del 72, ¿cuál es la tasa de crecimiento anual aproximada?",
+  choices: ["8,0%", "10,0%", "12,0%", "16,7%"]
+},
+'num-105': {
+  prompt: "Cinco representantes de ventas cerraron 12, 15, 9, 18 y 11 negocios el trimestre pasado. ¿Cuál fue el número promedio de negocios cerrados?",
+  choices: ["11", "12", "13", "15"]
+},
+'num-106': {
+  prompt: "Un equipo de ocho personas tiene un salario promedio de USD 54.000. Una novena persona se une con un salario de USD 72.000. ¿Cuál es el nuevo salario promedio del equipo?",
+  choices: ["$54.000", "$56.000", "$58.000", "$63.000"]
+},
+'num-107': {
+  prompt: "El promedio de seis números es 24. Cinco de los números son 18, 22, 25, 30 y 20. ¿Cuál es el sexto número?",
+  choices: ["27", "28", "29", "31"]
+},
+'num-108': {
+  prompt: "Un repartidor recorre 120 km a un promedio de 60 km/h y luego otros 120 km a un promedio de 40 km/h. ¿Cuál es la velocidad promedio de todo el trayecto?",
+  choices: ["48 km/h", "50 km/h", "52 km/h", "55 km/h"]
+},
+'num-109': {
+  prompt: "Una tienda registró ingresos mensuales de USD 82.000, USD 91.000, USD 77.000 y USD 94.000 durante cuatro meses. ¿Cuál fue el ingreso mensual promedio?",
+  choices: ["$82.500", "$84.000", "$85.000", "$86.000"]
+},
+'num-110': {
+  prompt: "Un presupuesto de USD 1,2 millones se divide entre marketing, ventas y desarrollo de producto en razón 3 : 5 : 2. ¿Cuánto se asigna a ventas?",
+  choices: ["$240.000", "$360.000", "$600.000", "$720.000"]
+},
+'num-111': {
+  prompt: "Dos áreas tienen plantas de personal en razón 4 : 7. El área más pequeña tiene 48 personas. ¿Cuántas personas hay en el área más grande?",
+  choices: ["56", "72", "80", "84"]
+},
+'num-112': {
+  prompt: "Una mezcla industrial contiene solvente y resina en razón 5 : 3. ¿Cuántos litros de resina hay en 320 litros de la mezcla?",
+  choices: ["96", "120", "128", "200"]
+},
+'num-113': {
+  prompt: "Los ingresos de una empresa se reparten entre sus regiones Oeste y Este en razón 9 : 5. La región Este generó USD 3,5 millones. ¿Cuánto generó la región Oeste?",
+  choices: ["$6,3 millones", "$6,5 millones", "$7,0 millones", "$9,0 millones"]
+},
+'num-114': {
+  prompt: "Una caja contiene 20 unidades, de las cuales 4 son defectuosas. Se saca una unidad al azar. ¿Cuál es la probabilidad de que sea defectuosa?",
+  choices: ["15%", "20%", "25%", "80%"]
+},
+'num-115': {
+  prompt: "Dos procesos de producción independientes tienen cada uno 10% de probabilidad de fallar en un día dado. ¿Cuál es la probabilidad de que ambos fallen el mismo día?",
+  choices: ["1%", "10%", "19%", "20%"]
+},
+'num-116': {
+  prompt: "Una máquina produce unidades con una tasa de defectos de 5%, y cada unidad es independiente de las demás. ¿Cuál es la probabilidad de que dos unidades consecutivas estén ambas libres de defectos?",
+  choices: ["85,00%", "90,00%", "90,25%", "95,00%"]
+},
+'num-117': {
+  prompt: "De 200 postulantes, 80 aprobaron la prueba numérica. De esos 80, exactamente 50 aprobaron también la prueba verbal. Se elige al azar a un postulante entre los que aprobaron la prueba numérica. ¿Cuál es la probabilidad de que también haya aprobado la verbal?",
+  choices: ["25,0%", "40,0%", "60,0%", "62,5%"]
+},
+'num-118': {
+  prompt: "¿Qué número sigue en esta serie?\n\n3, 7, 15, 31, ?",
+  choices: ["47", "55", "63", "71"]
+},
+'num-119': {
+  prompt: "¿Qué número sigue en esta serie?\n\n2, 6, 12, 20, 30, ?",
+  choices: ["40", "42", "44", "46"]
+},
+'num-120': {
+  prompt: "¿Qué número sigue en esta serie?\n\n81, 27, 9, 3, ?",
+  choices: ["0", "1", "1,5", "2"]
+},
+'num-121': {
+  prompt: "¿Qué número sigue en esta serie?\n\n1, 4, 9, 16, 25, ?",
+  choices: ["36", "42", "49", "64"]
+},
+'num-122': {
+  prompt: "¿Qué número sigue en esta serie?\n\n120, 60, 30, 15, ?",
+  choices: ["5", "7,5", "10", "12"]
+},
+'num-123': {
+  prompt: "¿Qué número sigue en esta serie?\n\n2, 3, 5, 8, 13, ?",
+  choices: ["21", "24", "26", "34"]
+},
+'num-124': {
+  prompt: "¿Qué número sigue en esta serie?\n\n7, 14, 28, 56, ?",
+  choices: ["84", "96", "112", "128"]
+},
+'num-125': {
+  prompt: "¿Qué número sigue en esta serie?\n\n100, 91, 83, 76, ?",
+  choices: ["66", "68", "69", "70"]
+},
+'num-126': {
+  prompt: "¿Qué número sigue en esta serie?\n\n1, 8, 27, 64, ?",
+  choices: ["81", "100", "121", "125"]
+},
+'num-127': {
+  prompt: "¿Qué número sigue en esta serie?\n\n3, 6, 11, 18, 27, ?",
+  choices: ["34", "36", "38", "40"]
+},
+'num-128': {
+  prompt: "Una máquina produce 240 unidades en 6 horas. Trabajando al mismo ritmo, ¿cuántas unidades producirá en 15 horas?",
+  choices: ["480", "540", "600", "660"]
+},
+'num-129': {
+  prompt: "Tres trabajadores completan una tarea en 12 días. Suponiendo que todos trabajan al mismo ritmo, ¿cuánto tardarían cuatro trabajadores en completar la misma tarea?",
+  choices: ["8 días", "9 días", "10 días", "16 días"]
+},
+'num-130': {
+  prompt: "Una bomba puede llenar un tanque en 8 horas y una segunda bomba puede llenar el mismo tanque en 12 horas. Trabajando juntas desde vacío, ¿cuánto tardarán en llenarlo?",
+  choices: ["2,4 horas", "4,0 horas", "4,5 horas", "4,8 horas"]
+},
+'num-131': {
+  prompt: "Un auto recorre 315 km en 3,5 horas. ¿Cuál es su velocidad promedio?",
+  choices: ["90 km/h", "95 km/h", "100 km/h", "110 km/h"]
+},
+'num-132': {
+  prompt: "Un equipo de 5 personas procesa 1.200 reclamaciones en 4 días. Trabajando al mismo ritmo por persona, ¿cuántas reclamaciones procesarían 8 personas en 5 días?",
+  choices: ["1.920", "2.400", "2.880", "3.000"]
+},
+'num-133': {
+  prompt: "Una impresora imprime 45 páginas por minuto. ¿Cuánto tardará en imprimir 1.530 páginas?",
+  choices: ["28 minutos", "32 minutos", "34 minutos", "38 minutos"]
+},
+'num-134': {
+  prompt: "Entra agua a un tanque a 15 litros por minuto mientras un desagüe saca agua a 6 litros por minuto. Partiendo de vacío, ¿cuánto tardará en llenarse un tanque de 540 litros?",
+  choices: ["25 minutos", "36 minutos", "50 minutos", "60 minutos"]
+},
+'num-135': {
+  prompt: "Un negocio de suscripción tiene 4.850 clientes, cada uno gastando aproximadamente USD 197 al año. ¿Cuál de las siguientes cifras se acerca más a sus ingresos anuales?",
+  choices: ["$760.000", "$860.000", "$960.000", "$1.060.000"]
+},
+'num-136': {
+  prompt: "Una bodega almacena 78 estibas, cada una con 96 cajas. ¿Cuál de las siguientes cifras se acerca más al número total de cajas?",
+  choices: ["6.500", "7.500", "8.500", "9.500"]
+},
+'num-137': {
+  prompt: "Un proyecto requiere cerca de 1.960 horas de trabajo. Un equipo de 7 personas trabaja 38 horas semanales cada una. ¿Aproximadamente cuántas semanas tomará el proyecto?",
+  choices: ["7 semanas", "9 semanas", "11 semanas", "14 semanas"]
+},
+'num-138': {
+  prompt: "Una ciudad de 2,1 millones de habitantes tiene aproximadamente un médico por cada 340 habitantes. ¿Cuántos médicos tiene aproximadamente la ciudad?",
+  choices: ["4.000", "6.000", "8.000", "12.000"]
+},
+'num-139': {
+  prompt: "Un minorista vende cerca de 312 unidades al día a un precio promedio de USD 28,60. ¿Cuál de las siguientes cifras se acerca más a sus ingresos en una semana de siete días?",
+  choices: ["$38.000", "$50.000", "$62.000", "$74.000"]
+},
+'num-140': {
+  prompt: "Una flota de 43 vehículos recorre aproximadamente 1.180 km al mes cada uno. ¿Cuál de las siguientes cifras se acerca más a la distancia total mensual de la flota?",
+  choices: ["31.000 km", "38.000 km", "44.000 km", "51.000 km"]
+},
+'num-141': {
+  prompt: "Un producto se vende en USD 25 por unidad con un costo variable de USD 15 por unidad. Los costos fijos de la empresa son USD 80.000. ¿Cuántas unidades debe vender para alcanzar el punto de equilibrio?",
+  choices: ["3.200", "5.333", "8.000", "16.000"]
+},
+'num-142': {
+  prompt: "Una campaña de marketing cuesta USD 45.000 y trae 900 clientes nuevos. ¿Cuál es el costo de adquisición por cliente?",
+  choices: ["$20", "$50", "$75", "$90"]
+},
+'num-143': {
+  prompt: "Un suscriptor paga USD 30 al mes y permanece en el servicio un promedio de 40 meses. ¿Cuál es el valor de vida promedio del cliente, antes de costos?",
+  choices: ["$360", "$750", "$900", "$1.200"]
+},
+'num-144': {
+  prompt: "Una consultora emplea a 60 consultores, cada uno con 1.800 horas disponibles al año. El año pasado la firma facturó 86.400 horas a clientes. ¿Cuál fue su tasa de utilización?",
+  choices: ["72%", "75%", "80%", "85%"]
+},
+'num-145': {
+  prompt: "Un minorista reporta un costo de mercancía vendida de USD 4,2 millones y un inventario promedio de USD 700.000. ¿Cuál es su rotación de inventario?",
+  choices: ["6 veces", "8 veces", "10 veces", "12 veces"]
+},
+'num-146': {
+  prompt: "Una inversión de USD 250.000 devuelve USD 310.000 en total. ¿Cuál es el retorno sobre la inversión?",
+  choices: ["19,4%", "24,0%", "30,0%", "124,0%"]
+},
+'num-147': {
+  prompt: "Una empresa tiene costos fijos de USD 120.000. Vende su producto en USD 40 por unidad con un costo variable de USD 28 por unidad. ¿Cuántas unidades debe vender para obtener una utilidad de USD 60.000?",
+  choices: ["5.000", "10.000", "12.000", "15.000"]
+},
+'num-148': {
+  prompt: "Un negocio de suscripción empieza el mes con 2.400 clientes. Durante el mes pierde 72 clientes y gana 150 nuevos. ¿Cuál es su tasa de cancelación mensual?",
+  choices: ["3,0%", "3,25%", "6,0%", "6,25%"]
+},
+'num-149': {
+  prompt: "Una tienda compra 300 unidades a USD 12 cada una. Vende 240 de ellas a USD 22 cada una y liquida las unidades restantes a USD 14 cada una. ¿Cuál es la utilidad total de la tienda sobre el lote?",
+  choices: ["$2.040", "$2.520", "$3.120", "$3.600"]
+},
+'num-150': {
+  prompt: "Una empresa reporta ingresos de USD 8 millones con un margen bruto de 30%. Los gastos operativos son USD 1,5 millones y el impuesto se cobra al 25% de la utilidad antes de impuestos. ¿Cuál es la utilidad neta de la empresa?",
+  choices: ["$450.000", "$600.000", "$675.000", "$900.000"]
+},
+'num-151': {
+  prompt: "Un empleado que gana USD 52.000 recibe un aumento de 6% y, un año después, otro aumento de 4%. ¿Cuál es su salario después de ambos aumentos?",
+  choices: ["$56.160,00", "$57.200,00", "$57.300,00", "$57.324,80"]
+},
+'num-152': {
+  prompt: "Un proyecto tiene cuatro fases que cuestan USD 18.000, USD 27.000, USD 35.000 y USD 20.000. El presupuesto aprobado es USD 110.000. ¿Qué porcentaje del presupuesto queda sin gastar?",
+  choices: ["9,1%", "10,0%", "11,0%", "12,5%"]
+},
+'num-153': {
+  prompt: "Una fábrica opera 22 días al mes, con dos turnos diarios de 8 horas cada uno, y produce 65 unidades por hora. ¿Cuál es su producción mensual?",
+  choices: ["17.160", "22.880", "28.600", "45.760"]
+},
+'num-154': {
+  prompt: "Una tienda registró ventas de USD 240.000 en el primer trimestre. Las ventas cayeron 15% en el segundo trimestre y luego subieron 25% en el tercero. ¿Cuáles fueron las ventas del tercer trimestre?",
+  choices: ["$240.000", "$244.800", "$255.000", "$270.000"]
+},
+'num-155': {
+  prompt: "Un vehículo se compra por USD 32.000. Se deprecia 20% el primer año y un 15% adicional de su valor restante el segundo año. ¿Cuánto vale después de dos años?",
+  choices: ["$20.800", "$21.760", "$22.400", "$24.320"]
+},
+'num-156': {
+  prompt: "Una conferencia tiene 480 asistentes. De estos, el 25% asiste al taller A. De los asistentes que no van al taller A, el 40% asiste al taller B. ¿Cuántos asisten al taller B?",
+  choices: ["96", "120", "132", "144"]
+},
+'num-157': {
+  prompt: "Un préstamo de USD 18.000 acumula interés simple de 7% anual durante tres años, sin pagos hasta el final. ¿Qué monto total debe pagarse?",
+  choices: ["$19.260", "$20.260", "$21.600", "$21.780"]
+},
+'num-158': {
+  prompt: "Un equipo de 6 personas trabaja 7,5 horas diarias durante 12 días a una tarifa de mano de obra de USD 45 por hora. ¿Cuál es el costo total de mano de obra?",
+  choices: ["$24.300", "$27.000", "$29.160", "$32.400"]
+},
+'num-159': {
+  prompt: "Un mayorista aplica 15% de descuento a pedidos superiores a USD 5.000, y luego un 5% adicional sobre el monto ya descontado por pago dentro de diez días. ¿Cuál es el costo final de un pedido de USD 7.200 pagado dentro de diez días?",
+  choices: ["$5.814", "$5.940", "$6.120", "$6.840"]
+},
+'num-160': {
+  prompt: "El presupuesto anual de un área subió de USD 340.000 a USD 391.000, mientras su planta de personal subió de 17 a 23. ¿Qué pasó con el presupuesto por persona?",
+  choices: ["Cayó USD 3.000", "Cayó USD 1.700", "Subió USD 3.000", "Subió USD 51.000"]
+},
+'num-161': {
+  prompt: "Una máquina cuesta USD 84.000 y ahorra USD 1.750 mensuales en costos operativos. Ignorando intereses, ¿cuál es el periodo de recuperación?",
+  choices: ["3,5 años", "4,0 años", "4,5 años", "5,0 años"]
+},
+'num-162': {
+  prompt: "Una firma factura a tres clientes por USD 12.400, USD 9.750 y USD 15.850. Los tres aprovechan un descuento de 3% por pago anticipado. ¿Qué monto total recibe la firma?",
+  choices: ["$36.860", "$37.050", "$37.240", "$38.000"]
+},
+'num-163': {
+  prompt: "Un fabricante vende un producto a través de un minorista a un precio de lista de USD 45. El minorista se lleva una comisión de 30% sobre el precio de lista, y el fabricante además paga USD 4,20 por unidad en envío. ¿Cuánto recibe el fabricante por unidad?",
+  choices: ["$26,10", "$27,00", "$27,30", "$31,50"]
 }
 
 };
