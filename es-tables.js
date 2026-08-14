@@ -184,13 +184,50 @@
       });
   }
 
-  var built = 0;
+  /* The 16 chart questions are inline SVG, and their axis and series labels are text nodes
+     like any other. Left alone they would have put an English chart under a Spanish
+     question, so they go through the same treatment: exact-match glossary, structure never
+     touched. Product and company names stay as they are; only real words move. */
+  var CHART_TERMS = {
+    'Alpha':'Alpha', 'Beta':'Beta',
+    'Alpha — 40%':'Alpha — 40%', 'Beta — 25%':'Beta — 25%',
+    'Gamma — 20%':'Gamma — 20%', 'Others — 15%':'Otros — 15%',
+    'Cost structure ($m)':'Estructura de costos ($ millones)',
+    'Labour':'Mano de obra',
+    'Market share (total market $800m)':'Participación de mercado (mercado total $800 millones)',
+    'Market share, 2020–2024':'Participación de mercado, 2020–2024',
+    'Materials':'Materiales',
+    'Other':'Otros',
+    'Product A':'Producto A', 'Product B':'Producto B',
+    'Q1':'T1', 'Q2':'T2', 'Q3':'T3', 'Q4':'T4',
+    'Region A':'Región A', 'Region B':'Región B',
+    'Revenue by quarter ($000)':'Ingresos por trimestre ($000)',
+    'Units sold':'Unidades vendidas'
+  };
+
+  function translateChart(svg, id){
+    return svg.replace(/>([^<>]+)</g, function(m, txt){
+      var t = txt.trim();
+      if(!t) return m;
+      if(Object.prototype.hasOwnProperty.call(CHART_TERMS, t)) return '>' + CHART_TERMS[t] + '<';
+      var n = esNum(t);
+      if(/[A-Za-z]/.test(n)) missing.push(id + ': chart label "' + t + '"');
+      return '>' + n + '<';
+    });
+  }
+
+  var built = 0, charts = 0;
   bank.forEach(function(q){
-    if(!q.table) return;
-    var es = translateTable(q.table, q.id);
-    window.ES_QUESTIONS[q.id] = window.ES_QUESTIONS[q.id] || {};
-    window.ES_QUESTIONS[q.id].table = es;
-    built++;
+    if(q.table){
+      window.ES_QUESTIONS[q.id] = window.ES_QUESTIONS[q.id] || {};
+      window.ES_QUESTIONS[q.id].table = translateTable(q.table, q.id);
+      built++;
+    }
+    if(q.chart){
+      window.ES_QUESTIONS[q.id] = window.ES_QUESTIONS[q.id] || {};
+      window.ES_QUESTIONS[q.id].chart = translateChart(q.chart, q.id);
+      charts++;
+    }
   });
 
   if(missing.length){
@@ -221,6 +258,14 @@
       };
       if(digits(q.table) !== digits(es)) problems.push(q.id + ': numeric content changed');
     });
-    return { tablesBuilt: built, untranslated: missing, structuralProblems: problems };
+    /* Charts get the same treatment: the drawing must be identical, only relabelled. */
+    bank.forEach(function(q){
+      var es = window.ES_QUESTIONS[q.id] && window.ES_QUESTIONS[q.id].chart;
+      if(!q.chart || !es) return;
+      var shape = function(h){ return (h.match(/<[^>]+>/g) || []).join(''); };
+      if(shape(q.chart) !== shape(es)) problems.push(q.id + ': chart structure changed');
+    });
+    return { tablesBuilt: built, chartsBuilt: charts, untranslated: missing,
+             structuralProblems: problems };
   };
 })();

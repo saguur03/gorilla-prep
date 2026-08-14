@@ -1203,6 +1203,536 @@ var T = {
     "La moda, porque es el resultado más común",
     "El rango, porque muestra la dispersión completa"
   ]
+},
+'data-50': {
+  prompt: "¿Cuál es el rango de las cifras de negocios cerrados?",
+  choices: ["17", "20", "23", "26"]
+},
+'data-51': {
+  prompt: "Si se excluyeran los 20 negocios de Gómez, ¿qué pasaría con la media y la mediana?",
+  choices: [
+    "La media caería a 6 y la mediana a 5,5",
+    "La media caería a 6 y la mediana se mantendría en 6",
+    "Ambas se mantendrían igual",
+    "La media se mantendría en 8 y la mediana caería a 5,5"
+  ]
+},
+'data-52': {
+  prompt: "Ambos equipos tienen la misma media de ventas mensuales. ¿Qué equipo tiene la mayor desviación estándar?",
+  choices: ["Equipo A", "Equipo B", "Son idénticas", "No puede determinarse solo con la media"]
+},
+'data-53': {
+  prompt: "Un gerente quiere el equipo cuya producción mensual sea más predecible. ¿Cuál debería elegir, y por qué?",
+  choices: [
+    "El Equipo B, porque alcanzó el mes individual más alto",
+    "El Equipo A, porque sus resultados varían mucho menos alrededor del mismo promedio",
+    "El Equipo B, porque su crecimiento es más constante",
+    "Cualquiera de los dos, porque los promedios son iguales"
+  ]
+},
+'data-54': {
+  prompt: "Un estudio reporta un coeficiente de correlación de r = 0,85 entre el gasto en publicidad y las ventas.\n\n¿Qué indica esto?",
+  choices: [
+    "La publicidad causa el 85% de las ventas",
+    "Una relación positiva fuerte: un mayor gasto tiende a acompañar mayores ventas",
+    "El 85% de los puntos está exactamente sobre la línea de tendencia",
+    "Las ventas suben 0,85% por cada 1% de aumento en publicidad"
+  ]
+},
+'data-55': {
+  prompt: "¿Qué coeficiente de correlación indica la relación más fuerte entre dos variables?",
+  choices: ["r = 0,60", "r = 0,05", "r = −0,78", "r = 0,40"]
+},
+'data-56': {
+  prompt: "Las ventas de helado y los incidentes de ahogamiento están fuertemente correlacionados de forma positiva a lo largo del año.\n\n¿Cuál es la interpretación más razonable?",
+  choices: [
+    "Comprar helado aumenta el riesgo de ahogarse",
+    "Un tercer factor —el clima cálido— impulsa ambos de forma independiente",
+    "Los incidentes de ahogamiento hacen que la gente compre helado",
+    "La correlación debe ser un error de cálculo"
+  ]
+},
+'data-57': {
+  prompt: "¿Qué registro contiene una fecha imposible?",
+  choices: ["1002", "1003", "1004", "1005"]
+},
+'data-58': {
+  prompt: "¿Qué dos registros parecen ser duplicados del mismo pedido?",
+  choices: ["1001 y 1002", "1001 y 1004", "1002 y 1003", "1003 y 1005"]
+},
+'data-59': {
+  prompt: "¿Qué valor de este extracto es lógicamente imposible para un pedido y debe investigarse?",
+  choices: [
+    "El valor de $4.200, porque aparece dos veces",
+    "El valor de −$1.200, porque un pedido no puede tener monto negativo",
+    "El valor de $2.970, porque no es un número redondo",
+    "El valor de $3.850, porque es de otra región"
+  ]
+},
+'data-60': {
+  prompt: "Si calcularas el valor promedio de pedido con este extracto sin limpiarlo, ¿qué saldría mal?",
+  choices: [
+    "Nada: el promedio sería confiable",
+    "El promedio quedaría subestimado, porque un valor negativo y un pedido duplicado lo distorsionan",
+    "El promedio quedaría sobreestimado, porque hay muy pocos registros",
+    "El promedio no puede calcularse en absoluto"
+  ]
+},
+'data-61': {
+  prompt: "Un informe indica que los segmentos de un mercado tienen participaciones de 34%, 28%, 21%, 14% y 9%.\n\n¿Qué debes concluir?",
+  choices: [
+    "El segmento más grande es dominante",
+    "Las cifras contienen un error, porque las participaciones suman 106%",
+    "El mercado está muy fragmentado",
+    "Las participaciones son consistentes y pueden usarse tal cual"
+  ]
+},
+'data-62': {
+  prompt: "Una empresa envía por correo una encuesta de satisfacción a clientes que compraron en los últimos 30 días. El 92% dice estar satisfecho.\n\n¿Cuál es la principal limitación de este resultado?",
+  choices: [
+    "La muestra excluye a los clientes que dejaron de comprar, que son los más propensos a estar insatisfechos",
+    "Treinta días es un periodo demasiado corto para medir satisfacción",
+    "Las encuestas por correo son menos precisas que las telefónicas",
+    "El resultado debió reportarse como fracción y no como porcentaje"
+  ]
+},
+'data-63': {
+  prompt: "Un analista encuentra que 3 de 400 filas de un conjunto de datos no tienen valor en la columna 'región'.\n\n¿Qué respuesta es más apropiada?",
+  choices: [
+    "Eliminar todo el conjunto de datos y pedir un extracto nuevo",
+    "Rellenar los vacíos con la región más común para no perder filas",
+    "Investigar por qué faltan, luego excluirlas o etiquetarlas, y dejar constancia del tratamiento en el análisis",
+    "Ignorar el asunto por completo, ya que 3 filas no pueden importar"
+  ]
+},
+'data-64': {
+  prompt: "Un gráfico muestra dos barras, una en 102 unidades y otra en 108, pero su eje vertical empieza en 100 en lugar de 0.\n\n¿Cuál es el efecto?",
+  choices: [
+    "El gráfico subestima la diferencia entre las dos barras",
+    "El gráfico exagera la diferencia, haciendo que una brecha de cerca de 6% se vea mucho mayor",
+    "El gráfico es inválido y no puede interpretarse",
+    "La elección del eje no afecta cómo se leen las barras"
+  ]
+},
+'data-65': {
+  prompt: "Un conjunto de datos de ingresos mensuales lista la mayoría de los meses en dólares pero tres meses en miles de dólares.\n\n¿Qué tipo de problema es este?",
+  choices: [
+    "Un problema de datos faltantes",
+    "Un problema de unidades inconsistentes, que distorsionará cualquier total o promedio hasta corregirlo",
+    "Un problema de registros duplicados",
+    "Un problema de redondeo con impacto insignificante"
+  ]
+},
+'data-66': {
+  prompt: "Un programa piloto en una sucursal elevó la productividad 30%. La dirección propone desplegarlo a toda la empresa y espera el mismo resultado.\n\n¿Cuál es la limitación clave de los datos?",
+  choices: [
+    "Una mejora de 30% es demasiado grande para ser creíble",
+    "Una sola sucursal es una muestra de uno, y puede diferir de las demás en formas que produjeron el resultado",
+    "La productividad no es una cantidad medible",
+    "El programa debió correr un año completo"
+  ]
+},
+'data-67': {
+  prompt: "¿En qué trimestre el Producto A vendió por primera vez más que el Producto B?",
+  choices: ["T1", "T2", "T3", "T4"]
+},
+'data-68': {
+  prompt: "¿Qué producto creció más rápido durante el año, medido de T1 a T4?",
+  choices: [
+    "El Producto A, por un margen amplio",
+    "El Producto B, por un margen amplio",
+    "Crecieron al mismo ritmo",
+    "El Producto B, pero solo ligeramente"
+  ]
+},
+'data-69': {
+  prompt: "¿Cuáles fueron las ventas totales del Producto A en los cuatro trimestres?",
+  choices: ["$195.000", "$205.000", "$215.000", "$245.000"]
+},
+'data-70': {
+  prompt: "¿Qué trimestre tuvo las mayores ventas combinadas de ambos productos?",
+  choices: ["T1", "T2", "T3", "T4"]
+},
+'data-71': {
+  prompt: "¿En qué año la participación de Beta superó por primera vez la de Alpha?",
+  choices: ["2021", "2022", "2023", "2024"]
+},
+'data-72': {
+  prompt: "¿Cuántos puntos porcentuales cayó la participación de Alpha entre 2020 y 2024?",
+  choices: ["6 puntos", "8 puntos", "10 puntos", "14 puntos"]
+},
+'data-73': {
+  prompt: "Entre 2020 y 2024, ¿qué pasó aproximadamente con la participación combinada de las dos empresas?",
+  choices: ["Subió de 42% a 46%", "Bajó de 42% a 40%", "Se mantuvo en 42%", "Bajó de 46% a 42%"]
+},
+'data-74': {
+  prompt: "¿Qué serie muestra el cambio interanual más estable?",
+  choices: [
+    "Alpha, cambiando 2–3 puntos al año",
+    "Beta, cambiando exactamente 2 puntos al año",
+    "Ambas cambian igual",
+    "Ninguna muestra un patrón consistente"
+  ]
+},
+'data-75': {
+  prompt: "La barra de la Región B parece cerca de cuatro veces la altura de la de la Región A.\n\n¿En qué porcentaje las ventas reales de la Región B superan a las de la Región A?",
+  choices: ["cerca de 6%", "cerca de 25%", "cerca de 75%", "cerca de 300%"]
+},
+'data-76': {
+  prompt: "¿Qué único cambio haría que este gráfico representara la diferencia de forma justa?",
+  choices: [
+    "Empezar el eje vertical en cero",
+    "Intercambiar el orden de las dos barras",
+    "Poner ambas barras del mismo color",
+    "Agregar una tercera región como contexto"
+  ]
+},
+'data-77': {
+  prompt: "¿Cuáles son los ingresos de Alpha en este mercado?",
+  choices: ["$240 millones", "$320 millones", "$360 millones", "$400 millones"]
+},
+'data-78': {
+  prompt: "¿Cuántos ingresos más genera Beta que Gamma?",
+  choices: ["$20 millones", "$40 millones", "$60 millones", "$80 millones"]
+},
+'data-79': {
+  prompt: "Si Gamma adquiriera todo el grupo 'Otros' y conservara a cada cliente, ¿qué afirmación sería cierta?",
+  choices: [
+    "Gamma se convertiría en el jugador más grande",
+    "Gamma pasaría al segundo lugar",
+    "Gamma seguiría siendo tercera",
+    "Gamma empataría con Alpha"
+  ]
+},
+'data-80': {
+  prompt: "¿Qué categoría de costo creció más rápido entre 2024 y 2025?",
+  choices: ["Mano de obra", "Materiales", "Otros", "Todas crecieron al mismo ritmo"]
+},
+'data-81': {
+  prompt: "¿Qué pasó con la participación de Mano de obra en los costos totales?",
+  choices: [
+    "Subió de 50% a 55%",
+    "Bajó de 50% a cerca de 47%",
+    "Se mantuvo en 50%",
+    "Bajó de 55% a 50%"
+  ]
+},
+'data-82': {
+  prompt: "¿En cuánto subieron los costos totales entre 2024 y 2025?",
+  choices: ["$12 millones", "$18 millones", "$24 millones", "$30 millones"]
+},
+'data-83': {
+  prompt: "¿Qué línea de producto generó los mayores ingresos en el año completo?",
+  choices: ["Alpha", "Beta", "Gamma", "Delta"]
+},
+'data-84': {
+  prompt: "¿Cuáles fueron los ingresos totales de las cuatro líneas de producto en T4?",
+  choices: ["1.470", "1.525", "1.585", "1.620"]
+},
+'data-85': {
+  prompt: "¿Qué línea de producto creció más rápido en términos porcentuales entre T1 y T4?",
+  choices: ["Alpha", "Beta", "Gamma", "Delta"]
+},
+'data-86': {
+  prompt: "¿Qué participación de los ingresos totales de T4 representó Gamma, al entero porcentual más cercano?",
+  choices: ["20%", "23%", "25%", "28%"]
+},
+'data-87': {
+  prompt: "¿En qué porcentaje crecieron los ingresos totales de todas las líneas de producto de T1 a T4?",
+  choices: ["21,9%", "22,5%", "24,0%", "28,5%"]
+},
+'data-88': {
+  prompt: "Si Gamma sigue creciendo cada trimestre el mismo monto absoluto que creció entre T3 y T4, ¿cuáles serán sus ingresos en T1 del próximo año?",
+  choices: ["420", "432", "450", "480"]
+},
+'data-89': {
+  prompt: "¿Qué área tiene el salario promedio más alto?",
+  choices: ["Ingeniería", "Finanzas", "Marketing", "Ventas"]
+},
+'data-90': {
+  prompt: "¿Cuál es el salario promedio de toda la empresa, a la centena de dólares más cercana?",
+  choices: ["$65.000", "$67.600", "$70.000", "$74.000"]
+},
+'data-91': {
+  prompt: "¿Qué porcentaje del personal total de la empresa representa Operaciones?",
+  choices: ["29,6%", "33,3%", "40,0%", "44,0%"]
+},
+'data-92': {
+  prompt: "Si el personal de Operaciones se recortara 25% sin cambiar su salario promedio, ¿en cuánto quedaría la nómina total de la empresa?",
+  choices: ["$17.280 miles", "$18.780 miles", "$19.080 miles", "$20.280 miles"]
+},
+'data-93': {
+  prompt: "Ventas, Marketing y Finanzas comparten el mismo salario promedio. ¿Cuál es?",
+  choices: ["$70.000", "$75.000", "$80.000", "$90.000"]
+},
+'data-94': {
+  prompt: "¿La nómina total de Ingeniería es qué múltiplo de la de Finanzas?",
+  choices: ["4,50", "5,25", "6,75", "7,00"]
+},
+'data-95': {
+  prompt: "¿Qué categoría de costo creció más rápido en términos porcentuales entre 2024 y 2025?",
+  choices: ["Mano de obra", "Logística", "Gastos generales", "Energía"]
+},
+'data-96': {
+  prompt: "¿Qué categoría de costo disminuyó entre 2024 y 2025?",
+  choices: ["Energía", "Mano de obra", "Logística", "Gastos generales"]
+},
+'data-97': {
+  prompt: "¿En qué porcentaje crecieron los costos totales entre 2024 y 2025?",
+  choices: ["10,2%", "11,4%", "12,5%", "13,6%"]
+},
+'data-98': {
+  prompt: "¿Qué participación de los costos totales representaron las materias primas en 2025?",
+  choices: ["39,4%", "40,0%", "42,0%", "44,0%"]
+},
+'data-99': {
+  prompt: "Si los costos de energía crecen en 2026 al mismo ritmo porcentual que en 2025, ¿en cuánto quedarán, al millar de dólares más cercano?",
+  choices: ["$1.530 miles", "$1.640 miles", "$1.700 miles", "$1.823 miles"]
+},
+'data-100': {
+  prompt: "¿Qué participación de los costos totales de 2025 representaron juntas la mano de obra y la energía?",
+  choices: ["40,8%", "42,0%", "44,5%", "46,0%"]
+},
+'data-101': {
+  prompt: "¿Qué tienda genera las menores ventas por metro cuadrado?",
+  choices: ["Centro", "Northgate", "Riverside", "Southbank"]
+},
+'data-102': {
+  prompt: "¿Cuáles fueron las ventas anuales totales de las cinco tiendas?",
+  choices: ["$25.450 miles", "$26.950 miles", "$27.500 miles", "$28.150 miles"]
+},
+'data-103': {
+  prompt: "¿Cuáles son las ventas anuales promedio por empleado en todo el parque de tiendas, a la centena de dólares más cercana?",
+  choices: ["$150.000", "$168.400", "$172.000", "$180.000"]
+},
+'data-104': {
+  prompt: "Northgate tiene la mayor superficie de todas las tiendas. ¿En qué puesto queda en ventas por metro cuadrado?",
+  choices: ["1.º", "2.º", "4.º", "5.º"]
+},
+'data-105': {
+  prompt: "Si las ventas por metro cuadrado de Riverside subieran hasta igualar las de Centro, ¿en cuánto quedarían sus ventas anuales?",
+  choices: ["$4.800 miles", "$5.000 miles", "$5.400 miles", "$6.000 miles"]
+},
+'data-106': {
+  prompt: "¿Qué porcentaje de las ventas totales del parque de tiendas representa la tienda Centro?",
+  choices: ["24,0%", "25,5%", "26,7%", "28,0%"]
+},
+'data-107': {
+  prompt: "¿Qué país genera la mayor utilidad bruta?",
+  choices: ["Francia", "Polonia", "España", "Suecia"]
+},
+'data-108': {
+  prompt: "¿Cuál es el margen bruto combinado de los cinco países?",
+  choices: ["35,0%", "37,6%", "40,0%", "42,0%"]
+},
+'data-109': {
+  prompt: "¿Cuál es la utilidad bruta total de los cinco países?",
+  choices: ["$52,5 millones", "$54,0 millones", "$56,5 millones", "$59,0 millones"]
+},
+'data-110': {
+  prompt: "Suecia tiene el margen bruto más alto de todos los países. ¿Qué participación de la utilidad bruta total aporta?",
+  choices: ["10,6%", "12,0%", "14,0%", "16,0%"]
+},
+'data-111': {
+  prompt: "Si el margen bruto de Italia subiera de 32% a 40% sin cambio en los ingresos, ¿cuánta utilidad bruta adicional generaría?",
+  choices: ["$2,4 millones", "$2,7 millones", "$3,0 millones", "$3,6 millones"]
+},
+'data-112': {
+  prompt: "¿Qué dos países suman exactamente el 60% de los ingresos totales?",
+  choices: ["Francia y España", "Francia e Italia", "Italia y España", "Polonia y Francia"]
+},
+'data-113': {
+  prompt: "¿En qué mes fueron más altos los ingresos?",
+  choices: ["Marzo", "Abril", "Mayo", "Junio"]
+},
+'data-114': {
+  prompt: "¿Cuáles fueron los ingresos totales de los seis meses?",
+  choices: ["$368.000", "$375.500", "$383.000", "$391.000"]
+},
+'data-115': {
+  prompt: "¿Cuál fue el precio promedio realizado por unidad en todo el periodo de seis meses?",
+  choices: ["$40,74", "$41,17", "$42,00", "$43,50"]
+},
+'data-116': {
+  prompt: "¿En qué porcentaje crecieron las ventas en unidades de enero a junio?",
+  choices: ["36,8%", "50,0%", "58,3%", "63,2%"]
+},
+'data-117': {
+  prompt: "¿En qué porcentaje crecieron los ingresos de enero a junio?",
+  choices: ["33,7%", "36,0%", "40,0%", "45,0%"]
+},
+'data-118': {
+  prompt: "¿Entre qué dos meses consecutivos crecieron los ingresos en el menor monto absoluto?",
+  choices: ["Febrero y marzo", "Marzo y abril", "Abril y mayo", "Mayo y junio"]
+},
+'data-119': {
+  prompt: "¿En qué porcentaje excedió el programa su presupuesto total?",
+  choices: ["5,0%", "6,5%", "7,0%", "8,5%"]
+},
+'data-120': {
+  prompt: "¿Qué frente de trabajo se sobregiró en el mayor monto absoluto?",
+  choices: ["Construcción", "Diseño", "Despliegue", "Pruebas"]
+},
+'data-121': {
+  prompt: "¿Qué dos frentes de trabajo se sobregiraron en el mismo porcentaje de sus presupuestos?",
+  choices: ["Construcción y Pruebas", "Construcción y Despliegue", "Diseño y Capacitación", "Pruebas y Despliegue"]
+},
+'data-122': {
+  prompt: "¿Cuál fue el gasto real total del programa?",
+  choices: ["$2.140 miles", "$2.180 miles", "$2.240 miles", "$2.300 miles"]
+},
+'data-123': {
+  prompt: "Si el frente de Construcción hubiera cerrado exactamente en presupuesto y todos los demás sin cambios, ¿cuál habría sido la posición general del programa?",
+  choices: [
+    "Un subgasto de $4 miles",
+    "Un sobregasto de $4 miles",
+    "Un sobregasto de $140 miles",
+    "Exactamente en presupuesto"
+  ]
+},
+'data-124': {
+  prompt: "¿Qué empresa ganó más participación de mercado entre 2023 y 2025?",
+  choices: ["Caldera", "Norvex", "Ostrand", "Pilar"]
+},
+'data-125': {
+  prompt: "Si el mercado total valía USD 4.000 millones en 2025, ¿cuáles fueron los ingresos de Caldera ese año?",
+  choices: ["$840 millones", "$960 millones", "$1.000 millones", "$1.120 millones"]
+},
+'data-126': {
+  prompt: "¿Cuántos puntos porcentuales cayó la participación de Norvex entre 2023 y 2025?",
+  choices: ["2 puntos porcentuales", "3 puntos porcentuales", "4 puntos porcentuales", "11 puntos porcentuales"]
+},
+'data-127': {
+  prompt: "La participación de Norvex cayó de 28% a 25%. ¿En qué porcentaje disminuyó su participación en términos relativos?",
+  choices: ["3,0%", "8,5%", "10,7%", "12,0%"]
+},
+'data-128': {
+  prompt: "El mercado total creció de USD 3.200 millones en 2023 a USD 4.000 millones en 2025. ¿Qué pasó con los ingresos de Norvex en ese periodo?",
+  choices: [
+    "Subieron cerca de $100 millones",
+    "Subieron cerca de $300 millones",
+    "Cayeron cerca de $100 millones",
+    "Cayeron cerca de $300 millones"
+  ]
+},
+'data-129': {
+  prompt: "¿Cuál es la mediana de negocios cerrados?",
+  choices: ["11", "14", "16", "22"]
+},
+'data-130': {
+  prompt: "¿Cuál es el promedio de negocios cerrados, con un decimal?",
+  choices: ["14,0", "15,5", "16,3", "17,1"]
+},
+'data-131': {
+  prompt: "¿Cuál es el rango de las cifras de negocios cerrados?",
+  choices: ["21", "23", "26", "30"]
+},
+'data-132': {
+  prompt: "¿Cuál es la moda de las cifras de negocios cerrados?",
+  choices: ["9", "11", "14", "30"]
+},
+'data-133': {
+  prompt: "La media de este conjunto de datos es notablemente mayor que su mediana. ¿Qué indica eso sobre la distribución?",
+  choices: [
+    "Está sesgada a la derecha por uno o dos valores inusualmente altos",
+    "Está sesgada a la izquierda por uno o dos valores inusualmente bajos",
+    "Es simétrica alrededor de la media",
+    "Los valores se registraron incorrectamente"
+  ]
+},
+'data-134': {
+  prompt: "Si se excluyeran del conjunto los 30 negocios de F. Torres, ¿qué pasaría con la mediana?",
+  choices: ["Se mantendría en 14", "Caería a 12,5", "Caería a 11", "Subiría a 16"]
+},
+'data-135': {
+  prompt: "Si se excluyeran los 30 negocios de F. Torres, ¿en cuánto quedaría la media?",
+  choices: ["13,5", "14,0", "15,0", "16,3"]
+},
+'data-136': {
+  prompt: "Un conjunto de datos contiene los valores 4, 8, 8, 10 y 20. ¿Qué medida de tendencia central se ve más afectada por el valor 20?",
+  choices: ["La media", "La mediana", "La moda", "Las tres por igual"]
+},
+'data-137': {
+  prompt: "Dos equipos de producción tienen la misma producción diaria promedio, pero la desviación estándar del Equipo A es tres veces la del Equipo B. ¿Qué te dice esto?",
+  choices: [
+    "La producción diaria del Equipo A varía mucho más de un día a otro que la del Equipo B",
+    "El Equipo A produce más en total que el Equipo B",
+    "La producción del Equipo A es sistemáticamente mayor que la del Equipo B",
+    "El Equipo B tiene más días de producción que el Equipo A"
+  ]
+},
+'data-138': {
+  prompt: "Una encuesta a 500 personas encuentra que el 60% aprueba una propuesta, con un margen de error de ±4 puntos porcentuales. ¿Qué rango contiene con mayor probabilidad el nivel real de aprobación?",
+  choices: ["52% a 68%", "56% a 64%", "58% a 62%", "60% a 64%"]
+},
+'data-139': {
+  prompt: "En un conjunto de datos de salarios de una empresa donde un número pequeño de ejecutivos gana muchas veces el salario típico, ¿qué medida representa mejor el salario de un empleado típico?",
+  choices: ["La mediana", "La media", "El rango", "El máximo"]
+},
+'data-140': {
+  prompt: "¿Qué fila contiene una fecha de ingreso que no puede ser válida?",
+  choices: ["3002", "3003", "3005", "3006"]
+},
+'data-141': {
+  prompt: "¿Qué dos filas parecen ser duplicados del mismo registro?",
+  choices: ["3001 y 3003", "3001 y 3004", "3002 y 3005", "3003 y 3004"]
+},
+'data-142': {
+  prompt: "¿Qué fila contiene un valor imposible para el campo de salario?",
+  choices: ["3002", "3004", "3005", "3006"]
+},
+'data-143': {
+  prompt: "La fila 3005 registra 95 horas por semana. ¿Cuál es el primer paso más apropiado?",
+  choices: [
+    "Consultar el valor con el sistema de origen antes de decidir cómo tratarlo",
+    "Eliminar la fila para que no distorsione el análisis",
+    "Reemplazar el valor por el promedio del conjunto de datos",
+    "Dejarlo sin cambios, ya que los valores extremos siguen siendo datos reales"
+  ]
+},
+'data-144': {
+  prompt: "Si la fila duplicada no se elimina antes de calcular el salario promedio, ¿qué efecto tiene?",
+  choices: [
+    "Jala el promedio hacia $58.000 al contar dos veces a ese empleado",
+    "No tiene efecto, porque las dos filas tienen ID distintos",
+    "Baja el promedio, porque aumenta el número de registros",
+    "Hace imposible calcular el promedio"
+  ]
+},
+'data-145': {
+  prompt: "¿Cuál es el salario promedio si el análisis se corre sobre este extracto sin limpiarlo?",
+  choices: ["$45.883", "$52.180", "$55.740", "$57.875"]
+},
+'data-146': {
+  prompt: "¿Cuál es el salario promedio después de eliminar la fila duplicada y excluir el valor negativo?",
+  choices: ["$52.180", "$55.175", "$55.740", "$57.875"]
+},
+'data-147': {
+  prompt: "La columna Horas/semana contiene 37,5 para un empleado y 40 para los demás. ¿Es esto un problema de calidad de datos?",
+  choices: [
+    "No: los contratos de medio tiempo y de jornada reducida son valores legítimos",
+    "Sí: todos los valores de una columna deben ser números enteros",
+    "Sí: la columna debería contener un único valor consistente",
+    "Sí: los decimales indican un error de formato en la exportación"
+  ]
+},
+'data-148': {
+  prompt: "¿Qué problema de calidad de datos detectaría aplicar una verificación de rango a una columna de salarios?",
+  choices: [
+    "Un valor de salario negativo",
+    "Un nombre de empleado mal escrito",
+    "Dos filas que registran al mismo empleado",
+    "Un nombre de área ingresado en la columna equivocada"
+  ]
+},
+'data-149': {
+  prompt: "Un conjunto de datos combina registros de dos sistemas, uno de los cuales guarda el área como 'Ventas' y el otro como 'VENTAS'. ¿Qué problema crea esto?",
+  choices: [
+    "Las agregaciones dividirán una sola área en dos grupos separados",
+    "Los registros no cargarán en la herramienta de análisis",
+    "Los valores de salario quedarán desalineados entre sistemas",
+    "Se crearán automáticamente registros de empleados duplicados"
+  ]
 }
 
 };

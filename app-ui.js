@@ -488,7 +488,7 @@ function renderQuestion(){
       '<div id="pausedNote"></div>'+
       '<div id="pacingHint"></div>'+
       (tableOf(q) ? '<div class="table-wrap">'+tableOf(q)+'</div>' : '')+
-      (q.chart ? '<div class="chart-wrap">'+q.chart+'</div>' : '')+
+      (chartOf(q) ? '<div class="chart-wrap">'+chartOf(q)+'</div>' : '')+
       '<div class="q-prompt">'+esc(promptOf(q))+'</div>'+
       '<div id="choicesWrap">'+
         view.choices.map((c,i)=>'<button class="choice" onclick="answerQuestion('+i+')">'+esc(c)+'</button>').join('')+
@@ -768,7 +768,7 @@ function renderReviewList(){
       '<div class="q-header"><span class="q-cat">'+(i+1)+'. '+catName(q.cat)+' · '+esc(typeName(q.type))+'</span>'+
       '<span class="'+(e.correct?'tick ok':'tick bad')+'">'+(e.correct?'✓':'✕')+'</span></div>'+
       (tableOf(q) ? '<div class="table-wrap">'+tableOf(q)+'</div>' : '')+
-      (q.chart ? '<div class="chart-wrap">'+q.chart+'</div>' : '')+
+      (chartOf(q) ? '<div class="chart-wrap">'+chartOf(q)+'</div>' : '')+
       '<div class="q-prompt small">'+esc(promptOf(q))+'</div>'+
       '<div class="ans-line"><b>'+t('yourAnswer')+'</b> '+(e.chosen ? esc(e.chosen) : t('noAnswer'))+'</div>'+
       (e.correct ? '' : '<div class="ans-line good"><b>'+t('correctAnswer')+'</b> '+esc(e.correctText || choicesOf(q)[q.answer])+'</div>')+

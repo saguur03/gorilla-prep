@@ -143,6 +143,10 @@ function tableOf(q){
   const es = esQuestion(q);
   return (es && es.table) || q.table || '';
 }
+function chartOf(q){
+  const es = esQuestion(q);
+  return (es && es.chart) || q.chart || '';
+}
 function guideDoc(){ return (window.GUIDE && window.GUIDE[lang]) || (window.GUIDE && window.GUIDE.en) || null; }
 function topicFor(q){
   const g = guideDoc(); if(!g) return null;
