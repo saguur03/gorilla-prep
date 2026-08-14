@@ -343,9 +343,7 @@ function priorityOf(q){
   if(needsReview(rec)) return 1;            /* then unresolved mistakes */
   return 2;                                  /* then spaced revision */
 }
-function pickQuestions(catKey, count, typeFilter){
-  let pool = catKey ? bankOf(catKey).slice() : allQuestions();
-  if(typeFilter) pool = pool.filter(q => q.type === typeFilter);
+function rankPool(pool){
   const today = todayStr();
   pool.forEach(q => {
     const rec = recOf(q.id);
@@ -357,7 +355,53 @@ function pickQuestions(catKey, count, typeFilter){
   });
   pool.sort((a,b) => (a._sameDay-b._sameDay) || (a._p-b._p) ||
                      (a._last < b._last ? -1 : a._last > b._last ? 1 : 0) || (a._rand-b._rand));
-  return pool.slice(0, Math.min(count, pool.length));
+  return pool;
+}
+function pickQuestions(catKey, count, typeFilter){
+  let pool = catKey ? bankOf(catKey).slice() : allQuestions();
+  if(typeFilter) pool = pool.filter(q => q.type === typeFilter);
+  return rankPool(pool).slice(0, Math.min(count, pool.length));
+}
+
+/* English practice is drawn to a fixed CEFR mix: 20% B1, 50% B2, 30% C1 — 2/5/3 in a
+   ten-question session. B2 is where the real test sits; B1 keeps the basics warm and C1
+   is over-training.
+
+   Deliberately NOT wired into pickQuestions(): buildSection() calls that for the mock and
+   the timed exam sections, and those have to keep replicating the real sitting, which is
+   B1/B2. Only startPractice('eng') opts in, so the mock cannot inherit the mix by
+   accident. C1 items keep cat 'engC1', so answering one updates the engC1 stats rather
+   than eng, and the English readiness score stays a measure of at-level performance. */
+const ENGLISH_LEVEL_MIX = { B1:0.20, B2:0.50, C1:0.30 };
+function levelQuota(count){
+  /* Largest remainder, so the parts add back up to count at any session size. */
+  const levels = Object.keys(ENGLISH_LEVEL_MIX);
+  const exact = levels.map(L => count * ENGLISH_LEVEL_MIX[L]);
+  const quota = exact.map(Math.floor);
+  let short = count - quota.reduce((a,b) => a+b, 0);
+  exact.map((v,i) => ({ i, frac: v - Math.floor(v) }))
+       .sort((a,b) => b.frac - a.frac)
+       .forEach(e => { if(short > 0){ quota[e.i]++; short--; } });
+  const out = {};
+  levels.forEach((L,i) => { out[L] = quota[i]; });
+  return out;
+}
+function pickEnglishByLevel(count){
+  const pool = bankOf('eng').concat(bankOf('engC1'));
+  const quota = levelQuota(count);
+  const chosen = [], taken = {};
+  Object.keys(quota).forEach(L => {
+    rankPool(pool.filter(q => q.cefr === L)).slice(0, quota[L])
+      .forEach(q => { chosen.push(q); taken[q.id] = 1; });
+  });
+  /* If one level cannot fill its share, top up from what is left rather than handing back
+     a short session. */
+  if(chosen.length < count){
+    rankPool(pool.filter(q => !taken[q.id])).slice(0, count - chosen.length)
+      .forEach(q => chosen.push(q));
+  }
+  /* Interleave: without this every session runs a B1 block, then B2, then C1. */
+  return chosen.sort(() => Math.random() - 0.5);
 }
 function pickOneMixed(){
   const c = pickQuestions(null, 20);

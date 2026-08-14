@@ -346,7 +346,9 @@ function startQuick(){
   renderQuestion();
 }
 function startPractice(catKey){
-  const qs = pickQuestions(catKey, 10); if(!qs.length) return;
+  /* English draws to the 2/5/3 CEFR mix; every other category is a straight priority draw. */
+  const qs = catKey === 'eng' ? pickEnglishByLevel(10) : pickQuestions(catKey, 10);
+  if(!qs.length) return;
   session = { mode:'practice', catKey, queue:qs, index:0, correctCount:0, log:[] };
   renderQuestion();
 }
