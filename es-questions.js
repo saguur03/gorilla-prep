@@ -2702,6 +2702,186 @@ var T = {
     "El proveedor anterior había tenido el contrato durante once años.",
     "Un puñado de despachos con el nuevo proveedor llegó más tarde de lo prometido."
   ]
+},
+'ct-110': {
+  prompt: "Una aseguradora introdujo un programa voluntario de bienestar que ofrecía subsidios de gimnasio y tamizaje anual de salud, al que cerca de un tercio de sus 2.400 empleados eligió unirse el primer año. Los empleados que se unieron tomaron en promedio 3,1 días de incapacidad el año pasado frente a 6,8 de quienes no lo hicieron, una diferencia que se sostuvo en todas las áreas. La directora de Recursos Humanos ha propuesto hacer obligatoria la participación, proyectando ahorros de unos USD 1,1 millones al año en cobertura de ausencias con base en esa diferencia.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la proyección?",
+  choices: [
+    "El programa cuesta unos USD 340 por empleado participante al año.",
+    "Los empleados que manejan condiciones crónicas de salud eran mucho menos propensos a inscribirse en un programa basado en gimnasio.",
+    "El componente de tamizaje identificó varias condiciones no diagnosticadas previamente.",
+    "Los días de incapacidad en toda la industria cayeron levemente el año pasado."
+  ]
+},
+'ct-111': {
+  prompt: "Una cadena de artículos para el hogar rediseñó la distribución de una tienda, moviendo los accesorios de alto margen al pasillo principal y reubicando los utensilios de cocina de volumen al fondo. El trabajo tomó dos semanas y costó USD 65.000. Durante los tres meses siguientes el valor promedio de la canasta de la tienda subió de USD 41 a USD 53, mientras que el volumen de transacciones se mantuvo prácticamente estable. El equipo de operaciones minoristas ha presupuestado USD 6 millones para rediseñar las noventa tiendas, usando la ganancia de doce dólares de la tienda piloto como base del cálculo de retorno.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el cálculo de retorno?",
+  choices: [
+    "La tienda piloto es la única de las noventa ubicada dentro de un centro comercial que abrió un nuevo local ancla durante la prueba.",
+    "El rediseño tomó ocho días, durante los cuales la tienda piloto operó a capacidad reducida.",
+    "A algunos empleados les pareció más difícil reabastecer con la nueva distribución.",
+    "Los accesorios tienen mayor margen que las líneas de muebles de la cadena."
+  ]
+},
+'ct-112': {
+  prompt: "Un centro de llamadas reemplazó su salario fijo por hora con un bono atado al número de llamadas que cada agente registra como resueltas por turno. El esquema aplicó a los 180 agentes de la sede y se introdujo sin ningún cambio en los niveles de dotación ni en los horarios de atención. El promedio de llamadas resueltas por agente subió 24% en el trimestre siguiente. El director de operaciones ha recomendado extender el esquema a los otros dos centros de la empresa, argumentando que el bono eleva demostrablemente la producción de los agentes.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la recomendación?",
+  choices: [
+    "El bono agrega cerca de 9% al pago del agente promedio.",
+    "Bajo el nuevo esquema los agentes marcan una llamada como resuelta al final de la conversación, y las llamadas repetidas por el mismo asunto subieron un tercio.",
+    "Algunos agentes dijeron que el esquema hizo que los turnos se sintieran más presionados.",
+    "La planta de personal del centro no cambió durante el trimestre."
+  ]
+},
+'ct-113': {
+  prompt: "Una firma de tecnología introdujo una herramienta automatizada de filtrado de hojas de vida para cargos de ingeniería de nivel inicial y junior, donde hoy filtra unas 9.000 postulaciones al año hasta una lista corta para entrevista. Entre los candidatos contratados mediante la herramienta, el 84% recibió una calificación alta en su primera evaluación anual, frente a 66% de los candidatos contratados por el proceso manual anterior. El líder de talento ha argumentado que la herramienta identifica candidatos más fuertes y debería extenderse a la contratación sénior.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento?",
+  choices: [
+    "La herramienta se usó solo para cargos de nivel inicial, donde las calificaciones del primer año son en general más altas que entre contrataciones con experiencia.",
+    "La herramienta toma cerca de cuatro segundos en filtrar cada postulación.",
+    "Un número pequeño de jefes dijo que no confiaba en el filtrado automatizado.",
+    "La firma recibe varios miles de postulaciones por cada cohorte de nivel inicial."
+  ]
+},
+'ct-114': {
+  prompt: "Un grupo hotelero está considerando reemplazar los artículos de tocador de un solo uso por dispensadores recargables en sus 60 propiedades, que van desde hoteles urbanos económicos hasta dos resorts de cinco estrellas. El equipo de sostenibilidad estima que el cambio ahorraría USD 1,8 millones al año en consumibles y retiraría unas 14 toneladas de plástico del flujo de residuos del grupo. El director financiero no está convencido, y señala que los puntajes de satisfacción de huéspedes son el principal activo competitivo del grupo y que algunos huéspedes podrían leer el cambio como un desmejoramiento.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso a favor del cambio?",
+  choices: [
+    "Los dispensadores recargables se han vuelto comunes en el segmento de mercado del grupo.",
+    "En una prueba de doce meses en ocho propiedades, los puntajes de satisfacción se mantuvieron estadísticamente sin cambios mientras el gasto en consumibles cayó según lo proyectado.",
+    "El grupo se ha comprometido públicamente a reducir los residuos plásticos.",
+    "Los artículos de tocador de un solo uso los suministra un único proveedor cuyo contrato vence el próximo año."
+  ]
+},
+'ct-115': {
+  prompt: "Una firma de arquitectura está debatiendo pasar a una semana de cuatro días sin reducción de salario. La socia directora argumenta que la producción facturable se mantendría, porque una revisión del registro de tiempos sugiere que la mayor parte del quinto día se consume en coordinación interna que no genera honorarios. También espera que el cambio ayude con la contratación en un mercado apretado. Varios arquitectos sénior son escépticos, y señalan que las fechas límite de los clientes no se acortarán en consecuencia y que la firma ya opera cerca de su capacidad.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el argumento de la socia directora?",
+  choices: [
+    "El personal de la firma ha dicho que recibiría con agrado una semana de cuatro días.",
+    "Los datos de registro de tiempos muestran que el 31% de las horas de los viernes de los últimos dos años se registraron en coordinación interna que podría consolidarse en otros días.",
+    "Varias firmas competidoras han anunciado pruebas de semana de cuatro días.",
+    "La tasa de utilización de la firma se mide mensualmente y no semanalmente."
+  ]
+},
+'ct-116': {
+  prompt: "Una firma de servicios profesionales opera un esquema de mentoría que empareja a personal junior con socios de forma voluntaria; cerca de una cuarta parte de los juniors elegibles participa actualmente. Los mentoreados son promovidos a gerente 40% más rápido que los no mentoreados, y la brecha ha sido consistente durante los cuatro años del esquema. El jefe de talento quiere expandir el esquema a toda la firma a costa de algo de tiempo de los socios, pero el comité ejecutivo sospecha que el patrón refleja que los socios eligen mentorear a las personas ya marcadas como de alto desempeño.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la posición del jefe de talento?",
+  choices: [
+    "Los mentoreados reportan mayor satisfacción laboral que los no mentoreados.",
+    "Los mentores se asignan por sorteo entre todos los juniors que se postulan, y las calificaciones de desempeño previas de los postulantes son indistinguibles de las de quienes no se postulan.",
+    "El esquema le cuesta poco a la firma más allá del tiempo de los socios.",
+    "Varios mentoreados han dicho que el esquema les ayudó a entender los criterios de promoción."
+  ]
+},
+'ct-117': {
+  prompt: "Un exportador de cerámica está considerando un inserto moldeado más grueso para su empaque. El gerente de operaciones proyecta que la rotura en tránsito, hoy 3,4% de las unidades despachadas, caería por debajo de 1%, justificando cómodamente los USD 0,35 adicionales por unidad en costo de empaque sobre los cerca de dos millones de unidades despachadas cada año. Los artículos reemplazados se envían actualmente sin cargo, y el exportador además absorbe el flete de devolución. El equipo de finanzas señala que nadie ha establecido dónde ocurren realmente las roturas.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la proyección del gerente de operaciones?",
+  choices: [
+    "El nuevo inserto está hecho de material reciclado.",
+    "Los registros de inspección de daños muestran que el 92% de las roturas involucra fracturas por impacto del tipo que el inserto está diseñado para absorber.",
+    "El inserto ha sido usado con éxito por un fabricante de cristalería.",
+    "El principal competidor del exportador usa un inserto similar."
+  ]
+},
+'ct-118': {
+  prompt: "Una empresa de servicios públicos planea desplegar un chatbot para atender consultas rutinarias de facturación, que representan poco más de la mitad de las cerca de 900.000 llamadas que su centro de contacto recibe cada año. El ahorro proyectado es de USD 2,4 millones anuales, neto de costos de licencia y construcción. El director de clientes objeta que si el chatbot atiende mal las consultas simples, los clientes escalarán a un agente de todos modos y la empresa pagará por ambos canales.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso a favor del despliegue?",
+  choices: [
+    "El chatbot puede desplegarse en menos de tres meses.",
+    "En un piloto de seis meses sobre el 15% del tráfico de facturación, el 78% de las conversaciones con el chatbot cerró sin escalar y el costo total de atención por consulta cayó un tercio.",
+    "Las consultas de facturación son la categoría individual más grande del volumen del centro de contacto.",
+    "El chatbot usa la misma base de conocimiento que los agentes humanos."
+  ]
+},
+'ct-119': {
+  prompt: "Una marca de cosméticos está considerando cobrar precios distintos en distintas regiones en lugar de un precio nacional único, fijando el precio de cada región según la disposición local a pagar. El equipo de ingresos estima que el cambio elevaría el margen combinado 5% sin ningún aumento en gasto de marketing. El jefe jurídico teme que los clientes que descubran las diferencias reaccionen mal, y que el daño reputacional resultante pese más que la ganancia.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso del equipo de ingresos?",
+  choices: [
+    "El precio regional es práctica estándar en la categoría de la marca.",
+    "La marca aplicó precios regionales en dos regiones durante dieciocho meses; el conocimiento de la diferencia alcanzó al 4% de los clientes y las tasas de recompra no cambiaron.",
+    "Los márgenes de la marca están actualmente por debajo del promedio de la categoría.",
+    "El precio regional se implementaría mediante el sistema de punto de venta existente."
+  ]
+},
+'ct-120': {
+  prompt: "Un negocio de distribución está evaluando una inversión de USD 9 millones en robótica de bodega para su centro de distribución más grande, con un retorno proyectado en menos de cuatro años por reducción de mano de obra de alistamiento. El proveedor ha garantizado por escrito las tasas de rendimiento, y la sede tiene el espacio de piso y la capacidad eléctrica requeridos. La directora de operaciones es cautelosa: la bodega maneja un rango inusualmente amplio de formas de artículos, y ha visto proyectos de robótica en otros lugares estancarse exactamente por eso.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso a favor de la inversión?",
+  choices: [
+    "El proveedor de robótica ha instalado sistemas similares en veinte bodegas.",
+    "Una prueba de cuatro meses en sitio corrió el sistema propuesto contra el rango completo de artículos del propio negocio y alcanzó la tasa de alistamiento proyectada en el 97% de los SKU.",
+    "La mano de obra de alistamiento es el mayor costo individual de bodega del negocio.",
+    "La inversión podría financiarse a una tasa favorable."
+  ]
+},
+'ct-121': {
+  prompt: "Una empresa de software está rediseñando la inducción de nuevos ingenieros, con el objetivo de recortar el tiempo hasta el primer despliegue de código independiente de once semanas a seis. La empresa contrata unos noventa ingenieros al año, y el director de ingeniería argumenta que el rediseño vale unos USD 700.000 anuales en tiempo productivo recuperado, antes de contar cualquier efecto sobre la retención. El director financiero responde que un arranque más rápido podría simplemente significar que los ingenieros despliegan antes y rompen más.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso del director de ingeniería?",
+  choices: [
+    "El rediseño lo construiría el equipo existente de experiencia de desarrollo.",
+    "Dos equipos pilotearon la inducción rediseñada; el tiempo mediano hasta el primer despliegue cayó a siete semanas y su tasa de defectos posdespliegue igualó el promedio de la empresa.",
+    "Los nuevos ingenieros reportan actualmente frustración con la duración de la inducción.",
+    "La cifra de once semanas es más larga que en empresas comparables."
+  ]
+},
+'ct-122': {
+  prompt: "Una planta embotelladora está considerando pasar de reparación por falla a mantenimiento preventivo programado en sus cuatro líneas de llenado. El gerente de planta proyecta que el tiempo de inactividad no planeado, que hoy cuesta unos USD 3 millones al año en producción perdida y reparaciones urgentes, caería a la mitad en dieciocho meses. El director financiero señala que el mantenimiento preventivo implica sacar de operación máquinas que funcionan, lo cual es en sí mismo tiempo de inactividad.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la proyección del gerente de planta?",
+  choices: [
+    "El mantenimiento preventivo es el estándar de la industria para líneas de embotellado.",
+    "Plantas hermanas que hicieron el mismo cambio recortaron 55% el tiempo de inactividad no planeado, mientras que el mantenimiento planeado devolvió menos de una quinta parte de las horas ahorradas.",
+    "El equipo de mantenimiento de la planta es experimentado y bien valorado.",
+    "Los repuestos para las máquinas de la planta son de fácil consecución."
+  ]
+},
+'ct-123': {
+  prompt: "Una firma de logística que atiende clientes europeos está considerando financiar capacitación en idioma de negocios para sus cuarenta gerentes de cuenta, a unos USD 4.000 cada uno en un programa de doce meses. El director comercial argumenta que mejorará la retención de clientes, hoy en 81% y unos cinco puntos por debajo de su competidor más cercano. La junta no está convencida, y señala que la mayoría de los clientes ya realiza sus reuniones en inglés y que la retención suele estar impulsada por la confiabilidad del servicio.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el caso del director comercial?",
+  choices: [
+    "El proveedor de capacitación es bien valorado y tiene horarios flexibles.",
+    "Las entrevistas de salida con clientes que se fueron durante tres años citan la dificultad para comunicarse con su gerente de cuenta como factor contribuyente en el 38% de los casos.",
+    "Los gerentes de cuenta han expresado interés en la capacitación en idiomas.",
+    "Varios competidores ofrecen capacitación en idiomas a su personal."
+  ]
+},
+'ct-124': {
+  prompt: "Un banco regional revisó su expediente de crédito tras una visita de supervisión. Todo crédito aprobado por el comité de crédito en los últimos dos años estuvo respaldado por un avalúo independiente. Algunos créditos del mismo periodo fueron aprobados bajo la facultad delegada del gerente de sucursal y no por el comité. Todos los créditos superiores a USD 500.000, sin excepción, pasaron al comité de crédito.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta con base en estos enunciados?",
+  choices: [
+    "Todo crédito superior a USD 500.000 aprobado en los últimos dos años estuvo respaldado por un avalúo independiente.",
+    "Ningún crédito aprobado bajo facultad delegada estuvo respaldado por un avalúo independiente.",
+    "La mayoría de los créditos de los últimos dos años fue aprobada por el comité de crédito.",
+    "Los créditos inferiores a USD 500.000 nunca se enviaron al comité de crédito."
+  ]
+},
+'ct-125': {
+  prompt: "Un fabricante lleva registros de su base de proveedores. Todo proveedor que ha tenido certificación ISO por más de cinco años ha pasado sus últimas tres auditorías de calidad. Algunos proveedores que pasaron sus últimas tres auditorías tienen su base fuera de la Unión Europea. Ningún proveedor con base fuera de la Unión Europea ha tenido certificación ISO por más de cinco años.\n\n¿Cuál de las siguientes opciones puede inferirse correctamente?",
+  choices: [
+    "Todo proveedor que pasó sus últimas tres auditorías tiene certificación ISO.",
+    "Algunos proveedores que pasaron sus últimas tres auditorías no han tenido certificación ISO por más de cinco años.",
+    "Ningún proveedor fuera de la Unión Europea ha pasado una auditoría de calidad.",
+    "La mayoría de los proveedores con certificación antigua tiene su base en la Unión Europea."
+  ]
+},
+'ct-126': {
+  prompt: "La política de despacho de un distribuidor es fija. Todo pedido enviado desde la bodega central se rastrea de extremo a extremo, y todo pedido rastreado de extremo a extremo genera una confirmación de entrega en la cuenta del cliente. Durante una revisión de servicio el equipo encontró un pedido para el cual nunca se generó una confirmación de entrega.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta sobre ese pedido?",
+  choices: [
+    "No fue enviado desde la bodega central.",
+    "Nunca fue rastreado de extremo a extremo, pero aun así pudo venir de la bodega central.",
+    "Fue enviado desde un depósito regional.",
+    "Nunca fue entregado al cliente."
+  ]
+},
+'ct-127': {
+  prompt: "Una aerolínea revisó sus datos de puntualidad. Todo vuelo que salió tarde el trimestre pasado fue operado por una aeronave que había volado al menos tres tramos ese día. Algunos vuelos operados por tales aeronaves llegaron dentro de los quince minutos de lo programado. Ningún vuelo que llegó dentro de los quince minutos de lo programado fue objeto de una reclamación de compensación de pasajeros.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Todo vuelo operado por una aeronave en su cuarto tramo salió tarde.",
+    "Algunos vuelos operados por aeronaves en su tercer tramo o posterior no fueron objeto de una reclamación de compensación.",
+    "Ningún vuelo que salió tarde llegó dentro de los quince minutos de lo programado.",
+    "Las reclamaciones de compensación surgieron solo en vuelos que salieron tarde."
+  ]
+},
+'ct-128': {
+  prompt: "El manual de crédito de un banco establece que una solicitud se escala al comité de crédito solo si supera los EUR 2 millones. En el último trimestre, 40 solicitudes superaron los EUR 2 millones y 12 solicitudes en total fueron escaladas al comité.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Toda solicitud escalada al comité superó los EUR 2 millones.",
+    "Toda solicitud que superó los EUR 2 millones fue escalada al comité.",
+    "Veintiocho solicitudes fueron rechazadas por el comité.",
+    "Ninguna solicitud por debajo de EUR 2 millones fue rechazada."
+  ]
+},
+'ct-129': {
+  prompt: "Un minorista analizó su parque de 200 tiendas. El sesenta por ciento de las tiendas superó su meta anual de ventas. El cuarenta y cinco por ciento de las tiendas está ubicado en centros comerciales, y toda tienda ubicada en un centro comercial superó su meta.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Al menos treinta tiendas que superaron su meta no están en centros comerciales.",
+    "Toda tienda que superó su meta está en un centro comercial.",
+    "Exactamente la mitad de las tiendas fuera de centros comerciales superó su meta.",
+    "La mayoría de las tiendas que no alcanzaron su meta está en centros comerciales."
+  ]
 }
 
 };
