@@ -55,6 +55,9 @@ const T = {
   listeningNote:{en:'The real English module includes listening, which this app cannot cover. Spend a few minutes a day on English-language business news or podcasts.', es:'El módulo real de inglés incluye comprensión auditiva, que esta app no puede cubrir. Dedica unos minutos al día a noticias o podcasts de negocios en inglés.'},
   judgmentBtn:{en:'⚖️ Business judgment', es:'⚖️ Criterio de negocio'},
   judgmentSub:{en:'not a confirmed module — practise it as insurance', es:'no es un módulo confirmado — practícalo como seguro'},
+  engC1Btn:{en:'English C1 (advanced)', es:'Inglés C1 (avanzado)'},
+  engC1Sub:{en:'harder than the real test on purpose — kept out of the mock and the readiness score',
+            es:'más difícil que la prueba real a propósito — fuera del simulacro y del readiness'},
   /* exam menu */
   examStrict:{en:'Strict exam', es:'Examen estricto'},
   examStrictSub:{en:'No feedback until the end — real conditions', es:'Sin feedback hasta el final — condiciones reales'},
@@ -318,7 +321,11 @@ function renderHome(){
     '<button class="cat-btn" style="margin-top:12px;" onclick="startPractice(\'judgment\')">'+
       '<span class="emoji">⚖️</span><span class="info">'+
       '<span class="name">'+t('judgmentBtn').replace('⚖️ ','')+'</span>'+
-      '<span class="meta">'+t('judgmentSub')+'</span></span><span class="arrow">›</span></button>') +
+      '<span class="meta">'+t('judgmentSub')+'</span></span><span class="arrow">›</span></button>'+
+    '<button class="cat-btn" style="margin-top:10px;" onclick="startPractice(\'engC1\')">'+
+      '<span class="emoji">🎓</span><span class="info">'+
+      '<span class="name">'+t('engC1Btn')+'</span>'+
+      '<span class="meta">'+t('engC1Sub')+'</span></span><span class="arrow">›</span></button>') +
     '<button class="btn-plain" onclick="renderSettings()">⚙ '+t('settings')+'</button>'+
     '<button class="btn-plain" onclick="if(confirm(\'Reset all data? This cannot be undone.\')) { localStorage.clear(); location.reload(); }">🔄 Reset all data</button>';
 

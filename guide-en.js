@@ -644,6 +644,126 @@ sections: [
   ]
 },
 
+/* ============================ ENGLISH C1 ============================ */
+{
+  id:'engC1', icon:'🎓', title:'English C1 (advanced)',
+  blurb:'Deliberate over-training. The real module is B1/B2, so everything here is harder than the test will ask. The point is not that these structures will appear — it is that after practising them, B2 items stop feeling like decisions and start feeling obvious.',
+  topics: [
+    {
+      type:'grammar-c1', title:'Inversion, cleft and fronting',
+      recognise:'A gap at the START of a clause, or a sentence beginning with a negative adverbial (Not only, Rarely, Seldom, No sooner, Under no circumstances, Only when/after/if).',
+      steps:[
+        'Spot the trigger. If a negative or restrictive adverbial has been FRONTED, the clause after it must invert like a question: auxiliary before subject.',
+        '"Rarely HAVE WE seen…", not "Rarely we have seen…". If there is no auxiliary, insert do/does/did: "Only then DID HE realise".',
+        'With "Only when/after/if + clause", the inversion lands on the MAIN clause, not the subordinate one: "Only when the board approved DID the CEO announce…".',
+        '"No sooner … THAN", never "no sooner … when". "Hardly/Scarcely … WHEN", never "than". These two pairs are swapped on purpose in distractors.',
+        'For cleft sentences, check what is being emphasised: "It was the CFO who raised it" (emphasis on person) vs "What the CFO raised was the risk" (emphasis on thing).'
+      ],
+      key:[
+        'Fronted negative adverbial → invert. That is the whole rule.',
+        'Not only … but also: the inversion goes in the FIRST clause. "Not only DID sales fall, but margins also narrowed."',
+        'Should/Were/Had can replace "if" in conditionals, and then they invert: "Had we known" = "If we had known"; "Should you require" = "If you require"; "Were it not for" = "If it were not for".',
+        'Inversion is NOT used when the adverbial is not fronted: "We have rarely seen this" is perfectly correct.',
+        'Cleft with "What" takes a SINGULAR verb: "What concerns me IS the assumptions" — even before a plural.'
+      ],
+      traps:[
+        'Inverting the subordinate clause instead of the main one after "Only when…".',
+        'Pairing "no sooner" with "when" or "hardly" with "than".',
+        'Adding "would" to the if-clause of an inverted conditional. "Had we would known" is not a sentence.'
+      ]
+    },
+    {
+      type:'vocabulary-c1', title:'Register, connotation and near-synonyms',
+      recognise:'Four options that all mean roughly the right thing. The question is not what the word means but how formal it is and what it implies.',
+      steps:[
+        'Decide what the gap actually needs: neutral, formal, or loaded. The surrounding sentence tells you — a regulator "sanctions", a friend "lets you".',
+        'Check connotation, not just denotation. Notorious = famous for something BAD. Ambitious plan = admiring; overambitious = critical.',
+        'Watch collocation: you MOUNT a defence, LODGE a complaint, RAISE a concern, VOICE an objection. The verb is fixed by the noun.',
+        'When two options are both formal and both fit, the answer is usually the one whose implication matches the sentence\'s stance.'
+      ],
+      key:[
+        'Formality ladder: start → begin → commence · end → conclude → terminate · ask for → request → solicit · about → concerning → with regard to.',
+        'Same meaning, opposite stance: thrifty (approving) / stingy (critical); confident / arrogant; determined / stubborn; frank / blunt.',
+        'Words that quietly signal doubt: purported, ostensibly, supposedly, allegedly, so-called, apparent. If one appears, the author is distancing themselves.',
+        'C1 verbs worth owning: countenance (tolerate), preclude (make impossible), obviate (remove the need for), attenuate (weaken), corroborate (confirm independently), equivocate (be deliberately vague), belie (give a false impression of), undermine, curtail, exacerbate, mitigate.',
+        'Nuance pairs that get tested: continual (repeated) vs continuous (unbroken) · comprise (the whole comprises the parts) vs compose (the parts compose the whole) · disinterested (impartial) vs uninterested (bored) · fortuitous (by chance) vs fortunate (lucky).'
+      ],
+      traps:[
+        'Choosing the most impressive word rather than the one that fits the register of the sentence.',
+        'Treating a near-synonym as interchangeable when its connotation reverses the author\'s stance.'
+      ]
+    },
+    {
+      type:'sentence-c1', title:'Subtle parallelism and modifier placement',
+      recognise:'A sentence that sounds fine on first reading. Nothing is broken; something is merely misaligned.',
+      steps:[
+        'Find the correlative pair (not only … but also, both … and, either … or, rather than, as much as). Whatever follows the first half must be the SAME grammatical kind as what follows the second.',
+        'Test it by deletion: "not only [X] but also [Y]" — read the sentence with X alone, then with Y alone. Both must work.',
+        'For modifiers, find the word the phrase is meant to describe and check it sits immediately beside it.',
+        'Track "only", "even", "just", "also". Each attaches to whatever follows it, and moving it changes the meaning of the sentence rather than breaking it.',
+        'For a dangling participle, ask who is doing the -ing. If that doer is not the subject of the main clause, it dangles.'
+      ],
+      key:[
+        'Parallel: "He emphasised reducing costs and improving service" — gerund + gerund. Not "…reducing costs and to improve service".',
+        '"Not only the need for X but also the importance of Y" — noun phrase against noun phrase.',
+        '"Only the board approved the merger" (nobody else did) ≠ "The board approved only the merger" (nothing else) ≠ "The board only approved the merger" (did not, say, fund it).',
+        'Comparisons must be like with like: "Our margins are higher than OUR COMPETITORS\'" — not "than our competitors", which compares margins to people.',
+        'A participle opening a sentence attaches to the subject that follows: "Having reviewed the data, THE TEAM concluded…" — not "…the conclusion was".'
+      ],
+      traps:[
+        'Accepting a sentence because it reads smoothly. At C1 the error is never audible.',
+        'Fixing the wrong half of a correlative pair.',
+        'Comparing a quality to a person, or a year to a company.'
+      ]
+    },
+    {
+      type:'idiom-c1', title:'Phrasal verbs and fixed expressions',
+      recognise:'One verb, four particles — or an expression where a single preposition is the whole question.',
+      steps:[
+        'Treat the verb + particle as ONE vocabulary item. "Bear out" and "bear on" share no meaning; knowing "bear" tells you nothing.',
+        'Use the object as the clue: data bears OUT a hypothesis (confirms it); a fact bears ON a question (is relevant to it); a person bears WITH you (is patient).',
+        'For fixed expressions, the preposition is not logical — it is memorised. Reasoning from Spanish will mislead you.',
+        'If two particles both seem possible, pick the one whose object type matches.'
+      ],
+      key:[
+        'bear out (confirm) · bear on (be relevant to) · bear with (be patient) · bear down on (approach threateningly).',
+        'account for (explain / make up) · allow for (leave room for) · answer for (take responsibility for) · call for (require).',
+        'put off (postpone / deter) · put up with (tolerate) · put down to (attribute to) · put forward (propose).',
+        'come up against (encounter) · come down to (be essentially about) · come in for (receive, of criticism) · come round to (eventually accept).',
+        'Fixed and frequently tested: at odds with · on the grounds that · in the wake of · with a view to + -ing · subject to · conducive to · tantamount to · in lieu of · by dint of · to no avail.',
+        'Note the -ing traps: "with a view to LAUNCHING", "committed to IMPROVING", "look forward to HEARING". "To" here is a preposition, not an infinitive.'
+      ],
+      traps:[
+        'Assuming the particle carries its literal spatial meaning.',
+        'Writing "with a view to launch" — the -ing is obligatory.',
+        'Choosing a phrasal verb that exists but takes a different kind of object.'
+      ]
+    },
+    {
+      type:'reading-c1', title:'Author stance and implication',
+      recognise:'A denser passage where the question asks about TONE, ATTITUDE, or what the author would most likely agree with — not about a stated fact.',
+      steps:[
+        'Read for the author\'s hedges and loaded words before you read for content. "So-called", "purportedly", "merely", "at best" are stance markers.',
+        'Separate what the author REPORTS from what the author ENDORSES. A passage can describe a view at length and still reject it.',
+        'Find the pivot. "Yet", "however", "in practice", "the reality is" almost always mark the sentence carrying the author\'s real position.',
+        'For tone questions, grade the intensity. Most C1 answers are moderate — "sceptical", "measured", "qualified approval" — while the wrong ones are extreme: "contemptuous", "enthusiastic", "indifferent".',
+        'For inference questions, the answer must follow from the passage, not merely sit comfortably alongside it.'
+      ],
+      key:[
+        'Concession then reversal is the standard C1 structure: "While the approach has merits, …". The position lives after the comma.',
+        'A rhetorical question is a statement. "Is this really innovation?" means the author thinks it is not.',
+        'Understatement signals criticism in formal English: "the results were less than compelling" is a harsh verdict.',
+        'If the author never states a view, the correct tone answer really is "neutral" or "detached" — do not manufacture an opinion.'
+      ],
+      traps:[
+        'Picking an extreme tone word when the passage is measured.',
+        'Attributing a reported view to the author.',
+        'Choosing an option that is reasonable in general but unsupported by this passage.'
+      ]
+    }
+  ]
+},
+
 /* ============================ BUSINESS JUDGMENT ============================ */
 {
   id:'judgment', icon:'⚖️', title:'Business Judgment',

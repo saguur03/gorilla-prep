@@ -28,10 +28,16 @@ const CATEGORIES = {
      Excluded from SECTION_ORDER so it never enters the full mock or distorts the simulation. */
   judgment: { key:'judgment', name:{en:'Business Judgment', es:'Criterio de Negocio'}, emoji:'⚖️',
               secQuestions:12, secMinutes:12, optional:true },
+  /* Deliberate over-training. The real English module is CEFR B1/B2, so these C1 items are
+     harder than anything the test will ask. Kept out of SECTION_ORDER for the same reason as
+     judgment: letting above-level questions into the mock or the readiness score would make
+     both of them understate how ready he actually is. */
+  engC1: { key:'engC1', name:{en:'English C1 (advanced)', es:'Inglés C1 (avanzado)'}, emoji:'🎓',
+           secQuestions:20, secMinutes:12, optional:true },
 };
 Object.values(CATEGORIES).forEach(c => { c.idealSecPerQ = Math.round((c.secMinutes*60)/c.secQuestions); });
 const SECTION_ORDER = ['ct','num','data','eng'];          /* the four real modules */
-const ALL_CATS = SECTION_ORDER.concat(['judgment']);      /* everything that carries questions */
+const ALL_CATS = SECTION_ORDER.concat(['judgment','engC1']); /* everything that carries questions */
 
 const DIFF = {
   1:{ label:{en:'Easy',es:'Fácil'},   factor:0.7 },
@@ -124,7 +130,9 @@ function topicFor(q){
 function blankStats(){
   return {
     totalAnswered:0, totalCorrect:0, streak:0, lastStudyDate:null,
-    byCategory:{ ct:{a:0,c:0}, num:{a:0,c:0}, data:{a:0,c:0}, eng:{a:0,c:0}, judgment:{a:0,c:0} },
+    /* Derived from ALL_CATS rather than listed by hand: a hardcoded list silently omits any
+       category added later, and the first answer in it then crashes on `cs.a++`. */
+    byCategory: ALL_CATS.reduce((m,k) => { m[k] = {a:0,c:0}; return m; }, {}),
     byType:{},      /* type -> {a, c, ms} — audit #10 */
     daily:{},
     questions:{},   /* id -> {seen, wrongCount, correctDays:[], lastSeen, times:[]} */
@@ -201,7 +209,10 @@ function recordAnswer(q, correct, elapsedMs){
   stats.totalAnswered++;
   if(correct) stats.totalCorrect++;
 
-  const cs = stats.byCategory[q.cat]; cs.a++; if(correct) cs.c++;
+  /* Create the bucket on demand: stats restored from an older save or from an imported
+     backup file will not carry categories that did not exist when it was written. */
+  const cs = stats.byCategory[q.cat] || (stats.byCategory[q.cat] = {a:0,c:0});
+  cs.a++; if(correct) cs.c++;
 
   const ty = q.type || 'other';
   const ts = stats.byType[ty] || { a:0, c:0, ms:0 };

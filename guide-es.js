@@ -640,6 +640,126 @@ sections: [
   ]
 },
 
+/* ============================ INGLÉS C1 ============================ */
+{
+  id:'engC1', icon:'🎓', title:'Inglés C1 (avanzado)',
+  blurb:'Sobreentrenamiento deliberado. El módulo real es B1/B2, así que todo lo de aquí es más difícil de lo que te van a preguntar. La idea no es que estas estructuras aparezcan, sino que tras practicarlas los ítems de B2 dejen de sentirse como decisiones y pasen a ser obvios.',
+  topics: [
+    {
+      type:'grammar-c1', title:'Inversión, cleft y anteposición',
+      recognise:'Un hueco al PRINCIPIO de una cláusula, o una oración que empieza con un adverbial negativo (Not only, Rarely, Seldom, No sooner, Under no circumstances, Only when/after/if).',
+      steps:[
+        'Detecta el disparador. Si se antepuso un adverbial negativo o restrictivo, la cláusula que sigue debe invertirse como una pregunta: auxiliar antes del sujeto.',
+        '"Rarely HAVE WE seen…", no "Rarely we have seen…". Si no hay auxiliar, se inserta do/does/did: "Only then DID HE realise".',
+        'Con "Only when/after/if + cláusula", la inversión cae en la cláusula PRINCIPAL, no en la subordinada: "Only when the board approved DID the CEO announce…".',
+        '"No sooner … THAN", nunca "no sooner … when". "Hardly/Scarcely … WHEN", nunca "than". Estos dos pares se intercambian a propósito en los distractores.',
+        'En las cleft, mira qué se enfatiza: "It was the CFO who raised it" (énfasis en la persona) vs "What the CFO raised was the risk" (énfasis en la cosa).'
+      ],
+      key:[
+        'Adverbial negativo antepuesto → invertir. Esa es toda la regla.',
+        'Not only … but also: la inversión va en la PRIMERA cláusula. "Not only DID sales fall, but margins also narrowed."',
+        'Should/Were/Had pueden sustituir a "if" en los condicionales, y entonces invierten: "Had we known" = "If we had known"; "Should you require" = "If you require"; "Were it not for" = "If it were not for".',
+        'NO se invierte cuando el adverbial no está antepuesto: "We have rarely seen this" es perfectamente correcto.',
+        'La cleft con "What" lleva verbo en SINGULAR: "What concerns me IS the assumptions", incluso ante un plural.'
+      ],
+      traps:[
+        'Invertir la subordinada en vez de la principal tras "Only when…".',
+        'Emparejar "no sooner" con "when" o "hardly" con "than".',
+        'Meter "would" en la cláusula if de un condicional invertido. "Had we would known" no es una oración.'
+      ]
+    },
+    {
+      type:'vocabulary-c1', title:'Registro, connotación y casi-sinónimos',
+      recognise:'Cuatro opciones que significan más o menos lo correcto. La pregunta no es qué significa la palabra sino qué tan formal es y qué implica.',
+      steps:[
+        'Decide qué necesita el hueco: neutro, formal o cargado. La oración te lo dice: un regulador "sanctions", un amigo "lets you".',
+        'Revisa la connotación, no solo el significado. Notorious = famoso por algo MALO. Ambitious plan = admirativo; overambitious = crítico.',
+        'Atiende a la colocación: se MOUNT a defence, se LODGE a complaint, se RAISE a concern, se VOICE an objection. El verbo lo fija el sustantivo.',
+        'Si dos opciones son formales y ambas encajan, suele ganar aquella cuya implicación coincide con la postura de la oración.'
+      ],
+      key:[
+        'Escalera de formalidad: start → begin → commence · end → conclude → terminate · ask for → request → solicit · about → concerning → with regard to.',
+        'Mismo significado, postura opuesta: thrifty (aprobatorio) / stingy (crítico); confident / arrogant; determined / stubborn; frank / blunt.',
+        'Palabras que señalan duda en silencio: purported, ostensibly, supposedly, allegedly, so-called, apparent. Si aparece una, el autor se está distanciando.',
+        'Verbos C1 que conviene dominar: countenance (tolerar), preclude (imposibilitar), obviate (eliminar la necesidad de), attenuate (debilitar), corroborate (confirmar de forma independiente), equivocate (ser vago a propósito), belie (dar una impresión falsa de), undermine, curtail, exacerbate, mitigate.',
+        'Pares de matiz que se examinan: continual (repetido) vs continuous (ininterrumpido) · comprise (el todo comprende las partes) vs compose (las partes componen el todo) · disinterested (imparcial) vs uninterested (aburrido) · fortuitous (por azar) vs fortunate (afortunado).'
+      ],
+      traps:[
+        'Escoger la palabra más impresionante en vez de la que encaja con el registro.',
+        'Tratar un casi-sinónimo como intercambiable cuando su connotación invierte la postura del autor.'
+      ]
+    },
+    {
+      type:'sentence-c1', title:'Paralelismo sutil y colocación de modificadores',
+      recognise:'Una oración que suena bien en la primera lectura. No hay nada roto; solo algo desalineado.',
+      steps:[
+        'Localiza el par correlativo (not only … but also, both … and, either … or, rather than, as much as). Lo que sigue a la primera mitad debe ser del MISMO tipo gramatical que lo que sigue a la segunda.',
+        'Compruébalo por eliminación: "not only [X] but also [Y]" — lee la oración solo con X, luego solo con Y. Ambas deben funcionar.',
+        'Con los modificadores, busca la palabra que la frase describe y verifica que esté justo al lado.',
+        'Vigila "only", "even", "just", "also". Cada uno se adhiere a lo que le sigue, y moverlo cambia el significado en vez de romper la oración.',
+        'Ante un participio colgante, pregunta quién hace la acción en -ing. Si no es el sujeto de la principal, cuelga.'
+      ],
+      key:[
+        'Paralelo: "He emphasised reducing costs and improving service" — gerundio + gerundio. No "…reducing costs and to improve service".',
+        '"Not only the need for X but also the importance of Y": sintagma nominal contra sintagma nominal.',
+        '"Only the board approved the merger" (nadie más) ≠ "The board approved only the merger" (nada más) ≠ "The board only approved the merger" (no lo financió, por ejemplo).',
+        'Las comparaciones deben ser entre iguales: "Our margins are higher than OUR COMPETITORS\'", no "than our competitors", que compara márgenes con personas.',
+        'Un participio que abre la oración se adhiere al sujeto que sigue: "Having reviewed the data, THE TEAM concluded…", no "…the conclusion was".'
+      ],
+      traps:[
+        'Aceptar una oración porque se lee con fluidez. En C1 el error nunca es audible.',
+        'Corregir la mitad equivocada de un par correlativo.',
+        'Comparar una cualidad con una persona, o un año con una empresa.'
+      ]
+    },
+    {
+      type:'idiom-c1', title:'Phrasal verbs y expresiones fijas',
+      recognise:'Un verbo y cuatro partículas, o una expresión donde una sola preposición es toda la pregunta.',
+      steps:[
+        'Trata verbo + partícula como UNA sola pieza de vocabulario. "Bear out" y "bear on" no comparten significado; saber qué es "bear" no te dice nada.',
+        'Usa el objeto como pista: los datos bear OUT una hipótesis (la confirman); un hecho bears ON una cuestión (es relevante); una persona bears WITH you (tiene paciencia).',
+        'En las expresiones fijas la preposición no es lógica: se memoriza. Razonar desde el español te va a desviar.',
+        'Si dos partículas parecen posibles, escoge aquella cuyo tipo de objeto coincida.'
+      ],
+      key:[
+        'bear out (confirmar) · bear on (ser relevante para) · bear with (tener paciencia) · bear down on (acercarse amenazante).',
+        'account for (explicar / constituir) · allow for (dejar margen para) · answer for (responder por) · call for (exigir).',
+        'put off (aplazar / disuadir) · put up with (tolerar) · put down to (atribuir a) · put forward (proponer).',
+        'come up against (toparse con) · come down to (reducirse esencialmente a) · come in for (recibir, de críticas) · come round to (acabar aceptando).',
+        'Fijas y muy examinadas: at odds with · on the grounds that · in the wake of · with a view to + -ing · subject to · conducive to · tantamount to · in lieu of · by dint of · to no avail.',
+        'Ojo con las trampas de -ing: "with a view to LAUNCHING", "committed to IMPROVING", "look forward to HEARING". Aquí "to" es preposición, no infinitivo.'
+      ],
+      traps:[
+        'Suponer que la partícula conserva su sentido espacial literal.',
+        'Escribir "with a view to launch": el -ing es obligatorio.',
+        'Escoger un phrasal verb que existe pero rige otro tipo de objeto.'
+      ]
+    },
+    {
+      type:'reading-c1', title:'Postura del autor e implicación',
+      recognise:'Un texto más denso donde la pregunta va sobre TONO, ACTITUD o con qué estaría de acuerdo el autor, no sobre un dato explícito.',
+      steps:[
+        'Lee primero los matizadores y las palabras cargadas, antes que el contenido. "So-called", "purportedly", "merely", "at best" marcan postura.',
+        'Separa lo que el autor REPORTA de lo que el autor SUSCRIBE. Un texto puede describir una postura largamente y aun así rechazarla.',
+        'Encuentra el pivote. "Yet", "however", "in practice", "the reality is" casi siempre marcan la frase con la posición real del autor.',
+        'En preguntas de tono, gradúa la intensidad. Las respuestas C1 correctas suelen ser moderadas —"escéptico", "mesurado", "aprobación con reservas"— mientras que las falsas son extremas: "despectivo", "entusiasta", "indiferente".',
+        'En preguntas de inferencia, la respuesta debe seguirse del texto, no simplemente convivir con él.'
+      ],
+      key:[
+        'Concesión y luego giro es la estructura C1 estándar: "While the approach has merits, …". La posición vive después de la coma.',
+        'Una pregunta retórica es una afirmación. "Is this really innovation?" significa que el autor cree que no.',
+        'En inglés formal, la atenuación señala crítica: "the results were less than compelling" es un veredicto duro.',
+        'Si el autor nunca declara una postura, la respuesta correcta de tono sí es "neutral" o "distante": no le inventes una opinión.'
+      ],
+      traps:[
+        'Escoger una palabra de tono extremo cuando el texto es mesurado.',
+        'Atribuir al autor una postura que solo está reportada.',
+        'Escoger una opción razonable en general pero no sostenida por este texto.'
+      ]
+    }
+  ]
+},
+
 /* ============================ CRITERIO DE NEGOCIO ============================ */
 {
   id:'judgment', icon:'⚖️', title:'Criterio de Negocio',
