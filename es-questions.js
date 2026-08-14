@@ -2517,6 +2517,191 @@ var T = {
 'ct-87': {
   prompt: "Cinco cajas tienen pesos diferentes.\n\n• La Caja A es más pesada que la Caja B.\n• La Caja C es más liviana que la Caja B.\n• La Caja D es más pesada que la Caja A pero más liviana que la Caja E.\n\n¿Cuál es la segunda caja más liviana?",
   choices: ["Caja A", "Caja B", "Caja C", "Caja D"]
+},
+
+/* ct-88 needs a note the English never needed. The series A, C, F, J, O advances by
+   +2, +3, +4, +5, which only holds on a 26-letter alphabet: with Ñ between N and O the
+   fifth term lands on Ñ, the visible pattern breaks, and a reader counting in Spanish
+   cannot reach the intended answer. Stating the convention keeps the item solvable without
+   touching the stored answer. ct-89 needs no such note — Z, X, V, T, R skips alternate
+   letters in a range Ñ never enters, so it works identically in both alphabets. */
+'ct-88': {
+  prompt: "¿Qué sigue en la secuencia?\n\nA,  C,  F,  J,  O,  ?\n\n(Usa el alfabeto de 26 letras, sin Ñ.)",
+  choices: ["Q", "S", "T", "U"]
+},
+'ct-89': {
+  prompt: "¿Qué sigue en la secuencia?\n\nZ,  X,  V,  T,  ?",
+  choices: ["S", "R", "Q", "P"]
+},
+'ct-90': {
+  prompt: "Un proyecto tiene estas restricciones:\n\n• La Tarea B no puede empezar hasta que la Tarea A esté terminada.\n• La Tarea C no puede empezar hasta que la Tarea B esté terminada.\n• La Tarea D no tiene dependencias.\n\n¿Cuál de los siguientes NO es un orden válido de finalización?",
+  choices: ["A, B, C, D", "D, A, B, C", "A, B, D, C", "B, A, D, C"]
+},
+'ct-91': {
+  prompt: "Se programan tres reuniones en una semana.\n\n• La auditoría es el miércoles.\n• La reunión con el cliente es dos días antes de la auditoría.\n• La revisión del informe es el día después de la auditoría.\n\n¿Qué día es la reunión con el cliente?",
+  choices: ["Lunes", "Martes", "Jueves", "Viernes"]
+},
+'ct-92': {
+  prompt: "Pregunta: ¿Debería una ciudad introducir un cargo por congestión para conducir en el centro?\n\n¿Cuál es el argumento MÁS FUERTE en contra?",
+  choices: [
+    "A los conductores les disgusta pagar cargos adicionales",
+    "La evidencia de ciudades comparables muestra que el cargo golpea más fuerte a los trabajadores de bajos ingresos, que no pueden cambiar su horario ni pasarse al transporte público",
+    "El esquema requeriría nueva señalización en toda el área del centro",
+    "El cargo por congestión se introdujo por primera vez en Singapur"
+  ]
+},
+'ct-93': {
+  prompt: "Pregunta: ¿Debería la empresa exigir que todos los empleados vuelvan a la oficina cinco días a la semana?\n\n¿Cuál es el argumento MÁS FUERTE en contra?",
+  choices: [
+    "Algunos empleados han gastado dinero decorando sus oficinas en casa",
+    "Desplazarse es desagradable con mal clima",
+    "Los propios datos de la empresa muestran que la producción por empleado subió 8% cuando empezó el trabajo remoto y desde entonces no ha bajado",
+    "Varias otras empresas han optado por seguir en remoto"
+  ]
+},
+'ct-94': {
+  prompt: "Pregunta: ¿Debería un hospital adoptar una nueva técnica quirúrgica?\n\n¿Cuál es el argumento MÁS FUERTE a favor?",
+  choices: [
+    "La técnica fue desarrollada en una universidad prestigiosa",
+    "Varios cirujanos del personal tienen curiosidad por probarla",
+    "El proveedor del equipo está ofreciendo un descuento este año",
+    "En ensayos aleatorizados la técnica redujo un tercio las complicaciones graves sin aumentar el tiempo de operación"
+  ]
+},
+'ct-95': {
+  prompt: "Pregunta: ¿Debería un colegio prohibir los teléfonos móviles durante las clases?\n\n¿Cuál es el argumento MÁS FUERTE a favor?",
+  choices: [
+    "A los docentes les molestan los teléfonos",
+    "Ensayos en colegios comparables encontraron que retirar los teléfonos elevó los puntajes de las pruebas, con las mayores ganancias entre los estudiantes de menor rendimiento",
+    "Los teléfonos móviles no existían cuando se fundó el colegio",
+    "Los teléfonos son costosos y podrían ser robados en el colegio"
+  ]
+},
+'ct-96': {
+  prompt: "Pregunta: ¿Debería la firma abrir una oficina en un país donde actualmente no tiene presencia?\n\n¿Cuál es el argumento MÁS FUERTE en contra?",
+  choices: [
+    "A algunos empleados no les gustaría reubicarse",
+    "La nueva oficina tendría que agregarse al sistema de calendario de la empresa",
+    "La firma no tiene un socio con relaciones locales de clientes, y expansiones comparables sin presencia local han fracasado de forma consistente",
+    "El país está a un vuelo largo de la sede"
+  ]
+},
+'ct-97': {
+  prompt: "Pregunta: ¿Debería la matrícula universitaria ser gratuita para todos los estudiantes?\n\nArgumento: 'No, porque los estudiantes terminarían con más tiempo libre del que tienen actualmente.'\n\n¿Cómo debería juzgarse este argumento?",
+  choices: [
+    "Fuerte, porque cómo usan su tiempo los estudiantes es una consideración importante de política",
+    "Débil, porque la consecuencia que plantea es trivial y no incide en si la educación debe financiarse con fondos públicos",
+    "Fuerte, porque identifica una consecuencia genuina de la política",
+    "Débil, porque la afirmación es fácticamente falsa"
+  ]
+},
+'ct-98': {
+  prompt: "Pregunta: ¿Debería una empresa invertir USD 2 millones en automatizar su bodega?\n\nArgumento: 'Sí, porque la automatización recortaría los costos operativos anuales en unos USD 700.000, recuperando la inversión en menos de tres años.'\n\n¿Cómo debería juzgarse este argumento?",
+  choices: [
+    "Débil, porque las estimaciones no son certezas",
+    "Débil, porque ignora el efecto sobre el personal de la bodega",
+    "Fuerte, porque cuantifica un beneficio directamente relevante en una escala que determinaría la decisión",
+    "Fuerte, porque reducir costos siempre es deseable"
+  ]
+},
+'ct-99': {
+  prompt: "Pregunta: ¿Debería la firma reemplazar las evaluaciones anuales de desempeño por retroalimentación continua?\n\n¿Cuál es el argumento MÁS DÉBIL a favor?",
+  choices: [
+    "Se ha demostrado que la retroalimentación entregada cerca del hecho cambia el comportamiento sustancialmente más que la retroalimentación retrasada meses",
+    "La retroalimentación continua es actualmente un enfoque popular entre los grandes empleadores",
+    "Las evaluaciones anuales concentran un año de juicio en una sola conversación, algo que la investigación vincula con el sesgo de recencia",
+    "Los jefes reportan que no logran recordar incidentes específicos del inicio del año de evaluación"
+  ]
+},
+'ct-100': {
+  prompt: "Una empresa de software reemplazó su planta abierta por escritorios de altura ajustable después de que los empleados se quejaran de dolor de espalda. La remodelación cubrió los 240 escritorios del piso de ingeniería y costó USD 1,9 millones. En los dos trimestres siguientes, el número promedio de puntos de historia completados por ingeniero subió 18%, una ganancia que la empresa no había registrado en ningún semestre anterior. El jefe de operaciones del lugar de trabajo presentó estas cifras a la junta y argumentó que la inversión en escritorios debería extenderse a las otras tres oficinas de la empresa, ya que los escritorios de pie evidentemente hacen más productivos a los ingenieros.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento?",
+  choices: [
+    "Los escritorios costaron cerca de USD 900 cada uno, más que las sillas que reemplazaron.",
+    "En esos mismos dos trimestres la empresa adoptó un nuevo sistema de gestión de proyectos que dividía las tareas grandes en historias más pequeñas.",
+    "Una minoría de ingenieros dijo que rara vez subía su escritorio por encima de la altura de estar sentado.",
+    "Las quejas por dolor de espalda no bajaron tanto como el equipo de operaciones esperaba."
+  ]
+},
+'ct-101': {
+  prompt: "Un minorista en línea analizó dos años de datos de transacciones que cubrían poco más de 12.000 publicaciones y encontró que los productos con más de cincuenta reseñas de clientes venden, en promedio, cuatro veces más unidades al mes que los productos con menos de diez reseñas. La relación se sostuvo en todas las categorías que el equipo examinó, desde utensilios de cocina hasta electrónica de consumo. El director de marketing ha propuesto pagar a los clientes un pequeño crédito por dejar reseñas en productos de baja rotación, con el argumento de que acumular reseñas elevará las ventas de esos productos.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la propuesta?",
+  choices: [
+    "Las reseñas se acumulan en un producto principalmente porque este ya vende en alto volumen.",
+    "Algunos clientes dicen que solo leen las dos o tres reseñas más recientes.",
+    "El crédito le costaría al minorista unos cuarenta centavos por reseña recolectada.",
+    "Minoristas competidores han corrido esquemas similares de incentivos por reseñas."
+  ]
+},
+'ct-102': {
+  prompt: "Un grupo manufacturero introdujo un curso obligatorio de seguridad de ocho horas en su planta Riverside, dictado a los 600 empleados de producción durante un periodo de tres meses. Las lesiones registrables en Riverside cayeron de 42 en el año anterior al curso a 19 en el año posterior, la cifra anual más baja que la planta haya registrado. El oficial de seguridad del grupo ha recomendado desplegar el curso en las once plantas a un costo combinado de USD 2,3 millones, argumentando que las cifras de Riverside muestran que la capacitación reduce aproximadamente a la mitad las tasas de lesiones.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la recomendación?",
+  choices: [
+    "El curso fue dictado por un proveedor externo a un costo significativo.",
+    "Riverside opera equipos más antiguos que la mayoría de las otras plantas del grupo.",
+    "Riverside además pasó de dos turnos a uno durante ese mismo año, recortando 45% las horas trabajadas.",
+    "Algunos empleados de Riverside dijeron que el curso cubría riesgos que nunca enfrentan."
+  ]
+},
+'ct-103': {
+  prompt: "Una firma consultora notó que los consultores que se inscribieron en su esquema voluntario de trabajo remoto renunciaron a menos de la mitad de la tasa de los consultores que permanecieron en la oficina. El patrón se ha sostenido por tres años consecutivos y en las cuatro áreas de práctica de la firma. La directora de personas ha argumentado que hacer universal el trabajo remoto recortaría la rotación general de la firma, que hoy está muy por encima del referente de la industria y cuesta unos USD 4 millones al año en contratación de reemplazos.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento de la directora de personas?",
+  choices: [
+    "El esquema remoto estaba abierto solo a consultores que habían pasado su evaluación de tercer año y estaban en la vía a socio.",
+    "Algunos consultores basados en oficina dijeron que preferían el aprendizaje informal que viene de sentarse cerca de los colegas.",
+    "Los consultores remotos facturan levemente menos horas al mes que los basados en oficina.",
+    "El referente de rotación de la industria ha subido en los últimos dos años."
+  ]
+},
+'ct-104': {
+  prompt: "Una cadena de supermercados lanzó hace dieciocho meses una tarjeta de fidelización por puntos y desde entonces ha inscrito a poco menos de la mitad de sus clientes habituales. El análisis de los datos de caja muestra que los tarjetahabientes gastan USD 87 al mes en la cadena frente a USD 34 de quienes no tienen tarjeta, una brecha que se ha mantenido estable desde el lanzamiento. El director de marketing quiere gastar USD 2 millones en convertir a los clientes restantes, proyectando que cada conversión sumará unos USD 50 de gasto mensual con base en esta brecha.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la proyección?",
+  choices: [
+    "La tarjeta se ofrece gratis en cada caja y toma cerca de un minuto inscribirse.",
+    "Los compradores que ya hacen la mayor parte de su mercado semanal en la cadena son mucho más propensos a tomarse la molestia de inscribirse.",
+    "Un número pequeño de tarjetahabientes nunca redime los puntos que acumula.",
+    "El principal competidor de la cadena también opera un esquema de fidelización."
+  ]
+},
+'ct-105': {
+  prompt: "Un proveedor de software B2B desplegó en enero un nuevo sistema CRM a su equipo comercial, reemplazando un conjunto de hojas de cálculo que cada representante mantenía por su cuenta. Durante el año siguiente, la tasa de cierre del equipo sobre oportunidades calificadas subió de 22% a 31%, y el tamaño promedio de negocio también subió levemente. El líder de operaciones comerciales ha escrito un caso de estudio interno atribuyendo la mejora al CRM y lo está usando para justificar otros USD 1,4 millones de gasto en herramientas.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión del caso de estudio?",
+  choices: [
+    "El CRM exigía que cada representante registrara unos veinte minutos de datos al día.",
+    "En enero la empresa además endureció su definición de oportunidad calificada, excluyendo los negocios más pequeños y menos probables.",
+    "Dos representantes dijeron que encontraban más fácil de navegar el sistema anterior.",
+    "La tasa de cierre subió más marcadamente en el cuarto trimestre."
+  ]
+},
+'ct-106': {
+  prompt: "Un banco encuestó al personal de su sede antes y después de una remodelación de USD 3 millones del comedor y las áreas sociales, logrando tasas de respuesta superiores al 70% en ambas ocasiones. La satisfacción reportada con el lugar de trabajo subió de 54% a 71%. El director de instalaciones ha recomendado la misma remodelación en seis oficinas regionales, a un costo combinado de USD 16 millones, argumentando que el resultado de la sede muestra que la inversión eleva de forma confiable la satisfacción en unos diecisiete puntos.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la recomendación?",
+  choices: [
+    "La segunda encuesta se distribuyó una semana después de que el personal se enterara de que los bonos anuales serían 20% más altos de lo pronosticado.",
+    "La remodelación tomó cuatro meses y causó algo de disrupción mientras estuvo en curso.",
+    "Las oficinas regionales tienen comedores más pequeños que la sede.",
+    "La satisfacción con la remuneración se midió por separado y no está incluida en la cifra de 71%."
+  ]
+},
+'ct-107': {
+  prompt: "Un servicio de streaming recortó el precio de su plan estándar de USD 12 a USD 9 en un mercado nacional, donde era el tercer proveedor más grande por número de suscriptores. Durante los seis meses siguientes, los ingresos totales por suscripción en ese mercado subieron 11% y las cancelaciones cayeron levemente. El equipo de precios ha propuesto el mismo recorte en los catorce mercados en que opera el servicio, argumentando que la ganancia en volumen por un precio menor compensa con creces el margen más pequeño por suscriptor.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la propuesta?",
+  choices: [
+    "El mercado de prueba fue el único en el que un competidor importante se retiró durante esos mismos seis meses.",
+    "Algunos suscriptores del plan estándar rara vez ven más de unas pocas horas al mes.",
+    "El presupuesto de contenido del servicio se fija anualmente y no cambiaría con el precio.",
+    "Los contactos a servicio al cliente cayeron levemente tras el cambio de precio."
+  ]
+},
+'ct-108': {
+  prompt: "Un fabricante de automóviles gastó USD 40 millones en una campaña nacional de televisión que corrió de marzo a mayo, su mayor compromiso individual de medios en una década. Un estudio de seguimiento realizado en junio encontró que el reconocimiento espontáneo de marca se situó en 61%, frente a 44% en un estudio comparable realizado en junio del año anterior. Ambos estudios usaron la misma agencia, el mismo tamaño de muestra y la misma redacción de preguntas. El equipo de marca ha concluido que la campaña produjo un alza de diecisiete puntos y está solicitando un presupuesto similar para el próximo año.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión del equipo de marca?",
+  choices: [
+    "La campaña corrió solo en televisión, sin componente digital.",
+    "En abril el fabricante fue objeto de amplia cobertura noticiosa nacional tras un llamado a revisión de producto muy publicitado.",
+    "El estudio de junio encuestó a levemente más participantes que el del año anterior.",
+    "El reconocimiento entre participantes menores de treinta subió menos que el promedio general."
+  ]
+},
+'ct-109': {
+  prompt: "Un distribuidor cambió su principal proveedor de transporte de carga en marzo, moviendo cerca de dos tercios de su volumen de despachos al nuevo transportador bajo un contrato a tres años. El tiempo promedio de entrega en toda su red cayó de 4,1 días a 3,2 días durante el trimestre siguiente, y las quejas de clientes por llegadas tardías bajaron un tercio. El gerente de logística ha recomendado mover al mismo proveedor los corredores regionales restantes, presentando la cifra de red como evidencia de que el nuevo transportador es aproximadamente un día más rápido.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la recomendación?",
+  choices: [
+    "El nuevo proveedor cobra cerca de 6% más por despacho que el anterior.",
+    "En febrero el distribuidor abrió dos nuevas bodegas regionales, acortando la distancia a la mayoría de los clientes.",
+    "El proveedor anterior había tenido el contrato durante once años.",
+    "Un puñado de despachos con el nuevo proveedor llegó más tarde de lo prometido."
+  ]
 }
 
 };
