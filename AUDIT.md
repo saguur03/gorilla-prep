@@ -1,7 +1,14 @@
-> **Status: implemented 13 Aug 2026.** Every P0, P1 and P2 finding below has been acted on,
-> except #7 (lengthening Critical Thinking stimuli) and #8 (rebalancing the CT/Numerical type
-> mix), which remain open. See "Implementation record" at the end for what changed and how it
-> was verified.
+> **Status: implemented 13 Aug 2026.** Every P0, P1 and P2 finding below has been acted on.
+> **#7 (lengthening Critical Thinking stimuli) was closed on 13 Aug** after the bank expansion:
+> 51 stimuli were rewritten and the CT bank now has 67 of 200 items at 70+ words — the "roughly
+> a third" this finding asked for — with a median of 67 words and none above 120.
+> **#8 (rebalancing the type mix) remains open and is now larger.** The expansion to 690
+> questions replicated each original bank's type distribution exactly, so the divergence this
+> finding describes was doubled rather than corrected: arrangements are still 10% of CT and
+> syllogisms 8% against a ~15% target each, Working with Data is still 61% table questions with
+> zero charts added, and Numerical multistep is still 18% against a ~10% target. Closing it
+> requires writing roughly 34 new CT and 40 new Data questions.
+> See "Implementation record" at the end, and the Paso 4 section of `EXPANSION-PROGRESS.md`.
 
 # External audit — Gorilla Prep
 

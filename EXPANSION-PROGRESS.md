@@ -29,7 +29,7 @@ Cargados en `index.html` después de los originales (y de `questions-charts.js`)
 - Cada pregunta nueva trae `type` y `d` explícitos (los IIFE de dificultad por defecto viven al final de los archivos originales y ya se ejecutaron).
 - Solo se usaron tipos que ya existían — 31 tipos, todos con tema en `guide-en.js` y `guide-es.js`. Ningún tipo nuevo, así que el botón de técnica funciona en todas.
 - Distribución por tipo replicada exactamente de cada banco original.
-- CT: enunciados de 75–95 palabras con contexto de negocio (criterio del Paso 6).
+- CT: enunciados con contexto de negocio. **Corregido el 13 ago**: la versión original de este documento afirmaba 75–95 palabras; al medirlas, la mediana real era 48,5 y ninguna llegaba a 70. Ver la sección del Paso 4.
 - Opciones numéricas en orden ascendente, con la posición de la respuesta correcta variada a propósito.
 
 ## Distribución por tipo de las preguntas nuevas
@@ -71,6 +71,47 @@ Segunda pasada sobre las 337 nuevas, leyendo el contenido en lugar de solo valid
 3. **Repetición de plantilla en `inference`** — 11 de las 13 nuevas compartían el mismo esqueleto («Every A→B. Some B are C. No C is D»), con la primera premisa siempre de adorno. Un banco así entrena reconocimiento de patrón, no razonamiento. Se reescribieron 8 con estructuras distintas: modus tollens encadenado, «only if» (condición necesaria), solapamiento de porcentajes, disyunción exclusiva, contrapositivo sobre una lista de exclusión, orden comparativo, principio del palomar, y condicional con «unless». Quedan 4 con la plantilla clásica, que es una representación razonable de ese patrón.
 
 Reverificado tras los cambios: 690 preguntas, 0 errores estructurales, 31 tipos cubiertos en ambas guías, `ct-100` sigue siendo la primera sin traducción ES (ids intactos), balance posicional 61/66/59/51 sobre 237 preguntas de orden fijo, consola sin errores y sesión mixta jugada de principio a fin.
+
+## Paso 4 — Revisión de calidad contra el estándar TestGorilla (13 ago 2026)
+
+Auditoría de las 337 nuevas contra el blueprint de `RESEARCH.md` y los hallazgos abiertos de `AUDIT.md`.
+
+**Conformidad de formato: correcta.** Las 690 preguntas tienen exactamente 4 opciones, como el test real. Los 31 tipos siguen cubiertos en ambas guías. `argument-strength` alterna STRONGEST/WEAKEST correctamente y mantiene el enunciado corto que pide el formato Watson-Glaser.
+
+### Hallazgo 1 — Los enunciados de CT no cumplían el rango real (auditoría #7). Corregido.
+
+Medidos, los 74 estímulos argumentativos nuevos tenían **mediana de 48,5 palabras y ninguno llegaba a 70**, contra el rango de 60–120 de Watson-Glaser. Peor: en `assumption`, `inference` y `evaluate` la expansión los hizo **más cortos** que los originales (68,5→47,5; 74→49; 68→54). La afirmación de «75–95 palabras» en la sección de reglas de este documento era falsa.
+
+Se reescribieron **51 estímulos** —los 12 de `flaw`, 14 de `weaken`, 10 de `assumption`, 8 de `paradox`, 7 de `evaluate`— añadiendo escala, evidencia secundaria y cláusulas calificativas, sin introducir explicaciones rivales que cambiaran la respuesta.
+
+| Tipo | Mediana antes | Mediana ahora | En 70+ |
+|---|---|---|---|
+| flaw | 41 | 89 | 12/12 |
+| weaken | 58 | 79 | 14/14 |
+| assumption | 48 | 73,5 | 9/10 |
+| evaluate | 54 | 72 | 5/7 |
+| strengthen | 53 | 72 | 6/10 |
+| paradox | 50 | 70,5 | 5/8 |
+
+El banco de CT pasa de **16 a 67 preguntas de 70+ palabras sobre 200** — exactamente el tercio que pedía la auditoría. Mediana global 67 palabras, ninguna por encima de 120. Verificado en la app: un estímulo de 96 palabras ocupa seis líneas sin desbordar.
+
+`inference` se dejó en 49 palabras a propósito: sus premisas son cadenas de cuantificadores donde el relleno narrativo estorba en lugar de añadir carga cognitiva.
+
+### Hallazgo 2 — La expansión replicó el desbalance de tipos (auditoría #8). **Sigue abierto.**
+
+La regla «distribución por tipo replicada exactamente de cada banco original», que este documento listaba como acierto de diseño, era en realidad un error: la auditoría del 12 ago ya había marcado esa distribución como divergente del blueprint, así que duplicar el banco duplicó la desviación en lugar de corregirla.
+
+| | Ahora | Objetivo de la auditoría |
+|---|---|---|
+| CT · arrangement | 10% | ~15% |
+| CT · syllogism | 8% | ~15% |
+| Data · table | 61% | bajar hacia ~⅓ |
+| Data · statistics | 15% | ~⅓ |
+| Data · validation | 13% | ~⅓ |
+| Data · chart | 11% (0 añadidos en la expansión) | subir |
+| Numerical · multistep | 18% | ~10% |
+
+Arrangements y silogismos son los dos formatos más distintivos de TestGorilla y juntos siguen en 18%. Cerrar esto exige **escribir preguntas nuevas** (~34 de CT y ~40 de Data), no reescribir las existentes; queda como trabajo pendiente decidido por Santiago.
 
 ## Pendiente (opcional, no bloquea el uso)
 

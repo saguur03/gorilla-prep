@@ -17,7 +17,7 @@ var Q = [
 /* ---------- WEAKEN ---------- */
 {
   type: "weaken", d: 2,
-  prompt: "A software company replaced its open-plan floor with height-adjustable standing desks after employees complained of back pain. In the two quarters that followed, the average number of story points completed per engineer rose by 18%. The head of workplace operations presented these figures to the board and argued that the desk investment should be extended to the company's other three offices, since standing desks evidently make engineers more productive.\n\nWhich of the following, if true, most weakens the argument?",
+  prompt: "A software company replaced its open-plan floor with height-adjustable standing desks after employees complained of back pain. The refurbishment covered all 240 desks on the engineering floor and cost $1.9m. In the two quarters that followed, the average number of story points completed per engineer rose by 18%, a gain the company had not recorded in any previous half-year. The head of workplace operations presented these figures to the board and argued that the desk investment should be extended to the company's other three offices, since standing desks evidently make engineers more productive.\n\nWhich of the following, if true, most weakens the argument?",
   choices: [
     "The desks cost roughly $900 each, more than the chairs they replaced.",
     "In the same two quarters the company adopted a new project-management system that broke large tasks into smaller stories.",
@@ -29,7 +29,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "An online retailer analysed two years of data and found that products with more than fifty customer reviews sell, on average, four times as many units per month as products with fewer than ten reviews. The marketing director has proposed paying customers a small credit to leave reviews on slow-moving products, on the grounds that accumulating reviews will lift those products' sales.\n\nWhich of the following, if true, most weakens the proposal?",
+  prompt: "An online retailer analysed two years of transaction data covering just over 12,000 listings and found that products with more than fifty customer reviews sell, on average, four times as many units per month as products with fewer than ten reviews. The relationship held in every category the team examined, from kitchenware to consumer electronics. The marketing director has proposed paying customers a small credit to leave reviews on slow-moving products, on the grounds that accumulating reviews will lift those products' sales.\n\nWhich of the following, if true, most weakens the proposal?",
   choices: [
     "Reviews accumulate on a product mainly because it already sells in high volume.",
     "Some customers say they read only the most recent two or three reviews.",
@@ -41,7 +41,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A manufacturing group introduced a mandatory eight-hour safety course at its Riverside plant. Recordable injuries at Riverside fell from 42 in the year before the course to 19 in the year after. The group's safety officer has recommended rolling the course out to all eleven plants, arguing that the Riverside figures show the training roughly halves injury rates.\n\nWhich of the following, if true, most weakens the recommendation?",
+  prompt: "A manufacturing group introduced a mandatory eight-hour safety course at its Riverside plant, delivered to all 600 production staff over a three-month period. Recordable injuries at Riverside fell from 42 in the year before the course to 19 in the year after, the lowest annual figure the plant has ever recorded. The group's safety officer has recommended rolling the course out to all eleven plants at a combined cost of $2.3m, arguing that the Riverside figures show the training roughly halves injury rates.\n\nWhich of the following, if true, most weakens the recommendation?",
   choices: [
     "The course was delivered by an external provider at significant cost.",
     "Riverside runs older equipment than most of the group's other plants.",
@@ -53,7 +53,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A consulting firm noticed that consultants who opted into its voluntary remote-work scheme resigned at less than half the rate of consultants who remained office-based. The people director has argued that making remote work universal would cut the firm's overall attrition, which currently sits well above the industry benchmark and costs an estimated $4m a year in replacement hiring.\n\nWhich of the following, if true, most weakens the people director's argument?",
+  prompt: "A consulting firm noticed that consultants who opted into its voluntary remote-work scheme resigned at less than half the rate of consultants who remained office-based. The pattern has held for three consecutive years and across all four of the firm's practice areas. The people director has argued that making remote work universal would cut the firm's overall attrition, which currently sits well above the industry benchmark and costs an estimated $4m a year in replacement hiring.\n\nWhich of the following, if true, most weakens the people director's argument?",
   choices: [
     "The remote scheme was open only to consultants who had passed their third-year review and were on partner track.",
     "Some office-based consultants said they preferred the informal learning that comes from sitting near colleagues.",
@@ -65,7 +65,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A grocery chain launched a points-based loyalty card. Analysis shows that cardholders spend $87 per month at the chain against $34 for non-cardholders. The chief marketing officer wants to spend $2m converting the remaining non-cardholders, projecting that each conversion will add roughly $50 of monthly spend on the strength of this gap.\n\nWhich of the following, if true, most weakens the projection?",
+  prompt: "A grocery chain launched a points-based loyalty card eighteen months ago and has since signed up just under half of its regular customers. Analysis of till data shows that cardholders spend $87 per month at the chain against $34 for non-cardholders, a gap that has been stable since launch. The chief marketing officer wants to spend $2m converting the remaining non-cardholders, projecting that each conversion will add roughly $50 of monthly spend on the strength of this gap.\n\nWhich of the following, if true, most weakens the projection?",
   choices: [
     "The card is offered free at every checkout and takes about a minute to sign up for.",
     "Shoppers who already do most of their weekly shopping at the chain are far more likely to bother signing up.",
@@ -77,7 +77,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A B2B software vendor rolled out a new CRM system to its sales team in January. Over the following year the team's win rate on qualified opportunities climbed from 22% to 31%. The sales operations lead has written a case study attributing the improvement to the CRM and is using it to justify a further $1.4m of tooling spend.\n\nWhich of the following, if true, most weakens the case study's conclusion?",
+  prompt: "A B2B software vendor rolled out a new CRM system to its sales team in January, replacing a set of spreadsheets that individual representatives had maintained themselves. Over the following year the team's win rate on qualified opportunities climbed from 22% to 31%, and average deal size rose slightly as well. The sales operations lead has written an internal case study attributing the improvement to the CRM and is using it to justify a further $1.4m of tooling spend.\n\nWhich of the following, if true, most weakens the case study's conclusion?",
   choices: [
     "The CRM required each representative to log roughly twenty minutes of data per day.",
     "In January the company also tightened its definition of a qualified opportunity, excluding the smallest and least likely deals.",
@@ -89,7 +89,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A bank surveyed staff at its head office before and after a $3m refurbishment of the canteen and social spaces. Reported satisfaction with the workplace rose from 54% to 71%. The facilities director has recommended the same refurbishment at six regional offices, arguing that the head-office result shows the investment reliably lifts satisfaction by around seventeen points.\n\nWhich of the following, if true, most weakens the recommendation?",
+  prompt: "A bank surveyed staff at its head office before and after a $3m refurbishment of the canteen and social spaces, achieving response rates above 70% on both occasions. Reported satisfaction with the workplace rose from 54% to 71%. The facilities director has recommended the same refurbishment at six regional offices, at a combined cost of $16m, arguing that the head-office result shows the investment reliably lifts satisfaction by around seventeen points.\n\nWhich of the following, if true, most weakens the recommendation?",
   choices: [
     "The second survey was distributed a week after staff learned that annual bonuses would be 20% higher than forecast.",
     "The refurbishment took four months and caused some disruption while it was underway.",
@@ -101,7 +101,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A streaming service cut the price of its standard tier from $12 to $9 in one national market. Over the next six months, total subscription revenue in that market rose by 11%. The pricing team has proposed the same cut across all fourteen markets, arguing that the volume gain from a lower price more than compensates for the smaller margin per subscriber.\n\nWhich of the following, if true, most weakens the proposal?",
+  prompt: "A streaming service cut the price of its standard tier from $12 to $9 in one national market, where it had been the third-largest provider by subscriber numbers. Over the next six months, total subscription revenue in that market rose by 11% and cancellations fell slightly. The pricing team has proposed the same cut across all fourteen markets in which the service operates, arguing that the volume gain from a lower price more than compensates for the smaller margin per subscriber.\n\nWhich of the following, if true, most weakens the proposal?",
   choices: [
     "The test market was the only one in which a major competitor withdrew from the market during the same six months.",
     "Some subscribers on the standard tier rarely watch more than a few hours a month.",
@@ -113,7 +113,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A car manufacturer spent $40m on a national television campaign in the spring. A tracking study run in June found that unprompted brand awareness stood at 61%, against 44% in a comparable study run the previous June. The brand team has concluded that the campaign produced a seventeen-point lift and is requesting a similar budget for next year.\n\nWhich of the following, if true, most weakens the brand team's conclusion?",
+  prompt: "A car manufacturer spent $40m on a national television campaign running from March to May, its largest single media commitment in a decade. A tracking study run in June found that unprompted brand awareness stood at 61%, against 44% in a comparable study run the previous June. Both studies used the same agency, the same sample size and the same question wording. The brand team has concluded that the campaign produced a seventeen-point lift and is requesting a similar budget for next year.\n\nWhich of the following, if true, most weakens the brand team's conclusion?",
   choices: [
     "The campaign ran on television only, with no digital component.",
     "In April the manufacturer was the subject of extensive national news coverage after a widely publicised product recall.",
@@ -125,7 +125,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A distributor switched its main freight provider in March. Average delivery time across its network fell from 4.1 days to 3.2 days over the following quarter. The logistics manager has recommended moving the remaining regional lanes to the same provider, presenting the network figure as evidence that the new carrier is roughly a day faster.\n\nWhich of the following, if true, most weakens the recommendation?",
+  prompt: "A distributor switched its main freight provider in March, moving roughly two-thirds of its shipment volume to the new carrier under a three-year contract. Average delivery time across its network fell from 4.1 days to 3.2 days over the following quarter, and customer complaints about late arrivals fell by a third. The logistics manager has recommended moving the remaining regional lanes to the same provider, presenting the network figure as evidence that the new carrier is roughly a day faster.\n\nWhich of the following, if true, most weakens the recommendation?",
   choices: [
     "The new provider charges about 6% more per shipment than the previous one.",
     "In February the distributor opened two new regional warehouses, shortening the distance to most customers.",
@@ -137,7 +137,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "An insurer introduced a voluntary wellness programme offering gym subsidies and health screening. Employees who joined took an average of 3.1 sick days last year against 6.8 for those who did not. The HR director has proposed making participation compulsory, projecting savings of roughly $1.1m a year in absence cover on the strength of the difference.\n\nWhich of the following, if true, most weakens the projection?",
+  prompt: "An insurer introduced a voluntary wellness programme offering gym subsidies and annual health screening, which around a third of its 2,400 staff chose to join in the first year. Employees who joined took an average of 3.1 sick days last year against 6.8 for those who did not, a difference that held in every department. The HR director has proposed making participation compulsory, projecting savings of roughly $1.1m a year in absence cover on the strength of the difference.\n\nWhich of the following, if true, most weakens the projection?",
   choices: [
     "The programme costs about $340 per participating employee per year.",
     "Employees managing chronic health conditions were far less likely to sign up for a gym-based programme.",
@@ -149,7 +149,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A homeware chain redesigned the layout of one store, moving high-margin accessories to the main aisle. Over the following three months the store's average basket value rose from $41 to $53. The retail operations team has budgeted $6m to redesign all ninety stores, using the pilot store's twelve-dollar gain as the basis for the return calculation.\n\nWhich of the following, if true, most weakens the return calculation?",
+  prompt: "A homeware chain redesigned the layout of one store, moving high-margin accessories to the main aisle and relocating bulk kitchenware to the rear. The work took two weeks and cost $65,000. Over the following three months the store's average basket value rose from $41 to $53, while transaction volume held roughly steady. The retail operations team has budgeted $6m to redesign all ninety stores, using the pilot store's twelve-dollar gain as the basis for the return calculation.\n\nWhich of the following, if true, most weakens the return calculation?",
   choices: [
     "The pilot store is the only one of the ninety located inside a shopping centre that opened a new anchor tenant during the trial.",
     "The redesign took eight days, during which the pilot store traded at reduced capacity.",
@@ -161,7 +161,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A call centre replaced its flat hourly wage with a bonus tied to calls resolved per shift. Average calls resolved per agent rose 24% in the following quarter. The operations director has recommended extending the scheme to the company's two other centres, arguing that the bonus demonstrably raises agent output.\n\nWhich of the following, if true, most weakens the recommendation?",
+  prompt: "A call centre replaced its flat hourly wage with a bonus tied to the number of calls each agent records as resolved per shift. The scheme applied to all 180 agents at the site and was introduced without any change to staffing levels or opening hours. Average calls resolved per agent rose 24% in the following quarter. The operations director has recommended extending the scheme to the company's two other centres, arguing that the bonus demonstrably raises agent output.\n\nWhich of the following, if true, most weakens the recommendation?",
   choices: [
     "The bonus adds roughly 9% to the average agent's pay.",
     "Under the new scheme agents mark a call resolved at the end of the conversation, and repeat calls about the same issue rose by a third.",
@@ -173,7 +173,7 @@ var Q = [
 },
 {
   type: "weaken", d: 2,
-  prompt: "A technology firm introduced an automated CV-screening tool. Among candidates hired through the tool, 84% received a strong rating at their first annual review, against 66% for candidates hired through the previous manual process. The talent lead has argued that the tool identifies stronger candidates and should be extended to senior hiring.\n\nWhich of the following, if true, most weakens the argument?",
+  prompt: "A technology firm introduced an automated CV-screening tool for graduate and junior engineering roles, where it now filters roughly 9,000 applications a year down to a shortlist for interview. Among candidates hired through the tool, 84% received a strong rating at their first annual review, against 66% for candidates hired through the previous manual process. The talent lead has argued that the tool identifies stronger candidates and should be extended to senior hiring.\n\nWhich of the following, if true, most weakens the argument?",
   choices: [
     "The tool was used only for graduate roles, where first-year ratings are generally higher than in experienced hires.",
     "The tool takes about four seconds to screen each application.",
@@ -187,7 +187,7 @@ var Q = [
 /* ---------- STRENGTHEN ---------- */
 {
   type: "strengthen", d: 2,
-  prompt: "A hotel group is considering replacing single-use toiletries with refillable dispensers across its 60 properties. The sustainability team estimates the switch would save $1.8m a year in consumables. The finance director is unconvinced, noting that the group's guest-satisfaction scores are its main competitive asset and that some guests may read the change as a downgrade.\n\nWhich of the following, if true, most strengthens the case for the switch?",
+  prompt: "A hotel group is considering replacing single-use toiletries with refillable dispensers across its 60 properties, which range from budget city hotels to two five-star resorts. The sustainability team estimates the switch would save $1.8m a year in consumables and remove around 14 tonnes of plastic from the group's waste stream. The finance director is unconvinced, noting that the group's guest-satisfaction scores are its main competitive asset and that some guests may read the change as a downgrade.\n\nWhich of the following, if true, most strengthens the case for the switch?",
   choices: [
     "Refillable dispensers have become common in the group's market segment.",
     "In a twelve-month trial across eight properties, satisfaction scores were statistically unchanged while consumables spend fell as projected.",
@@ -199,7 +199,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "An architecture practice is debating a move to a four-day week with no reduction in pay. The managing partner argues that billable output would hold because most of the fifth day is consumed by low-value coordination. Several senior architects are sceptical, pointing out that client deadlines will not shorten to match and that the practice already runs close to capacity.\n\nWhich of the following, if true, most strengthens the managing partner's argument?",
+  prompt: "An architecture practice is debating a move to a four-day week with no reduction in pay. The managing partner argues that billable output would hold, because a time-recording review suggests most of the fifth day is consumed by internal coordination that generates no fee. She also expects the change to help with recruitment in a tight market. Several senior architects are sceptical, pointing out that client deadlines will not shorten to match and that the practice already runs close to capacity.\n\nWhich of the following, if true, most strengthens the managing partner's argument?",
   choices: [
     "Staff at the practice have said they would welcome a four-day week.",
     "Time-tracking data shows that 31% of Friday hours across the past two years were logged to internal coordination that could be consolidated into other days.",
@@ -211,7 +211,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A professional services firm runs a mentorship scheme pairing junior staff with partners. Mentees are promoted to manager 40% faster than non-mentees. The head of talent wants to expand the scheme firm-wide, but the executive committee suspects the pattern reflects partners choosing to mentor the people already marked as high performers.\n\nWhich of the following, if true, most strengthens the head of talent's position?",
+  prompt: "A professional services firm runs a mentorship scheme pairing junior staff with partners on a voluntary basis; roughly a quarter of eligible juniors currently take part. Mentees are promoted to manager 40% faster than non-mentees, and the gap has been consistent over the four years the scheme has run. The head of talent wants to expand the scheme firm-wide at a cost of some partner time, but the executive committee suspects the pattern reflects partners choosing to mentor the people already marked as high performers.\n\nWhich of the following, if true, most strengthens the head of talent's position?",
   choices: [
     "Mentees report higher job satisfaction than non-mentees.",
     "Mentors are assigned by lottery among all juniors who apply, and applicants' prior performance ratings are indistinguishable from non-applicants'.",
@@ -223,7 +223,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A ceramics exporter is considering a thicker moulded insert for its packaging. The operations manager projects that breakage in transit, currently 3.4% of units shipped, would fall to under 1%, comfortably justifying the extra $0.35 per unit in packaging cost. The finance team notes that no one has established where the breakages actually occur.\n\nWhich of the following, if true, most strengthens the operations manager's projection?",
+  prompt: "A ceramics exporter is considering a thicker moulded insert for its packaging. The operations manager projects that breakage in transit, currently 3.4% of units shipped, would fall to under 1%, comfortably justifying the extra $0.35 per unit in packaging cost across the roughly two million units shipped each year. Replaced items are currently sent free of charge, and the exporter also absorbs the return shipping. The finance team notes that no one has established where the breakages actually occur.\n\nWhich of the following, if true, most strengthens the operations manager's projection?",
   choices: [
     "The new insert is made from recycled material.",
     "Damage inspection records show that 92% of breakages involve impact fractures of the kind the insert is designed to absorb.",
@@ -235,7 +235,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A utility company plans to deploy a chatbot to handle routine billing enquiries, projecting a $2.4m annual reduction in contact-centre cost. The customer director objects that if the chatbot handles simple queries badly, customers will escalate to an agent anyway and the company will pay for both channels.\n\nWhich of the following, if true, most strengthens the case for deployment?",
+  prompt: "A utility company plans to deploy a chatbot to handle routine billing enquiries, which account for just over half the roughly 900,000 calls its contact centre takes each year. The projected saving is $2.4m annually, net of licensing and build cost. The customer director objects that if the chatbot handles simple queries badly, customers will escalate to an agent anyway and the company will pay for both channels.\n\nWhich of the following, if true, most strengthens the case for deployment?",
   choices: [
     "The chatbot can be deployed in under three months.",
     "In a six-month pilot on 15% of billing traffic, 78% of chatbot conversations closed without escalation and overall handling cost per enquiry fell by a third.",
@@ -247,7 +247,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A cosmetics brand is considering charging different prices in different regions rather than a single national price. The revenue team estimates a 5% margin gain. The general counsel worries that customers who discover the differences will react badly, and that the resulting reputational damage could outweigh the gain.\n\nWhich of the following, if true, most strengthens the revenue team's case?",
+  prompt: "A cosmetics brand is considering charging different prices in different regions rather than a single national price, setting each region's price against local willingness to pay. The revenue team estimates the change would lift blended margin by 5% without any increase in marketing spend. The general counsel worries that customers who discover the differences will react badly, and that the resulting reputational damage could outweigh the gain.\n\nWhich of the following, if true, most strengthens the revenue team's case?",
   choices: [
     "Regional pricing is standard practice in the brand's category.",
     "The brand ran regional pricing in two regions for eighteen months; awareness of the difference reached 4% of customers and repeat-purchase rates were unchanged.",
@@ -259,7 +259,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A distribution business is evaluating a $9m investment in warehouse robotics, projected to pay back in under four years through reduced picking labour. The chief operating officer is cautious: the warehouse handles an unusually wide range of item shapes, and she has seen robotics projects elsewhere stall on exactly that.\n\nWhich of the following, if true, most strengthens the case for the investment?",
+  prompt: "A distribution business is evaluating a $9m investment in warehouse robotics for its largest distribution centre, projected to pay back in under four years through reduced picking labour. The vendor has guaranteed throughput rates in writing, and the site has the floor space and power capacity required. The chief operating officer is cautious: the warehouse handles an unusually wide range of item shapes, and she has seen robotics projects elsewhere stall on exactly that.\n\nWhich of the following, if true, most strengthens the case for the investment?",
   choices: [
     "The robotics vendor has installed similar systems in twenty warehouses.",
     "A four-month on-site trial ran the proposed system against the business's own full item range and achieved the projected pick rate on 97% of SKUs.",
@@ -271,7 +271,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A software company is redesigning onboarding for new engineers, aiming to cut the time to first independent code deployment from eleven weeks to six. The engineering director argues the investment is worth roughly $700,000 a year in recovered productive time. The CFO responds that faster ramp-up may simply mean engineers deploy sooner and break more.\n\nWhich of the following, if true, most strengthens the engineering director's case?",
+  prompt: "A software company is redesigning onboarding for new engineers, aiming to cut the time to first independent code deployment from eleven weeks to six. The company hires around ninety engineers a year, and the engineering director argues that the redesign is worth roughly $700,000 annually in recovered productive time, before counting any effect on retention. The CFO responds that faster ramp-up may simply mean engineers deploy sooner and break more.\n\nWhich of the following, if true, most strengthens the engineering director's case?",
   choices: [
     "The redesign would be built by the existing developer-experience team.",
     "Two teams piloted the redesigned onboarding; median time to first deployment fell to seven weeks and their post-deployment defect rate matched the company average.",
@@ -283,7 +283,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A bottling plant is considering a shift from repair-on-failure to scheduled preventive maintenance. The plant manager projects that unplanned downtime, currently costing about $3m a year, would fall by half. The finance director notes that preventive maintenance means taking working machines offline, which is itself downtime.\n\nWhich of the following, if true, most strengthens the plant manager's projection?",
+  prompt: "A bottling plant is considering a shift from repair-on-failure to scheduled preventive maintenance across its four filling lines. The plant manager projects that unplanned downtime, currently costing about $3m a year in lost output and expedited repairs, would fall by half within eighteen months. The finance director notes that preventive maintenance means taking working machines offline, which is itself downtime.\n\nWhich of the following, if true, most strengthens the plant manager's projection?",
   choices: [
     "Preventive maintenance is the industry standard for bottling lines.",
     "Sister plants that made the same switch cut unplanned downtime by 55% while planned maintenance added back less than a fifth of the hours saved.",
@@ -295,7 +295,7 @@ var Q = [
 },
 {
   type: "strengthen", d: 2,
-  prompt: "A logistics firm serving European clients is considering funding business-language training for its account managers, at about $4,000 per manager. The commercial director argues it will improve client retention, currently 81%. The board is unconvinced, noting that most clients already conduct meetings in English and that retention is usually driven by service reliability.\n\nWhich of the following, if true, most strengthens the commercial director's case?",
+  prompt: "A logistics firm serving European clients is considering funding business-language training for its forty account managers, at about $4,000 each over a twelve-month programme. The commercial director argues that it will improve client retention, currently 81% and roughly five points below the firm's closest competitor. The board is unconvinced, noting that most clients already conduct meetings in English and that retention is usually driven by service reliability.\n\nWhich of the following, if true, most strengthens the commercial director's case?",
   choices: [
     "The training provider is well regarded and has flexible scheduling.",
     "Exit interviews with departing clients over three years cite difficulty communicating with their account manager as a contributing factor in 38% of cases.",
@@ -468,7 +468,7 @@ var Q = [
 /* ---------- FLAW ---------- */
 {
   type: "flaw", d: 2,
-  prompt: "A retail director addresses the board: 'Our customer research shows that 78% of shoppers say they would pay more for sustainably sourced products. Our sustainable range currently accounts for only 12% of sales. Clearly our shoppers are not finding the range, so the answer is better in-store signage.'\n\nWhich of the following most accurately describes a flaw in the director's reasoning?",
+  prompt: "A retail director addresses the board about the sustainable range, launched eighteen months ago across all 240 stores. 'Our commissioned research surveyed 4,000 shoppers and found that 78% say they would pay more for sustainably sourced products, a figure that has risen six points in two years. Yet the range still accounts for only 12% of sales, and that share has been flat since launch. Shoppers plainly want these products, so they must not be finding them. I propose we invest in clearer in-store signage.'\n\nWhich of the following most accurately describes a flaw in the director's reasoning?",
   choices: [
     "It assumes without support that stated willingness to pay more translates into actual purchasing behaviour.",
     "It fails to specify how much more shoppers said they would pay.",
@@ -480,7 +480,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "An operations manager argues: 'Every one of our top five performing plants uses lean manufacturing methods. Our two worst-performing plants do not. Lean methods are therefore what separates a strong plant from a weak one, and we should mandate them everywhere.'\n\nWhich of the following most accurately describes a flaw in the argument?",
+  prompt: "An operations manager presents to the executive committee. 'I have reviewed output per labour hour across all fourteen of our plants for the last three years. Every one of our top five performing plants uses lean manufacturing methods, and our two worst performers have never adopted them. The gap between those two groups is substantial and has widened in each of the three years. Lean methods are therefore what separates a strong plant from a weak one, and I recommend we mandate them across the network within twelve months.'\n\nWhich of the following most accurately describes a flaw in the argument?",
   choices: [
     "It treats a correlation observed across a small, selectively chosen set of plants as establishing causation.",
     "It fails to define what counts as lean manufacturing.",
@@ -492,7 +492,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A finance director tells a project meeting: 'We have already spent $6m of the $9m budget on this platform. Abandoning it now would waste that $6m entirely. We should therefore approve the remaining $3m and finish the build.'\n\nWhich of the following most accurately describes a flaw in the director's reasoning?",
+  prompt: "A finance director addresses a steering meeting about a customer platform now in its third year of development. 'We have already spent $6m of the $9m budget, and the build is roughly two-thirds complete. The vendor has confirmed it can deliver the remaining functionality for the $3m that is left. If we abandon the programme now, that $6m is wasted entirely and we have nothing to show the board for three years of work. We should therefore approve the remaining spend and finish the build.'\n\nWhich of the following most accurately describes a flaw in the director's reasoning?",
   choices: [
     "It treats money already spent as a reason to continue, rather than comparing the remaining cost against the expected future benefit.",
     "It does not state whether the $9m budget was approved by the board.",
@@ -504,7 +504,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A marketing lead argues: 'Either we double our digital advertising budget or we accept that our market share will keep falling. Since nobody in this room is willing to accept a shrinking share, the budget increase is the only responsible decision.'\n\nWhich of the following most accurately describes a flaw in the argument?",
+  prompt: "A marketing lead makes the case for next year's budget. 'Our share has fallen in each of the last five quarters, and our two largest competitors have both roughly doubled their digital spend over the same period. The position is straightforward: either we double our own digital advertising budget, or we accept that our share will keep falling. Nobody in this room is willing to stand in front of the board and accept a shrinking share, so the budget increase is the only responsible decision.'\n\nWhich of the following most accurately describes a flaw in the argument?",
   choices: [
     "It presents only two options when other means of defending market share may exist.",
     "It does not quantify how much share has been lost.",
@@ -516,7 +516,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A partner defends a proposal: 'The objections to this restructuring come mainly from the regional managers, who would lose their current reporting lines if it goes ahead. Their opposition therefore tells us nothing about whether the restructuring is a good idea.'\n\nWhich of the following most accurately describes a flaw in the partner's reasoning?",
+  prompt: "A partner defends a proposed restructuring at a leadership meeting. 'I have read the written objections carefully, and I note where they come from. Almost all of them were submitted by the regional managers, every one of whom would lose a direct reporting line if the restructuring goes ahead, and several of whom would sit a grade lower in the new structure. Their opposition is exactly what we would predict from people in their position, and it therefore tells us nothing about whether the restructuring is a good idea.'\n\nWhich of the following most accurately describes a flaw in the partner's reasoning?",
   choices: [
     "It dismisses the objections on the basis of who raised them rather than on the merits of what they said.",
     "It fails to state how many regional managers objected.",
@@ -528,7 +528,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A quality manager reports: 'We surveyed customers who contacted our support line last month, and 91% rated our service as good or excellent. Our customer base is clearly very satisfied with the support we provide.'\n\nWhich of the following most accurately describes a flaw in the report?",
+  prompt: "A quality manager presents the monthly service report. 'We surveyed every customer who contacted our support line during March, and 91% rated the service they received as good or excellent, up from 88% in February. The sample is large — just over 2,000 responses — and the wording of the questionnaire has not changed in two years, so the comparison is a fair one. On this evidence our customer base is clearly very satisfied with the support we provide, and I see no case for the additional investment being proposed.'\n\nWhich of the following most accurately describes a flaw in the report?",
   choices: [
     "It generalises from customers who chose to contact support to the customer base as a whole.",
     "It does not distinguish between ratings of 'good' and 'excellent'.",
@@ -540,7 +540,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A policy adviser argues: 'If we allow this one department to carry unspent budget into next year, then every department will demand the same, our annual budgeting discipline will collapse, and within a few years the organisation will have no meaningful financial control at all. The request must be refused.'\n\nWhich of the following most accurately describes a flaw in the argument?",
+  prompt: "A policy adviser responds to a request from the engineering department to carry $400,000 of unspent budget into next year. 'I understand the department's reasoning, and the specific request is not unreasonable in itself — the delay was caused by a supplier, not by poor planning. But if we allow this one exception, every other department will demand the same treatment next year. Our budgeting discipline will collapse, forecasting will become meaningless, and within a few years the organisation will have no real financial control at all. The request must be refused.'\n\nWhich of the following most accurately describes a flaw in the argument?",
   choices: [
     "It assumes without support that the first step will inevitably lead to the final outcome.",
     "It does not state how much unspent budget is involved.",
@@ -552,7 +552,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "An HR director states: 'Our engagement survey found that teams with weekly one-to-ones score eleven points higher on engagement than teams without them. Weekly one-to-ones therefore raise engagement, and we will require them across the organisation.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
+  prompt: "An HR director presents the annual engagement results to the executive team. 'We surveyed 3,200 employees across every function and region. Teams whose managers hold weekly one-to-ones score eleven points higher on engagement than teams whose managers do not, and the pattern holds in all six regions without exception. The difference is larger than that produced by any other factor we measured, including pay satisfaction and workload. Weekly one-to-ones therefore raise engagement, and I recommend we require them organisation-wide from next quarter.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
   choices: [
     "It overlooks the possibility that engaged teams are more likely to sustain regular one-to-ones in the first place.",
     "It does not report the survey's response rate.",
@@ -564,7 +564,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A consultant argues: 'The proposed merger cannot be justified on cost grounds. The finance team's synergy model has not been independently audited, and two of its assumptions have been questioned. Until the model is verified, we must conclude that the projected savings do not exist.'\n\nWhich of the following most accurately describes a flaw in the argument?",
+  prompt: "A consultant advises a board considering a merger. 'The case rests almost entirely on $40m of annual cost synergies identified by the target's own finance team. That model has never been independently audited. Two of its central assumptions — the pace of systems integration and the retention of the combined salesforce — have been questioned by our analysts, and the target has not yet supplied the underlying workings. Until the model is verified by a third party, we must conclude that the projected savings do not exist, and the merger cannot be justified on cost grounds.'\n\nWhich of the following most accurately describes a flaw in the argument?",
   choices: [
     "It treats the absence of verified evidence for the savings as evidence that there are none.",
     "It does not identify which two assumptions were questioned.",
@@ -576,7 +576,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A sales manager writes: 'Our new pitch deck must be working. Since we introduced it in April, we have closed eleven deals, whereas in the four months before April we closed only six. The deck is clearly the strongest sales asset we have built.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
+  prompt: "A sales manager writes to the commercial director. 'The new pitch deck must be working. We introduced it at the start of April, and in the four months since we have closed eleven deals, whereas in the four months before April we closed only six. The team also report feeling more confident presenting it, and two clients commented favourably on the design during their final meetings. On any reasonable reading, the deck is the strongest sales asset we have built in years and should be rolled out to every region.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
   choices: [
     "It infers that the deck caused the increase merely because the increase followed its introduction.",
     "It does not report the value of the deals closed.",
@@ -588,7 +588,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A board member argues: 'Our chief executive says the transformation programme is on track. She has thirty years of experience in this industry and has led two successful turnarounds. There is therefore no need for the board to commission an independent review of the programme.'\n\nWhich of the following most accurately describes a flaw in the argument?",
+  prompt: "A board member speaks against a proposal to commission an independent review of the transformation programme. 'Our chief executive told this board last month that the programme is on track and that the remaining milestones are achievable within the current budget. She has thirty years of experience in this industry, has led two successful turnarounds at comparable businesses, and was recruited precisely because of that record. An external review would cost several hundred thousand pounds and take three months to report. There is therefore no need for the board to commission one.'\n\nWhich of the following most accurately describes a flaw in the argument?",
   choices: [
     "It substitutes the speaker's credentials for evidence about the programme itself.",
     "It does not specify what the transformation programme involves.",
@@ -600,7 +600,7 @@ var Q = [
 },
 {
   type: "flaw", d: 2,
-  prompt: "A procurement officer argues: 'The vendor's proposal claims their platform will reduce processing time by 60%. But their salesperson gave three different figures for the licence cost during the negotiation. We should therefore reject their claim about processing time.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
+  prompt: "A procurement officer summarises a vendor evaluation for the selection committee. 'Their proposal claims the platform will cut our processing time by 60%, and they have supplied three client references who appear to support that figure. However, during the commercial negotiation their salesperson quoted three different licence costs within the space of a fortnight, and twice failed to provide written confirmation when we asked for it. Given that record on the commercial side, we should reject their claim about processing time and remove them from the shortlist.'\n\nWhich of the following most accurately describes a flaw in the reasoning?",
   choices: [
     "It treats inconsistency on one point as sufficient to reject an unrelated claim on another.",
     "It does not verify whether the 60% figure came from the salesperson.",
@@ -615,7 +615,7 @@ var Q = [
 /* ---------- ASSUMPTION ---------- */
 {
   type: "assumption", d: 3,
-  prompt: "A city transport authority is deciding how to reduce congestion in the centre. Officials note that 40% of morning journeys into the core are made by single-occupancy car, and that the tram network runs at 60% of capacity at the same hour. They have concluded that raising the city-centre parking charge will cut congestion, because drivers facing the higher charge will switch to the tram.\n\nThe officials' conclusion depends on which of the following assumptions?",
+  prompt: "A city transport authority is deciding how to reduce congestion in the centre, where average traffic speeds have fallen for four consecutive years. Officials note that 40% of morning journeys into the core are made by single-occupancy car, and that the tram network runs at 60% of capacity at the same hour. A public consultation last year found parking charges to be the measure residents objected to least. They have concluded that raising the city-centre parking charge will cut congestion, because drivers facing the higher charge will switch to the tram.\n\nThe officials' conclusion depends on which of the following assumptions?",
   choices: [
     "The tram network could be expanded further if demand required it.",
     "A significant number of drivers currently paying to park have a tram route that is a workable alternative for their journey.",
@@ -627,7 +627,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A consulting firm is choosing between two scheduling systems. The partner responsible argues that the cheaper system is the better choice: over a three-year horizon its licence fees are $180,000 lower than the alternative's, and the firm's technology budget is under pressure after two years of overspend.\n\nThe partner's argument depends on which of the following assumptions?",
+  prompt: "A consulting firm is choosing between two scheduling systems for its 400 consultants. The partner responsible argues that the cheaper system is the better choice: over a three-year horizon its licence fees are $180,000 lower than the alternative's, and the firm's technology budget is under pressure after two years of overspend. Both systems meet the functional requirements set out by the operations team, and both vendors have offered the same implementation timetable.\n\nThe partner's argument depends on which of the following assumptions?",
   choices: [
     "The cheaper system will not generate additional costs elsewhere that offset the licence saving.",
     "The technology budget will remain under pressure for the next three years.",
@@ -639,7 +639,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A charity is planning next year's fundraising. Its analysis shows that donors acquired through the door-to-door programme give an average of $340 in their first year, against $210 for donors acquired online. The fundraising director has proposed shifting the acquisition budget towards door-to-door on the grounds that it will raise total income.\n\nThe director's proposal depends on which of the following assumptions?",
+  prompt: "A charity is planning next year's fundraising across a total acquisition budget of $2m. Its analysis of the last three years shows that donors acquired through the door-to-door programme give an average of $340 in their first year, against $210 for donors acquired online. The gap has been consistent year on year and holds across several thousand donors. The fundraising director has proposed shifting the acquisition budget towards door-to-door on the grounds that doing so will raise total income.\n\nThe director's proposal depends on which of the following assumptions?",
   choices: [
     "Door-to-door fundraising is well received in the areas where the charity operates.",
     "The cost of acquiring a donor door-to-door is not so much higher than the online cost that it eliminates the difference in donations.",
@@ -651,7 +651,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A hospital trust is reviewing its outpatient clinics. Managers observe that clinics using the new appointment-reminder service have a missed-appointment rate of 6%, against 14% for clinics that have not adopted it. They plan to roll the service out across all clinics, expecting missed appointments to fall to around 6% everywhere.\n\nThe managers' expectation depends on which of the following assumptions?",
+  prompt: "A hospital trust is reviewing its outpatient clinics, where missed appointments cost an estimated $3m a year in wasted clinician time. Managers observe that clinics using the new appointment-reminder service have a missed-appointment rate of 6%, against 14% for clinics that have not adopted it. The service has been available for eighteen months and around a third of clinics now use it. They plan to roll it out across all clinics, expecting missed appointments to fall to around 6% everywhere.\n\nThe managers' expectation depends on which of the following assumptions?",
   choices: [
     "The clinics that adopted the service early do not differ from the others in ways that affect attendance.",
     "The reminder service can be delivered at the same cost in every clinic.",
@@ -663,7 +663,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A publisher is deciding whether to close its print magazine. The finance team notes that print circulation has fallen 45% in four years while the digital edition has grown steadily, and argues that closing print and redirecting the editorial budget to digital will improve overall profitability.\n\nThe finance team's argument depends on which of the following assumptions?",
+  prompt: "A publisher is deciding whether to close its print magazine, which has appeared continuously for thirty-one years. The finance team notes that print circulation has fallen 45% in four years while the digital edition has grown steadily over the same period, and that the print operation now runs at a small loss before any allocation of central overhead. It argues that closing print and redirecting the editorial budget to digital will improve overall profitability.\n\nThe finance team's argument depends on which of the following assumptions?",
   choices: [
     "Digital subscriptions will continue to grow at their current rate.",
     "A substantial share of the revenue currently attached to the print edition would not be lost when print closes.",
@@ -675,7 +675,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A manufacturer is considering moving assembly of its mid-range line from Germany to Portugal. The operations director points out that fully loaded labour cost per assembled unit is 38% lower in Portugal and concludes that the move will reduce the cost of each unit produced.\n\nThe director's conclusion depends on which of the following assumptions?",
+  prompt: "A manufacturer is considering moving assembly of its mid-range line from Germany to Portugal, where it already operates a components plant. The operations director points out that fully loaded labour cost per assembled unit is 38% lower in Portugal, that the Portuguese site has spare floor space available immediately, and that the local workforce can be recruited without difficulty. He concludes that the move will reduce the cost of each unit produced.\n\nThe director's conclusion depends on which of the following assumptions?",
   choices: [
     "Portuguese labour law is comparable to German labour law in relevant respects.",
     "The move will not increase non-labour costs per unit by enough to offset the labour saving.",
@@ -687,7 +687,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A software company is planning its pricing for next year. Analysts note that the firm's churn rate is 4% a year, well below the 9% industry average, and conclude that a 15% price increase can be implemented without material customer loss, since the customer base is evidently unusually loyal.\n\nThe analysts' conclusion depends on which of the following assumptions?",
+  prompt: "A software company is planning its pricing for next year, having held list prices flat for three years. Analysts note that the firm's annual churn rate is 4%, well below the 9% industry average, and that net revenue retention has exceeded 100% in each of those three years. They conclude that a 15% price increase can be implemented without material customer loss, since the customer base is evidently unusually loyal.\n\nThe analysts' conclusion depends on which of the following assumptions?",
   choices: [
     "The loyalty reflected in the current churn rate would survive a change in the price customers pay.",
     "Competitors will not reduce their prices in response.",
@@ -699,7 +699,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A university is evaluating its new admissions test. Administrators report that students admitted under the test achieved higher first-year grades than the previous cohort, and conclude that the test is a better predictor of academic ability than the interview process it replaced.\n\nThe administrators' conclusion depends on which of the following assumptions?",
+  prompt: "A university is evaluating the new admissions test it introduced two years ago in place of a structured interview. Administrators report that students admitted under the test achieved higher average first-year grades than the cohort admitted the year before, and that the gap appeared in every faculty. Total applications rose slightly over the same period. They conclude that the test is a better predictor of academic ability than the interview process it replaced.\n\nThe administrators' conclusion depends on which of the following assumptions?",
   choices: [
     "The test is cheaper to administer than the interview process.",
     "First-year grading standards did not change between the two cohorts.",
@@ -711,7 +711,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "A supermarket chain is deciding whether to extend its home-delivery service to rural areas. The commercial team calculates that rural households order a larger average basket than urban ones and concludes that rural delivery will be more profitable per order than the existing urban service.\n\nThe commercial team's conclusion depends on which of the following assumptions?",
+  prompt: "A supermarket chain is deciding whether to extend its home-delivery service to rural areas, having run the service in cities for six years. The commercial team calculates that rural households, where they have been surveyed, order a larger average basket than urban ones — roughly $95 against $62 — and that rural customers report fewer competing options nearby. It concludes that rural delivery will be more profitable per order than the existing urban service.\n\nThe commercial team's conclusion depends on which of the following assumptions?",
   choices: [
     "Rural households will order as frequently as urban households.",
     "The cost of fulfilling and delivering a rural order will not exceed the extra margin the larger basket generates.",
@@ -723,7 +723,7 @@ var Q = [
 },
 {
   type: "assumption", d: 3,
-  prompt: "An airline is considering replacing meal service on short-haul routes with a paid buy-on-board menu. The commercial director argues that this will improve short-haul profitability, citing $22m of annual catering cost currently absorbed into the ticket price and the fact that two competitors have made the same change.\n\nThe director's argument depends on which of the following assumptions?",
+  prompt: "An airline is considering replacing complimentary meal service on short-haul routes with a paid buy-on-board menu. The commercial director argues that this will improve short-haul profitability, citing $22m of annual catering cost currently absorbed into the ticket price, the fact that two of its three main competitors have already made the same change, and internal research indicating that most short-haul passengers eat little of what is currently served.\n\nThe director's argument depends on which of the following assumptions?",
   choices: [
     "The competitors that made the change did so for the same reasons.",
     "Passengers will not shift enough business to airlines still offering complimentary meals to outweigh the catering saving.",
@@ -835,7 +835,7 @@ var Q = [
 /* ---------- PARADOX ---------- */
 {
   type: "paradox", d: 3,
-  prompt: "A retailer redesigned its checkout page to remove three form fields and one confirmation step. Usability testing had shown the shorter flow was faster and less error-prone, and it was expected to lift completed purchases. After launch, the share of shoppers who reached the checkout page and completed a purchase fell by four percentage points, even though the average time spent on the page dropped as predicted.\n\nWhich of the following, if true, best explains this result?",
+  prompt: "A retailer redesigned its checkout page to remove three form fields and one confirmation step. Usability testing had shown the shorter flow was faster and less error-prone, and it was expected to lift completed purchases. After launch, the share of shoppers who reached the checkout page and completed a purchase fell by four percentage points, even though the average time spent on the page dropped as predicted. The new flow was released to all traffic at once, with no accompanying change to pricing, delivery options or the pages leading up to checkout.\n\nWhich of the following, if true, best explains this result?",
   choices: [
     "The removed confirmation step had let shoppers review their order and correct mistakes before paying, and many now abandon at the payment screen instead.",
     "The redesign was released to all markets at the same time.",
@@ -847,7 +847,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A manufacturer invested heavily in automated inspection at the end of its production line, and the equipment performs exactly as specified: it now detects far more defective units than the manual inspectors it replaced. Yet in the two years since installation, the number of defective units reaching customers has risen rather than fallen.\n\nWhich of the following, if true, best explains this outcome?",
+  prompt: "A manufacturer invested $7m in automated optical inspection at the end of its production line, replacing the team of manual inspectors who had done the work. The equipment performs exactly as specified: it now detects far more defective units than the inspectors did, and its detection rate has been independently verified against known samples. Yet in the two years since installation, the number of defective units reaching customers has risen rather than fallen.\n\nWhich of the following, if true, best explains this outcome?",
   choices: [
     "The automated system is more expensive to maintain than manual inspection was.",
     "Confident that the automated system would catch problems, the plant scaled back the in-process checks that had previously prevented defects from being produced at all.",
@@ -859,7 +859,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A national employment agency reports that the number of people in work rose by 180,000 last quarter, and no significant change occurred in the size of the working-age population or in the definitions used. Yet the published unemployment rate also rose over the same quarter, from 5.1% to 5.4%.\n\nWhich of the following, if true, best explains these two figures?",
+  prompt: "A national employment agency reports that the number of people in work rose by 180,000 last quarter, and that no significant change occurred in the size of the working-age population, in the definitions used, or in the survey methodology. Both figures are drawn from the same household survey and were published together. Yet the unemployment rate also rose over the same quarter, from 5.1% to 5.4%.\n\nWhich of the following, if true, best explains these two figures?",
   choices: [
     "A large number of people who had previously stopped looking for work began actively seeking jobs, entering the labour force.",
     "Average wages grew more slowly than in the previous quarter.",
@@ -871,7 +871,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A software firm doubled the size of its customer-support team after complaints about slow responses. Average first-response time duly halved. Yet in the following two quarters the proportion of customers rating support as satisfactory declined, and the volume of formal escalations to account managers increased.\n\nWhich of the following, if true, best explains this pattern?",
+  prompt: "A software firm doubled the size of its customer-support team after sustained complaints about slow responses, recruiting forty additional agents over a single quarter. Average first-response time duly halved, and the firm publicised the improvement to its customer base. Incoming ticket volume was broadly flat throughout. Yet in the following two quarters the proportion of customers rating support as satisfactory declined, and the volume of formal escalations to account managers increased.\n\nWhich of the following, if true, best explains this pattern?",
   choices: [
     "The firm's product range expanded during the same period.",
     "The new hires answered quickly but, lacking product depth, frequently gave answers that did not resolve the underlying issue.",
@@ -883,7 +883,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A city introduced a scheme paying households a rebate for every kilogram by which their annual landfill waste fell below the previous year's figure. Measured landfill waste from participating households dropped sharply in the first year. However, the total tonnage arriving at the city's landfill from all sources was almost unchanged.\n\nWhich of the following, if true, best explains this discrepancy?",
+  prompt: "A city introduced a scheme paying households a rebate for every kilogram by which their annual landfill waste fell below the previous year's figure. Around 60% of households enrolled in the first year. Measured landfill waste from participating households dropped sharply over that year, and the city paid out rebates accordingly. However, the total tonnage arriving at the city's landfill sites from all sources was almost unchanged.\n\nWhich of the following, if true, best explains this discrepancy?",
   choices: [
     "Participating households placed a substantial share of their waste in commercial skips and neighbouring districts' bins rather than reducing what they discarded.",
     "The rebate was smaller than some households had expected.",
@@ -895,7 +895,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "An insurer tightened the underwriting criteria for its motor policies, declining applicants whose claims history suggested elevated risk. The measure worked as designed: the average claims frequency among newly written policies fell noticeably. Nevertheless, the insurer's overall loss ratio on the motor book worsened over the following two years.\n\nWhich of the following, if true, best explains this outcome?",
+  prompt: "An insurer tightened the underwriting criteria for its motor policies, declining applicants whose claims history suggested elevated risk. The measure worked as designed: average claims frequency among newly written policies fell noticeably, and the criteria were applied consistently across every distribution channel. Premium rates on accepted business were left unchanged. Nevertheless, the insurer's overall loss ratio on the motor book worsened over the following two years.\n\nWhich of the following, if true, best explains this outcome?",
   choices: [
     "The insurer's marketing budget was reduced during the period.",
     "The stricter criteria also priced out many low-risk customers who shopped elsewhere, leaving a smaller book over which fixed claims-handling costs and remaining large losses were spread.",
@@ -907,7 +907,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A hospital introduced a rapid-triage protocol in its emergency department. Audits confirm the protocol is followed correctly and that patients are now assessed by a clinician within twenty minutes of arrival, down from fifty. Yet the average total time patients spend in the department before admission or discharge has increased.\n\nWhich of the following, if true, best explains this result?",
+  prompt: "A hospital introduced a rapid-triage protocol in its emergency department, under which a senior nurse assesses every arrival before registration is completed. Audits confirm the protocol is followed correctly and that patients are now assessed by a clinician within twenty minutes of arrival, down from fifty. Attendance numbers have been stable throughout the period. Yet the average total time patients spend in the department before admission or discharge has increased.\n\nWhich of the following, if true, best explains this result?",
   choices: [
     "The protocol requires additional documentation from triage nurses.",
     "Faster assessment identified more patients needing diagnostic imaging, and the imaging department's capacity was unchanged, so waits simply moved downstream.",
@@ -919,7 +919,7 @@ var Q = [
 },
 {
   type: "paradox", d: 3,
-  prompt: "A supermarket chain launched a widely advertised price-cut campaign on 400 everyday products. Customer research confirms that shoppers noticed the cuts and rated the chain better on value than before. Nevertheless, the chain's total sales revenue and its transaction count both fell slightly over the campaign period.\n\nWhich of the following, if true, best explains this pattern?",
+  prompt: "A supermarket chain launched a widely advertised price-cut campaign on 400 everyday products, holding the lower prices for a full quarter. The cuts averaged 8% and were funded from the chain's own margin rather than from supplier rebates. Customer research confirms that shoppers noticed the cuts and rated the chain better on value than before. Nevertheless, the chain's total sales revenue and its transaction count both fell slightly over the campaign period.\n\nWhich of the following, if true, best explains this pattern?",
   choices: [
     "The 400 products were concentrated in categories that shoppers buy in fixed quantities regardless of price, and the cuts reduced the value of those same baskets.",
     "The campaign was advertised on television and radio.",
@@ -1129,7 +1129,7 @@ var Q = [
 /* ---------- EVALUATE ---------- */
 {
   type: "evaluate", d: 2,
-  prompt: "A regional bakery chain is deciding whether to install solar panels on the roofs of its twelve production sites. The proposal costs $2.4m up front and the energy team projects annual electricity savings of $310,000, implying a payback period of under eight years. The board has asked for further analysis before committing, since the company has not previously made an investment of this length.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A regional bakery chain is deciding whether to install solar panels on the roofs of its twelve production sites. The proposal costs $2.4m up front and the energy team projects annual electricity savings of $310,000, implying a payback period of under eight years. The panels would be owned outright rather than leased, and the projection assumes current electricity prices. The board has asked for further analysis before committing, since the company has not previously made an investment of this length.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "Whether the panels would be visible from the street at each site",
     "How much of each site's electricity demand falls during daylight hours, when the panels generate",
@@ -1141,7 +1141,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A logistics company is considering replacing its diesel delivery vans with electric ones across its urban fleet. The finance team calculates that lower fuel and maintenance costs would recover the higher purchase price within five years. The operations director supports the change in principle but has asked for one further piece of analysis before the board decides.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A logistics company is considering replacing its diesel delivery vans with electric ones across its urban fleet of 320 vehicles. The finance team calculates that lower fuel and maintenance costs would recover the higher purchase price within five years, and that charging infrastructure could be installed at the company's four existing depots. The operations director supports the change in principle but has asked for one further piece of analysis before the board decides.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "Whether the electric vans' range covers the daily distance of the company's typical urban routes without mid-shift charging",
     "What colour scheme the new vans would carry",
@@ -1153,7 +1153,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A publisher is deciding whether to acquire a small competitor for $18m. The strategy team argues that the combined business would eliminate $4m of duplicated overhead within two years, and that the target's catalogue complements the publisher's own. The board is broadly supportive but wants one further question answered before approving the deal.\n\nAnswering which of the following would be most useful in evaluating the acquisition?",
+  prompt: "A publisher is deciding whether to acquire a small competitor for $18m. The strategy team argues that the combined business would eliminate $4m of duplicated overhead within two years, that the target's catalogue complements the publisher's own with almost no overlap of titles, and that the target has been profitable in each of the last four years. The board is broadly supportive but wants one further question answered before approving the deal.\n\nAnswering which of the following would be most useful in evaluating the acquisition?",
   choices: [
     "How long the target company has been trading",
     "What proportion of the target's revenue depends on author contracts that permit termination on a change of control",
@@ -1165,7 +1165,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A hotel group is deciding whether to convert two floors of a city property from guest rooms into serviced offices. The development team projects that office rents would exceed the rooms' current contribution by about $500,000 a year, based on prevailing commercial rents in the district. The board has asked for one further analysis before approving the conversion.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A hotel group is deciding whether to convert two floors of a city property from guest rooms into serviced offices. The development team projects that office rents would exceed the rooms' current contribution by about $500,000 a year, based on prevailing commercial rents in the district, and that the conversion work would take roughly five months. The two floors currently run at the hotel's average occupancy. The board has asked for one further analysis before approving the conversion.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "What the current vacancy rate is for serviced offices in the district",
     "How long the conversion works would take",
@@ -1177,7 +1177,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A retailer is deciding whether to open on Sundays at its forty high-street stores. The commercial team estimates additional weekly revenue of $190,000 against $120,000 of extra staffing and operating cost, giving a clear positive contribution. The finance director has asked for one further question to be answered before the trial is extended chain-wide.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A retailer is deciding whether to open on Sundays at its forty high-street stores, having trialled Sunday trading at six of them over three months. The commercial team estimates additional weekly revenue of $190,000 across the chain against $120,000 of extra staffing and operating cost, giving a clear positive contribution. The finance director has asked for one further question to be answered before the trial is extended chain-wide.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "Whether staff would prefer to work Sundays rather than Saturdays",
     "What proportion of Sunday revenue represents purchases customers would otherwise have made on another day",
@@ -1189,7 +1189,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A software firm is deciding whether to move its customer data from its own servers to a cloud provider. The infrastructure team projects savings of $700,000 a year in hardware, power and maintenance once the migration is complete, and notes that the provider offers stronger uptime guarantees than the firm currently achieves.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A software firm is deciding whether to move its customer data from its own servers to a cloud provider. The infrastructure team projects savings of $700,000 a year in hardware, power and maintenance once the migration is complete, notes that the provider offers stronger uptime guarantees than the firm currently achieves, and estimates the migration itself would take about nine months of engineering effort.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "How much the firm would pay the cloud provider in data transfer and storage charges at its actual usage volumes",
     "Which programming languages the firm's engineers prefer",
@@ -1201,7 +1201,7 @@ var Q = [
 },
 {
   type: "evaluate", d: 2,
-  prompt: "A manufacturer is deciding whether to offer an extended five-year warranty on its flagship appliance, in place of the current two-year cover. Marketing projects that the longer warranty would lift unit sales by 12%, on the basis of a survey in which customers rated warranty length as an important purchase factor.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
+  prompt: "A manufacturer is deciding whether to offer an extended five-year warranty on its flagship appliance, in place of the current two-year cover. Marketing projects that the longer warranty would lift unit sales by 12%, on the basis of a survey in which customers rated warranty length as an important purchase factor. The appliance's closest competitor currently offers three years, and the extended cover would apply to units already in the distribution channel.\n\nAnswering which of the following would be most useful in evaluating the proposal?",
   choices: [
     "What the appliance's failure rate is between years two and five",
     "Which retailers stock the appliance",
