@@ -3210,6 +3210,301 @@ var T = {
     "Lyon queda primera.",
     "Cracovia queda tercera."
   ]
+},
+'ct-168': {
+  prompt: "Cuatro sesiones de capacitación —cumplimiento, ética, finanzas y seguridad— se realizan en cuatro días consecutivos de lunes a jueves, una por día.\n\n· La sesión de cumplimiento no se realiza ni el lunes ni el jueves.\n· La sesión de seguridad se realiza el día antes de la de ética.\n· La sesión de finanzas se realiza el lunes.\n\n¿Qué día se realiza la sesión de seguridad?",
+  choices: ["Lunes", "Martes", "Miércoles", "Jueves"]
+},
+
+/* The paradox items all work the same way: something performed exactly as designed, and
+   the surprise is a second-order effect somewhere the measurement did not look. The
+   correct option is the only one that names a mechanism; the distractors are true
+   statements that explain nothing. Translating a distractor into something that gestures
+   at a cause would blur that line, so they stay as inert as they are in English. */
+'ct-169': {
+  prompt: "Un minorista rediseñó su página de pago para eliminar tres campos de formulario y un paso de confirmación. Las pruebas de usabilidad habían mostrado que el flujo más corto era más rápido y menos propenso a errores, y se esperaba que elevara las compras completadas. Tras el lanzamiento, la proporción de compradores que llegaron a la página de pago y completaron una compra cayó cuatro puntos porcentuales, aunque el tiempo promedio en la página bajó como se había previsto. El nuevo flujo se liberó a todo el tráfico de una vez, sin ningún cambio acompañante en precios, opciones de entrega ni en las páginas previas al pago.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "El paso de confirmación eliminado permitía a los compradores revisar su pedido y corregir errores antes de pagar, y muchos ahora abandonan en la pantalla de pago.",
+    "El rediseño se liberó en todos los mercados al mismo tiempo.",
+    "Algunos compradores tomaron más tiempo que el promedio en la nueva página.",
+    "Los competidores del minorista también usan flujos de pago cortos."
+  ]
+},
+'ct-170': {
+  prompt: "Un fabricante invirtió USD 7 millones en inspección óptica automatizada al final de su línea de producción, reemplazando al equipo de inspectores manuales que hacía el trabajo. El equipo funciona exactamente como se especificó: ahora detecta muchas más unidades defectuosas de las que detectaban los inspectores, y su tasa de detección ha sido verificada de forma independiente contra muestras conocidas. Sin embargo, en los dos años desde la instalación, el número de unidades defectuosas que llegan a los clientes ha subido en lugar de bajar.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "El sistema automatizado es más costoso de mantener de lo que era la inspección manual.",
+    "Confiada en que el sistema automatizado detectaría los problemas, la planta redujo los controles en proceso que antes evitaban que los defectos se produjeran siquiera.",
+    "El sistema automatizado inspecciona unidades más rápido de lo que lo hacían los inspectores manuales.",
+    "Algunos inspectores manuales fueron reubicados en otras partes de la planta."
+  ]
+},
+'ct-171': {
+  prompt: "Una agencia nacional de empleo reporta que el número de personas trabajando subió en 180.000 el trimestre pasado, y que no hubo cambio significativo en el tamaño de la población en edad de trabajar, en las definiciones usadas ni en la metodología de la encuesta. Ambas cifras provienen de la misma encuesta de hogares y se publicaron juntas. Sin embargo, la tasa de desempleo también subió en el mismo trimestre, de 5,1% a 5,4%.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor estas dos cifras?",
+  choices: [
+    "Un gran número de personas que antes había dejado de buscar trabajo empezó a buscar empleo activamente, entrando a la fuerza laboral.",
+    "Los salarios promedio crecieron más lentamente que en el trimestre anterior.",
+    "El crecimiento del empleo se concentró en cargos de medio tiempo.",
+    "Algunas regiones vieron caer el empleo mientras otras lo vieron subir."
+  ]
+},
+'ct-172': {
+  prompt: "Una empresa de software duplicó el tamaño de su equipo de soporte al cliente tras quejas sostenidas por respuestas lentas, reclutando cuarenta agentes adicionales en un solo trimestre. El tiempo promedio de primera respuesta se redujo a la mitad, como era de esperarse, y la firma publicitó la mejora a su base de clientes. El volumen de tiquetes entrantes se mantuvo prácticamente plano en todo el periodo. Sin embargo, en los dos trimestres siguientes la proporción de clientes que calificó el soporte como satisfactorio disminuyó, y el volumen de escalamientos formales a los gerentes de cuenta aumentó.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este patrón?",
+  choices: [
+    "La gama de productos de la firma se amplió durante el mismo periodo.",
+    "Los nuevos contratados respondían rápido pero, sin profundidad de producto, con frecuencia daban respuestas que no resolvían el problema de fondo.",
+    "El equipo de soporte ahora trabaja en más husos horarios que antes.",
+    "Los costos de soporte subieron en línea con el aumento de personal."
+  ]
+},
+'ct-173': {
+  prompt: "Una ciudad introdujo un esquema que paga a los hogares un reembolso por cada kilogramo en que sus residuos anuales a relleno sanitario caen por debajo de la cifra del año anterior. Cerca del 60% de los hogares se inscribió el primer año. Los residuos a relleno medidos de los hogares participantes cayeron marcadamente durante ese año, y la ciudad pagó los reembolsos en consecuencia. Sin embargo, el tonelaje total que llegó a los rellenos de la ciudad desde todas las fuentes se mantuvo casi sin cambios.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor esta discrepancia?",
+  choices: [
+    "Los hogares participantes pusieron una parte sustancial de sus residuos en contenedores comerciales y en canecas de distritos vecinos, en lugar de reducir lo que desechaban.",
+    "El reembolso fue menor de lo que algunos hogares esperaban.",
+    "No todos los hogares de la ciudad eligieron participar.",
+    "Las instalaciones de reciclaje de la ciudad operaron a plena capacidad durante el año."
+  ]
+},
+'ct-174': {
+  prompt: "Una aseguradora endureció los criterios de suscripción de sus pólizas de automóvil, rechazando a solicitantes cuyo historial de siniestros sugería riesgo elevado. La medida funcionó como estaba diseñada: la frecuencia promedio de siniestros entre las pólizas nuevas cayó notoriamente, y los criterios se aplicaron de forma consistente en todos los canales de distribución. Las tarifas de prima sobre el negocio aceptado se dejaron sin cambios. No obstante, la siniestralidad general de la aseguradora en el ramo de automóviles empeoró durante los dos años siguientes.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "El presupuesto de marketing de la aseguradora se redujo durante el periodo.",
+    "Los criterios más estrictos también dejaron por fuera a muchos clientes de bajo riesgo que se fueron a otra parte, dejando una cartera más pequeña sobre la cual repartir los costos fijos de gestión de siniestros y los siniestros grandes restantes.",
+    "El seguro de automóviles es un mercado competitivo.",
+    "La frecuencia de siniestros es solo un componente del riesgo de suscripción."
+  ]
+},
+'ct-175': {
+  prompt: "Un hospital introdujo un protocolo de triage rápido en su servicio de urgencias, bajo el cual una enfermera sénior evalúa a toda persona que llega antes de completar el registro. Las auditorías confirman que el protocolo se sigue correctamente y que los pacientes ahora son evaluados por un clínico dentro de los veinte minutos de su llegada, frente a cincuenta antes. Los números de atención se han mantenido estables durante el periodo. Sin embargo, el tiempo total promedio que los pacientes pasan en el servicio antes de ser admitidos o dados de alta ha aumentado.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "El protocolo exige documentación adicional de las enfermeras de triage.",
+    "La evaluación más rápida identificó a más pacientes que necesitaban imágenes diagnósticas, y la capacidad del área de imágenes no cambió, así que las esperas simplemente se corrieron aguas abajo.",
+    "El servicio de urgencias atiende más pacientes en invierno que en verano.",
+    "Algunos pacientes llegan en ambulancia y no a pie."
+  ]
+},
+'ct-176': {
+  prompt: "Una cadena de supermercados lanzó una campaña de recorte de precios ampliamente publicitada en 400 productos de uso diario, manteniendo los precios más bajos durante un trimestre completo. Los recortes promediaron 8% y se financiaron con el margen propio de la cadena y no con rebajas de proveedores. La investigación de clientes confirma que los compradores notaron los recortes y calificaron mejor a la cadena en valor que antes. No obstante, los ingresos totales por ventas de la cadena y su número de transacciones cayeron levemente durante el periodo de campaña.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este patrón?",
+  choices: [
+    "Los 400 productos se concentraban en categorías que los compradores adquieren en cantidades fijas sin importar el precio, y los recortes redujeron el valor de esas mismas canastas.",
+    "La campaña se anunció en televisión y radio.",
+    "Algunos competidores también redujeron precios durante el periodo.",
+    "La cadena opera tiendas de tamaños variados."
+  ]
+},
+'ct-177': {
+  prompt: "Todos los miembros del comité de riesgo son directores de la empresa. Ningún director de la empresa es auditor externo.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Ningún miembro del comité de riesgo es auditor externo.",
+    "Todos los directores de la empresa son miembros del comité de riesgo.",
+    "Algunos auditores externos son directores de la empresa.",
+    "Ningún auditor externo está calificado para integrar un comité."
+  ]
+},
+'ct-178': {
+  prompt: "Todos los proveedores aprobados han pasado una verificación financiera. Algunos proveedores aprobados tienen su base en el exterior.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Todos los proveedores con base en el exterior han pasado una verificación financiera.",
+    "Algunos proveedores que han pasado una verificación financiera tienen su base en el exterior.",
+    "Todos los proveedores que han pasado una verificación financiera están aprobados.",
+    "Ningún proveedor del exterior ha reprobado una verificación financiera."
+  ]
+},
+'ct-179': {
+  prompt: "Ningún contrato firmado este año contiene una cláusula de arbitraje. Algunos contratos que tiene el área jurídica contienen una cláusula de arbitraje.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Ningún contrato que tiene el área jurídica fue firmado este año.",
+    "Algunos contratos que tiene el área jurídica no fueron firmados este año.",
+    "Todos los contratos firmados este año los tiene el área jurídica.",
+    "Algunos contratos firmados este año no contienen cláusula alguna."
+  ]
+},
+'ct-180': {
+  prompt: "Todos los proyectos que recibieron aprobación de la junta tienen un patrocinador designado. Algunos proyectos con patrocinador designado están retrasados.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunos proyectos aprobados por la junta están retrasados.",
+    "Todos los proyectos con patrocinador designado recibieron aprobación de la junta.",
+    "Ningún proyecto sin patrocinador recibió aprobación de la junta.",
+    "La mayoría de los proyectos retrasados tiene patrocinador."
+  ]
+},
+'ct-181': {
+  prompt: "Todos los técnicos certificados pueden operar la línea de presión. Ningún miembro del personal temporal es técnico certificado.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Ningún miembro del personal temporal puede operar la línea de presión.",
+    "Algunos miembros del personal temporal son técnicos certificados.",
+    "Cualquiera que pueda operar la línea de presión es técnico certificado.",
+    "Algunas personas que pueden operar la línea de presión no son personal temporal."
+  ]
+},
+'ct-182': {
+  prompt: "Algunos gerentes regionales han completado el programa de liderazgo. Todos los que han completado el programa de liderazgo son elegibles para la asignación internacional.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Todos los gerentes regionales son elegibles para la asignación internacional.",
+    "Algunos gerentes regionales son elegibles para la asignación internacional.",
+    "Solo quienes completaron el programa son elegibles.",
+    "Todos los elegibles para la asignación son gerentes regionales."
+  ]
+},
+'ct-183': {
+  prompt: "Ningún producto de la línea descontinuada está en inventario en la tienda insignia. Todos los productos lanzados esta temporada están en inventario en la tienda insignia.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Ningún producto lanzado esta temporada está en la línea descontinuada.",
+    "Todos los productos en inventario en la tienda insignia fueron lanzados esta temporada.",
+    "Algunos productos descontinuados están en inventario en otro lugar.",
+    "La tienda insignia tiene en inventario todos los productos no descontinuados."
+  ]
+},
+'ct-184': {
+  prompt: "Todos los créditos revisados por el equipo de recuperación están clasificados como no productivos. Algunos créditos clasificados como no productivos fueron originados antes de 2020.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunos créditos revisados por el equipo de recuperación fueron originados antes de 2020.",
+    "Todo crédito originado antes de 2020 es no productivo.",
+    "Cualquier crédito no clasificado como no productivo no fue revisado por el equipo de recuperación.",
+    "La mayoría de los créditos no productivos son anteriores a 2020."
+  ]
+},
+
+/* The strong/weak argument items are graded on relevance and weight, so the evidence-bearing
+   option keeps every figure that gives it force, and the weak option stays weak for the same
+   reason it was: it appeals to fashion, to who chose something, or to a quality of the thing
+   rather than to a consequence. Distance in ct-191 is given in kilómetros — the figure is a
+   stand-in for "far", carries no arithmetic, and miles would read as foreign here. */
+'ct-185': {
+  prompt: "Pregunta: ¿Debería la empresa exigir que todo software nuevo pase una auditoría de accesibilidad antes de su lanzamiento?\n\n¿Cuál es el argumento MÁS FUERTE a favor?",
+  choices: [
+    "La accesibilidad es un valor importante para una organización moderna",
+    "Una revisión interna encontró que el 14% de los usuarios de la empresa depende de tecnología asistiva, y tres de los últimos cinco lanzamientos eran inutilizables con un lector de pantalla",
+    "Varios competidores han publicado compromisos de accesibilidad",
+    "Exigir auditorías demostraría la seriedad de la empresa sobre la inclusión"
+  ]
+},
+'ct-186': {
+  prompt: "Pregunta: ¿Debería la firma pasar su conferencia anual de una sede física a un formato en línea?\n\n¿Cuál es el argumento MÁS DÉBIL a favor?",
+  choices: [
+    "Los datos de asistencia muestran que el 40% de los clientes invitados declinó el año pasado específicamente por el tiempo de viaje",
+    "La entrega en línea recortaría el presupuesto del evento de USD 600.000 a unos USD 90.000",
+    "Las conferencias virtuales se han vuelto mucho más comunes desde 2020",
+    "Las grabaciones de las sesiones quedarían disponibles para los clientes que no pudieran asistir en vivo"
+  ]
+},
+'ct-187': {
+  prompt: "Pregunta: ¿Debería el hospital adoptar un único sistema de historia clínica electrónica en todas sus sedes?\n\n¿Cuál es el argumento MÁS FUERTE a favor?",
+  choices: [
+    "Un sistema único sería más sencillo de describir ante los reguladores",
+    "Una revisión de incidentes atribuyó 61 errores de medicación el año pasado a que los clínicos no podían ver registros creados en otra sede",
+    "La mayoría de los grandes grupos hospitalarios opera hoy un sistema unificado",
+    "El personal se ha quejado de tener que recordar varias credenciales de acceso"
+  ]
+},
+'ct-188': {
+  prompt: "Pregunta: ¿Debería el fabricante devolver a casa su servicio al cliente, hoy tercerizado?\n\n¿Cuál es el argumento MÁS DÉBIL a favor?",
+  choices: [
+    "Los agentes internos podrían capacitarse en los productos con mucha mayor profundidad de la que permite el tercero",
+    "El contrato de tercerización se ha encarecido cada año durante seis años consecutivos",
+    "Traer la función de vuelta le daría a la empresa control más directo sobre la calidad",
+    "El tercero tiene su base en un país que los ejecutivos de la empresa rara vez visitan"
+  ]
+},
+'ct-189': {
+  prompt: "Pregunta: ¿Debería la universidad introducir un curso obligatorio de estadística en todos los pregrados?\n\n¿Cuál es el argumento MÁS FUERTE a favor?",
+  choices: [
+    "La estadística es una materia exigente que desarrolla pensamiento riguroso",
+    "Una encuesta a empleadores de egresados clasificó la interpretación de datos como la habilidad que con más frecuencia falta en los recién contratados de la universidad, por delante de otras ocho habilidades",
+    "Varias universidades pares ya exigen un curso cuantitativo",
+    "El departamento de estadística tiene capacidad para enseñar a más estudiantes"
+  ]
+},
+'ct-190': {
+  prompt: "Pregunta: ¿Debería el minorista dejar de aceptar pagos en efectivo en sus tiendas del centro?\n\n¿Cuál es el argumento MÁS DÉBIL a favor?",
+  choices: [
+    "El manejo de efectivo, la consignación y la seguridad le cuestan a la cadena unos USD 2,3 millones al año en sus tiendas del centro",
+    "El efectivo representa menos del 4% de las transacciones en estas tiendas y esa participación ha caído cada año desde 2019",
+    "Los pagos con tarjeta son más modernos que el efectivo",
+    "Quitar las cajas de efectivo liberaría cerca de 1,5 metros cuadrados de mostrador por tienda para terminales de autoservicio"
+  ]
+},
+'ct-191': {
+  prompt: "Pregunta: ¿Debería el banco cerrar sus veinte sucursales más pequeñas?\n\n¿Cuál es el argumento MÁS FUERTE en contra?",
+  choices: [
+    "Los cierres de sucursales son impopulares entre el público",
+    "Catorce de las veinte sucursales son la única entidad bancaria en treinta kilómetros a la redonda, y el análisis interno muestra que los clientes en esas ubicaciones cierran sus cuentas a cuatro veces la tasa normal cuando cierra una sucursal",
+    "Las sucursales han servido a sus comunidades durante muchos años",
+    "Cerrar sucursales exigiría procesos de consulta por despido con el personal"
+  ]
+},
+'ct-192': {
+  prompt: "Pregunta: ¿Debería la empresa reemplazar su oficina de planta abierta por una mezcla de salas silenciosas y espacios de colaboración?\n\n¿Cuál es el argumento MÁS DÉBIL a favor?",
+  choices: [
+    "Las encuestas internas de tres años clasifican consistentemente el ruido como el principal obstáculo para el trabajo concentrado",
+    "El contrato de arrendamiento actual permite reconfigurar sin autorización del arrendador",
+    "Los estudios de observación encontraron las salas de reuniones ocupadas el 94% de la semana laboral, empujando las discusiones al piso abierto",
+    "La distribución actual fue elegida por un jefe de instalaciones que desde entonces dejó la empresa"
+  ]
+},
+'ct-193': {
+  prompt: "Una cadena regional de panaderías está decidiendo si instala paneles solares en los techos de sus doce plantas de producción. La propuesta cuesta USD 2,4 millones por adelantado y el equipo de energía proyecta ahorros anuales de electricidad de USD 310.000, lo que implica un periodo de recuperación de menos de ocho años. Los paneles se tendrían en propiedad y no en arriendo, y la proyección supone los precios actuales de electricidad. La junta ha pedido más análisis antes de comprometerse, ya que la empresa no ha hecho antes una inversión de este plazo.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Si los paneles serían visibles desde la calle en cada planta",
+    "Qué parte de la demanda eléctrica de cada planta ocurre durante las horas de luz, cuando los paneles generan",
+    "Qué proveedor fabrica los paneles",
+    "Cuántas otras panaderías de la región han instalado paneles solares"
+  ]
+},
+'ct-194': {
+  prompt: "Una empresa de logística está considerando reemplazar sus furgonetas diésel de reparto por eléctricas en toda su flota urbana de 320 vehículos. El equipo financiero calcula que los menores costos de combustible y mantenimiento recuperarían el mayor precio de compra en cinco años, y que la infraestructura de carga podría instalarse en los cuatro depósitos existentes de la empresa. El director de operaciones apoya el cambio en principio pero ha pedido un análisis adicional antes de que la junta decida.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Si la autonomía de las furgonetas eléctricas cubre la distancia diaria de las rutas urbanas típicas de la empresa sin carga a mitad de turno",
+    "Qué esquema de colores llevarían las nuevas furgonetas",
+    "Cuántos fabricantes producen actualmente furgonetas eléctricas de reparto",
+    "Si los conductores de la empresa han manejado vehículos eléctricos antes"
+  ]
+},
+'ct-195': {
+  prompt: "Una editorial está decidiendo si adquiere a un competidor pequeño por USD 18 millones. El equipo de estrategia argumenta que el negocio combinado eliminaría USD 4 millones de gastos generales duplicados en dos años, que el catálogo de la empresa objetivo complementa el propio de la editorial con casi ningún traslape de títulos, y que la empresa objetivo ha sido rentable en cada uno de los últimos cuatro años. La junta apoya la operación en general pero quiere una pregunta más respondida antes de aprobarla.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la adquisición?",
+  choices: [
+    "Cuánto tiempo lleva operando la empresa objetivo",
+    "Qué proporción de los ingresos de la empresa objetivo depende de contratos con autores que permiten terminarlos ante un cambio de control",
+    "Qué asesores nombraría la editorial para la transacción",
+    "Si las oficinas de la empresa objetivo están cerca de las de la editorial"
+  ]
+},
+'ct-196': {
+  prompt: "Un grupo hotelero está decidiendo si convierte dos pisos de una propiedad urbana de habitaciones a oficinas con servicios. El equipo de desarrollo proyecta que los arriendos de oficina superarían la contribución actual de las habitaciones en unos USD 500.000 al año, con base en los arriendos comerciales vigentes en el sector, y que la obra de conversión tomaría unos cinco meses. Los dos pisos operan actualmente a la ocupación promedio del hotel. La junta ha pedido un análisis adicional antes de aprobar la conversión.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Cuál es la tasa actual de desocupación de oficinas con servicios en el sector",
+    "Cuánto tomaría la obra de conversión",
+    "Qué arquitecto diseñaría los pisos de oficina",
+    "Si el restaurante del hotel es usado por personas no hospedadas"
+  ]
+},
+'ct-197': {
+  prompt: "Un minorista está decidiendo si abre los domingos en sus cuarenta tiendas de calle, tras haber probado la apertura dominical en seis de ellas durante tres meses. El equipo comercial estima ingresos semanales adicionales de USD 190.000 en toda la cadena frente a USD 120.000 de costo extra de personal y operación, lo que da una contribución claramente positiva. El director financiero ha pedido que se responda una pregunta más antes de extender la prueba a toda la cadena.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Si el personal preferiría trabajar los domingos en vez de los sábados",
+    "Qué proporción de los ingresos del domingo representa compras que los clientes habrían hecho otro día de todos modos",
+    "Cuántos minoristas competidores ya abren los domingos",
+    "Si los proveedores de las tiendas entregan los fines de semana"
+  ]
+},
+'ct-198': {
+  prompt: "Una firma de software está decidiendo si mueve los datos de sus clientes de sus propios servidores a un proveedor de nube. El equipo de infraestructura proyecta ahorros de USD 700.000 al año en hardware, energía y mantenimiento una vez completada la migración, señala que el proveedor ofrece garantías de disponibilidad más fuertes de las que la firma logra hoy, y estima que la migración misma tomaría unos nueve meses de esfuerzo de ingeniería.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Cuánto pagaría la firma al proveedor de nube en cargos de transferencia y almacenamiento de datos a sus volúmenes reales de uso",
+    "Qué lenguajes de programación prefieren los ingenieros de la firma",
+    "Cuántas otras firmas del sector usan proveedores de nube",
+    "Cuándo se compraron los servidores actuales de la firma"
+  ]
+},
+'ct-199': {
+  prompt: "Un fabricante está decidiendo si ofrece una garantía extendida de cinco años en su electrodoméstico insignia, en lugar de la cobertura actual de dos años. Marketing proyecta que la garantía más larga elevaría las ventas en unidades 12%, con base en una encuesta en la que los clientes calificaron la duración de la garantía como un factor importante de compra. El competidor más cercano del electrodoméstico ofrece hoy tres años, y la cobertura extendida aplicaría a unidades que ya están en el canal de distribución.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la propuesta?",
+  choices: [
+    "Cuál es la tasa de falla del electrodoméstico entre los años dos y cinco",
+    "Qué minoristas venden el electrodoméstico",
+    "Cuánto tiempo lleva ofreciéndose la garantía de dos años",
+    "Si los competidores publicitan sus términos de garantía de forma prominente"
+  ]
 }
 
 };
