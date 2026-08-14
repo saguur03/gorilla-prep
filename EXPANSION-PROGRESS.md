@@ -54,6 +54,24 @@ Servidor local `powershell -File server.ps1` en el puerto 8420 (config en `.clau
 - **Sesgo posicional:** en las 238 preguntas con opciones de orden fijo, la respuesta correcta cae en las posiciones 1/2/3/4 en 61/67/59/51 casos. Sin sesgo material.
 - **Consola: sin errores.** Sesión mixta de 20 preguntas respondida de principio a fin sin excepciones.
 
+## Revisión de contenido (13 ago 2026)
+
+Segunda pasada sobre las 337 nuevas, leyendo el contenido en lugar de solo validar la estructura. Chequeos automáticos ejecutados en consola:
+
+- **Aritmética de las explicaciones:** se extrajeron y recalcularon las 213 cadenas del tipo `a × b = c`. Cero errores reales (los 2 candidatos restantes eran una fracción y un porcentaje redondeado).
+- **Respuesta ↔ explicación:** en las 122 preguntas de opción numérica, el valor de la opción correcta aparece en su propia explicación. Cero desajustes.
+- **Tablas:** las 10 nuevas tablas están bien formadas, sin desajuste entre cabeceras y filas. Las cuotas de mercado suman 100% en los tres años.
+- **Superlativos y ratios:** recalculados desde la tabla (ventas por m², ganancia de cuota, revenue mensual, deltas mes a mes). Todos coinciden.
+- **Cuasi-duplicados:** comparación por solapamiento de tokens entre preguntas del mismo tipo. Sin pares sospechosos en CT; los pares numéricos detectados son la misma técnica con estructura distinta, no repeticiones.
+
+**Tres defectos encontrados y corregidos:**
+
+1. `eng-103` — «None of the proposals ___» con `meet` y `meets` como opciones. La propia explicación admitía que el plural «se acepta ampliamente», es decir, dos respuestas defendibles. Sustituida por un ítem de `fewer` vs `less`, que no admite discusión.
+2. `eng-117` — «the committee, ___ approved them». Para un sustantivo colectivo, `which` es tan estándar como `who`. El antecedente pasa a ser `the directors`, con lo que `who` queda como única opción correcta.
+3. **Repetición de plantilla en `inference`** — 11 de las 13 nuevas compartían el mismo esqueleto («Every A→B. Some B are C. No C is D»), con la primera premisa siempre de adorno. Un banco así entrena reconocimiento de patrón, no razonamiento. Se reescribieron 8 con estructuras distintas: modus tollens encadenado, «only if» (condición necesaria), solapamiento de porcentajes, disyunción exclusiva, contrapositivo sobre una lista de exclusión, orden comparativo, principio del palomar, y condicional con «unless». Quedan 4 con la plantilla clásica, que es una representación razonable de ese patrón.
+
+Reverificado tras los cambios: 690 preguntas, 0 errores estructurales, 31 tipos cubiertos en ambas guías, `ct-100` sigue siendo la primera sin traducción ES (ids intactos), balance posicional 61/66/59/51 sobre 237 preguntas de orden fijo, consola sin errores y sesión mixta jugada de principio a fin.
+
 ## Pendiente (opcional, no bloquea el uso)
 
 - Las 337 preguntas nuevas no tienen traducción al español. La app hace *fallback* automático al inglés, así que funcionan en ambos idiomas; solo la explicación sale en inglés con el toggle en ES.

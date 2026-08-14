@@ -122,10 +122,10 @@ var Q = [
 },
 {
   type: "grammar", d: 2,
-  prompt: "Choose the correct option:\n\nNone of the proposals submitted so far ___ the client's budget constraints.",
-  choices: ["meet", "meets", "is meeting", "have met"],
+  prompt: "Choose the correct option:\n\nWe received ___ complaints this quarter than in any quarter since the redesign.",
+  choices: ["less", "fewer", "lesser", "least"],
   answer: 1,
-  explanation: "'None' is treated as singular in careful formal usage, meaning 'not one', so 'meets' is the safer choice in a business-English test. The plural 'meet' is widely accepted in speech but is the weaker answer here."
+  explanation: "'Complaints' are countable, so the comparative is 'fewer'; 'less' belongs with uncountable quantities such as 'less feedback' or 'less time'. 'Lesser' means inferior in importance rather than smaller in number, and 'least' is superlative, which 'than' rules out."
 },
 {
   type: "grammar", d: 2,
@@ -220,10 +220,10 @@ var Q = [
 },
 {
   type: "grammar", d: 2,
-  prompt: "Choose the correct option:\n\nThe findings were presented to the committee, ___ approved them without amendment.",
+  prompt: "Choose the correct option:\n\nThe findings were presented to the directors, ___ approved them without amendment.",
   choices: ["which", "who", "whom", "that"],
   answer: 1,
-  explanation: "The relative pronoun is the subject of 'approved' and refers to the committee as a group of people acting, so 'who' is correct. 'Whom' would be needed only if the pronoun were the object of the verb."
+  explanation: "The antecedent is people, so 'which' is out, and the pronoun is the subject of 'approved', so 'whom' is out as well. 'That' cannot introduce a non-defining clause after a comma, which leaves 'who'."
 },
 {
   type: "grammar", d: 2,

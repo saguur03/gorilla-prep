@@ -334,15 +334,15 @@ var Q = [
 },
 {
   type: "inference", d: 2,
-  prompt: "A publishing house tracks its output. Every title that sold more than 50,000 copies last year was released in both hardback and paperback. Some titles released in both formats were translated into at least three languages. All translated titles received a marketing budget above $20,000.\n\nWhich of the following must be true?",
+  prompt: "A distributor's despatch policy is fixed. Any order sent from the central warehouse is tracked end to end, and every order tracked end to end generates a delivery confirmation on the customer's account. During a service review the team found an order for which no delivery confirmation was ever generated.\n\nWhich of the following must be true of that order?",
   choices: [
-    "Every title released in both formats sold more than 50,000 copies.",
-    "Some titles that received a marketing budget above $20,000 were released in both hardback and paperback.",
-    "Every title that sold more than 50,000 copies was translated.",
-    "No title with a small marketing budget sold well."
+    "It was not sent from the central warehouse.",
+    "It was never tracked end to end but may still have come from the central warehouse.",
+    "It was sent from a regional depot.",
+    "It was never delivered to the customer."
   ],
-  answer: 1,
-  explanation: "Some dual-format titles were translated, and all translated titles had budgets above $20,000, so those titles are both dual-format and well funded — which the second option asserts. The first and third reverse the given conditionals, and the fourth invents a claim about poorly funded titles that the statements never license."
+  answer: 0,
+  explanation: "Run the chain backwards: no confirmation means it was not tracked end to end, and if it was not tracked it cannot have come from the central warehouse. That is the only conclusion the chain forces. The second option accepts the first half of that reasoning but refuses the second, which the premises do not allow. The third assumes a regional depot is the only alternative, and the fourth confuses a missing confirmation with a missing delivery."
 },
 {
   type: "inference", d: 2,
@@ -358,63 +358,63 @@ var Q = [
 },
 {
   type: "inference", d: 2,
-  prompt: "A pharmaceutical group audited its trial portfolio. Every trial that reached Phase III was reviewed by the external ethics board. Some trials reviewed by the ethics board were funded by a commercial partner. No trial funded by a commercial partner was conducted at a single site.\n\nWhich of the following can be properly inferred?",
+  prompt: "A bank's credit manual states that an application is escalated to the credit committee only if it exceeds €2m. In the last quarter, 40 applications exceeded €2m and 12 applications in total were escalated to the committee.\n\nWhich of the following must be true?",
   choices: [
-    "Some trials reviewed by the ethics board were conducted at more than one site.",
-    "Every trial reviewed by the ethics board reached Phase III.",
-    "No Phase III trial was funded by a commercial partner.",
-    "All multi-site trials were funded commercially."
+    "Every application escalated to the committee exceeded €2m.",
+    "Every application that exceeded €2m was escalated to the committee.",
+    "Twenty-eight applications were rejected by the committee.",
+    "No application below €2m was refused."
   ],
   answer: 0,
-  explanation: "Some ethics-reviewed trials were commercially funded, and no commercially funded trial was single-site, so those trials must have run at more than one site. The second reverses the conditional; the third contradicts nothing in the premises but is not entailed by them; the fourth reverses the site relationship."
+  explanation: "'Only if' states a necessary condition, not a sufficient one: exceeding €2m is required for escalation, so everything escalated must have exceeded it. The second option reads the rule backwards — the manual permits a large application to stay below committee level, which is why 12 were escalated rather than 40. The third invents an outcome the passage never mentions, and the fourth concerns refusals, which the rule says nothing about."
 },
 {
   type: "inference", d: 2,
-  prompt: "A retailer analysed its store estate. Every store that exceeded its annual sales target has a car park. Some stores with car parks are located in town centres. No store located in a town centre opened before 2015.\n\nWhich of the following must be true?",
+  prompt: "A retailer analysed its estate of 200 stores. Sixty per cent of the stores exceeded their annual sales target. Forty-five per cent of the stores are located in shopping centres, and every store located in a shopping centre exceeded its target.\n\nWhich of the following must be true?",
   choices: [
-    "Every store with a car park exceeded its sales target.",
-    "Some stores with car parks opened in 2015 or later.",
-    "No store that exceeded its target is in a town centre.",
-    "All stores that opened before 2015 exceeded their targets."
-  ],
-  answer: 1,
-  explanation: "Some car-park stores are in town centres, and no town-centre store opened before 2015, so those stores opened in 2015 or later. The first reverses the conditional. The third is unsupported: a town-centre store with a car park could well have beaten its target. The fourth is unconnected to anything stated."
-},
-{
-  type: "inference", d: 2,
-  prompt: "A law firm reviewed its matter records. Every matter billed above $200,000 was staffed with at least one partner. Some matters staffed with a partner were completed ahead of the agreed deadline. All matters completed ahead of deadline received a client satisfaction score of nine or ten.\n\nWhich of the following can be properly inferred?",
-  choices: [
-    "Every matter staffed with a partner was billed above $200,000.",
-    "Some matters that scored nine or ten were staffed with a partner.",
-    "Every matter billed above $200,000 finished ahead of deadline.",
-    "No matter without a partner scored nine or ten."
-  ],
-  answer: 1,
-  explanation: "Some partner-staffed matters finished early, and all early finishers scored nine or ten, so some high scorers were partner-staffed. The first and third reverse the given conditionals, and the fourth makes a claim about non-partner matters that the statements do not address at all."
-},
-{
-  type: "inference", d: 2,
-  prompt: "A university reviewed its research grants. Every grant above €1m was subject to an annual progress review. Some grants subject to annual review were held jointly with an industrial partner. No grant held jointly with an industrial partner was administered by the humanities faculty.\n\nWhich of the following must be true?",
-  choices: [
-    "Some grants subject to annual review were not administered by the humanities faculty.",
-    "Every grant subject to annual review exceeded €1m.",
-    "No grant above €1m involved an industrial partner.",
-    "The humanities faculty held no grants above €1m."
+    "At least thirty stores that exceeded their target are not in shopping centres.",
+    "Every store that exceeded its target is in a shopping centre.",
+    "Exactly half the stores outside shopping centres exceeded their target.",
+    "Most stores that missed their target are in shopping centres."
   ],
   answer: 0,
-  explanation: "Some annually reviewed grants had industrial partners, and no such grant sat in humanities, so those grants were outside humanities — the first option. The second reverses the conditional. The third and fourth assert links between grant size and faculty or partnership that the premises never establish."
+  explanation: "120 stores beat the target and 90 are in shopping centres, all of which beat it. That leaves at least 120 − 90 = 30 target-beating stores elsewhere. The second option would require the two groups to coincide, which the numbers forbid. The third fixes a proportion the data does not pin down, and the fourth is impossible: every shopping-centre store beat its target, so none of the missers can be there."
 },
 {
   type: "inference", d: 2,
-  prompt: "A shipping line reviewed its fleet. Every vessel that failed a port-state inspection last year was more than fifteen years old. Some vessels more than fifteen years old were retrofitted with new scrubbers. No vessel retrofitted with new scrubbers operates on the Baltic route.\n\nWhich of the following can be properly inferred?",
+  prompt: "Every matter opened by the firm is assigned to exactly one of two teams, litigation or advisory, and never to both. No matter handled by the advisory team is billed on a contingency basis. The finance report shows that some matters opened last year were billed on a contingency basis.\n\nWhich of the following can be properly inferred?",
   choices: [
-    "Every vessel more than fifteen years old failed an inspection.",
-    "Some vessels more than fifteen years old do not operate on the Baltic route.",
-    "No vessel that failed an inspection was retrofitted.",
-    "All Baltic-route vessels are under fifteen years old."
+    "Some matters opened last year were handled by the litigation team.",
+    "Every matter handled by the litigation team is billed on a contingency basis.",
+    "The litigation team opened more matters than the advisory team.",
+    "No advisory matter was profitable."
   ],
-  answer: 1,
-  explanation: "Some old vessels were retrofitted, and no retrofitted vessel runs the Baltic route, so those vessels are off that route. The first reverses the conditional. The third and fourth are not entailed: a failed vessel could have been retrofitted afterwards, and old non-retrofitted vessels could still run the Baltic."
+  answer: 0,
+  explanation: "The contingency matters cannot be advisory, and since every matter belongs to one of exactly two teams, they must be litigation — so some litigation matters exist. The second reverses that reasoning: litigation matters may be billed any number of ways. The third compares volumes the passage never gives, and the fourth introduces profitability, which is not mentioned."
+},
+{
+  type: "inference", d: 2,
+  prompt: "A university's procurement rules are absolute: no supplier on the restricted list may be issued a new purchase order, and every supplier that fails the ethics screen is placed on the restricted list. The finance system shows that a new purchase order was issued to Halden Instruments last week.\n\nWhich of the following must be true?",
+  choices: [
+    "Halden Instruments did not fail the ethics screen.",
+    "Halden Instruments has never been assessed against the ethics screen.",
+    "Halden Instruments passed the ethics screen with the highest possible rating.",
+    "The restricted list contains no suppliers at all."
+  ],
+  answer: 0,
+  explanation: "A new order means Halden is not on the restricted list, and since failing the screen guarantees a place on that list, Halden cannot have failed it. The second goes further than the premises allow: not failing is compatible with having been assessed and passed. The third invents a rating the rules never mention, and the fourth generalises from one supplier to the whole list."
+},
+{
+  type: "inference", d: 2,
+  prompt: "A shipping line compared operating margins across four routes last year. The Baltic route earned a higher margin than the Adriatic route. The Aegean route earned a lower margin than the Adriatic route. The North Sea route earned a higher margin than the Baltic route. No two routes earned the same margin.\n\nWhich of the following can be properly inferred?",
+  choices: [
+    "The Aegean route earned the lowest margin of the four.",
+    "The Adriatic route earned the second-highest margin.",
+    "The Baltic route earned a higher margin than the North Sea route.",
+    "The North Sea and Baltic routes together earned more than half the total margin."
+  ],
+  answer: 0,
+  explanation: "The three comparisons chain into a single order: North Sea above Baltic, Baltic above Adriatic, Adriatic above Aegean. Aegean therefore sits at the bottom. The second is wrong because Adriatic is third in that chain, the third reverses a stated comparison, and the fourth treats margins as though they were amounts that could be summed, which the ranking does not support."
 },
 {
   type: "inference", d: 2,
@@ -430,27 +430,27 @@ var Q = [
 },
 {
   type: "inference", d: 2,
-  prompt: "A food producer reviewed its product lines. Every line that was reformulated last year now carries a reduced-sugar label. Some lines carrying a reduced-sugar label are sold through discount retailers. No line sold through discount retailers is packaged in glass.\n\nWhich of the following can be properly inferred?",
+  prompt: "A food producer surveyed all 400 of its product lines. Seventy per cent of the lines carry a reduced-sugar label, and sixty per cent are sold through discount retailers.\n\nWhich of the following must be true?",
   choices: [
-    "Every line with a reduced-sugar label was reformulated last year.",
-    "Some lines with a reduced-sugar label are not packaged in glass.",
-    "No reformulated line is sold through discount retailers.",
-    "All glass-packaged lines were reformulated."
+    "At least 120 lines both carry a reduced-sugar label and are sold through discount retailers.",
+    "Exactly 120 lines both carry the label and are sold through discount retailers.",
+    "At least 120 lines carry the label but are not sold through discount retailers.",
+    "Thirty per cent of discount-retailer lines carry no reduced-sugar label."
   ],
-  answer: 1,
-  explanation: "Some reduced-sugar lines go to discount retailers, and nothing sold there is in glass, so those lines are not glass-packaged. The first reverses the conditional. The third is unsupported, and the fourth invents a claim about glass packaging that the statements never make."
+  answer: 0,
+  explanation: "The two groups cover 70% + 60% = 130% of the lines, so at least 30% — 120 lines — must fall into both. That is a floor, not a fixed figure: the overlap could run as high as 60%, which is why the second option's 'exactly' fails. The third states the reverse of what the arithmetic forces, and the fourth asserts a split within the discount group that the totals do not determine."
 },
 {
   type: "inference", d: 2,
-  prompt: "A construction group reviewed its projects. Every project that finished within budget had a dedicated cost controller assigned from the outset. Some projects with a dedicated cost controller were delivered under a fixed-price contract. No fixed-price project in the sample ran longer than eighteen months.\n\nWhich of the following must be true?",
+  prompt: "Under the group's framework agreement, a contractor's accreditation is renewed automatically each year unless the contractor records a reportable safety incident during the period. The register shows that Verrand Civils did not have its accreditation renewed this year.\n\nWhich of the following must be true?",
   choices: [
-    "Some projects with a dedicated cost controller ran eighteen months or less.",
-    "Every project with a cost controller finished within budget.",
-    "No project that finished within budget was fixed-price.",
-    "All projects longer than eighteen months overran their budgets."
+    "Verrand Civils recorded a reportable safety incident during the period.",
+    "Verrand Civils recorded more reportable incidents than any other contractor.",
+    "Verrand Civils will be unable to bid for work in future years.",
+    "Every contractor that recorded an incident lost its accreditation."
   ],
   answer: 0,
-  explanation: "Some cost-controller projects were fixed-price, and no fixed-price project exceeded eighteen months, so those projects ran eighteen months or less. The second reverses the conditional. The third and fourth make claims about budget outcomes and long projects that the premises leave open."
+  explanation: "'Unless' sets out the only circumstance that blocks renewal, so a contractor that was not renewed must have met it. The second adds a comparison the register does not support — one incident is enough. The third speculates about future bidding, which the agreement does not address, and the fourth generalises to all contractors from a rule about renewal in a single case."
 },
 {
   type: "inference", d: 2,
