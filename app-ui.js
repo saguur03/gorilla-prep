@@ -487,9 +487,9 @@ function renderQuestion(){
       '<div id="calcWrap"></div>'+
       '<div id="pausedNote"></div>'+
       '<div id="pacingHint"></div>'+
-      (q.table ? '<div class="table-wrap">'+q.table+'</div>' : '')+
+      (tableOf(q) ? '<div class="table-wrap">'+tableOf(q)+'</div>' : '')+
       (q.chart ? '<div class="chart-wrap">'+q.chart+'</div>' : '')+
-      '<div class="q-prompt">'+esc(q.prompt)+'</div>'+
+      '<div class="q-prompt">'+esc(promptOf(q))+'</div>'+
       '<div id="choicesWrap">'+
         view.choices.map((c,i)=>'<button class="choice" onclick="answerQuestion('+i+')">'+esc(c)+'</button>').join('')+
       '</div><div id="explanationWrap"></div>'+
@@ -767,11 +767,11 @@ function renderReviewList(){
     return '<div class="card review-item">'+
       '<div class="q-header"><span class="q-cat">'+(i+1)+'. '+catName(q.cat)+' · '+esc(typeName(q.type))+'</span>'+
       '<span class="'+(e.correct?'tick ok':'tick bad')+'">'+(e.correct?'✓':'✕')+'</span></div>'+
-      (q.table ? '<div class="table-wrap">'+q.table+'</div>' : '')+
+      (tableOf(q) ? '<div class="table-wrap">'+tableOf(q)+'</div>' : '')+
       (q.chart ? '<div class="chart-wrap">'+q.chart+'</div>' : '')+
-      '<div class="q-prompt small">'+esc(q.prompt)+'</div>'+
+      '<div class="q-prompt small">'+esc(promptOf(q))+'</div>'+
       '<div class="ans-line"><b>'+t('yourAnswer')+'</b> '+(e.chosen ? esc(e.chosen) : t('noAnswer'))+'</div>'+
-      (e.correct ? '' : '<div class="ans-line good"><b>'+t('correctAnswer')+'</b> '+esc(e.correctText || q.choices[q.answer])+'</div>')+
+      (e.correct ? '' : '<div class="ans-line good"><b>'+t('correctAnswer')+'</b> '+esc(e.correctText || choicesOf(q)[q.answer])+'</div>')+
       (takeawayOf(q) ? '<div class="takeaway">'+esc(takeawayOf(q))+'</div>' : '')+
       '<div class="why"><b>'+t('why')+'</b> '+esc(explanationOf(q))+'</div></div>';
   }).join('');

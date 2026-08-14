@@ -416,6 +416,9 @@
 <script src="app.js"></script>
 <!-- After app.js: tags every English question with its CEFR level for the 2/5/3 mix. -->
 <script src="levels-eng.js"></script>
+<!-- Spanish enunciados/opciones/tablas. After app.js because it validates against the
+     bank's assigned ids. Falls back to English per question when untranslated. -->
+<script src="es-questions.js"></script>
 <script src="takeaways.js"></script>
 <script src="app-ui.js"></script>
 </body>

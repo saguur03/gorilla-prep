@@ -119,6 +119,30 @@ function explanationOf(q){
   if(lang === 'es' && window.ES_EXPLANATIONS && window.ES_EXPLANATIONS[q.id]) return window.ES_EXPLANATIONS[q.id];
   return q.explanation;
 }
+
+/* The English modules are never localised — they test English, so serving the question in
+   Spanish would defeat the point. Guarding by category here rather than by omission means
+   a stray entry in es-questions.js cannot leak into them. */
+const NEVER_LOCALISED = { eng:1, engC1:1 };
+function esQuestion(q){
+  if(lang !== 'es' || NEVER_LOCALISED[q.cat]) return null;
+  return (window.ES_QUESTIONS && window.ES_QUESTIONS[q.id]) || null;
+}
+function promptOf(q){
+  const es = esQuestion(q);
+  return (es && es.prompt) || q.prompt;
+}
+function choicesOf(q){
+  const es = esQuestion(q);
+  /* A translation with a different number of options would leave the stored answer index
+     pointing at the wrong choice, so fall back to English rather than serve a broken item.
+     es-questions.js checks this at load time and reports it; this is the runtime backstop. */
+  return (es && es.choices && es.choices.length === q.choices.length) ? es.choices : q.choices;
+}
+function tableOf(q){
+  const es = esQuestion(q);
+  return (es && es.table) || q.table || '';
+}
 function guideDoc(){ return (window.GUIDE && window.GUIDE[lang]) || (window.GUIDE && window.GUIDE.en) || null; }
 function topicFor(q){
   const g = guideDoc(); if(!g) return null;
@@ -411,10 +435,13 @@ function looksNumeric(ch){ return ch.every(c => /^[$€£]?\s*[\d]/.test(String(
 function prepare(q){
   /* Numeric option sets stay in their authored (ascending) order, as on the real
      test. Positional balance is handled in the bank itself — see AUDIT #1. */
-  if(looksNumeric(q.choices)) return { choices:q.choices.slice(), answer:q.answer };
-  const idx = q.choices.map((_,i)=>i);
+  /* Translations keep the authored option order, so the stored answer index stays valid
+     against the localised set and shuffling still works the same way. */
+  const ch = choicesOf(q);
+  if(looksNumeric(ch)) return { choices:ch.slice(), answer:q.answer };
+  const idx = ch.map((_,i)=>i);
   for(let i=idx.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [idx[i],idx[j]]=[idx[j],idx[i]]; }
-  return { choices: idx.map(i=>q.choices[i]), answer: idx.indexOf(q.answer) };
+  return { choices: idx.map(i=>ch[i]), answer: idx.indexOf(q.answer) };
 }
 /* Mock fatigue analysis: accuracy by quartile to detect cognitive decline. */
 function mockFatigueAnalysis(log){
