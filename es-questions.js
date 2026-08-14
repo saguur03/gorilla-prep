@@ -989,6 +989,220 @@ var T = {
 'num-163': {
   prompt: "Un fabricante vende un producto a través de un minorista a un precio de lista de USD 45. El minorista se lleva una comisión de 30% sobre el precio de lista, y el fabricante además paga USD 4,20 por unidad en envío. ¿Cuánto recibe el fabricante por unidad?",
   choices: ["$26,10", "$27,00", "$27,30", "$31,50"]
+},
+
+/* ---------------- WORKING WITH DATA ----------------
+   The tables these refer to are generated in es-tables.js from a glossary. Terms used in a
+   prompt must match that glossary exactly — a question asking about "el Este" against a
+   table headed "East" would be unanswerable — so region names, quarters (T1..T4), months
+   and cost categories here all follow it.
+
+   "billion" becomes "mil millones", so $1.35 billion is written $1.350 millones: same
+   quantity, and it keeps the option list on the same unit as the rest of the set. */
+'data-0': {
+  prompt: "¿Qué región logró el mayor crecimiento porcentual en ventas de 2024 a 2025?",
+  choices: ["Norte", "Sur", "Este", "Oeste"]
+},
+'data-1': {
+  prompt: "¿Cuáles fueron las ventas totales de las cuatro regiones en 2025?",
+  choices: ["4.150", "4.350", "4.500", "4.725"]
+},
+'data-2': {
+  prompt: "¿Las ventas de 2025 del Este representan aproximadamente qué porcentaje del total de ventas de 2025?",
+  choices: ["28,5%", "30,0%", "31,7%", "33,3%"]
+},
+'data-3': {
+  prompt: "¿En qué porcentaje crecieron las ventas totales de todas las regiones de 2024 a 2025?",
+  choices: ["9,0%", "10,0%", "11,1%", "12,5%"]
+},
+'data-4': {
+  prompt: "¿Cómo cambió la participación del Norte en las ventas totales entre 2024 y 2025?",
+  choices: ["Subió de 30% a 32%", "Bajó de 32% a 30%", "Se mantuvo en 30%", "Subió de 28% a 30%"]
+},
+'data-5': {
+  prompt: "Si el Este hubiera crecido al mismo ritmo porcentual que el mercado total, ¿cuáles habrían sido sus ventas de 2025?",
+  choices: ["1.575", "1.650", "1.687,5", "1.725"]
+},
+'data-6': {
+  prompt: "¿Qué producto genera la mayor utilidad bruta total?",
+  choices: ["Alpha", "Beta", "Gamma", "Delta"]
+},
+'data-7': {
+  prompt: "¿Qué producto tiene el menor margen bruto como porcentaje del precio?",
+  choices: ["Alpha", "Beta", "Gamma", "Delta"]
+},
+'data-8': {
+  prompt: "¿Cuáles son los ingresos totales de los cuatro productos?",
+  choices: ["$205.000", "$220.000", "$227.500", "$235.000"]
+},
+'data-9': {
+  prompt: "¿Cuál es el margen bruto global de los cuatro productos, como porcentaje de los ingresos totales?",
+  choices: ["34,7%", "37,5%", "40,0%", "42,5%"]
+},
+'data-10': {
+  prompt: "¿Gamma representa aproximadamente qué porcentaje de los ingresos totales?",
+  choices: ["14,6%", "17,6%", "20,0%", "23,4%"]
+},
+'data-11': {
+  prompt: "¿En qué mes fue más alto el costo de nómina por empleado?",
+  choices: ["Enero", "Febrero", "Marzo", "Abril"]
+},
+'data-12': {
+  prompt: "¿En qué porcentaje creció el personal de enero a abril?",
+  choices: ["20%", "25%", "30%", "33%"]
+},
+'data-13': {
+  prompt: "¿En qué porcentaje creció la nómina total de enero a abril?",
+  choices: ["22,50%", "25,00%", "28,75%", "31,25%"]
+},
+'data-14': {
+  prompt: "¿Cuál fue la nómina total de los cuatro meses?",
+  choices: ["$2.669.500", "$2.769.500", "$2.869.500", "$2.969.500"]
+},
+'data-15': {
+  prompt: "¿Cuáles son los ingresos anuales de Alpha Corp en este mercado?",
+  choices: ["$800 millones", "$875 millones", "$925 millones", "$1.000 millones"]
+},
+'data-16': {
+  prompt: "¿Cuántos ingresos más genera Beta Ltd que Delta SA?",
+  choices: ["$300 millones", "$400 millones", "$450 millones", "$500 millones"]
+},
+'data-17': {
+  prompt: "¿Qué porción del mercado por ingresos controlan juntas las dos empresas más grandes?",
+  choices: ["$1.350 millones", "$1.500 millones", "$1.750 millones", "$2.000 millones"]
+},
+'data-18': {
+  prompt: "Si Gamma Inc adquiriera a Delta SA y la entidad combinada conservara todos los clientes de ambas empresas, ¿cuál sería su participación de mercado?",
+  choices: ["19%", "24%", "31%", "34%"]
+},
+'data-19': {
+  prompt: "¿Qué porcentaje de los encuestados estaba satisfecho o muy satisfecho?",
+  choices: ["40,0%", "53,3%", "60,0%", "66,7%"]
+},
+'data-20': {
+  prompt: "¿Cuál es la razón entre encuestados satisfechos (ambos niveles) e insatisfechos (ambos niveles)?",
+  choices: ["2:1", "3:1", "4:1", "5:1"]
+},
+'data-21': {
+  prompt: "Si la meta de la empresa es que no más del 15% de los encuestados exprese alguna insatisfacción, ¿cumplió la meta?",
+  choices: ["Sí, la insatisfacción fue 10,0%", "Sí, la insatisfacción fue 14,2%", "No, la insatisfacción fue 16,7%", "No, la insatisfacción fue 20,0%"]
+},
+'data-22': {
+  prompt: "Si se recolectaran 300 respuestas adicionales de 'muy satisfecho' y se agregaran a la encuesta, ¿qué porcentaje de todas las respuestas sería entonces 'muy satisfecho'?",
+  choices: ["26,7%", "35,5%", "41,3%", "51,7%"]
+},
+'data-23': {
+  prompt: "¿Qué trimestre tuvo el mayor margen bruto (ingresos menos costo de ventas, como porcentaje de los ingresos)?",
+  choices: ["T1", "T2", "T3", "T4"]
+},
+'data-24': {
+  prompt: "¿Cuáles fueron los ingresos totales del año completo?",
+  choices: ["$23.500 miles", "$24.500 miles", "$25.500 miles", "$26.500 miles"]
+},
+'data-25': {
+  prompt: "¿Cuál fue la utilidad operativa de la empresa en T4 (ingresos menos costo de ventas menos gastos operativos)?",
+  choices: ["$1.510 miles", "$1.890 miles", "$2.400 miles", "$3.010 miles"]
+},
+'data-26': {
+  prompt: "¿Cuál fue el margen operativo de la empresa en el año completo?",
+  choices: ["15,3%", "18,6%", "20,4%", "41,3%"]
+},
+'data-27': {
+  prompt: "¿En qué porcentaje crecieron los ingresos de T3 a T4?",
+  choices: ["14,3%", "16,7%", "18,0%", "20,0%"]
+},
+'data-28': {
+  prompt: "¿Cómo cambiaron los gastos operativos como porcentaje de los ingresos entre T1 y T4?",
+  choices: ["Cayeron de 24,0% a 21,4%", "Subieron de 21,4% a 24,0%", "Se mantuvieron en 24,0%", "Cayeron de 24,0% a 18,6%"]
+},
+'data-29': {
+  prompt: "¿Cuál es la nómina anual total de la empresa?",
+  choices: ["$20.350.000", "$21.350.000", "$22.350.000", "$23.350.000"]
+},
+'data-30': {
+  prompt: "¿Cuál es el salario promedio de toda la empresa?",
+  choices: ["$56.250", "$58.375", "$60.000", "$61.250"]
+},
+'data-31': {
+  prompt: "¿Qué porcentaje de la nómina total representa Ingeniería?",
+  choices: ["30,0%", "36,5%", "40,2%", "43,7%"]
+},
+'data-32': {
+  prompt: "Si el personal de Operaciones se recortara 20% sin ningún otro cambio, ¿cuál sería la nueva nómina total?",
+  choices: ["$21.000.000", "$21.700.000", "$22.000.000", "$22.675.000"]
+},
+'data-33': {
+  prompt: "¿En qué año logró la plataforma su mayor crecimiento porcentual de usuarios?",
+  choices: ["2022", "2023", "2024", "El crecimiento fue igual en 2022 y 2023"]
+},
+'data-34': {
+  prompt: "¿Cuál fue la tasa de crecimiento anual compuesta de usuarios de 2021 a 2024?",
+  choices: ["27%", "30%", "33%", "38%"]
+},
+'data-35': {
+  prompt: "¿Cuántos usuarios se sumaron en total entre 2021 y 2024?",
+  choices: ["3,25 millones", "4,00 millones", "4,25 millones", "5,25 millones"]
+},
+'data-36': {
+  prompt: "Si el crecimiento de 2025 iguala el ritmo de 2024, ¿aproximadamente cuántos usuarios habrá al cierre de 2025?",
+  choices: ["6,30 millones", "6,56 millones", "6,83 millones", "7,25 millones"]
+},
+'data-37': {
+  prompt: "¿Qué categoría de costo creció más rápido entre 2024 y 2025?",
+  choices: ["Mano de obra", "Materiales", "Logística", "Gastos generales"]
+},
+'data-38': {
+  prompt: "¿Qué categoría de costo disminuyó entre 2024 y 2025?",
+  choices: ["Mano de obra", "Materiales", "Logística", "Ninguna disminuyó"]
+},
+'data-39': {
+  prompt: "¿Cuál es la participación de Mano de obra en los costos totales de 2025?",
+  choices: ["40%", "44%", "46%", "48%"]
+},
+'data-40': {
+  prompt: "¿Cómo cambió la participación de Mano de obra en los costos totales entre 2024 y 2025?",
+  choices: ["Subió 2 puntos porcentuales", "Bajó 2 puntos porcentuales", "No cambió", "Subió 4 puntos porcentuales"]
+},
+'data-41': {
+  prompt: "¿En qué porcentaje crecieron los costos totales entre 2024 y 2025?",
+  choices: ["8%", "10%", "11%", "12%"]
+},
+'data-42': {
+  prompt: "Si el costo unitario de Beta pudiera reducirse de USD 60 a USD 52 sin cambio en precio ni volumen, ¿en cuánto aumentaría la utilidad bruta total de todos los productos?",
+  choices: ["$4.800", "$6.400", "$8.000", "$12.000"]
+},
+'data-43': {
+  prompt: "Si el Oeste sigue creciendo a su ritmo de 2024–2025, ¿aproximadamente cuáles serán sus ventas de 2026?",
+  choices: ["930", "1.022", "1.100", "1.180"]
+},
+'data-44': {
+  prompt: "¿Qué porcentaje del personal de la empresa emplea Operaciones?",
+  choices: ["25,0%", "30,0%", "34,5%", "37,5%"]
+},
+'data-45': {
+  prompt: "¿En qué trimestre fue más bajo el costo de ventas como porcentaje de los ingresos?",
+  choices: ["T1", "T2", "T3", "T4"]
+},
+'data-46': {
+  prompt: "¿Cuál es el promedio de negocios cerrados por representante?",
+  choices: ["5", "6", "7", "8"]
+},
+'data-47': {
+  prompt: "¿Cuál es la mediana de negocios cerrados por representante?",
+  choices: ["5", "6", "8", "9"]
+},
+'data-48': {
+  prompt: "¿Cuál es la moda de las cifras de negocios cerrados?",
+  choices: ["3", "5", "6", "20"]
+},
+'data-49': {
+  prompt: "¿Qué medida representa mejor el desempeño de un representante típico de este equipo?",
+  choices: [
+    "La media, porque usa todos los datos",
+    "La mediana, porque un valor inusualmente alto distorsiona la media",
+    "La moda, porque es el resultado más común",
+    "El rango, porque muestra la dispersión completa"
+  ]
 }
 
 };
