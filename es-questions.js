@@ -2145,6 +2145,378 @@ var T = {
     "el informe no indica cuántas cirugías se realizaron",
     "un periodo de un año es demasiado corto para sacar conclusiones"
   ]
+},
+'ct-44': {
+  prompt: "Un gerente reporta: 'Nuestras quejas de clientes se duplicaron este año, de 50 a 100. La calidad del servicio claramente se está deteriorando.'\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión del gerente?",
+  choices: [
+    "La base de clientes de la empresa creció de 5.000 a 20.000 durante ese mismo año.",
+    "Las quejas son registradas por el equipo de servicio al cliente.",
+    "Algunas quejas se referían a productos y no al servicio.",
+    "La empresa recibió elogios de varios clientes antiguos."
+  ]
+},
+'ct-45': {
+  prompt: "El informe anual de una empresa manufacturera mediana resumió dos años consecutivos de desempeño financiero para los accionistas antes de la próxima reunión de junta. Según las cifras presentadas, los ingresos de la empresa crecieron 10% en el Año 1 frente a la línea base anterior, y luego cayeron 10% en el Año 2 respecto al total del Año 1. La gerencia no comentó si se esperaba que este patrón continuara en el Año 3.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta sobre los ingresos al final del Año 2 en comparación con el nivel inicial?",
+  choices: [
+    "Son menores que el nivel inicial.",
+    "Son iguales al nivel inicial.",
+    "Son mayores que el nivel inicial.",
+    "No puede determinarse."
+  ]
+},
+'ct-46': {
+  prompt: "Un estudio encontró que las personas que desayunan pesan en promedio menos que las que lo omiten. Un nutricionista concluye que desayunar ayuda a prevenir el aumento de peso.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión?",
+  choices: [
+    "Las personas que omiten el desayuno tienen mayor probabilidad de trabajar por turnos, con horarios irregulares de comida y sueño que afectan el peso de forma independiente.",
+    "Los alimentos del desayuno varían mucho en contenido nutricional.",
+    "El estudio incluyó participantes de varios países.",
+    "Algunas personas que desayunan también cenan en abundancia."
+  ]
+},
+'ct-47': {
+  prompt: "Ante un déficit de financiación, la junta de una fundación debatió si aumentar significativamente su presupuesto de marketing para el próximo ciclo de recaudación. Al revisar cinco años de datos internos, el director de desarrollo notó que las donaciones han subido históricamente en proporción al gasto en publicidad durante ese periodo. Con base en este patrón, la fundación argumenta que duplicar su gasto en publicidad duplicará las donaciones que recibe, y propuso reasignar fondos de los servicios programáticos para cubrir el aumento.\n\n¿El argumento supone cuál de las siguientes opciones?",
+  choices: [
+    "La relación proporcional entre publicidad y donaciones seguirá manteniéndose en el nivel de gasto más alto.",
+    "La causa de la fundación es popular entre el público.",
+    "Ninguna otra fundación se anuncia en los mismos canales.",
+    "Los donantes prefieren dar en respuesta a anuncios."
+  ]
+},
+'ct-48': {
+  prompt: "Un memorando interno circulado a los jefes de área describió cambios recientes al proceso de aprobación de propuestas de la firma, motivados por dos incidentes en los que propuestas sin revisar avanzaron sin una evaluación de riesgo adecuada. El memorando establece que ninguna propuesta se aprueba a menos que sea revisada por el comité de riesgo, formalizando un paso que antes era informal. Señala además que algunas propuestas revisadas por el comité de riesgo son rechazadas, con base en un resumen de decisiones de los dos últimos trimestres.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "La revisión del comité de riesgo no garantiza la aprobación.",
+    "La mayoría de las propuestas son rechazadas.",
+    "El comité de riesgo revisa todas las propuestas presentadas.",
+    "Las propuestas rechazadas por el comité de riesgo no pueden volver a presentarse."
+  ]
+},
+'ct-49': {
+  prompt: "Una ciudad argumenta que su nuevo programa de educación en reciclaje causó que las tasas de reciclaje domiciliario subieran de 30% a 45%.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el argumento de la ciudad?",
+  choices: [
+    "Las tasas de reciclaje subieron marcadamente en los distritos que recibieron el programa y se mantuvieron cerca de 30% en distritos demográficamente similares que no lo recibieron.",
+    "El programa fue bien recibido por las organizaciones comunitarias.",
+    "El reciclaje se considera ampliamente beneficioso para el medio ambiente.",
+    "La ciudad también amplió el número de puntos de entrega de reciclaje en todo su territorio."
+  ]
+},
+'ct-50': {
+  prompt: "Una empresa de software duplicó el tamaño de su equipo de ingeniería para acelerar el lanzamiento retrasado de un producto. El lanzamiento se retrasó aún más.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "Los ingenieros existentes tuvieron que dedicar buena parte de su tiempo a capacitar y coordinar con los nuevos, y la sobrecarga de coordinación creció más rápido que la capacidad agregada.",
+    "A los nuevos ingenieros se les pagaron salarios de mercado.",
+    "El producto llevaba dos años en desarrollo.",
+    "Las firmas competidoras también estaban contratando ingenieros."
+  ]
+},
+'ct-51': {
+  prompt: "Miembro de junta: 'Nuestra directora ejecutiva debe estar haciendo un excelente trabajo. El precio de nuestra acción ha subido 40% desde que asumió.'\n\nEl razonamiento del miembro de junta es más vulnerable a la crítica de que:",
+  choices: [
+    "no considera si el mercado o la industria en general subieron en una magnitud similar o mayor",
+    "supone que los precios de las acciones se reportan públicamente",
+    "se apoya en una muestra de una sola empresa",
+    "confunde una condición necesaria con una suficiente"
+  ]
+},
+'ct-52': {
+  prompt: "Los costos de mantenimiento de un equipo de fábrica envejecido han crecido de forma sostenida en los últimos años, lo que llevó al gerente de planta a explorar si reemplazarlo sería más económico que seguir reparándolo. Actualmente, el fabricante está considerando reemplazar una máquina que cuesta USD 50.000 al año en mantenimiento por un modelo nuevo que cuesta USD 200.000 comprarlo de contado, financiado mediante un crédito bancario o el presupuesto de capital existente de la planta. Aún no se ha tomado una decisión, a la espera de más análisis.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar la decisión?",
+  choices: [
+    "Cuántos años operaría la máquina nueva y cuáles serían sus propios costos de mantenimiento",
+    "Qué proveedor fabrica la máquina nueva",
+    "Cuánto tiempo lleva en servicio la máquina actual",
+    "Si los competidores usan máquinas similares"
+  ]
+},
+'ct-53': {
+  prompt: "Un periódico afirma que su aumento en el precio de suscripción estuvo justificado porque el número de suscriptores se mantuvo estable en el mes siguiente al aumento.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la afirmación del periódico?",
+  choices: [
+    "La mayoría de los suscriptores tiene contratos anuales que no podían cancelarse hasta sus fechas de renovación, repartidas a lo largo del año siguiente.",
+    "La calidad de impresión del periódico mejoró al mismo tiempo.",
+    "Los periódicos competidores cobran precios similares.",
+    "El aumento de precio se anunció con dos meses de anticipación."
+  ]
+},
+'ct-54': {
+  prompt: "Tras años de quejas públicas por los trancones en las horas pico, una agencia metropolitana de planeación propuso una gran inversión en infraestructura para atender los problemas de tráfico de la región. Al presentar la propuesta en una audiencia pública, un funcionario del gobierno argumenta que construir una nueva autopista reducirá la congestión vehicular en el área metropolitana, señalando como justificación del costo del proyecto los ahorros de tiempo de viaje proyectados por el equipo de ingeniería de la agencia.\n\n¿El argumento supone cuál de las siguientes opciones?",
+  choices: [
+    "La capacidad vial adicional no atraerá suficientes conductores nuevos como para anular el alivio de la congestión.",
+    "La autopista se completará según el cronograma.",
+    "El uso del transporte público se mantendrá constante.",
+    "La autopista se financiará con peajes."
+  ]
+},
+'ct-55': {
+  prompt: "La oficina de gestión de proyectos elaboró un informe de fin de año que revisó los resultados de cada proyecto importante completado durante el año fiscal, con el fin de identificar patrones que pudieran informar futuras prácticas de programación y presupuesto. Entre sus hallazgos, el informe indica que todo proyecto que terminó por debajo del presupuesto también terminó a tiempo. Por separado, el informe confirma que el Proyecto Delta, un proyecto de infraestructura de seis meses, terminó a tiempo.\n\n¿Qué puede concluirse correctamente sobre el Proyecto Delta?",
+  choices: [
+    "Nada puede concluirse sobre si terminó por debajo del presupuesto.",
+    "Terminó por debajo del presupuesto.",
+    "No terminó por debajo del presupuesto.",
+    "Excedió su presupuesto."
+  ]
+},
+'ct-56': {
+  prompt: "Un banco afirma que su sistema de detección de fraude evitó pérdidas por USD 10 millones el año pasado.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la afirmación?",
+  choices: [
+    "Las transacciones que el sistema marcó y bloqueó fueron confirmadas después por los investigadores como fraudulentas en una tasa superior al 90%.",
+    "El sistema fue desarrollado por un proveedor tecnológico de prestigio.",
+    "El volumen total de transacciones del banco aumentó el año pasado.",
+    "Otros bancos han instalado sistemas similares."
+  ]
+},
+'ct-57': {
+  prompt: "Investigador: 'Los países con más médicos per cápita tienen tasas más altas de diagnóstico de enfermedades crónicas. Por lo tanto, los médicos podrían estar sobrediagnosticando condiciones crónicas.'\n\n¿Cuál de las siguientes opciones, de ser cierta, socava más seriamente la interpretación del investigador?",
+  choices: [
+    "Los países con más médicos per cápita también tienen poblaciones más envejecidas, en las que la enfermedad crónica es genuinamente más prevalente.",
+    "Los médicos de algunos países se especializan más estrechamente que en otros.",
+    "Las definiciones de enfermedad crónica han cambiado en la última década.",
+    "Algunos pacientes consultan a varios médicos por la misma condición."
+  ]
+},
+'ct-58': {
+  prompt: "Una cadena de restaurantes reemplazó sus menús de papel por tabletas digitales, esperando que mejorara la precisión de los pedidos. La precisión de los pedidos mejoró, pero el tiempo de espera promedio de los clientes aumentó.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor el aumento en el tiempo de espera?",
+  choices: [
+    "Los clientes exploraron los menús digitales considerablemente más tiempo que los de papel antes de pedir, retrasando el inicio de la preparación de los alimentos.",
+    "Las tabletas eran más costosas que imprimir menús de papel.",
+    "El personal de cocina recibió la misma capacitación que antes.",
+    "Los proveedores de alimentos de la cadena no cambiaron."
+  ]
+},
+'ct-59': {
+  prompt: "Tras perder a varios empleados con experiencia frente a la competencia durante el último año, el equipo directivo de una firma mediana se reunió para discutir formas de mejorar la retención. Después de un ejercicio de comparación con empresas similares de la industria, la empresa planea reducir la rotación de empleados aumentando los salarios 10% en todas las áreas, con efecto a partir del inicio del próximo trimestre. Recursos Humanos aún no ha realizado entrevistas de salida para entender las partidas con más detalle.\n\n¿Cuál de las siguientes sería más útil determinar para evaluar si el plan funcionará?",
+  choices: [
+    "Si los empleados que se han ido lo han hecho principalmente por la compensación",
+    "Cuánto tiempo lleva la empresa en el negocio",
+    "Si los salarios de la empresa se publican internamente",
+    "Cuántos empleados tiene actualmente la empresa"
+  ]
+},
+'ct-60': {
+  prompt: "Un funcionario de educación argumenta que los grupos más pequeños mejoran los resultados de los estudiantes, citando que los estudiantes en grupos de menos de 20 obtienen puntajes más altos en pruebas estandarizadas que los estudiantes en grupos más grandes.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento?",
+  choices: [
+    "Los grupos pequeños se concentran en colegios bien financiados que además emplean docentes más experimentados y ofrecen tutorías extensas.",
+    "Algunos docentes prefieren enseñar a grupos más pequeños.",
+    "Las pruebas estandarizadas se aplican una vez al año.",
+    "El tamaño de los grupos varía entre distritos escolares."
+  ]
+},
+'ct-61': {
+  prompt: "Un analista que preparaba un informe de concentración de clientes para el comité de riesgo señaló la dependencia de la firma en un número pequeño de cuentas grandes como una vulnerabilidad que vale la pena monitorear en adelante. La nota indica que nuestros dos clientes más grandes representan juntos el 60% de los ingresos, y confirma por separado que ningún otro cliente individual representa más del 5% de los ingresos. El analista no especificó cómo se distribuyen los ingresos restantes entre las cuentas más pequeñas.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Se necesitan al menos ocho clientes además de los dos más grandes para dar cuenta del 40% restante de los ingresos.",
+    "La empresa tiene exactamente diez clientes.",
+    "El segundo cliente más grande representa exactamente el 30% de los ingresos.",
+    "Perder al cliente más grande reduciría los ingresos en 30%."
+  ]
+},
+'ct-62': {
+  prompt: "Un minorista nacional revisó el desempeño de su programa de fidelización un año después del lanzamiento, comparando datos de transacciones entre miembros inscritos y no miembros en todas sus tiendas. El análisis, presentado al comité financiero, encontró que los miembros del programa gastan en promedio 40% más por visita que los no miembros. Con base únicamente en este hallazgo, el minorista concluye que su programa de fidelización es rentable, y ahora está considerando ampliar las recompensas ofrecidas a los miembros.\n\n¿Cuál de las siguientes es una suposición que requiere la conclusión?",
+  choices: [
+    "El gasto adicional supera el costo de las recompensas y descuentos que otorga el programa.",
+    "Los miembros del programa visitan la tienda con más frecuencia que los no miembros.",
+    "El programa es más generoso que los de los competidores.",
+    "La mayoría de los clientes sabe que el programa existe."
+  ]
+},
+'ct-63': {
+  prompt: "Director de marketing: 'Nuestra campaña llegó a dos millones de personas, así que fue un éxito.'\n\nEl razonamiento del director es defectuoso principalmente porque:",
+  choices: [
+    "trata una medida de exposición como si fuera una medida del objetivo de la campaña",
+    "no especifica el presupuesto total de la campaña",
+    "supone que los dos millones de personas vieron el anuncio completo",
+    "no compara la campaña con campañas anteriores"
+  ]
+},
+'ct-64': {
+  prompt: "Una firma de logística afirma que su nuevo software de optimización de rutas redujo 12% el consumo de combustible por entrega.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la afirmación?",
+  choices: [
+    "El consumo de combustible por entrega se midió en las mismas rutas, en la misma temporada y con los mismos vehículos antes y después de introducir el software.",
+    "El software se compró a un proveedor de buena reputación.",
+    "Los conductores encontraron el software fácil de usar.",
+    "Los precios del combustible bajaron durante el periodo de medición."
+  ]
+},
+'ct-65': {
+  prompt: "Una empresa de bienestar anuncia que el 80% de los participantes de su programa de seis semanas bajó de peso, y concluye que el programa es efectivo.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión?",
+  choices: [
+    "Cerca de la mitad de los participantes inscritos abandonó antes de terminar las seis semanas y fue excluida de la cifra del 80%.",
+    "El programa incluye componentes dietéticos y de ejercicio.",
+    "Los participantes pagaron una cuota para inscribirse en el programa.",
+    "El peso se midió usando las básculas de la propia empresa."
+  ]
+},
+'ct-66': {
+  prompt: "Después de que un programa piloto revelara prácticas inconsistentes de trabajo remoto entre áreas, la empresa emitió una política formal para estandarizar la elegibilidad en toda la organización. La política establece que los empleados pueden trabajar de forma remota solo si han completado un año de servicio y su jefe lo aprueba, con ambas condiciones verificadas por el sistema de Recursos Humanos antes de otorgar el acceso remoto. También se pidió a los jefes documentar sus decisiones de aprobación para revisión trimestral, aunque la revisión en sí no afecta la elegibilidad.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta sobre un empleado que está trabajando de forma remota?",
+  choices: [
+    "El empleado ha completado al menos un año de servicio y cuenta con la aprobación de su jefe.",
+    "El empleado lleva más de dos años en la empresa.",
+    "El jefe del empleado también trabaja de forma remota.",
+    "Todos los empleados con un año de servicio trabajan de forma remota."
+  ]
+},
+'ct-67': {
+  prompt: "Después de que un banco instalara cajeros automáticos adicionales por toda una ciudad, el tiempo de espera promedio en cada cajero aumentó en lugar de disminuir.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "La mayor comodidad atrajo a muchos clientes que antes usaban la ventanilla de las sucursales o los cajeros de bancos competidores, aumentando la demanda total de cajeros más rápido de lo que creció la capacidad.",
+    "Los nuevos cajeros costaron más de instalar de lo que el banco había presupuestado.",
+    "Los nuevos cajeros ofrecen los mismos servicios que las máquinas antiguas.",
+    "Las sucursales del banco mantuvieron sus horarios de atención existentes."
+  ]
+},
+'ct-68': {
+  prompt: "Consultor: 'Nuestra recomendación debe ser correcta: nadie en el equipo del cliente ha planteado ninguna objeción.'\n\nEl razonamiento del consultor es más vulnerable a la crítica de que:",
+  choices: [
+    "trata la ausencia de desacuerdo expresado como evidencia positiva de corrección",
+    "generaliza a partir de una muestra no representativa de clientes",
+    "supone que el equipo del cliente tiene la experticia relevante",
+    "confunde una causa con su efecto"
+  ]
+},
+'ct-69': {
+  prompt: "Como parte de su estrategia climática nacional, el ministerio de energía de un país está evaluando varias opciones de política destinadas a reducir las emisiones de carbono del transporte durante la próxima década. Entre las propuestas en revisión, el ministerio está considerando si subsidiar los vehículos eléctricos para reducir las emisiones de carbono, un enfoque que varios países vecinos ya adoptaron con resultados mixtos. Se espera una decisión final antes de la revisión anual de presupuesto del ministerio.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar si el subsidio reducirá las emisiones?",
+  choices: [
+    "Qué proporción de la electricidad del país se genera con combustibles fósiles",
+    "Cuántos concesionarios de automóviles operan en el país",
+    "Cuál es la edad promedio del parque automotor del país",
+    "Si los países vecinos ofrecen subsidios similares"
+  ]
+},
+'ct-70': {
+  prompt: "El editor de un periódico argumenta que publicar más periodismo investigativo aumentará las suscripciones digitales, ya que los artículos más leídos del periódico el año pasado fueron piezas investigativas.\n\n¿El argumento supone cuál de las siguientes opciones?",
+  choices: [
+    "La cantidad de lectores de un tipo de artículo corresponde a la disposición a pagar por una suscripción.",
+    "El periodismo investigativo es más costoso de producir que otras coberturas.",
+    "Los competidores del periódico publican poco periodismo investigativo.",
+    "Los suscriptores digitales leen más artículos que los suscriptores impresos."
+  ]
+},
+'ct-71': {
+  prompt: "El director regional de ventas preparó una nota de datos que resumía el desempeño del lanzamiento del producto para el equipo directivo, de cara a la planeación de expansión del próximo año. La nota indica que en todas las regiones donde se lanzó el producto, las ventas superaron los pronósticos, un resultado atribuido en parte a una fuerte demanda inicial. También señala que en dos regiones el producto no se lanzó en absoluto, por retrasos regulatorios no relacionados que se espera resolver el próximo trimestre.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Las ventas superaron los pronósticos en cada región donde el producto estuvo disponible.",
+    "Las ventas totales de la empresa superaron los pronósticos.",
+    "Las dos regiones sin lanzamiento tenían pronósticos más bajos.",
+    "El producto se lanzará en las dos regiones restantes."
+  ]
+},
+'ct-72': {
+  prompt: "Un ejecutivo argumenta que la nueva oficina de planta abierta de la empresa aumentó la colaboración, citando un alza de 25% en el número de reuniones realizadas por semana.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento?",
+  choices: [
+    "Los empleados reportan agendar más reuniones porque la planta abierta hace imposible la conversación privada espontánea.",
+    "La remodelación de planta abierta se completó antes del cronograma.",
+    "A algunos empleados les gusta la distribución de planta abierta.",
+    "La empresa también compró equipos nuevos de videoconferencia."
+  ]
+},
+'ct-73': {
+  prompt: "Una ciudad afirma que su nuevo sistema de sincronización de semáforos redujo los tiempos promedio de espera en las intersecciones.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la afirmación?",
+  choices: [
+    "Los tiempos de espera medidos en las intersecciones que recibieron la nueva sincronización cayeron 20%, mientras que en intersecciones comparables sin ella no cambiaron.",
+    "El sistema se instaló a tiempo y dentro del presupuesto.",
+    "Los conductores reportan que el tráfico se siente más fluido en el centro.",
+    "El volumen de tráfico en toda la ciudad disminuyó levemente durante el periodo de estudio."
+  ]
+},
+
+/* The syllogisms are where a loose translation is most dangerous. Spanish has exact
+   equivalents for the logical quantifiers, so they are used strictly: todos/todo el que for
+   the universal, algunos for the existential (never "varios", which reads as more than the
+   premise grants), ningún/nadie for the negative universal. The "cannot be determined"
+   options keep that exact force rather than becoming a softer "no está claro". */
+'ct-74': {
+  prompt: "Algunos estudiantes tienen trabajo. Todo el que tiene trabajo tiene dinero.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunos estudiantes tienen dinero",
+    "Todos los estudiantes tienen dinero",
+    "Todo el que tiene dinero tiene trabajo",
+    "Algunos estudiantes no tienen dinero"
+  ]
+},
+'ct-75': {
+  prompt: "Todos los gerentes asisten a la reunión semanal. Nadie que asiste a la reunión semanal trabaja los viernes.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Ningún gerente trabaja los viernes",
+    "Todo el que trabaja los viernes es gerente",
+    "Algunos gerentes trabajan los viernes",
+    "Todo el que asiste a la reunión semanal es gerente"
+  ]
+},
+'ct-76': {
+  prompt: "Todas las rosas son flores. Algunas flores se marchitan rápido.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunas rosas se marchitan rápido",
+    "Ninguna rosa se marchita rápido",
+    "No puede determinarse si alguna rosa se marchita rápido",
+    "Todas las flores que se marchitan rápido son rosas"
+  ]
+},
+'ct-77': {
+  prompt: "Ningún consultor es contador. Todos los contadores tienen licencia.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunas personas con licencia no son consultores",
+    "Ningún consultor tiene licencia",
+    "Todas las personas con licencia son contadores",
+    "Algunos consultores tienen licencia"
+  ]
+},
+'ct-78': {
+  prompt: "Ningún socio sénior trabaja medio tiempo. Algunos consultores trabajan medio tiempo.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunos consultores no son socios sénior",
+    "Ningún consultor es socio sénior",
+    "Todos los socios sénior son consultores",
+    "Algunos socios sénior son consultores"
+  ]
+},
+'ct-79': {
+  prompt: "Todos los miembros del equipo de auditoría están certificados. Rodríguez está certificado.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Rodríguez es miembro del equipo de auditoría",
+    "Rodríguez no es miembro del equipo de auditoría",
+    "Nada puede concluirse sobre la pertenencia de Rodríguez al equipo",
+    "Todo el que está certificado está en el equipo de auditoría"
+  ]
+},
+'ct-80': {
+  prompt: "Todos los ingenieros de la firma hablan inglés. Algunas personas que hablan inglés también hablan alemán.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunos ingenieros hablan alemán",
+    "Ningún ingeniero habla alemán",
+    "No puede determinarse si algún ingeniero habla alemán",
+    "Todos los hablantes de alemán son ingenieros"
+  ]
+},
+'ct-81': {
+  prompt: "Toda propuesta que pasa la revisión legal se envía al cliente. Algunas propuestas nunca se envían al cliente.\n\n¿Qué conclusión se sigue necesariamente?",
+  choices: [
+    "Algunas propuestas no pasan la revisión legal",
+    "Todas las propuestas que se envían al cliente pasaron la revisión legal",
+    "Ninguna propuesta pasa la revisión legal",
+    "Algunas propuestas que pasan la revisión legal no se envían al cliente"
+  ]
+},
+'ct-82': {
+  prompt: "Cinco colegas terminaron una carrera.\n\n• Ana terminó antes que Beto.\n• Carlos terminó después que Beto.\n• Diana terminó antes que Ana.\n• Elena terminó de última.\n\n¿Quién terminó en segundo lugar?",
+  choices: ["Diana", "Ana", "Beto", "Carlos"]
+},
+'ct-83': {
+  prompt: "Cuatro edificios están en fila.\n\n• Q está inmediatamente a la derecha de P.\n• R está en el extremo izquierdo.\n• S no está junto a Q.\n\n¿Qué edificio es el segundo desde la izquierda?",
+  choices: ["P", "Q", "R", "S"]
+},
+'ct-84': {
+  prompt: "Cinco productos están ordenados por ventas.\n\n• Alpha vendió más que Beta.\n• Gamma vendió menos que Beta.\n• Delta vendió más que Alpha.\n• Epsilon vendió menos que Gamma.\n\n¿Qué producto tuvo las terceras ventas más altas?",
+  choices: ["Alpha", "Beta", "Gamma", "Delta"]
+},
+'ct-85': {
+  prompt: "Cuatro candidatos son entrevistados en cuatro días consecutivos, de lunes a jueves, uno por día.\n\n• Rojas no es entrevistado el lunes.\n• Silva es entrevistado el día siguiente a Rojas.\n• Torres es entrevistado el jueves.\n\n¿Quién es entrevistado el lunes?",
+  choices: ["Rojas", "Silva", "Torres", "Uribe"]
+},
+'ct-86': {
+  prompt: "Un edificio de oficinas tiene seis pisos.\n\n• Operaciones está en el piso 1.\n• Finanzas está en el piso 2.\n• Recursos Humanos está directamente encima de Finanzas.\n• Jurídica está en el último piso.\n• Marketing está directamente debajo de Jurídica.\n\nTI ocupa el único piso restante. ¿En qué piso está?",
+  choices: ["Piso 3", "Piso 4", "Piso 5", "Piso 6"]
+},
+'ct-87': {
+  prompt: "Cinco cajas tienen pesos diferentes.\n\n• La Caja A es más pesada que la Caja B.\n• La Caja C es más liviana que la Caja B.\n• La Caja D es más pesada que la Caja A pero más liviana que la Caja E.\n\n¿Cuál es la segunda caja más liviana?",
+  choices: ["Caja A", "Caja B", "Caja C", "Caja D"]
 }
 
 };
