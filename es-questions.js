@@ -1733,6 +1733,418 @@ var T = {
     "Los valores de salario quedarán desalineados entre sistemas",
     "Se crearán automáticamente registros de empleados duplicados"
   ]
+},
+
+/* ---------------- CRITICAL THINKING ----------------
+   The longest stimuli in the bank, and the ones where translation can do real damage. Two
+   things have to survive intact.
+
+   The logical skeleton. Quantifiers map one to one — all/todos, some/algunos, none/ninguno —
+   but they must not drift: rendering "some members have worked in Brazil" as "varios" would
+   quietly strengthen a premise that the correct answer depends on being weak.
+
+   The relative force of the distractors. A weaken question works because three options are
+   irrelevant or trivial and one is decisive; translating a trivial option into something
+   that sounds weightier than it is makes the item ambiguous. Each distractor here keeps the
+   register of its original — a cost complaint stays a cost complaint.
+
+   Units are localised where it does not touch the logic: fuel consumption is per kilómetro
+   rather than per mile, since the reasoning is about consumption per unit of distance. */
+'ct-0': {
+  prompt: "El año pasado la ciudad instaló luminarias más brillantes a lo largo de la calle Main. En los seis meses siguientes, los delitos reportados en la calle Main cayeron 30%. Las autoridades municipales concluyeron que la mejor iluminación causó la caída del delito.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la conclusión de las autoridades?",
+  choices: [
+    "Durante esos mismos seis meses, la policía duplicó el número de agentes que patrullaban la calle Main.",
+    "Las luminarias más brillantes le cuestan a la ciudad más en operación que las antiguas.",
+    "El delito en la calle Main venía subiendo lentamente durante los tres años anteriores.",
+    "Los residentes de la calle Main reportaron sentirse más seguros tras la instalación de las luces."
+  ]
+},
+'ct-1': {
+  prompt: "Una cadena minorista encontró que las tiendas que ponen música clásica tienen un valor promedio de transacción 12% mayor que las tiendas que ponen música pop. La cadena planea cambiar todas sus tiendas a música clásica para aumentar los ingresos.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el plan?",
+  choices: [
+    "Algunos clientes reportan que les disgusta la música clásica.",
+    "Las tiendas que ponen música clásica están ubicadas casi exclusivamente en barrios de altos ingresos.",
+    "Cambiar la música en todas las tiendas tomaría cerca de tres meses.",
+    "Los competidores de la cadena ponen una mezcla de ambos géneros."
+  ]
+},
+'ct-2': {
+  prompt: "Un fabricante afirma: 'Nuestra fábrica redujo los defectos 40% después de introducir la nueva lista de verificación de control de calidad. Otras fábricas deberían adoptar la lista para recortar sus tasas de defectos.'\n\n¿Cuál de las siguientes opciones, de ser cierta, socava más la recomendación?",
+  choices: [
+    "La lista de verificación les toma a los trabajadores unos diez minutos por turno.",
+    "La fábrica reemplazó la mayor parte de su maquinaria envejecida en el mismo trimestre en que se introdujo la lista.",
+    "Algunos trabajadores encontraron repetitiva la lista de verificación.",
+    "La tasa de defectos de la fábrica había sido antes más alta que el promedio de la industria."
+  ]
+},
+'ct-3': {
+  prompt: "Una universidad reporta que los egresados de su programa de emprendimiento ganan 35% más diez años después de graduarse que los egresados de otros programas. La universidad promociona el programa como una forma de aumentar los ingresos futuros.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la afirmación implícita del anuncio?",
+  choices: [
+    "La admisión al programa de emprendimiento exige experiencia previa en negocios y un proceso de selección competitivo.",
+    "El programa de emprendimiento tiene más créditos obligatorios que la mayoría de los otros programas.",
+    "Algunos egresados de emprendimiento trabajan fuera del sector empresarial.",
+    "La cifra de 35% se calcula antes de impuestos."
+  ]
+},
+'ct-4': {
+  prompt: "Un administrador de hospital argumenta: 'Los pacientes atendidos en nuestro hospital tienen una tasa de mortalidad más alta que los de la clínica comunitaria del otro lado de la ciudad. Por lo tanto, la clínica brinda mejor atención.'\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento?",
+  choices: [
+    "El hospital emplea más personal que la clínica.",
+    "El hospital es el centro de trauma designado de la región y recibe a los pacientes con lesiones más graves.",
+    "La clínica amplió recientemente sus instalaciones.",
+    "Ambas instituciones usan sistemas de registro similares."
+  ]
+},
+'ct-5': {
+  prompt: "Una empresa de software observó que los usuarios que completan el tutorial dentro de la aplicación renuevan sus suscripciones al doble de la tasa de quienes lo omiten. La gerencia propone hacer obligatorio el tutorial para mejorar la retención.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más la propuesta?",
+  choices: [
+    "El tutorial toma cerca de ocho minutos en completarse.",
+    "Los usuarios que completan el tutorial voluntariamente son los que ya tenían la intención de usar el producto intensamente.",
+    "Un competidor ofrece un tutorial más corto.",
+    "El tutorial se desarrolló hace dos años."
+  ]
+},
+'ct-6': {
+  prompt: "Consultor: 'Las empresas que hacen reuniones generales semanales reportan puntajes más altos de compromiso de los empleados. Nuestro cliente debería instituir reuniones generales semanales para elevar el compromiso.'\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más seriamente la recomendación del consultor?",
+  choices: [
+    "Las reuniones generales duran típicamente 45 minutos.",
+    "Las empresas con una fuerza laboral ya comprometida son las que más probablemente adoptan reuniones generales semanales en primer lugar.",
+    "Los puntajes de compromiso se recogen anualmente.",
+    "El cliente actualmente hace reuniones generales mensuales."
+  ]
+},
+'ct-7': {
+  prompt: "Un concejo municipal argumenta que su nueva red de ciclorrutas redujo la congestión vehicular, citando una caída de 15% en los tiempos promedio de desplazamiento en el centro durante el año posterior a su apertura.\n\n¿Cuál de las siguientes opciones, de ser cierta, debilita más el argumento del concejo?",
+  choices: [
+    "Un gran empleador del centro pasó al 40% de su personal a trabajo remoto permanente durante ese mismo año.",
+    "Las ciclorrutas costaron más de lo proyectado originalmente.",
+    "Los ciclistas reportan que las ciclorrutas se sienten más seguras que la disposición vial anterior.",
+    "Algunos conductores se opusieron a las ciclorrutas antes de su construcción."
+  ]
+},
+'ct-8': {
+  prompt: "Un minorista notó que los clientes que instalan su aplicación móvil gastan 25% más al año que los clientes que no la instalan. El director de marketing argumenta que persuadir a más clientes de instalar la aplicación aumentará los ingresos totales.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el argumento del director?",
+  choices: [
+    "Los clientes a quienes se les ofreció al azar un pequeño incentivo para instalar la aplicación aumentaron después su gasto en un margen similar.",
+    "La aplicación fue costosa de desarrollar.",
+    "La mayoría de los competidores del minorista también ofrece aplicaciones móviles.",
+    "Los usuarios de la aplicación son en promedio más jóvenes que los no usuarios."
+  ]
+},
+'ct-9': {
+  prompt: "Un funcionario de salud pública afirma que una nueva campaña publicitaria antitabaco causó que las tasas de tabaquismo en la región cayeran 8% el año pasado.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la afirmación?",
+  choices: [
+    "La campaña fue elogiada por varias asociaciones médicas.",
+    "En una región vecina con demografía similar y sin campaña, las tasas de tabaquismo no cambiaron en el mismo periodo.",
+    "La campaña costó menos que esfuerzos anteriores de salud pública.",
+    "Las tasas de tabaquismo a nivel nacional han declinado en general durante la última década."
+  ]
+},
+'ct-10': {
+  prompt: "Una aerolínea argumenta que su nuevo procedimiento de abordaje redujo los retrasos promedio de salida.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el argumento?",
+  choices: [
+    "Los pasajeros reportan que el nuevo procedimiento es más fácil de entender.",
+    "Los retrasos cayeron solo en los aeropuertos donde se implementó el nuevo procedimiento, y no en los demás aeropuertos de la aerolínea.",
+    "La reputación de puntualidad de la aerolínea ha mejorado en la cobertura de prensa.",
+    "El nuevo procedimiento fue diseñado por un consultor de operaciones experimentado."
+  ]
+},
+'ct-11': {
+  prompt: "Unos investigadores proponen que las pausas cortas y regulares durante la jornada laboral mejoran la productividad de la tarde.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la propuesta?",
+  choices: [
+    "Los empleados dicen que disfrutan tomar pausas.",
+    "Los equipos asignados al azar a un horario obligatorio de pausas produjeron 12% más en la tarde que los equipos asignados a trabajar de corrido.",
+    "Empresas de varias industrias han adoptado políticas de pausas.",
+    "La productividad generalmente decae al final de la tarde."
+  ]
+},
+'ct-12': {
+  prompt: "Una firma afirma que su nuevo bono por referidos mejoró la calidad de las nuevas contrataciones, señalando calificaciones de desempeño más altas en el primer año entre los contratados por referencia.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más la afirmación de la firma?",
+  choices: [
+    "Los contratados por referencia que ingresaron antes de que existiera el bono tenían calificaciones de desempeño similares a las de los no referidos.",
+    "El bono por referidos se paga seis meses después de la fecha de ingreso del nuevo contratado.",
+    "Los empleados aprecian la oportunidad de ganar el bono.",
+    "La firma recibe más postulaciones de las que puede revisar."
+  ]
+},
+'ct-13': {
+  prompt: "Un economista argumenta que subir el salario mínimo de una ciudad no redujo el empleo en el sector de restaurantes de esa ciudad.\n\n¿Cuál de las siguientes opciones, de ser cierta, fortalece más el argumento del economista?",
+  choices: [
+    "Los dueños de restaurantes de la ciudad se opusieron públicamente al aumento salarial.",
+    "El empleo en restaurantes de la ciudad siguió de cerca el empleo en restaurantes de tres ciudades vecinas que no subieron su salario mínimo.",
+    "El aumento del salario mínimo se aplicó por fases durante dos años.",
+    "Algunos restaurantes subieron los precios del menú tras el aumento."
+  ]
+},
+'ct-14': {
+  prompt: "Una firma consultora invirtió fuerte en un nuevo software de modelación financiera después de que varios analistas junior reportaran dedicar horas desproporcionadas a tareas repetitivas de construcción de modelos durante los proyectos con clientes. Las pruebas internas iniciales mostraron que el software reduce 40% el tiempo necesario para construir un modelo financiero frente al proceso anterior de la firma. En la reunión anual de planeación, el socio director citó esta cifra y concluyó que la firma podrá, por lo tanto, aceptar 40% más proyectos de clientes el próximo año sin sumar personal.\n\n¿La conclusión del socio depende de cuál de los siguientes supuestos?",
+  choices: [
+    "El software será adoptado por todos los consultores de la firma.",
+    "El tiempo de construcción de modelos es lo que actualmente limita el número de proyectos que la firma puede aceptar.",
+    "Las firmas competidoras no tienen acceso a un software similar.",
+    "El software cuesta menos que los ingresos de un proyecto adicional."
+  ]
+},
+'ct-15': {
+  prompt: "Ante la presión de los residentes por el empeoramiento de la calidad del aire en el centro, las autoridades municipales presentaron una nueva iniciativa para reducir la contaminación del tráfico diario de quienes se desplazan al trabajo. Bajo el plan, la ciudad ofrecerá pases gratuitos de transporte público a quienes se desplacen al centro, financiados mediante una reasignación del presupuesto de control de estacionamiento. Las autoridades declararon públicamente que esperan una caída significativa en las emisiones vehiculares dentro del primer año del programa, citando como precedente iniciativas similares en otras ciudades.\n\n¿El plan supone cuál de las siguientes opciones?",
+  choices: [
+    "El transporte público es más cómodo que conducir.",
+    "Un número significativo de quienes hoy conducen se cambiará al transporte público porque los pases son gratuitos.",
+    "El sistema de transporte de la ciudad funciona enteramente con electricidad.",
+    "Quienes se desplazan al centro ganan ingresos por encima del promedio."
+  ]
+},
+'ct-16': {
+  prompt: "Durante una revisión trimestral del negocio, un gerente de servicio al cliente presentó los resultados de la última encuesta de satisfacción del área, que se había enviado automáticamente por correo a los clientes después de cada interacción de soporte durante los últimos tres meses. Al resumir los hallazgos para la alta dirección, el gerente argumenta: 'Nuestra encuesta de satisfacción muestra 90% de satisfacción. Nuestros clientes están claramente contentos con nuestro servicio', y recomendó no hacer cambios al proceso actual de soporte.\n\n¿Cuál de las siguientes es una suposición que hace el gerente?",
+  choices: [
+    "Quienes respondieron la encuesta son razonablemente representativos del conjunto de clientes.",
+    "El servicio de la empresa es mejor que el de sus competidores.",
+    "La encuesta fue realizada por una firma independiente.",
+    "Los clientes satisfechos gastan más que los insatisfechos."
+  ]
+},
+'ct-17': {
+  prompt: "Un inversionista argumenta: 'Los ingresos de esta empresa han crecido 25% anual durante tres años. Por lo tanto será una inversión rentable.'\n\n¿El razonamiento del inversionista supone cuál de las siguientes opciones?",
+  choices: [
+    "La empresa no tiene competidores.",
+    "El crecimiento de los ingresos se traducirá en retornos para los accionistas.",
+    "La empresa opera en un solo país.",
+    "Los fundadores de la empresa siguen en el negocio."
+  ]
+},
+'ct-18': {
+  prompt: "Tras varios años de resultados estancados en lectura, un distrito escolar adoptó un nuevo currículo de lectura desarrollado por una consultora educativa externa, y lo desplegó en todas las escuelas primarias al inicio del año académico. Al cierre del año, los administradores del distrito compararon los resultados de las pruebas estandarizadas con las cifras del año anterior. Con base en esa comparación, el distrito escolar concluye que su nuevo currículo de lectura es efectivo porque los puntajes promedio de lectura subieron 10 puntos después de su introducción.\n\n¿La conclusión supone cuál de las siguientes opciones?",
+  choices: [
+    "Ningún otro cambio significativo que afectara los puntajes de lectura ocurrió al mismo tiempo que el cambio de currículo.",
+    "Todos los docentes del distrito apoyaron el nuevo currículo.",
+    "La lectura es la materia más importante del currículo.",
+    "El currículo anterior llevaba muchos años en uso."
+  ]
+},
+'ct-19': {
+  prompt: "Una empresa de logística planea recortar 15% los costos de entrega cambiando a una flota de vehículos más pequeños, ya que los vehículos pequeños consumen menos combustible por kilómetro.\n\n¿El plan supone cuál de las siguientes opciones?",
+  choices: [
+    "Los vehículos más pequeños son menos costosos de comprar.",
+    "La empresa no necesitará hacer sustancialmente más viajes para mover el mismo volumen de mercancía.",
+    "Los precios del combustible se mantendrán estables.",
+    "Los conductores prefieren operar vehículos más pequeños."
+  ]
+},
+'ct-20': {
+  prompt: "El área de Recursos Humanos de la firma revisó el ciclo de promociones del año pasado en todos los empleados de la línea de analistas, comparando los resultados contra los registros de finalización de la certificación avanzada en modelación, que varios líderes de equipo habían recomendado como preparación útil. La revisión confirmó que todos los analistas promovidos el año pasado habían completado la certificación avanzada en modelación antes de que su promoción entrara en vigor. María, analista de segundo año del equipo de estrategia, no ha completado la certificación avanzada en modelación.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "María no fue promovida el año pasado.",
+    "María no está calificada para una promoción.",
+    "María completará la certificación este año.",
+    "La certificación es obligatoria para todos los analistas."
+  ]
+},
+'ct-21': {
+  prompt: "Como parte de una revisión de dotación, la oficina regional de operaciones de la firma compiló registros de idiomas y asignaciones del equipo de estrategia, que atiende clientes en América Latina y rota periódicamente a sus miembros por destinos en el exterior. Los registros muestran que todos los miembros del equipo de estrategia hablan portugués, y que algunos miembros del equipo de estrategia han trabajado en asignaciones en Brasil en algún momento de su carrera. Por separado, la política de Recursos Humanos establece que nadie que haya trabajado en Brasil tiene su base en la oficina de Bogotá.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Algunos hablantes de portugués no tienen su base en la oficina de Bogotá.",
+    "Ningún miembro del equipo de estrategia tiene su base en la oficina de Bogotá.",
+    "Todos los que tienen su base en la oficina de Bogotá hablan portugués.",
+    "Todos los hablantes de portugués han trabajado en Brasil."
+  ]
+},
+'ct-22': {
+  prompt: "El equipo de analítica de Recursos Humanos distribuyó una encuesta anónima posterior a la capacitación a todos los empleados que completaron el nuevo taller de habilidades analíticas de la firma, parte de una iniciativa más amplia para modernizar los programas de aprendizaje interno este año. La encuesta pedía a los participantes calificar su confianza al aplicar técnicas analíticas frente a la que tenían antes del taller, y permaneció abierta dos semanas después del cierre de cada sesión. Los resultados finales mostraron que, entre los empleados que recibieron la nueva capacitación, el 85% reportó mayor confianza en sus habilidades analíticas.\n\n¿Cuál de las siguientes opciones puede inferirse correctamente?",
+  choices: [
+    "La mayoría de los empleados que recibieron la capacitación creyó que su confianza había aumentado.",
+    "La capacitación mejoró las habilidades analíticas reales de los empleados.",
+    "Los empleados que no recibieron la capacitación tenían menor confianza.",
+    "El 85% de todos los empleados de la empresa recibió la capacitación."
+  ]
+},
+'ct-23': {
+  prompt: "El contrato del proyecto entre la firma consultora y su cliente incluía una cláusula estándar de retraso, agregada después de que un proyecto anterior se pasara significativamente del cronograma y generara disputas sobre la compensación. Según los términos que ambas partes firmaron, si el proyecto se retrasa, el cliente renegociará los honorarios antes de que continúe cualquier trabajo adicional. En la reunión de cierre programada del proyecto, el gerente de cuenta confirmó que el cliente no renegoció los honorarios en ningún momento durante el proyecto.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "El proyecto no se retrasó.",
+    "El proyecto se completó antes de tiempo.",
+    "El cliente quedó satisfecho con el proyecto.",
+    "Los honorarios fueron más altos que lo acordado originalmente."
+  ]
+},
+'ct-24': {
+  prompt: "La política de asignación de personal de la firma, introducida tras la queja de un cliente por una barrera idiomática en un proyecto anterior, establece que ningún consultor que carezca de fluidez en inglés es asignado a proyectos internacionales, sin importar su antigüedad ni sus relaciones previas con clientes. Una auditoría de asignaciones realizada este trimestre encontró que algunos consultores de la oficina de Bogotá están actualmente asignados a proyectos internacionales que abarcan múltiples regiones.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Algunos consultores de la oficina de Bogotá tienen fluidez en inglés.",
+    "Todos los consultores de la oficina de Bogotá tienen fluidez en inglés.",
+    "La mayoría de los proyectos internacionales se dota desde Bogotá.",
+    "Los consultores con fluidez en inglés siempre son asignados internacionalmente."
+  ]
+},
+'ct-25': {
+  prompt: "El resumen de fin de año del equipo de finanzas, preparado para la revisión anual de la junta, destacó dos tendencias separadas observadas durante el año fiscal. Primero, el informe indica que los ingresos subieron en cada trimestre del año pasado, es decir, el total de cada trimestre superó al del trimestre anterior. Segundo, el mismo informe señala que los costos anuales totales fueron menores que los del año anterior, un resultado que el director financiero atribuyó en parte a contratos renegociados con proveedores.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "La utilidad anual fue mayor que la del año anterior.",
+    "Los ingresos del cuarto trimestre fueron los más altos de los cuatro trimestres.",
+    "Los costos cayeron en todos los trimestres.",
+    "La empresa no tuvo pérdidas en ningún trimestre."
+  ]
+},
+'ct-26': {
+  prompt: "Tras una revisión de seguridad de datos, la firma endureció sus controles de acceso a los registros sensibles de clientes y actualizó su manual de políticas internas en consecuencia. La política revisada establece que solo los empleados que hayan completado el curso de cumplimiento pueden acceder a la base de datos de clientes, y TI ahora hace cumplir este requisito mediante un sistema automatizado de permisos en lugar de aprobación manual. Una auditoría de rutina de los registros de la base de datos realizada este mes confirmó que Javier, analista del equipo de asesoría, tiene acceso a la base de datos de clientes.\n\n¿Cuál de las siguientes afirmaciones debe ser cierta?",
+  choices: [
+    "Javier ha completado el curso de cumplimiento.",
+    "Javier es un empleado sénior.",
+    "Todos los que completan el curso de cumplimiento obtienen acceso a la base de datos.",
+    "El curso de cumplimiento cubre seguridad de bases de datos."
+  ]
+},
+'ct-27': {
+  prompt: "Gerente: 'Nuestros mejores vendedores llegan todos a la oficina antes de las 8 a. m. Si exigimos que todos lleguen antes de las 8 a. m., las ventas generales mejorarán.'\n\n¿Cuál de las siguientes opciones describe mejor la falla en el razonamiento del gerente?",
+  choices: [
+    "Supone que una característica compartida por los vendedores exitosos es lo que causa su éxito.",
+    "No define qué cuenta como un 'mejor' vendedor.",
+    "Se apoya en el testimonio de una parte interesada.",
+    "Supone que todos los vendedores quieren mejorar."
+  ]
+},
+'ct-28': {
+  prompt: "Crítico: 'La nueva propuesta tributaria no puede ser una política económica sólida, porque fue redactada por legisladores que nunca han dirigido una empresa.'\n\nEl argumento del crítico es más vulnerable a la crítica de que:",
+  choices: [
+    "ataca el origen de la propuesta en lugar de su contenido",
+    "se apoya en estadísticas de una fuente no identificada",
+    "confunde una condición necesaria con una suficiente",
+    "supone lo que se propone demostrar"
+  ]
+},
+'ct-29': {
+  prompt: "Ejecutivo: 'O recortamos el presupuesto de marketing o incumpliremos nuestra meta de utilidad. No podemos permitirnos incumplir la meta de utilidad, así que debemos recortar el presupuesto de marketing.'\n\nEl razonamiento es defectuoso porque:",
+  choices: [
+    "presenta solo dos opciones cuando pueden existir otras",
+    "cita una autoridad sin justificación",
+    "generaliza a partir de una muestra no representativa",
+    "confunde correlación con causalidad"
+  ]
+},
+'ct-30': {
+  prompt: "Analista: 'La antigüedad promedio de los empleados de nuestra empresa es de ocho años, así que la mayoría de nuestros empleados lleva cerca de ocho años aquí.'\n\nEl razonamiento del analista es defectuoso porque:",
+  choices: [
+    "un promedio puede producirse por una distribución en la que pocos individuos, o ninguno, están cerca del promedio",
+    "la antigüedad no es una medida significativa del valor de un empleado",
+    "el analista no especifica qué empleados fueron contados",
+    "ocho años es un periodo corto en la mayoría de las industrias"
+  ]
+},
+'ct-31': {
+  prompt: "Anuncio: 'Nueve de cada diez odontólogos que respondieron nuestra encuesta recomiendan nuestra crema dental. Claramente, nuestra crema dental es la elección de los profesionales odontológicos.'\n\n¿A cuál de las siguientes críticas es más vulnerable el razonamiento del anuncio?",
+  choices: [
+    "Extrae una conclusión sobre todos los odontólogos a partir de quienes eligieron responder.",
+    "No indica cuánto cuesta la crema dental.",
+    "Supone que los odontólogos usan la crema dental ellos mismos.",
+    "No compara la crema dental con otras marcas."
+  ]
+},
+'ct-32': {
+  prompt: "Político: 'El plan de salud de mi oponente debe rechazarse. Él afirma que resolverá todos los problemas del sistema, lo cual es obviamente imposible.'\n\nEl argumento del político es defectuoso porque:",
+  choices: [
+    "tergiversa la posición del oponente para refutarla más fácilmente",
+    "apela a la opinión popular en lugar de a la evidencia",
+    "trata un solo contraejemplo como decisivo",
+    "supone que lo cierto de una parte es cierto del todo"
+  ]
+},
+'ct-33': {
+  prompt: "Una aerolínea redujo 15% los precios base de los tiquetes en una ruta popular. El número de tiquetes vendidos en esa ruta subió 30%. Sin embargo, los ingresos totales de la ruta cayeron.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "Junto con la reducción de precio, la aerolínea eliminó los cargos por equipaje y por selección de asiento, que antes generaban ingresos sustanciales en la ruta.",
+    "Los competidores de la aerolínea también redujeron precios en la misma ruta.",
+    "Los costos de combustible en la ruta aumentaron durante el mismo periodo.",
+    "La aerolínea agregó dos vuelos diarios adicionales en la ruta."
+  ]
+},
+'ct-34': {
+  prompt: "Una empresa introdujo una política generosa de trabajo desde casa esperando que los costos de oficina cayeran. La satisfacción de los empleados subió marcadamente, pero el gasto total en instalaciones de la empresa aumentó ese año.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor el aumento?",
+  choices: [
+    "El contrato de arrendamiento de la empresa exigía un pago fijo hasta el final de un plazo de diez años, y la empresa abrió oficinas satélite pequeñas adicionales para colaboración presencial ocasional.",
+    "Los empleados reportaron disfrutar la flexibilidad del trabajo remoto.",
+    "Varios competidores introdujeron políticas similares.",
+    "La planta de personal de la empresa se mantuvo estable durante el año."
+  ]
+},
+'ct-35': {
+  prompt: "Una cadena de supermercados movió sus productos más rentables a los estantes a la altura de los ojos, una ubicación que se sabe aumenta las ventas. Las ventas de esos productos sí aumentaron, pero la utilidad general de la cadena disminuyó.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor este resultado?",
+  choices: [
+    "Los productos desplazados de los estantes a la altura de los ojos tenían márgenes de utilidad aún más altos y se vendían en volúmenes mucho mayores.",
+    "A los clientes les tomó un poco más de tiempo encontrar los productos tras la reorganización.",
+    "La reorganización se completó en un solo fin de semana.",
+    "Las cadenas competidoras usan estrategias similares de ubicación en estantes."
+  ]
+},
+'ct-36': {
+  prompt: "La tasa de desempleo de un país subió el trimestre pasado, aunque el número de personas empleadas también aumentó.\n\n¿Cuál de las siguientes opciones explica mejor esta aparente contradicción?",
+  choices: [
+    "La fuerza laboral creció más rápido que el número de empleos, ya que muchas personas que habían dejado de buscar trabajo retomaron su búsqueda.",
+    "Los salarios aumentaron en la mayoría de las industrias durante el trimestre.",
+    "Varios grandes empleadores anunciaron planes de expansión.",
+    "El gobierno revisó su método de conteo de trabajadores de medio tiempo."
+  ]
+},
+'ct-37': {
+  prompt: "Una cadena hotelera subió 20% sus tarifas de habitación y esperaba que la ocupación cayera. La ocupación se mantuvo sin cambios, y sin embargo la utilidad por habitación de la cadena disminuyó.\n\n¿Cuál de las siguientes opciones, de ser cierta, explica mejor la disminución?",
+  choices: [
+    "Para justificar las tarifas más altas, la cadena agregó desayuno de cortesía, traslados al aeropuerto y mejoras diarias de limpieza cuyo costo combinado superó el aumento de tarifa.",
+    "Varios hoteles competidores también subieron sus tarifas.",
+    "El presupuesto de marketing de la cadena se mantuvo sin cambios.",
+    "Los huéspedes se quedaron el mismo número promedio de noches que antes."
+  ]
+},
+'ct-38': {
+  prompt: "Una empresa está decidiendo si traslada su centro de servicio al cliente de la Ciudad A a la Ciudad B, donde los salarios son 30% menores.\n\n¿Responder cuál de las siguientes preguntas sería más útil para evaluar si el traslado reducirá los costos totales?",
+  choices: [
+    "Si la producción por empleado en la Ciudad B es comparable a la producción por empleado en la Ciudad A",
+    "Si los empleados actuales de la Ciudad A preferirían reubicarse",
+    "Cuál es el tiempo promedio de desplazamiento en la Ciudad B",
+    "Si la Ciudad B tiene una población mayor que la Ciudad A"
+  ]
+},
+'ct-39': {
+  prompt: "Una editorial planea aumentar sus utilidades subiendo 20% el precio de su revista insignia.\n\n¿Cuál de las siguientes sería más útil saber para evaluar el plan?",
+  choices: [
+    "Cuántos suscriptores cancelarían en respuesta al aumento de precio",
+    "Cuándo se publicó la revista por primera vez",
+    "Cuántas páginas tiene la revista",
+    "Si la revista ha ganado premios de la industria"
+  ]
+},
+'ct-40': {
+  prompt: "Ante los costos crecientes de su relleno sanitario regional, que se espera alcance su capacidad dentro de cinco años, el departamento de obras públicas de una ciudad propuso una nueva estructura de cobro para la recolección de residuos domiciliarios. Bajo la propuesta, la ciudad busca reducir los residuos que llegan al relleno exigiendo a los residentes pagar por cada bolsa de basura recolectada, reemplazando la tarifa mensual plana actual que aplica sin importar cuánta basura genere un hogar. Se espera que el concejo municipal vote la medida el próximo mes.\n\n¿Responder cuál de las siguientes preguntas sería más relevante para evaluar si la propuesta reducirá los residuos totales?",
+  choices: [
+    "Si los residentes responderían aumentando el vertimiento ilegal o compactando los mismos residuos en menos bolsas",
+    "Cuántos camiones de recolección opera actualmente la ciudad",
+    "Si las ciudades vecinas tienen rellenos sanitarios similares",
+    "Cuál era la población de la ciudad hace diez años"
+  ]
+},
+'ct-41': {
+  prompt: "Una empresa farmacéutica presentó resultados preliminares de un ensayo clínico a un panel de analistas de la industria antes de su solicitud planeada de aprobación regulatoria. La empresa reporta que los pacientes que toman su nuevo medicamento se recuperaron más rápido que los pacientes que no tomaban ningún medicamento, describiendo la diferencia como clínicamente significativa en su comunicado de prensa. Los analistas en la llamada hicieron varias preguntas de seguimiento sobre cómo se había diseñado el ensayo.\n\n¿Cuál de las siguientes sería más útil para evaluar la significancia de este resultado?",
+  choices: [
+    "Cómo se comparan los tiempos de recuperación del nuevo medicamento con los de los tratamientos estándar existentes",
+    "Cuánto tiempo dedicó la empresa a desarrollar el medicamento",
+    "Cuántos países han aprobado el medicamento",
+    "Cuál es el nombre comercial del medicamento"
+  ]
+},
+'ct-42': {
+  prompt: "En un año, el margen de utilidad de la Empresa X subió de 4% a 6%, mientras que el de la Empresa Y subió de 20% a 24%. Un analista concluyó que la Empresa X mejoró su margen más que la Empresa Y.\n\n¿Cuál de las siguientes opciones evalúa mejor la afirmación del analista?",
+  choices: [
+    "La afirmación es defendible en términos relativos (un aumento de 50% frente a 20%) pero no en términos absolutos (2 puntos frente a 4 puntos).",
+    "La afirmación es correcta porque 6% es mayor que 4%.",
+    "La afirmación es incorrecta porque la Empresa Y tiene el margen más alto.",
+    "La afirmación no puede evaluarse sin conocer los ingresos de cada empresa."
+  ]
+},
+'ct-43': {
+  prompt: "Un informe señala que la tasa de complicaciones quirúrgicas de un hospital subió de 2% a 3% el año pasado y describe esto como 'un aumento de 1% en las complicaciones'.\n\nLa descripción del informe es engañosa porque:",
+  choices: [
+    "la tasa subió 1 punto porcentual, lo que representa un aumento de 50% en la tasa de complicaciones",
+    "las tasas de complicaciones nunca deberían expresarse como porcentajes",
+    "el informe no indica cuántas cirugías se realizaron",
+    "un periodo de un año es demasiado corto para sacar conclusiones"
+  ]
 }
 
 };
