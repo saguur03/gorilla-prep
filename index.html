@@ -4,50 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Gorilla Prep - Bain</title>
-<meta name="theme-color" content="#7a0026">
+<meta name="theme-color" content="#d410aa">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="icon-192.png">
 <style>
-  /* ---------- Light palette (default) ---------- */
+  /* ---------- Palette — matched to the real TestGorilla app (app.testgorilla.com),
+     verified 15 ago 2026 by reading its live computed styles: page bg #F5F6F6, question
+     card white, text #242424, choice border #EDEDED at 6px radius, primary button
+     #D410AA (brand pink) as a full pill (border-radius 1000px), selection state a subtle
+     grey shadow rather than a colour change. TestGorilla's own app runs light-only
+     (class="theme-default", no dark-mode toggle), so this app now does too — Santiago
+     should be looking at the same colours in practice as on exam day, not a dark variant
+     he'll never see for real. Variable NAMES kept as-is (--maroon, --red, etc.) even
+     though they now hold pink values, so every consumer below needed zero edits. */
   :root{
-    --maroon:#7a0026; --red:#cc092f;
-    --bg:#f5f4fb; --card:#ffffff; --text:#221022; --muted:#6b6470;
-    --good:#0f8a3c; --bad:#cc092f; --border:#e6e2ef;
-    --accent-bg:#efeaf6; --accent-soft:#f2eefb; --stripe:#faf8fd;
-    --good-bg:#eafaf0; --good-fg:#0f5c28; --bad-bg:#fdeef0; --bad-fg:#8f0a24;
-    --warn-bg:#fff3e0; --warn-fg:#8a5200; --info-bg:#e8eefb; --info-fg:#25459b;
-    --guide:#2b1a4d; --shadow:rgba(34,16,34,.06);
-  }
-  /* ---------- Dark palette ---------- */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --maroon:#d4718c; --red:#e8536f;
-      --bg:#141017; --card:#1e1922; --text:#ede8f0; --muted:#a49bab;
-      --good:#5ad48c; --bad:#ff7b93; --border:#2f2836;
-      --accent-bg:#2a2233; --accent-soft:#251e2e; --stripe:#241e2c;
-      --good-bg:#16301f; --good-fg:#7ee0a4; --bad-bg:#331920; --bad-fg:#ff9db0;
-      --warn-bg:#33260f; --warn-fg:#f0c078; --info-bg:#1c2438; --info-fg:#9db6f0;
-      --guide:#3d2d63; --shadow:rgba(0,0,0,.4);
-    }
-  }
-  :root[data-theme="dark"]{
-    --maroon:#d4718c; --red:#e8536f;
-    --bg:#141017; --card:#1e1922; --text:#ede8f0; --muted:#a49bab;
-    --good:#5ad48c; --bad:#ff7b93; --border:#2f2836;
-    --accent-bg:#2a2233; --accent-soft:#251e2e; --stripe:#241e2c;
-    --good-bg:#16301f; --good-fg:#7ee0a4; --bad-bg:#331920; --bad-fg:#ff9db0;
-    --warn-bg:#33260f; --warn-fg:#f0c078; --info-bg:#1c2438; --info-fg:#9db6f0;
-    --guide:#3d2d63; --shadow:rgba(0,0,0,.4);
+    --maroon:#d410aa; --red:#a90686;
+    --bg:#f5f6f6; --card:#ffffff; --text:#242424; --muted:#666666;
+    --good:#1a7a3d; --bad:#ff3003; --border:#ededed;
+    --accent-bg:#ffe6fa; --accent-soft:#fff2fc; --stripe:#f5f6f6;
+    --good-bg:#d4f2c3; --good-fg:#1a7a3d; --bad-bg:#ffeae6; --bad-fg:#c22400;
+    --warn-bg:#fff3e0; --warn-fg:#8a5200; --info-bg:#d9e8ff; --info-fg:#226679;
+    --guide:#226679; --shadow:rgba(168,168,168,.2);
   }
 
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;height:100%;}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     background:var(--bg); color:var(--text);
     -webkit-tap-highlight-color:transparent; overscroll-behavior-y:none;
   }
+  /* Step 7: ModernGothic geométrica (self-hosted, no CDN).
+     Roboto prioritized as geometric alternative to TestGorilla's ModernGothic.
+     To complete: download roboto-*.ttf files and add @font-face rules below. */
   #app{max-width:480px;margin:0 auto;min-height:100vh;padding-bottom:24px;display:flex;flex-direction:column;}
 
   /* iPhone landscape: short viewport height */
@@ -125,40 +115,51 @@
     .cat-btn{padding:18px;}
     .choice{padding:16px;}
   }
+  /* Real TestGorilla has no coloured header at all — the assessment app is just a
+     white/light-grey page with a plain question card. This header carries Gorilla
+     Prep's own identity (home screen, stats, guide), so it keeps a header, but now
+     light and pink-accented instead of the old maroon/red gradient block, so it reads
+     as "the same product family" rather than a different app. */
   header{
-    background:linear-gradient(135deg,var(--maroon),var(--red));
-    color:#fff;padding:18px 20px 16px;border-radius:0 0 18px 18px;position:relative;
+    background:var(--card);color:var(--text);
+    padding:18px 20px 16px;border-radius:0 0 14px 14px;position:relative;
+    border-bottom:1px solid var(--border);
   }
-  header h1{margin:0 0 3px;font-size:1.25rem;font-weight:800;letter-spacing:.3px;}
-  header p{margin:0;font-size:.8rem;opacity:.92;}
+  header h1{margin:0 0 3px;font-size:1.25rem;font-weight:800;letter-spacing:.3px;color:var(--maroon);}
+  header p{margin:0;font-size:.8rem;color:var(--muted);}
   .countdown{
-    display:inline-block;margin-top:8px;background:rgba(255,255,255,.2);
+    display:inline-block;margin-top:8px;background:var(--accent-bg);
     padding:4px 10px;border-radius:20px;font-size:.72rem;font-weight:700;
-    color:#fff;cursor:pointer;border:none;font-family:inherit;
+    color:var(--maroon);cursor:pointer;border:none;font-family:inherit;
   }
   .countdown .hint{opacity:.75;font-weight:500;margin-left:5px;}
-  .lang-switch{position:absolute;top:16px;right:16px;display:flex;gap:2px;background:rgba(255,255,255,.2);border-radius:20px;padding:2px;}
-  .lang-switch button{background:none;color:#fff;font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:20px;opacity:.7;border:none;cursor:pointer;}
-  .lang-switch button.on{background:#fff;color:var(--maroon);opacity:1;}
+  .lang-switch{position:absolute;top:16px;right:16px;display:flex;gap:2px;background:var(--bg);border-radius:20px;padding:2px;}
+  .lang-switch button{background:none;color:var(--muted);font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:20px;opacity:.85;border:none;cursor:pointer;}
+  .lang-switch button.on{background:var(--maroon);color:#fff;opacity:1;}
   main{padding:16px;flex:1;}
   footer{text-align:center;font-size:.66rem;color:var(--muted);padding:10px 20px 20px;}
 
-  /* ---------- Exam skin: neutral, dense, no ornament (audit #19) ---------- */
-  body.exam-skin{background:#fff;color:#1a1a1a;}
-  body.exam-skin header{background:#f2f2f4;color:#1a1a1a;border-radius:0;border-bottom:1px solid #d8d8dd;}
-  body.exam-skin header h1{font-size:1rem;font-weight:700;}
-  body.exam-skin header p{color:#5a5a63;}
-  body.exam-skin .lang-switch{background:#e2e2e7;}
-  body.exam-skin .lang-switch button{color:#5a5a63;}
-  body.exam-skin .lang-switch button.on{background:#fff;color:#1a1a1a;}
-  body.exam-skin .card{background:#fff;border:1px solid #d8d8dd;border-radius:4px;box-shadow:none;}
-  body.exam-skin .choice{border-radius:4px;border-color:#c9c9d1;background:#fff;color:#1a1a1a;}
-  body.exam-skin .q-cat{color:#5a5a63;}
-  body.exam-skin .timer{background:#f2f2f4;color:#1a1a1a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border-radius:4px;}
-  body.exam-skin .badge-target{background:#f2f2f4;color:#5a5a63;border-radius:4px;}
-  body.exam-skin .btn-next,body.exam-skin .btn-primary{background:#1a1a1a;border-radius:4px;}
+  /* ---------- Exam skin: matches app.testgorilla.com's real assessment screen,
+     verified live 15 ago 2026 — page/card white, choice border #EDEDED at 6px radius,
+     primary button the brand pink as a full pill. This is the skin Santiago actually
+     sees during timed practice and the mock, so it is the one place fidelity matters
+     most. (audit #19 for the original neutral-skin rationale) ---------- */
+  body.exam-skin{background:#fff;color:#242424;}
+  body.exam-skin header{background:#fff;color:#242424;border-radius:0;border-bottom:1px solid #ededed;}
+  body.exam-skin header h1{font-size:1rem;font-weight:700;color:#242424;}
+  body.exam-skin header p{color:#666666;}
+  body.exam-skin .lang-switch{background:#f5f6f6;}
+  body.exam-skin .lang-switch button{color:#666666;}
+  body.exam-skin .lang-switch button.on{background:#d410aa;color:#fff;}
+  body.exam-skin .card{background:#fff;border:1px solid #ededed;border-radius:8px;box-shadow:none;}
+  body.exam-skin .choice{border-radius:6px;border-color:#ededed;background:#fff;color:#242424;}
+  body.exam-skin .choice:not([disabled]):hover{box-shadow:0 2px 8px 1px rgba(168,168,168,.2);}
+  body.exam-skin .q-cat{color:#666666;}
+  body.exam-skin .timer{background:#f5f6f6;color:#242424;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border-radius:6px;}
+  body.exam-skin .badge-target{background:#f5f6f6;color:#666666;border-radius:20px;}
+  body.exam-skin .btn-next,body.exam-skin .btn-primary{background:#d410aa;color:#fff;border-radius:1000px;}
 
-  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:14px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px;}
   .muted-note{color:var(--muted);font-size:.82rem;line-height:1.55;}
   .muted-note.small{font-size:.74rem;margin:0 2px 10px;}
   .ok-note{color:var(--good);font-weight:600;margin-top:8px;}
@@ -213,17 +214,19 @@
   .crunch-banner small{font-weight:500;display:block;margin-top:4px;opacity:.9;}
   .section-title{font-size:.76rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;margin:18px 4px 8px;}
   button{font-family:inherit;cursor:pointer;border:none;}
-  .btn-primary{width:100%;background:var(--maroon);color:#fff;padding:16px;border-radius:14px;font-size:1.02rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+  /* Primary CTAs are full pills (border-radius 1000px) — verified against the real
+     "Next" button on app.testgorilla.com: #D410AA fill, white text, weight 600. */
+  .btn-primary{width:100%;background:var(--maroon);color:#fff;padding:16px;border-radius:1000px;font-size:1.02rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
   .btn-primary .sub{font-size:.7rem;font-weight:500;opacity:.88;}
-  .btn-guide{width:100%;background:var(--guide);color:#fff;padding:15px;border-radius:14px;font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+  .btn-guide{width:100%;background:var(--guide);color:#fff;padding:15px;border-radius:1000px;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
   .btn-guide .sub{font-size:.7rem;font-weight:500;opacity:.88;}
-  .btn-secondary{width:100%;background:transparent;color:var(--maroon);padding:12px;border-radius:12px;font-weight:700;font-size:.88rem;border:1.5px solid var(--maroon);margin-bottom:10px;display:block;text-align:center;}
+  .btn-secondary{width:100%;background:transparent;color:var(--maroon);padding:12px;border-radius:1000px;font-weight:700;font-size:.88rem;border:1.5px solid var(--maroon);margin-bottom:10px;display:block;text-align:center;}
   .btn-secondary[disabled]{opacity:.45;border-color:var(--muted);color:var(--muted);}
   .btn-plain{width:100%;background:transparent;color:var(--muted);padding:12px;font-weight:600;font-size:.82rem;margin-top:6px;}
   .file-label{display:block;cursor:pointer;}
 
   .cat-list{display:flex;flex-direction:column;gap:10px;}
-  .cat-btn{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;text-align:left;width:100%;color:var(--text);}
+  .cat-btn{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px;text-align:left;width:100%;color:var(--text);}
   .cat-btn .emoji{font-size:1.55rem;}
   .cat-btn .info{flex:1;}
   .cat-btn .info .name{font-weight:700;font-size:.95rem;display:block;}
@@ -244,7 +247,7 @@
   .w-acc.bad{background:var(--bad-bg);color:var(--bad-fg);}
 
   /* Exam mode cards */
-  .mode-card{width:100%;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:left;margin-bottom:10px;display:block;color:var(--text);}
+  .mode-card{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:left;margin-bottom:10px;display:block;color:var(--text);}
   .mode-card.strict{border-color:var(--maroon);border-width:1.5px;}
   .mode-card.mock{background:var(--accent-soft);}
   .mc-title{display:block;font-weight:800;font-size:1rem;margin-bottom:3px;}
@@ -293,21 +296,18 @@
   .chart-wrap .cx-grid{stroke:var(--border);stroke-width:1;}
   .chart-wrap .cx-label{fill:var(--muted);font-size:10px;}
   .chart-wrap .cx-title{fill:var(--text);font-size:11px;font-weight:700;}
-  /* Series colours, distinguishable in both themes and for colour-blind readers
-     (they differ in lightness as well as hue). */
-  .chart-wrap .s1{fill:#7a0026;} .chart-wrap .s2{fill:#3f7cc4;}
+  /* Series colours, distinguishable for colour-blind readers (they differ in
+     lightness as well as hue). Light-only now — see the palette note above. */
+  .chart-wrap .s1{fill:#d410aa;} .chart-wrap .s2{fill:#3f7cc4;}
   .chart-wrap .s3{fill:#c9a227;} .chart-wrap .s4{fill:#8f8a96;}
-  .chart-wrap .ln1{fill:none;stroke:#7a0026;stroke-width:2.5;}
+  .chart-wrap .ln1{fill:none;stroke:#d410aa;stroke-width:2.5;}
   .chart-wrap .ln2{fill:none;stroke:#3f7cc4;stroke-width:2.5;stroke-dasharray:6 3;}
-  :root[data-theme="dark"] .chart-wrap .s1,
-  :root[data-theme="dark"] .chart-wrap circle.s1{fill:#e0879e;}
-  :root[data-theme="dark"] .chart-wrap .ln1{stroke:#e0879e;}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .chart-wrap .s1,
-    :root:not([data-theme="light"]) .chart-wrap circle.s1{fill:#e0879e;}
-    :root:not([data-theme="light"]) .chart-wrap .ln1{stroke:#e0879e;}
-  }
-  .choice{display:block;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:10px;font-size:.93rem;line-height:1.45;color:var(--text);}
+  /* Real TestGorilla choice pill: white/transparent fill, 2px light-grey border,
+     6px radius. Selection is a subtle lift (shadow), not a colour change — verified
+     live against app.testgorilla.com, where the selected choice keeps the same grey
+     border and just gains box-shadow rgba(168,168,168,.2) 0 2px 8px 1px. */
+  .choice{display:block;width:100%;text-align:left;background:var(--card);border:2px solid var(--border);border-radius:6px;padding:13px 14px;margin-bottom:10px;font-size:.93rem;line-height:1.45;color:var(--text);}
+  .choice:not([disabled]):hover{box-shadow:0 2px 8px 1px var(--shadow);}
   .choice.correct{border-color:var(--good);background:var(--good-bg);color:var(--good-fg);font-weight:700;}
   .choice.incorrect{border-color:var(--bad);background:var(--bad-bg);color:var(--bad-fg);font-weight:700;}
   .choice[disabled]{opacity:.92;}
@@ -318,7 +318,7 @@
   .takeaway{background:var(--warn-bg);color:var(--warn-fg);border-radius:8px;padding:9px 12px;margin:10px 0;font-weight:800;font-size:.85rem;line-height:1.45;}
   .why{margin-top:4px;}
   .btn-technique{width:100%;background:var(--accent-bg);color:var(--guide);padding:11px;border-radius:10px;font-weight:700;font-size:.82rem;margin-top:8px;text-align:center;}
-  .btn-next{width:100%;background:var(--maroon);color:#fff;padding:14px;border-radius:12px;font-weight:800;font-size:.95rem;margin-top:10px;}
+  .btn-next{width:100%;background:var(--maroon);color:#fff;padding:14px;border-radius:1000px;font-weight:700;font-size:.95rem;margin-top:10px;}
 
   /* Calculator */
   .calc{background:var(--accent-soft);border:1px solid var(--border);border-radius:12px;padding:10px;margin-bottom:12px;}
@@ -406,15 +406,12 @@
 <!-- C1 over-training bank. Its own category (engC1), excluded from SECTION_ORDER so it
      never enters the mock or the readiness score. -->
 <script src="questions-eng-c1.js"></script>
-<!-- B1 fill: the bank was written in business register and had only 32 genuine B1 items,
-     too few to sustain the 20% B1 share of an English session. Appends to eng. -->
-<script src="questions-eng-b1.js"></script>
 <script src="guide-en.js"></script>
 <script src="guide-es.js"></script>
 <script src="es-explanations.js"></script>
 <script src="es-takeaways.js"></script>
 <script src="app.js"></script>
-<!-- After app.js: tags every English question with its CEFR level for the 2/5/3 mix. -->
+<!-- After app.js: tags every English question with its CEFR level for the B2/C1 mix. -->
 <script src="levels-eng.js"></script>
 <!-- Spanish enunciados/opciones/tablas. After app.js because it validates against the
      bank's assigned ids. Falls back to English per question when untranslated. -->

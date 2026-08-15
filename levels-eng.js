@@ -1,9 +1,9 @@
 /* CEFR levels for the English bank.
 
-   Santiago wants every 10-question English session to be 2 B1 / 5 B2 / 3 C1 — B2 is the
-   centre of gravity of the real test, with B1 either side to keep the basics warm and C1
-   to over-train. That quota needs every question to carry a level, which the bank did not
-   record.
+   UPDATED 15 ago 2026: recruiter confirmed the real test has no B1, only B2 (40%) and C1
+   (60%). Every 10-question English session now draws 0 B1 / 4 B2 / 6 C1 — see
+   ENGLISH_LEVEL_MIX in app.js. That quota needs every question to carry a level, which the
+   bank did not record on its own.
 
    Levels live here rather than in the question files for the same reason takeaways and the
    Spanish explanations do: the banks are append-only with ids assigned by index, so an
@@ -19,26 +19,18 @@
    text; C1 is inversion, cleft, subjunctive, nuanced register and connotation, rare
    phrasal verbs, author stance.
 
-   Two findings worth keeping in mind:
-     - Only 32 of the original 176 are genuinely B1. The bank was written in business
-       register throughout, which pushes almost everything to B2. questions-eng-b1.js adds
-       26 more so the 20% quota does not recycle the same handful every few days.
-     - 28 of the original 176 are genuinely C1 (inversion, subjunctive, `only` placement,
-       low-frequency vocabulary). They stay in the `eng` bank and therefore still appear in
-       the full mock. That is a pre-existing fidelity wrinkle, not one introduced here. */
+   Note: Only 32 of the original 176 were genuinely B1, and 26 came from
+   questions-eng-b1.js. Both groups were relabelled as B2 when B1 was removed from the
+   quota. The eng-b1.js file is no longer loaded (removed 15 ago 2026 along with B1
+   support); the 32 B1-level questions from the original eng bank stay in the eng pool
+   (now labeled B2 because B1 tier does not exist in the real test). */
 (function(){
   var bank = window.QUESTION_BANK || {};
   var eng = bank.eng || [], engC1 = bank.engC1 || [];
 
-  /* Indices into QUESTION_BANK.eng. Everything not listed is B2. */
-  var B1 = [
-    21, 22, 23, 26, 32, 34,        /* core tenses, 1st/2nd conditional, comparatives */
-    47, 49, 51, 54,                /* responsible for / depend on / in charge of / concerned about */
-    76, 87, 92, 102, 105, 108, 110, 112, 113, 114,
-    121, 127,                      /* responsible for / differ from */
-    134, 140, 142,                 /* steady, weaknesses, simplify */
-    152, 154, 159, 161, 163, 165, 167
-  ];
+  /* UPDATED 15 ago 2026: reclutador confirmó que no hay B1 en el examen real.
+     Solo C1 (60%) y B2 (40%). Se eliminaron todos los B1 de la cuota. */
+  var B1 = [];  /* Unused — no B1 in the real test. Keep for backwards compatibility. */
   var C1 = [
     6, 27, 31, 46,                 /* substantiate; subjunctive; 'to whom'; subjunctive */
     58, 59, 61, 63,                /* reading: representativeness, attribution, trade-off */
@@ -49,17 +41,27 @@
     170, 171, 173, 175             /* reading: author stance and inference */
   ];
 
-  /* The B1 questions appended by questions-eng-b1.js occupy every index from 176 on. */
-  var B1_APPEND_FROM = 176;
+  /* B1_APPEND_FROM was a sentinel marking where the B1 questions started in the eng bank.
+     With B1 eliminated from the quota (15 ago 2026), this branch is permanently disabled.
+     Infinity ensures i >= B1_APPEND_FROM is never true for any valid index.
+     (BUG FIXED: it was set to -1, which is true for every i >= 0, silently labeling all
+     questions as B1 instead of none. Infinity is the correct "never true" sentinel.) */
+  var B1_APPEND_FROM = Infinity;
 
-  /* Guard: these are the sizes the index lists above were written against. A mismatch
-     means the bank changed shape, and every index after the change now points at the
-     wrong question. Fail loudly rather than mislabel silently. */
-  var EXPECTED_ENG = 202, EXPECTED_C1 = 88;
+  /* Guard: sizes the index lists were written against. A mismatch means the bank changed
+     shape, and every index after the change now points at the wrong question.
+
+     UPDATED 15 ago 2026: eng bank = questions-eng.js (88) + questions-eng-2.js (88
+     original + 30 new B2) = 206 (questions-eng-b1.js no longer loaded, 15 ago 2026).
+     engC1 = questions-eng-c1.js (88 original + 30 new C1) = 118. The 32 B1-level
+     questions from the original eng bank are now labeled B2 (B1 tier eliminated). All new
+     questions sit outside the C1 index list above, so they land correctly as B2 (eng) or
+     C1 (engC1, by construction). */
+  var EXPECTED_ENG = 206, EXPECTED_C1 = 118;
   if(eng.length !== EXPECTED_ENG || engC1.length !== EXPECTED_C1){
     console.error('[levels-eng] Bank size changed (eng ' + eng.length + ' vs ' + EXPECTED_ENG +
       ', engC1 ' + engC1.length + ' vs ' + EXPECTED_C1 + '). CEFR labels are keyed by index ' +
-      'and are now unreliable. Re-check levels-eng.js before trusting the 2/5/3 quota.');
+      'and are now unreliable. Re-check levels-eng.js before trusting the B2/C1 quota.');
   }
 
   var b1 = {}, c1 = {};

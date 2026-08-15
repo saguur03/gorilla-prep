@@ -707,6 +707,254 @@ var Q = [
   ],
   answer: 0,
   explanation: "'None of this means the improvement was illusory' explicitly preserves the finding, while 'an upper bound rather than an expectation' limits what may be inferred from it. That is qualification, not rejection — and the author never attributes the gain to any single cause."
+},
+
+/* ---------- EXPANSION 15 ago 2026: 30 more C1 to widen the pool after B1 was
+   eliminated from the CEFR quota (recruiter confirmed no B1 in the real test). ---------- */
+{
+  type: "grammar-c1", d: 2,
+  prompt: "Choose the correct option:\n\nIn no way ___ the revised estimate reflect the additional risk the board had flagged.",
+  choices: ["does", "it does", "is", "has"],
+  answer: 0,
+  explanation: "'In no way' is a negative fronted adverbial that forces inversion; with a base-form main verb ('reflect') the dummy auxiliary 'does' is required before the subject: 'does the revised estimate reflect'. 'Has' would require a past participle and 'is' a participle or adjective, neither of which fits 'reflect'."
+},
+{
+  type: "grammar-c1", d: 2,
+  prompt: "Choose the correct option:\n\nNever before ___ the division reported a quarterly loss of this size, until the results released that morning.",
+  choices: ["had", "has", "did", "would"],
+  answer: 0,
+  explanation: "'Until the results released that morning' anchors the sentence in the past, so the fronted negative 'Never before' triggers past perfect inversion: 'had the division reported'. 'Has' would only fit if the reference point were the present moment, and 'did' cannot combine with 'reported' as a participle."
+},
+{
+  type: "grammar-c1", d: 2,
+  prompt: "Choose the correct option:\n\nIt is not the headline cost that worries the committee, ___ the assumptions buried beneath it.",
+  choices: ["but", "than", "rather", "except"],
+  answer: 0,
+  explanation: "The 'It is not X that…, but Y' cleft structure sets up a direct contrast, and 'but' is the conjunction that completes it. 'Rather' could intensify as 'but rather', but alone it cannot function as the connector here, and 'than' and 'except' do not fit the cleft pattern."
+},
+{
+  type: "grammar-c1", d: 2,
+  prompt: "Choose the correct option:\n\nIt is imperative that the revised covenant ___ to every lender before the refinancing closes.",
+  choices: ["is circulated", "circulated", "be circulated", "will be circulated"],
+  answer: 2,
+  explanation: "'Imperative', like 'essential' and 'vital', triggers the mandative subjunctive in a that-clause: the base form 'be circulated', regardless of subject or tense. The indicative forms 'is circulated' and 'will be circulated' are the errors this construction is designed to test."
+},
+{
+  type: "grammar-c1", d: 3,
+  prompt: "Choose the correct option:\n\n___ the regulator to block the merger, the two companies would be left with no fallback strategy.",
+  choices: ["Were", "Should", "Had", "Was"],
+  answer: 0,
+  explanation: "'Were the regulator to block' is the inverted form of a hypothetical conditional using 'were…to', emphasising an unlikely but possible future event. 'Should' would need the base verb without 'to' ('Should the regulator block'), 'Had' implies a past-unreal condition, and 'Was' is not used in this inverted structure."
+},
+{
+  type: "grammar-c1", d: 2,
+  prompt: "Choose the correct option:\n\nAt no point during the negotiation ___ the directors informed of the pending litigation.",
+  choices: ["were", "did", "have", "are"],
+  answer: 0,
+  explanation: "'At no point' is a fronted negative adverbial, forcing inversion of auxiliary and subject. Since the main verb needed is the passive 'informed', the auxiliary must be a form of 'be': 'were the directors informed'. 'Did' would require an active base verb, which 'informed' as a passive participle cannot follow directly."
+},
+{
+  type: "vocabulary-c1", d: 2,
+  prompt: "Choose the word that best completes the sentence:\n\nThe eventual recovery in sales ___ the decision to hold prices steady during the downturn, despite the board's initial doubts.",
+  choices: ["vindicated", "excused", "permitted", "assumed"],
+  answer: 0,
+  explanation: "'Vindicate' means to show that a decision or belief was right after doubt or criticism, fitting a recovery that proved the earlier choice correct. 'Excused' implies forgiving a fault, 'permitted' means allowing, and 'assumed' means taking for granted."
+},
+{
+  type: "vocabulary-c1", d: 2,
+  prompt: "Choose the word that best completes the sentence:\n\nAlthough nothing was ever put in writing, there was a ___ understanding that the two firms would not compete for the same clients.",
+  choices: ["tacit", "explicit", "contractual", "provisional"],
+  answer: 0,
+  explanation: "'Tacit' describes something understood without being stated openly, matching 'nothing was ever put in writing'. 'Explicit' and 'contractual' both imply a stated or formal agreement, and 'provisional' means temporary, which is not the issue here."
+},
+{
+  type: "vocabulary-c1", d: 2,
+  prompt: "Choose the word that best completes the sentence:\n\nGiven the size of the transaction, the due diligence was surprisingly ___, covering only the headline financials in a single afternoon.",
+  choices: ["cursory", "exhaustive", "meticulous", "protracted"],
+  answer: 0,
+  explanation: "'Cursory' means hasty and superficial, matching a review that covered only headline figures in one afternoon. 'Exhaustive' and 'meticulous' both mean thorough — the opposite — and 'protracted' means drawn out over a long time, contradicting 'a single afternoon'."
+},
+{
+  type: "vocabulary-c1", d: 3,
+  prompt: "Choose the word that best completes the sentence:\n\nThe correlation between ice cream sales and drowning rates is ___: both simply rise in summer, and neither causes the other.",
+  choices: ["spurious", "conclusive", "verified", "causal"],
+  answer: 0,
+  explanation: "'Spurious' describes a relationship that appears meaningful but is not genuine, exactly the case described where a shared cause (summer) produces the correlation. 'Conclusive', 'verified' and 'causal' all assert the correlation is real and meaningful, which the sentence explicitly denies."
+},
+{
+  type: "vocabulary-c1", d: 3,
+  prompt: "Choose the word that best completes the sentence:\n\nThe new finance director was famously ___, questioning even minor stationery orders that previous directors had approved without comment.",
+  choices: ["parsimonious", "generous", "indifferent", "impulsive"],
+  answer: 0,
+  explanation: "'Parsimonious' means excessively unwilling to spend money, fitting someone who questions minor stationery orders. 'Generous' is the opposite, 'indifferent' suggests not caring either way, and 'impulsive' describes acting without thought, not carefulness with spending."
+},
+{
+  type: "vocabulary-c1", d: 2,
+  prompt: "Choose the word that best completes the sentence:\n\nCritics argued that the report tended to ___ correlation with causation, treating the two as though they were the same thing.",
+  choices: ["conflate", "distinguish", "isolate", "corroborate"],
+  answer: 0,
+  explanation: "'Conflate' means to wrongly treat two distinct things as one, matching 'treating the two as though they were the same thing'. 'Distinguish' and 'isolate' both mean keeping things separate, and 'corroborate' means to support with evidence."
+},
+{
+  type: "sentence-c1", d: 3,
+  prompt: "Choose the option that completes the sentence correctly:\n\nThe team had not even finished scoping the project, ___ started building it.",
+  choices: ["let alone", "even though", "as well as", "not to mention that"],
+  answer: 0,
+  explanation: "'Let alone' adds an even more extreme or unlikely case after a negative statement, exactly the relationship between 'not even finished scoping' and 'started building'. 'Even though' introduces a contrast clause with its own subject and verb, and 'not to mention that' would require a full clause, not a bare past participle."
+},
+{
+  type: "sentence-c1", d: 2,
+  prompt: "Choose the option that completes the sentence correctly:\n\nThe outcome hinges on whether the regulator approves the deal outright or ___ it subject to conditions.",
+  choices: ["approves", "approving", "to approve", "approved"],
+  answer: 0,
+  explanation: "The correlative 'whether…or' requires parallel structure, so the second verb must match the first finite verb 'approves': 'approves it outright or approves it subject to conditions'. The gerund, infinitive and past-tense options all break that parallelism."
+},
+{
+  type: "sentence-c1", d: 3,
+  prompt: "Which sentence is correctly constructed?",
+  choices: [
+    "Rather than reducing headcount, a hiring freeze was implemented by the board.",
+    "Rather than reduce headcount, the board implemented a hiring freeze.",
+    "Rather than to reduce headcount, the board implemented a hiring freeze.",
+    "Rather than reducing headcount, the board implementing a hiring freeze."
+  ],
+  answer: 1,
+  explanation: "'Rather than' compares two parallel actions taken by the same subject; the standard form pairs the bare infinitive 'reduce' with the board as the explicit subject performing both actions. The first option shifts to a passive that obscures who acted, the third inserts an unnecessary 'to', and the fourth is not a complete sentence."
+},
+{
+  type: "sentence-c1", d: 3,
+  prompt: "Choose the option that completes the sentence correctly:\n\nThe announcement was delayed until after the markets closed, ___ trigger unnecessary volatility.",
+  choices: ["so as not to", "in order that not", "for not to", "so that not"],
+  answer: 0,
+  explanation: "'So as not to' is the standard way to express negative purpose before an infinitive: 'delayed…so as not to trigger'. 'In order that not' and 'so that not' misplace the negative, which should attach to the following clause's verb, and 'for not to' is not a recognised construction."
+},
+{
+  type: "sentence-c1", d: 2,
+  prompt: "Choose the option that completes the sentence correctly:\n\nThe regional office's compliance record is no less rigorous ___ that maintained at head office.",
+  choices: ["than", "as", "that", "from"],
+  answer: 0,
+  explanation: "'No less + adjective + than' is the fixed comparative pattern asserting equality of a positive quality. 'As' would pair with 'as rigorous as', not with 'no less rigorous', and 'that' and 'from' do not complete a comparison at all."
+},
+{
+  type: "sentence-c1", d: 3,
+  prompt: "Choose the option that completes the sentence correctly:\n\nFew analysts had predicted the scale of the downturn, ___ its speed.",
+  choices: ["still less", "much more", "even so", "on top of"],
+  answer: 0,
+  explanation: "'Still less' (like 'let alone') adds an even less expected element after a negative statement — if analysts barely predicted the scale, they certainly did not predict the speed. 'Much more' would reverse the logic toward a positive addition, and 'even so' and 'on top of' do not fit the grammar of the gap."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nThe marketing campaign had to be withdrawn after it ___ new advertising standards regulations.",
+  choices: ["fell foul of", "fell short of", "fell back on", "fell through with"],
+  answer: 0,
+  explanation: "'Fall foul of' means to break a rule or come into conflict with an authority, matching a campaign withdrawn for breaching regulations. 'Fall short of' means failing to meet a standard rather than breaching one, and the other options do not fit here."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nOnce the underlying assumptions were tested, the consultancy's projection simply did not ___.",
+  choices: ["hold water", "hold court", "hold firm", "hold forth"],
+  answer: 0,
+  explanation: "'Not hold water' means an argument or claim is not logically sound once examined. 'Hold court' means to be the centre of attention, 'hold firm' means to remain resolute, and 'hold forth' means to speak at length."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nThe chief executive's presentation ___ the two failed product launches in a single bullet point.",
+  choices: ["glossed over", "dwelt on", "zeroed in on", "followed up on"],
+  answer: 0,
+  explanation: "'Gloss over' means to deal with something briefly or superficially to make it seem less important, matching reducing two failures to one bullet point. 'Dwelt on' and 'zeroed in on' both mean giving close attention — the opposite."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nThe regulator's approval of the pilot scheme is expected to ___ a wider national rollout next year.",
+  choices: ["pave the way for", "fall back on", "keep tabs on", "make do with"],
+  answer: 0,
+  explanation: "'Pave the way for' means to create the conditions that make a later development possible, fitting an approval that enables a future rollout. 'Fall back on' means to rely on as an alternative, and 'keep tabs on' means to monitor."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nWhether the plant remains open ultimately ___ the outcome of next month's union vote.",
+  choices: ["hinges on", "brushes off", "sits out", "banks on"],
+  answer: 0,
+  explanation: "'Hinge on' means to depend entirely on a single deciding factor, fitting a plant's future depending on a vote outcome. 'Brushes off' means to dismiss, 'sits out' means not to participate, and 'banks on' normally takes a person or entity as its subject, not an abstract 'whether' clause."
+},
+{
+  type: "idiom-c1", d: 2,
+  prompt: "Choose the option that best completes the sentence:\n\nThe ambiguous wording in the clause later ___ a costly dispute between the two parties.",
+  choices: ["gave rise to", "gave way to", "gave in to", "gave notice of"],
+  answer: 0,
+  explanation: "'Give rise to' means to cause or lead to something, fitting ambiguous wording causing a dispute. 'Give way to' means to be replaced by or yield to something, and 'give in to' means to submit to pressure."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe decision to outsource the customer service function was presented to staff as an initiative to 'focus in-house talent on higher-value work'. The function employed 140 people, all of whom were made redundant. Six months later, the company signed a five-year contract with an overseas provider employing roughly the same number of agents at a lower average wage.\n\nThe author's characterisation of the outsourcing decision is best described as:",
+  choices: [
+    "implicitly ironic, letting the facts undercut the official framing",
+    "openly critical, condemning the company outright",
+    "neutral, presenting the facts without any evaluative stance",
+    "approving, endorsing the efficiency of the decision"
+  ],
+  answer: 0,
+  explanation: "The passage quotes the official justification and then lets the redundancy figures and the near-identical replacement headcount speak for themselves, never stating a judgement directly. That gap between stated purpose and outcome is irony conveyed through juxtaposition, not open condemnation or genuine neutrality."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe remuneration committee's report describes the chief executive's pay as being 'closely aligned with shareholder returns'. The disclosed calculation shows that seventy per cent of the bonus is tied to a metric the company itself selected and can adjust annually, and that the metric has been changed twice in the last four years, on both occasions shortly after a year in which it would otherwise have produced no bonus.\n\nWhat does the passage most strongly imply about the phrase 'closely aligned with shareholder returns'?",
+  choices: [
+    "The alignment is weaker than the phrase suggests, given the company's ability to redefine the metric",
+    "The phrase is a precise and accurate description of the bonus structure",
+    "Shareholders have approved every change to the metric",
+    "The chief executive's pay has decreased over the last four years"
+  ],
+  answer: 0,
+  explanation: "The pattern of the company selecting and twice revising the metric, each time after a year that would have produced no bonus, undercuts the claim of close alignment. The passage never mentions shareholder approval of the changes, and it does not state that pay has decreased — only that the metric was adjusted to avoid a zero bonus."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe division's five-year plan, approved eighteen months ago, projected steady double-digit growth. The plan has since been revised three times, each revision lower than the last, and each accompanied by a memo attributing the shortfall to 'temporary market conditions'. The conditions cited have differed each time: currency movements, then input costs, then a competitor's pricing.\n\nThe author's attitude towards the phrase 'temporary market conditions' is best described as:",
+  choices: [
+    "doubtful, given that a different explanation is offered each time",
+    "reassured, since the explanations are plausible individually",
+    "indifferent to whether the explanations are consistent",
+    "convinced that the conditions genuinely are temporary"
+  ],
+  answer: 0,
+  explanation: "The repeated use of the same reassuring phrase to explain three different and unrelated causes invites doubt about whether any of them is the real, lasting explanation. The passage does not treat the individual explanations as reassuring, is clearly not indifferent given its pointed listing of the changing causes, and shows no conviction that the conditions are temporary."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe firm's annual report notes with satisfaction that its customer satisfaction score exceeds the industry average. It does not mention that the industry average includes several firms operating in markets with structurally lower service expectations, nor that the firm's own score has fallen for three consecutive years even as the average it is compared against has also fallen.\n\nThe author's main technique for conveying scepticism is:",
+  choices: [
+    "noting what the report omits rather than stating outright that the figure is misleading",
+    "citing a competitor's higher satisfaction score",
+    "quoting a dissatisfied customer directly",
+    "presenting a statistical model that recalculates the average"
+  ],
+  answer: 0,
+  explanation: "The passage's method throughout is to specify what the report 'does not mention' — the composition of the average and the firm's own declining trend — rather than to assert directly that the figure is misleading. No competitor score, customer quote, or recalculated model is introduced."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe internal audit found 'no evidence of systemic wrongdoing', a conclusion the board cited widely. The audit's scope, set by the same executives whose conduct had prompted the complaint, excluded the three departments named in the original complaint and covered a period ending four months before the complaint was filed.\n\nWhat does the passage suggest about the audit's conclusion?",
+  choices: [
+    "The conclusion may be true of what was examined but says little about the concerns actually raised",
+    "The conclusion is definitively false and was fabricated by the board",
+    "The audit was thorough and directly addressed the original complaint",
+    "The departments named in the complaint were found to be blameless"
+  ],
+  answer: 0,
+  explanation: "By detailing what the audit excluded — the very departments named and the relevant time period — the passage suggests the 'no evidence' finding may be accurate for its narrow scope while saying nothing about the actual complaint. It does not allege fabrication, does not call the audit thorough, and never states the excluded departments were cleared, since they were never examined."
+},
+{
+  type: "reading-c1", d: 3,
+  prompt: "Read the passage and answer the question.\n\nThe manufacturer's recall notice describes the fault as being 'in rare cases, associated with reduced performance'. Internal engineering documents, later disclosed in litigation, described the same fault as causing complete failure of the braking system in approximately one in every four hundred units under normal use.\n\nThe contrast between the two descriptions is best explained as:",
+  choices: [
+    "a public-facing understatement of a risk the company had characterised more seriously in private",
+    "two independent assessments that happened to reach different technical conclusions",
+    "a correction issued after further engineering testing revealed a lesser fault",
+    "an example of consistent, accurate risk communication at two stages of the investigation"
+  ],
+  answer: 0,
+  explanation: "'Reduced performance' in the public notice and 'complete failure of the braking system' in the internal documents describe the same fault in starkly different terms, with the softer language reserved for the public. Nothing suggests these are independent assessments, a later correction toward a lesser fault, or consistent communication — the internal version is the more serious one, not the public one."
 }
 
 ];

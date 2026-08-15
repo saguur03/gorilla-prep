@@ -28,10 +28,13 @@ const CATEGORIES = {
      Excluded from SECTION_ORDER so it never enters the full mock or distorts the simulation. */
   judgment: { key:'judgment', name:{en:'Business Judgment', es:'Criterio de Negocio'}, emoji:'⚖️',
               secQuestions:12, secMinutes:12, optional:true },
-  /* Deliberate over-training. The real English module is CEFR B1/B2, so these C1 items are
-     harder than anything the test will ask. Kept out of SECTION_ORDER for the same reason as
-     judgment: letting above-level questions into the mock or the readiness score would make
-     both of them understate how ready he actually is. */
+  /* UPDATED 15 ago 2026: the recruiter confirmed the real English module is CEFR B2/C1
+     (no B1), so engC1 is not over-training — it is 60% of the real section's content. It
+     stays a separate CATEGORIES entry (own id prefix, own stats bucket, reachable as
+     standalone practice) rather than being merged into 'eng', but buildSection('eng') pulls
+     from both banks at the confirmed 40/60 mix so the exam section and the full mock
+     actually rehearse the material the real test uses. Kept out of SECTION_ORDER only
+     because it is not a section of its own — see buildSection(). */
   engC1: { key:'engC1', name:{en:'English C1 (advanced)', es:'Inglés C1 (avanzado)'}, emoji:'🎓',
            secQuestions:20, secMinutes:12, optional:true },
 };
@@ -391,16 +394,14 @@ function pickQuestions(catKey, count, typeFilter){
   return rankPool(pool).slice(0, Math.min(count, pool.length));
 }
 
-/* English practice is drawn to a fixed CEFR mix: 20% B1, 50% B2, 30% C1 — 2/5/3 in a
-   ten-question session. B2 is where the real test sits; B1 keeps the basics warm and C1
-   is over-training.
-
-   Deliberately NOT wired into pickQuestions(): buildSection() calls that for the mock and
-   the timed exam sections, and those have to keep replicating the real sitting, which is
-   B1/B2. Only startPractice('eng') opts in, so the mock cannot inherit the mix by
-   accident. C1 items keep cat 'engC1', so answering one updates the engC1 stats rather
-   than eng, and the English readiness score stays a measure of at-level performance. */
-const ENGLISH_LEVEL_MIX = { B1:0.20, B2:0.50, C1:0.30 };
+/* English practice — and the English section of the timed exam and full mock — is drawn to
+   the CEFR mix the recruiter confirmed for the real test: 0% B1, 40% B2, 60% C1 (14 ago
+   2026). Used by both startPractice('eng') (via pickEnglishByLevel) and buildSection('eng')
+   (via the same function, sized to the section's secQuestions), so the untimed practice mode
+   and the timed section/mock all rehearse the same composition the real test actually has.
+   C1 items keep cat 'engC1' even when drawn into an English section, so answering one still
+   updates the engC1 stats bucket rather than eng — see recordAnswer(). */
+const ENGLISH_LEVEL_MIX = { B1:0.00, B2:0.40, C1:0.60 };
 function levelQuota(count){
   /* Largest remainder, so the parts add back up to count at any session size. */
   const levels = Object.keys(ENGLISH_LEVEL_MIX);

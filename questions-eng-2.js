@@ -764,6 +764,279 @@ var Q = [
   ],
   answer: 0,
   explanation: "The passage explains that low response rates over-represent contented staff, so a broader sample naturally produces a lower score. The final sentence makes the implication explicit: departments with genuinely improving engagement can appear to be getting worse."
+},
+
+/* ---------- EXPANSION 15 ago 2026: 30 more B2 to widen the pool after B1 was
+   eliminated from the CEFR quota (recruiter confirmed no B1 in the real test). ---------- */
+{
+  type: "grammar", d: 2,
+  prompt: "Choose the correct option:\n\nIf we had invested in the new machinery two years ago, our production costs ___ lower now.",
+  choices: ["would be", "would have been", "were", "will be"],
+  answer: 0,
+  explanation: "This is a mixed conditional: a past hypothetical condition ('had invested') combined with a present result ('now'), so the result clause uses 'would be' rather than 'would have been', which would wrongly place the result in the past too."
+},
+{
+  type: "grammar", d: 2,
+  prompt: "Choose the correct option:\n\nThe client wanted to know ___ the shipment would arrive.",
+  choices: ["when would it", "when it would", "would it when", "when does it"],
+  answer: 1,
+  explanation: "In reported/embedded questions the word order reverts to statement order (subject before verb), so 'when it would' is correct. 'When would it' wrongly keeps the inverted order used only in direct questions."
+},
+{
+  type: "grammar", d: 1,
+  prompt: "Choose the correct option:\n\nUnder the new policy, all expense claims ___ approved by a line manager before reimbursement.",
+  choices: ["must", "must be", "must have", "must being"],
+  answer: 1,
+  explanation: "Claims do not approve themselves, so a passive is needed: modal + be + past participle, 'must be approved'. 'Must' alone would need an active verb, and 'must have' would change the meaning to a deduction about the past."
+},
+{
+  type: "grammar", d: 2,
+  prompt: "Choose the correct option:\n\nI wish I ___ the contract more carefully before signing it.",
+  choices: ["read", "had read", "would read", "have read"],
+  answer: 1,
+  explanation: "'Wish' about a past action that cannot be changed takes the past perfect: 'wish I had read'. 'Would read' expresses a wish about someone else's future behaviour or an annoying habit, not a regret about one's own past action."
+},
+{
+  type: "grammar", d: 1,
+  prompt: "Choose the correct option:\n\nThe supplier, ___ delivery record had slipped noticeably, was asked to explain the delays.",
+  choices: ["who", "whose", "which", "that"],
+  answer: 1,
+  explanation: "'Whose' introduces a possessive relative clause, showing the delivery record belongs to the supplier. 'Who' and 'that' cannot show possession, and 'which' would need to be followed by 'its', not the noun directly."
+},
+{
+  type: "grammar", d: 1,
+  prompt: "Choose the correct option:\n\nThe bank will extend the credit line, ___ the company submits updated financial statements.",
+  choices: ["provided that", "even though", "in spite of", "so that"],
+  answer: 0,
+  explanation: "'Provided that' introduces a necessary condition, meaning 'only if', which fits the logic here. 'Even though' and 'in spite of' introduce a contrast rather than a condition, and 'so that' expresses purpose, not a requirement."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nThe board was initially reluctant ___ additional funds to the project.",
+  choices: ["to commit", "committing", "for committing", "on committing"],
+  answer: 0,
+  explanation: "'Reluctant' is followed by a to-infinitive: 'reluctant to commit'. The gerund forms in the other options are not used after this adjective."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nThe restructuring plan was met ___ fierce resistance from staff.",
+  choices: ["by", "with", "from", "against"],
+  answer: 1,
+  explanation: "'Be met with' is the fixed phrase for describing the reaction a proposal or action receives. 'Met by' would describe someone being physically greeted, not an abstract reaction."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nEmployees who have completed one year of service are entitled ___ additional annual leave.",
+  choices: ["to", "for", "with", "on"],
+  answer: 0,
+  explanation: "'Entitled' is followed by 'to' plus a noun or infinitive: 'entitled to leave'. The other prepositions do not collocate with 'entitled' in this sense."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nThe negotiating team succeeded ___ securing a two-year extension on the lease.",
+  choices: ["in", "at", "on", "for"],
+  answer: 0,
+  explanation: "'Succeed' takes 'in' before a gerund: 'succeed in securing'. 'Succeed at' is sometimes used before a skill or task noun ('succeed at chess'), but not in this verb + gerund pattern."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nSenior management is keen ___ expanding into the Southeast Asian market next year.",
+  choices: ["on", "in", "for", "to"],
+  answer: 0,
+  explanation: "'Keen on' + gerund expresses enthusiasm for a plan. 'Keen to' is used with a bare infinitive instead ('keen to expand'), not with 'expanding', so it cannot fill this gap."
+},
+{
+  type: "idiom", d: 1,
+  prompt: "Choose the correct option:\n\nThe supplier agreed to a lower price ___ a longer-term contract.",
+  choices: ["in return for", "in place of", "in charge of", "on account of"],
+  answer: 0,
+  explanation: "'In return for' signals an exchange: a lower price given in exchange for a longer contract. 'In place of' would mean substitution, and 'on account of' would mean the price change was caused by the contract, reversing the logic."
+},
+{
+  type: "sentence correction", d: 1,
+  prompt: "Which version is grammatically correct?",
+  choices: [
+    "The new hire is expected to manage the budget, coordinate with vendors, and reporting weekly.",
+    "The new hire is expected to manage the budget, to coordinating vendors, and report weekly.",
+    "The new hire is expected to manage the budget, coordinate with vendors, and report weekly.",
+    "The new hire is expected manage the budget, coordinate with vendors, and report weekly."
+  ],
+  answer: 2,
+  explanation: "The three duties following 'expected to' must be parallel: 'manage', 'coordinate' and 'report' all share the single 'to'. The other options break parallelism by switching to a gerund, inserting 'to' before a gerund, or dropping the infinitive marker entirely."
+},
+{
+  type: "sentence correction", d: 2,
+  prompt: "Which version is grammatically correct?",
+  choices: [
+    "Having reviewed the proposal twice, several concerns were raised by the committee.",
+    "Having reviewed the proposal twice, the committee raised several concerns.",
+    "The committee raised several concerns, having reviewed the proposal twice by them.",
+    "Several concerns, having reviewed the proposal twice, were raised by the committee."
+  ],
+  answer: 1,
+  explanation: "The participle phrase 'having reviewed the proposal twice' must modify whoever did the reviewing. Only option 2 places 'the committee' immediately after the comma as that subject; in the others, the phrase wrongly attaches to 'concerns', which cannot review anything."
+},
+{
+  type: "sentence correction", d: 2,
+  prompt: "Which version is correctly punctuated?",
+  choices: [
+    "The forecast was revised downward, the board requested a full explanation.",
+    "The forecast was revised downward the board requested a full explanation.",
+    "The forecast was revised downward, so the board requested a full explanation.",
+    "The forecast was revised downward; so the board requested a full explanation."
+  ],
+  answer: 2,
+  explanation: "Two independent clauses need either a conjunction or a semicolon to join them correctly. Option 3 adds the coordinating conjunction 'so' after the comma. Option 1 is a comma splice, option 2 is a run-on with no punctuation, and option 4 misuses a semicolon before a conjunction."
+},
+{
+  type: "sentence correction", d: 1,
+  prompt: "Which version places the modifier correctly?",
+  choices: [
+    "The team almost finished all of the deliverables before the deadline.",
+    "The team finished almost all of the deliverables before the deadline.",
+    "The team finished all of the deliverables almost before the deadline.",
+    "Almost the team finished all of the deliverables before the deadline."
+  ],
+  answer: 1,
+  explanation: "'Almost' should sit directly before the word it limits. The intended meaning is that nearly all deliverables were finished, so it belongs before 'all': 'finished almost all of the deliverables'. Option 1 wrongly suggests the team almost didn't finish at all."
+},
+{
+  type: "sentence correction", d: 1,
+  prompt: "Which sentence is free of redundancy?",
+  choices: [
+    "The two proposals were completely identical in every respect.",
+    "The two proposals were identical.",
+    "The two proposals were both the same and identical to one another.",
+    "The two proposals were identical to each other in every single way."
+  ],
+  answer: 1,
+  explanation: "'Identical' already means 'exactly the same', so adding 'completely', 'in every respect' or 'to one another' repeats the same idea. Option 2 states the fact once, without redundant qualifiers."
+},
+{
+  type: "sentence correction", d: 1,
+  prompt: "Which version expresses the idea most clearly and concisely?",
+  choices: [
+    "Due to the fact that the budget was reduced, the launch was postponed.",
+    "Because the budget was reduced, the launch was postponed.",
+    "On account of the reason that the budget being reduced, the launch was postponed.",
+    "In light of the fact of the budget reduction, the launch, it was postponed."
+  ],
+  answer: 1,
+  explanation: "'Because' expresses the causal link directly. 'Due to the fact that' and 'on account of the reason that' are wordy substitutes for 'because', and option 4 is additionally ungrammatical."
+},
+{
+  type: "vocabulary", d: 1,
+  prompt: "Choose the word that best completes the sentence:\n\nOutdated software continued to ___ the team's ability to process orders quickly.",
+  choices: ["hinder", "expedite", "facilitate", "endorse"],
+  answer: 0,
+  explanation: "'Hinder' means to slow down or obstruct progress, fitting software that makes order processing harder. 'Facilitate' and 'expedite' mean the opposite, and 'endorse' means to approve, which is unrelated."
+},
+{
+  type: "vocabulary", d: 1,
+  prompt: "Choose the word that best completes the sentence:\n\nThe new booking platform was designed to ___ communication between clients and account managers.",
+  choices: ["facilitate", "hinder", "postpone", "restrict"],
+  answer: 0,
+  explanation: "'Facilitate' means to make a process easier, matching a platform built to improve communication. 'Hinder' and 'restrict' suggest making something harder, and 'postpone' means to delay."
+},
+{
+  type: "vocabulary", d: 2,
+  prompt: "Choose the word closest in meaning to 'overhaul' in 'The IT department plans to overhaul the entire booking system next year':",
+  choices: ["thoroughly rebuild", "slightly adjust", "temporarily disable", "gradually monitor"],
+  answer: 0,
+  explanation: "'Overhaul' means to examine and make major improvements or repairs, effectively rebuilding it. 'Slightly adjust' understates the scale, and 'disable' or 'monitor' describe unrelated actions."
+},
+{
+  type: "vocabulary", d: 1,
+  prompt: "Choose the word closest in meaning to 'surplus' in 'The warehouse is holding a surplus of unsold inventory':",
+  choices: ["excess", "shortage", "sample", "estimate"],
+  answer: 0,
+  explanation: "'Surplus' means an amount left over beyond what is needed, so 'excess' is closest. 'Shortage' is the opposite meaning, and 'sample' and 'estimate' are unrelated concepts."
+},
+{
+  type: "vocabulary", d: 1,
+  prompt: "Choose the word closest in meaning to 'plummet' in 'Shares in the company plummeted after the profit warning':",
+  choices: ["fell sharply", "rose gradually", "remained stable", "fluctuated slightly"],
+  answer: 0,
+  explanation: "'Plummet' describes a sudden, steep drop, so 'fell sharply' is closest. The other options all describe upward, stable or mild movement."
+},
+{
+  type: "vocabulary", d: 1,
+  prompt: "Choose the word that best completes the sentence:\n\nThe finance director had to ___ the remaining budget across four competing departments.",
+  choices: ["allocate", "reimburse", "forfeit", "audit"],
+  answer: 0,
+  explanation: "'Allocate' means to distribute resources for a purpose, fitting dividing a budget among departments. 'Reimburse' means to pay back, 'forfeit' means to lose as a penalty, and 'audit' means to inspect records."
+},
+{
+  type: "reading", d: 1,
+  prompt: "Read the passage and answer the question.\n\n'A mid-sized retailer calculated that replacing a departing store manager cost roughly four months of that manager's salary once recruitment, training and lost productivity were included. Store turnover had been treated as a minor line item in the budget, but once the full replacement cost was calculated, several regions found that retention bonuses would have been cheaper than the staff they lost.'\n\nWhat is the main point of the passage?",
+  choices: [
+    "The true cost of turnover was higher than the budget had reflected, changing the retention calculation",
+    "Retention bonuses are always more expensive than recruitment",
+    "Store managers are paid too little compared to their responsibilities",
+    "Training costs are the largest component of replacing a manager"
+  ],
+  answer: 0,
+  explanation: "The passage's point is that turnover had been undercounted as 'a minor line item', and once the full cost was calculated, retention looked cheaper than replacement in several regions. It never claims bonuses are always cheaper, does not comment on pay levels, and does not rank training as the largest single cost."
+},
+{
+  type: "reading", d: 2,
+  prompt: "Read the passage and answer the question.\n\n'An online retailer tested a redesigned checkout page against the original for two weeks and found a 3% increase in completed purchases. Encouraged, the company rolled the redesign out permanently. Six months later, conversion rates had returned to their original level. A subsequent review found that the two-week test had coincided with a seasonal promotion that boosted sales across both versions of the page.'\n\nWhat does the passage suggest went wrong with the original test?",
+  choices: [
+    "An outside factor affecting both versions was mistaken for an effect of the redesign",
+    "The redesign itself caused conversion rates to fall after six months",
+    "The test period was too short to collect any data at all",
+    "Customers preferred the original checkout page over the redesign"
+  ],
+  answer: 0,
+  explanation: "The seasonal promotion lifted sales on 'both versions of the page', meaning the 3% gain was not caused by the redesign at all. The passage does not say the redesign caused the later decline, does not claim the test collected no data, and never states customers preferred the original."
+},
+{
+  type: "reading", d: 2,
+  prompt: "Read the passage and answer the question.\n\n'A car manufacturer that had operated a just-in-time supply chain for over a decade experienced no major disruption until a single supplier's factory flooded, halting production at three assembly plants within days. An internal review found that 60% of a critical component came from that one factory, a concentration the company had not tracked because it monitored supplier count, not supplier share.'\n\nWhat does the passage identify as the underlying problem?",
+  choices: [
+    "The company tracked the number of suppliers rather than how concentrated its supply actually was",
+    "Just-in-time supply chains are inherently unreliable",
+    "The flooded factory had a history of quality problems",
+    "The company used too many suppliers for the critical component"
+  ],
+  answer: 0,
+  explanation: "The review's finding is explicit: the company 'monitored supplier count, not supplier share', which hid the 60% concentration in one factory. The passage does not generalise about just-in-time chains, mentions no quality history, and the problem was too much concentration, not too many suppliers."
+},
+{
+  type: "reading", d: 1,
+  prompt: "Read the passage and answer the question.\n\n'A professional services firm moved new-employee onboarding entirely online during a period of remote work. Formal training scores on the new online modules were slightly higher than the previous in-person average. However, new hires who joined during this period took noticeably longer to become fully productive, and exit interviews showed that many struggled to build informal relationships with colleagues that had previously formed naturally in the office.'\n\nWhat does the passage suggest about the online onboarding programme?",
+  choices: [
+    "It improved formal training scores but may have weakened informal relationship-building that supports productivity",
+    "It failed on every measure the firm tracked",
+    "It should be abandoned in favour of the previous in-person format",
+    "It had no measurable effect on how quickly new hires became productive"
+  ],
+  answer: 0,
+  explanation: "The passage reports higher formal scores alongside slower time-to-productivity and weaker informal relationships, a mixed result rather than failure on every measure. It never recommends abandoning the programme, and it explicitly says productivity was affected, contradicting the fourth option."
+},
+{
+  type: "reading", d: 2,
+  prompt: "Read the passage and answer the question.\n\n'A software company added a high-priced \"enterprise\" tier to its pricing page, even though very few customers were expected to choose it. Sales of the mid-priced tier, previously the top seller, increased by 20% in the following quarter, while the enterprise tier itself accounted for under 2% of new subscriptions.'\n\nWhat does the passage suggest happened?",
+  choices: [
+    "The expensive tier made the mid-priced tier look more reasonable by comparison, shifting customer choices toward it",
+    "Customers overwhelmingly chose the new enterprise tier",
+    "The mid-priced tier's features were improved to attract more customers",
+    "Adding the enterprise tier had no effect on sales of other tiers"
+  ],
+  answer: 0,
+  explanation: "Sales of the mid-priced tier rose 20% while the new top tier itself barely sold, the classic anchoring effect of an expensive option making a cheaper one look reasonable. The passage never mentions feature changes, and it clearly reports an effect on other tiers, not an absence of one."
+},
+{
+  type: "reading", d: 2,
+  prompt: "Read the passage and answer the question.\n\n'In its quarterly letter to shareholders, a retail chain highlighted that \"comparable store sales\" had grown for the ninth consecutive quarter. The letter did not mention that the company had closed 40 of its lowest-performing stores over the same period, since closed stores are excluded from the comparable-store calculation by definition.'\n\nWhat is the passage's main point?",
+  choices: [
+    "A headline growth figure omitted a factor — store closures — that also shaped the underlying picture",
+    "The company's overall sales grew for nine consecutive quarters",
+    "Comparable store sales is a meaningless metric",
+    "The company deliberately falsified its sales figures"
+  ],
+  answer: 0,
+  explanation: "The passage points out that the celebrated metric, by its own definition, excludes closed stores, so the nine-quarter streak does not capture the full picture. It does not claim overall company sales grew, does not call the metric meaningless outright, and does not allege falsification — the calculation was accurate, just incomplete."
 }
 
 /* END-ENG-2 */

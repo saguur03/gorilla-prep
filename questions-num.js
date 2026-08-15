@@ -531,7 +531,7 @@ window.QUESTION_BANK.num = [
   prompt: "What number comes next in the series?\n\n120,  60,  20,  5,  ?",
   choices: ["1", "2", "2.5", "4"],
   answer: 0,
-  explanation: "The divisors increase by one each step: 120 ÷ 2 = 60, 60 ÷ 3 = 20, 20 ÷ 4 = 5, so next is 5 ÷ 5 = 1. Assuming a constant ratio would make you divide by 4 again and answer 2 or 2.5; spotting that the ratio itself changes systematically is the key move."
+  explanation: "The divisors increase by one each step: 120 ÷ 2 = 60, 60 ÷ 3 = 20, 20 ÷ 4 = 5, so next is 5 ÷ 5 = 1. If you mistakenly assume a constant ratio and divide by 4 again, you'd get 1.25, which isn't an option. The right move is recognizing that the divisor itself increases by one each time."
 },
 {
   type: "series",
@@ -591,7 +591,7 @@ window.QUESTION_BANK.num = [
   prompt: "Which of these fractions is the largest?",
   choices: ["3/7", "4/9", "5/11", "7/16"],
   answer: 2,
-  explanation: "All four sit near one half, so compare each with 1/2: 3/7 ≈ 0.4286, 4/9 ≈ 0.4444, 5/11 ≈ 0.4545, 7/16 = 0.4375. The largest is 5/11. Shortcut: for a fraction just below 1/2, the closer the denominator is to twice the numerator, the larger the fraction — 11 is closest to 10."
+  explanation: "All four sit near one half, so compare each with 1/2: 3/7 ≈ 0.4286, 4/9 ≈ 0.4444, 5/11 ≈ 0.4545, 7/16 = 0.4375. The largest is 5/11. Notice that 3/7, 4/9, and 5/11 all have denominator = 2 × numerator + 1; among fractions of this form, the one with the larger numerator is larger. For 7/16, which doesn't follow that pattern, the decimal check is quickest."
 },
 {
   type: "estimation",

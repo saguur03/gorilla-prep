@@ -75,7 +75,7 @@ var Q = [
   prompt: "Value-added tax of 21% is applied to a net price of $340. What is the gross price including tax?",
   choices: ["$351.40", "$361.40", "$401.40", "$411.40"],
   answer: 3,
-  explanation: "The tax is 340 × 0.21 = $71.40, giving 340 + 71.40 = $411.40. Equivalently, multiply by 1.21 in one step. The near-miss options come from mis-scaling the tax by a factor of ten."
+  explanation: "The tax is 340 × 0.21 = $71.40, giving 340 + 71.40 = $411.40. Equivalently, multiply by 1.21 in one step. The other options use miscomputed tax amounts: $11.40, $21.40, and $61.40 instead of $71.40."
 },
 {
   type: "percent", d: 2,
@@ -491,10 +491,10 @@ var Q = [
 },
 {
   type: "business", d: 2,
-  prompt: "An investment of $250,000 returns $310,000 in total. What is the return on investment?",
+  prompt: "An investment of $250,000 has a final value of $310,000. What is the return on investment (ROI)?",
   choices: ["19.4%", "24.0%", "30.0%", "124.0%"],
   answer: 1,
-  explanation: "Return on investment is gain divided by the amount invested: (310,000 − 250,000) ÷ 250,000 = 60,000 ÷ 250,000 = 24%. The 124% figure is the total return including the original capital, not the gain."
+  explanation: "Return on investment is gain divided by the amount invested: (310,000 − 250,000) ÷ 250,000 = 60,000 ÷ 250,000 = 24%. The 124% figure is the final value as a percentage of the original investment, not the gain."
 },
 {
   type: "business", d: 3,

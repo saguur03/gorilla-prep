@@ -191,7 +191,7 @@ var C_STACK = (function(){
 
   /* ---- E: stacked ---- */
   { chart:C_STACK, type:'chart', d:2,
-    prompt:"Which cost category grew fastest between 2024 and 2025?",
+    prompt:"Reading each segment's own height in both years, which cost category grew fastest in percentage terms?",
     choices:["Labour","Materials","Other","They all grew at the same rate"], answer:1,
     takeaway:"On a stacked chart, read each segment's own height in both years before comparing growth.",
     explanation:"Labour 50 → 55 is +10%; Materials 30 → 39 is +30%; Other 20 → 24 is +20%. Materials grew fastest despite Labour adding more dollars. Stacked charts make this hard to see because only the bottom segment shares a common baseline." },

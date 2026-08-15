@@ -217,14 +217,14 @@ var Q = [
 },
 {
   table: T2_COSTS, type: "table", d: 1,
-  prompt: "Which cost category declined between 2024 and 2025?",
+  prompt: "Cost control appears to have worked in exactly one category — which one?",
   choices: ["Energy", "Labour", "Logistics", "Overheads"],
   answer: 2,
-  explanation: "Logistics fell from 1,100 to 1,045, a reduction of 55. Every other category rose."
+  explanation: "Logistics fell from 1,100 to 1,045, a reduction of 55. Every other category rose, so Logistics is the only line where costs were actually brought down."
 },
 {
   table: T2_COSTS, type: "table", d: 2,
-  prompt: "By what percentage did total costs grow between 2024 and 2025?",
+  prompt: "Summing all five cost categories, what was the year-on-year percentage increase in total costs?",
   choices: ["10.2%", "11.4%", "12.5%", "13.6%"],
   answer: 1,
   explanation: "2024 costs total 4,200 + 3,600 + 900 + 1,100 + 1,200 = 11,000 and 2025 costs total 4,830 + 3,780 + 1,215 + 1,045 + 1,380 = 12,250. The increase of 1,250 against 11,000 is 11.4%."
@@ -505,17 +505,17 @@ var Q = [
 },
 {
   table: T2_DEALS, type: "statistics", d: 1,
-  prompt: "What is the range of the deals-closed figures?",
+  prompt: "By how many deals does the top performer outstrip the weakest?",
   choices: ["21", "23", "26", "30"],
   answer: 0,
-  explanation: "The range is the largest value minus the smallest: 30 − 9 = 21. The 30 distractor is simply the maximum, which is not the same thing."
+  explanation: "This is the range: the largest value minus the smallest, 30 − 9 = 21. The 30 distractor is simply the maximum, which is not the same thing as the gap between top and bottom."
 },
 {
   table: T2_DEALS, type: "statistics", d: 1,
-  prompt: "What is the mode of the deals-closed figures?",
+  prompt: "If a sales manager wanted to know the deal count most reps are actually hitting, which figure would that be?",
   choices: ["9", "11", "14", "30"],
   answer: 2,
-  explanation: "The mode is the most frequently occurring value. Three representatives closed 14 deals; every other figure appears once."
+  explanation: "That figure is the mode, the most frequently occurring value. Three representatives closed 14 deals; every other figure appears once."
 },
 {
   table: T2_DEALS, type: "statistics", d: 3,
@@ -553,7 +553,7 @@ var Q = [
   prompt: "A dataset contains the values 4, 8, 8, 10 and 20. Which measure of central tendency is most affected by the value 20?",
   choices: ["The mean", "The median", "The mode", "All three equally"],
   answer: 0,
-  explanation: "The mean uses every value, so an extreme observation shifts it directly: here it is 10.0, above four of the five values. The median stays at 8 and the mode stays at 8 regardless of how large the final value becomes."
+  explanation: "The mean uses every value, so an extreme observation shifts it directly: here it is 10.0, above three of the five values and equal to one. The median stays at 8 and the mode stays at 8 regardless of how large the final value becomes."
 },
 {
   type: "statistics", d: 2,

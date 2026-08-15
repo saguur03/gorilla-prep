@@ -919,7 +919,7 @@ var T = {
   choices: ["6 veces", "8 veces", "10 veces", "12 veces"]
 },
 'num-146': {
-  prompt: "Una inversión de USD 250.000 devuelve USD 310.000 en total. ¿Cuál es el retorno sobre la inversión?",
+  prompt: "Una inversión de USD 250.000 tiene un valor final de USD 310.000. ¿Cuál es el retorno sobre la inversión (ROI)?",
   choices: ["19,4%", "24,0%", "30,0%", "124,0%"]
 },
 'num-147': {
@@ -1405,7 +1405,7 @@ var T = {
   ]
 },
 'data-80': {
-  prompt: "¿Qué categoría de costo creció más rápido entre 2024 y 2025?",
+  prompt: "Leyendo la altura de cada segmento en ambos años, ¿qué categoría de costo creció más rápido en términos porcentuales?",
   choices: ["Mano de obra", "Materiales", "Otros", "Todas crecieron al mismo ritmo"]
 },
 'data-81': {
@@ -1474,11 +1474,11 @@ var T = {
   choices: ["Mano de obra", "Logística", "Gastos generales", "Energía"]
 },
 'data-96': {
-  prompt: "¿Qué categoría de costo disminuyó entre 2024 y 2025?",
+  prompt: "El control de costos parece haber funcionado en exactamente una categoría: ¿en cuál?",
   choices: ["Energía", "Mano de obra", "Logística", "Gastos generales"]
 },
 'data-97': {
-  prompt: "¿En qué porcentaje crecieron los costos totales entre 2024 y 2025?",
+  prompt: "Sumando las cinco categorías de costos, ¿cuál fue el aumento porcentual interanual de los costos totales?",
   choices: ["10,2%", "11,4%", "12,5%", "13,6%"]
 },
 'data-98': {
@@ -1624,11 +1624,11 @@ var T = {
   choices: ["14,0", "15,5", "16,3", "17,1"]
 },
 'data-131': {
-  prompt: "¿Cuál es el rango de las cifras de negocios cerrados?",
+  prompt: "¿Por cuántos negocios supera el mejor representante al más débil?",
   choices: ["21", "23", "26", "30"]
 },
 'data-132': {
-  prompt: "¿Cuál es la moda de las cifras de negocios cerrados?",
+  prompt: "Si un gerente de ventas quisiera saber la cifra de negocios que más representantes están realmente alcanzando, ¿cuál sería esa cifra?",
   choices: ["9", "11", "14", "30"]
 },
 'data-133': {
@@ -3652,7 +3652,7 @@ var COMMENTARY = {
 'num-143': { explanation: "El valor de vida antes de costos es el ingreso mensual por la permanencia promedio: 30 × 40 = $1.200. La cifra de $360 es el ingreso de un año y no usa la permanencia de 40 meses." },
 'num-144': { explanation: "Las horas disponibles totales son 60 × 1.800 = 108.000. La utilización es lo facturado sobre lo disponible: 86.400 ÷ 108.000 = 0,80, o 80%." },
 'num-145': { explanation: "La rotación de inventario es el costo de la mercancía vendida dividido por el inventario promedio: 4.200.000 ÷ 700.000 = 6 veces al año. Eso implica que el inventario se mantiene unos dos meses en promedio." },
-'num-146': { explanation: "El retorno sobre la inversión es la ganancia dividida por el monto invertido: (310.000 − 250.000) ÷ 250.000 = 60.000 ÷ 250.000 = 24%. La cifra de 124% es el retorno total incluyendo el capital original, no la ganancia." },
+'num-146': { explanation: "El retorno sobre la inversión es la ganancia dividida por el monto invertido: (310.000 − 250.000) ÷ 250.000 = 60.000 ÷ 250.000 = 24%. La cifra de 124% es el valor final como porcentaje de la inversión original, no la ganancia." },
 'num-147': { explanation: "La contribución por unidad es 40 − 28 = $12. Las unidades deben cubrir los costos fijos más la utilidad objetivo: (120.000 + 60.000) ÷ 12 = 15.000 unidades. Cubrir solo los costos fijos requeriría 10.000 unidades." },
 'num-148': { explanation: "La cancelación mide los clientes perdidos contra la base de apertura: 72 ÷ 2.400 = 0,03, o 3%. Los clientes nuevos pertenecen al cálculo de crecimiento, no al de cancelación, así que no entran en esta cifra." },
 'num-149': { explanation: "El costo total es 300 × 12 = $3.600. Los ingresos son 240 × 22 = $5.280 más 60 × 14 = $840, lo que da $6.120. La utilidad es 6.120 − 3.600 = $2.520." },
@@ -3687,7 +3687,7 @@ var COMMENTARY = {
 'data-93': { explanation: "Ventas da 3.920 ÷ 56 = $70.000, Marketing 1.680 ÷ 24 = $70.000 y Finanzas 1.120 ÷ 16 = $70.000. Tres áreas de tamaños muy distintos pueden compartir un promedio idéntico, y por eso el personal debe arrastrarse en cualquier cálculo a nivel de empresa." },
 'data-94': { explanation: "7.560 ÷ 1.120 = 6,75. Ingeniería tiene 5,25 veces el personal de Finanzas pero 6,75 veces su nómina, porque su salario promedio también es mayor." },
 'data-95': { explanation: "Materias primas creció 630/4.200 = 15%; Mano de obra 180/3.600 = 5%; Energía 315/900 = 35%; Logística cayó 55/1.100 = −5%; Gastos generales 180/1.200 = 15%. Energía creció más rápido en términos porcentuales aunque su aumento absoluto de 315 fue menor que los 630 de materias primas." },
-'data-96': { explanation: "Logística cayó de 1.100 a 1.045, una reducción de 55. Todas las demás categorías subieron." },
+'data-96': { explanation: "Logística cayó de 1.100 a 1.045, una reducción de 55. Todas las demás categorías subieron, así que Logística es la única línea donde realmente se redujeron los costos." },
 'data-97': { explanation: "Los costos de 2024 suman 4.200 + 3.600 + 900 + 1.100 + 1.200 = 11.000 y los de 2025 suman 4.830 + 3.780 + 1.215 + 1.045 + 1.380 = 12.250. El aumento de 1.250 contra 11.000 es 11,4%." },
 'data-98': { explanation: "4.830 ÷ 12.250 = 39,4%. En 2024 la misma categoría era 4.200 ÷ 11.000 = 38,2%, así que su participación subió levemente porque creció más rápido que el total." },
 'data-99': { explanation: "Energía creció de 900 a 1.215, una tasa de 35%. Aplicarla a 1.215 da 1.215 × 1,35 = $1.640 miles. Sumar el mismo aumento absoluto de 315 da $1.530 miles." },
@@ -3722,8 +3722,8 @@ var COMMENTARY = {
 'data-128': { explanation: "Norvex ganó 3,2 × 0,28 = $896 millones en 2023 y 4,0 × 0,25 = $1.000 millones en 2025, un alza de unos $100 millones. Perder participación en un mercado creciente puede aun así significar ingresos crecientes, y por eso la participación y el desempeño absoluto deben leerse juntos." },
 'data-129': { explanation: "Ordena los valores: 9, 11, 14, 14, 14, 22, 30. Con siete observaciones la mediana es la cuarta, que es 14. La media de 16,3 es mayor, lo que es señal de que la distribución está siendo jalada por los dos valores grandes." },
 'data-130': { explanation: "Los negocios suman 14 + 9 + 22 + 14 + 11 + 30 + 14 = 114 entre siete representantes, así que 114 ÷ 7 = 16,3." },
-'data-131': { explanation: "El rango es el valor mayor menos el menor: 30 − 9 = 21. El distractor de 30 es simplemente el máximo, que no es lo mismo." },
-'data-132': { explanation: "La moda es el valor que ocurre con más frecuencia. Tres representantes cerraron 14 negocios; todas las demás cifras aparecen una sola vez." },
+'data-131': { explanation: "Esto es el rango: el valor mayor menos el menor, 30 − 9 = 21. El distractor de 30 es simplemente el máximo, que no es lo mismo que la brecha entre el mejor y el peor." },
+'data-132': { explanation: "Esa cifra es la moda, el valor que ocurre con más frecuencia. Tres representantes cerraron 14 negocios; todas las demás cifras aparecen una sola vez." },
 'data-133': { explanation: "Una media por encima de la mediana significa que la cola alta es más larga: aquí 22 y sobre todo 30 jalan el promedio hacia arriba mientras la mediana se queda en 14. Eso es sesgo a la derecha, y es la razón por la que la mediana suele describir mejor el caso típico en datos sesgados." },
 'data-134': { explanation: "Sin el 30 los valores ordenados son 9, 11, 14, 14, 14, 22. Con seis observaciones la mediana es el promedio del tercero y el cuarto, ambos 14, así que se queda en 14. La insensibilidad de la mediana a los valores extremos es exactamente lo que la hace robusta." },
 'data-135': { explanation: "Los seis valores restantes suman 114 − 30 = 84, así que la media es 84 ÷ 6 = 14,0. Eliminar una sola observación movió la media 2,3 dejando la mediana intacta." },

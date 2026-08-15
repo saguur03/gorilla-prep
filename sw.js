@@ -2,21 +2,30 @@
    The question bank gets updated, so a cache-first strategy would pin the app to whatever
    version was installed first. This fetches fresh content when online and falls back to the
    cached copy when offline, which is what an offline-capable study app actually needs. */
-const CACHE_NAME = 'gorilla-prep-v3';
+const CACHE_NAME = 'gorilla-prep-v4';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './questions-ct.js',
+  './questions-ct-2.js',
   './questions-num.js',
+  './questions-num-2.js',
   './questions-data.js',
+  './questions-data-2.js',
   './questions-charts.js',
   './questions-eng.js',
+  './questions-eng-2.js',
+  './questions-eng-c1.js',
   './questions-judgment.js',
+  './questions-judgment-2.js',
+  './levels-eng.js',
   './guide-en.js',
   './guide-es.js',
   './es-explanations.js',
   './es-takeaways.js',
+  './es-questions.js',
+  './es-tables.js',
   './app.js',
   './takeaways.js',
   './app-ui.js',

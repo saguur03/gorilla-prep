@@ -346,7 +346,7 @@ function startQuick(){
   renderQuestion();
 }
 function startPractice(catKey){
-  /* English draws to the 2/5/3 CEFR mix; every other category is a straight priority draw. */
+  /* English draws to the 0/4/6 CEFR mix (no B1, 40% B2, 60% C1); every other category is a straight priority draw. */
   const qs = catKey === 'eng' ? pickEnglishByLevel(10) : pickQuestions(catKey, 10);
   if(!qs.length) return;
   session = { mode:'practice', catKey, queue:qs, index:0, correctCount:0, log:[] };
@@ -428,6 +428,16 @@ function chooseSection(strict){
 }
 function buildSection(catKey){
   const cat = CATEGORIES[catKey];
+  /* English draws from both the eng and engC1 banks at the confirmed 40/60 B2/C1 mix
+     (ENGLISH_LEVEL_MIX) instead of pickQuestions('eng', n), which would only sample the
+     eng bank and, since that bank is 88% B2, deliver a section that looks nothing like the
+     real test's English composition. pickEnglishByLevel already ranks and interleaves. */
+  if(catKey === 'eng'){
+    const pool = bankOf('eng').length + bankOf('engC1').length;
+    const n = Math.min(cat.secQuestions, pool);
+    const qs = pickEnglishByLevel(n);
+    return { catKey, queue:qs, seconds:n*cat.idealSecPerQ };
+  }
   const n = Math.min(cat.secQuestions, bankOf(catKey).length);
   const qs = pickQuestions(catKey, n).sort(() => Math.random()-0.5);
   return { catKey, queue:qs, seconds:n*cat.idealSecPerQ };
@@ -829,9 +839,6 @@ function renderSettings(){
   const seg = (opts, cur, fn) => '<div class="seg">'+opts.map(o =>
     '<button class="'+(cur===o.v?'on':'')+'" onclick="'+fn+'(\''+o.v+'\')">'+o.l+'</button>').join('')+'</div>';
   main.innerHTML =
-    '<div class="card"><div class="g-label">'+t('appearance')+'</div>'+
-      seg([{v:'auto',l:t('themeAuto')},{v:'light',l:t('themeLight')},{v:'dark',l:t('themeDark')}], theme, 'setTheme')+
-    '</div>'+
     '<div class="card"><div class="g-label">'+t('showDiff')+'</div>'+
       seg([{v:'before',l:t('diffBefore')},{v:'after',l:t('diffAfter')}], prefs.revealDiff, 'setRevealDiff')+
       '<p class="muted-note small" style="margin-top:8px;">'+t('diffAfterNote')+'</p>'+
