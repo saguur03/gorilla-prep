@@ -56,8 +56,16 @@
      engC1 = questions-eng-c1.js (88 original + 30 new C1) = 118. The 32 B1-level
      questions from the original eng bank are now labeled B2 (B1 tier eliminated). All new
      questions sit outside the C1 index list above, so they land correctly as B2 (eng) or
-     C1 (engC1, by construction). */
-  var EXPECTED_ENG = 206, EXPECTED_C1 = 118;
+     C1 (engC1, by construction).
+
+     UPDATED 15 ago 2026 (again): questions-eng-3.js added 94 grammar/idiom questions
+     (replacing the 40 retired "sentence correction" GMAT items, which keep their slot in
+     the array — bonus:true, filtered at selection time, not removed — so no index shifts)
+     plus 22 True/False reading questions (Paso 3, closing the gap against the 22 existing
+     "best supported" reading questions). All 116 set `cefr` on themselves directly instead
+     of going through the index-based C1 list below (see the `if(!q.cefr)` guard just
+     below), so they don't need an entry here. eng bank is now 206 + 116 = 322. */
+  var EXPECTED_ENG = 400, EXPECTED_C1 = 118;
   if(eng.length !== EXPECTED_ENG || engC1.length !== EXPECTED_C1){
     console.error('[levels-eng] Bank size changed (eng ' + eng.length + ' vs ' + EXPECTED_ENG +
       ', engC1 ' + engC1.length + ' vs ' + EXPECTED_C1 + '). CEFR labels are keyed by index ' +
@@ -69,6 +77,9 @@
   C1.forEach(function(i){ c1[i] = 1; });
 
   eng.forEach(function(q, i){
+    /* Questions that already carry their own cefr (questions-eng-3.js onward) are left
+       alone — only the older index-mapped questions get labelled here. */
+    if(q.cefr) return;
     q.cefr = (i >= B1_APPEND_FROM || b1[i]) ? 'B1' : (c1[i] ? 'C1' : 'B2');
   });
   /* The C1 bank is C1 by construction — it was written to be above the level of the test. */

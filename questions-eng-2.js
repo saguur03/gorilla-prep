@@ -464,7 +464,7 @@ var Q = [
 
 /* ---------- SENTENCE CORRECTION ---------- */
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "Having reviewed the figures, the conclusion was that the forecast was too optimistic.",
@@ -476,7 +476,7 @@ var Q = [
   explanation: "The opening participle must attach to the person who did the reviewing. In the other versions the grammatical subject is 'the conclusion' or 'it', neither of which reviewed anything, leaving the participle dangling."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The new process is faster, cheaper, and it uses less energy.",
@@ -488,7 +488,7 @@ var Q = [
   explanation: "Items in a list should share the same grammatical form. Three adjectives — 'faster, cheaper and more energy-efficient' — are parallel; the other versions mix adjectives with full clauses and break the pattern."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "We only reviewed the contracts signed after March.",
@@ -500,7 +500,7 @@ var Q = [
   explanation: "'Only' should sit immediately before what it limits. Placed before 'the contracts', it correctly restricts which contracts were reviewed. Before 'reviewed' it suggests reviewing was the sole action taken, and at the start it says nobody else reviewed them."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The report was submitted by the team and it was approved by the board.",
@@ -512,7 +512,7 @@ var Q = [
   explanation: "The active voice is shorter and identifies who did what without ambiguity. The other versions use passive constructions and nominalisations that add words while removing clarity about the actors."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "Neither of the two proposals were considered viable by the committee.",
@@ -524,7 +524,7 @@ var Q = [
   explanation: "'Neither' is singular and takes a singular verb, so 'was' is correct. The plural 'proposals' sits between the subject and the verb and pulls the ear towards a plural form, which is what makes this pattern a reliable test item."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The client requested that we would send the revised terms by Friday.",
@@ -536,7 +536,7 @@ var Q = [
   explanation: "'Request that' takes the subjunctive, which uses the base form of the verb: 'that we send'. Adding 'would' or 'will' breaks the construction, and 'request for … sending' is not an English pattern."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "Our margins are higher than our competitors.",
@@ -548,7 +548,7 @@ var Q = [
   explanation: "The comparison is between two sets of margins, so the possessive apostrophe after 'competitors' is essential: it stands for 'our competitors' margins'. Without it the sentence compares margins to companies."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The system crashed twice last week, this caused significant delays.",
@@ -560,7 +560,7 @@ var Q = [
   explanation: "A comma alone cannot join two independent clauses — that is a comma splice, which the first and last options commit. Using the relative pronoun 'which' subordinates the second clause correctly."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "Each employee must submit their timesheet by Monday.",
@@ -572,7 +572,7 @@ var Q = [
   explanation: "Recasting in the plural avoids the singular-they debate and the clumsy 'his or her' entirely, while saying exactly the same thing. Where a formal register is required, making the subject plural is the cleanest fix."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The consultant presented the findings to the directors that were controversial.",
@@ -584,7 +584,7 @@ var Q = [
   explanation: "Placing 'controversial' directly before 'findings' removes all ambiguity in the fewest words. The first version leaves the relative clause next to 'directors', implying it was the directors who were controversial."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "Due to the fact that the supplier was late, we missed the deadline.",
@@ -596,7 +596,7 @@ var Q = [
   explanation: "'Because' does in one word what the other options take four or five to do. 'Due to the fact that' and 'owing to the fact of' are padding, and business-English tests consistently reward the direct construction."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The pilot was successful, we therefore recommend a full rollout.",
@@ -608,7 +608,7 @@ var Q = [
   explanation: "'Therefore' is a conjunctive adverb, not a conjunction, so it cannot join two independent clauses with a comma. A semicolon before it — or a full stop — is required."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "We need to urgently address the backlog before the audit.",
@@ -620,7 +620,7 @@ var Q = [
   explanation: "Placing 'urgently' before 'need' keeps the infinitive 'to address' intact and reads naturally. Split infinitives are widely tolerated, but in a formal test the unsplit version is the safer answer."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The company reduced costs by closing two sites, cutting overtime, and a hiring freeze.",
@@ -632,7 +632,7 @@ var Q = [
   explanation: "All three items after 'by' should take the same -ing form: closing, cutting, freezing. The other versions mix gerunds with noun phrases or clauses, breaking the parallel structure."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "There is three outstanding issues that need resolution.",
@@ -644,7 +644,7 @@ var Q = [
   explanation: "In 'there is / there are' the verb agrees with what follows it. 'Three outstanding issues' is plural, so the verb must be 'are'."
 },
 {
-  type: "sentence correction", d: 3,
+  type: "sentence correction", bonus: true, d: 3,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "After analysing the data, several inconsistencies were identified.",
@@ -656,7 +656,7 @@ var Q = [
   explanation: "The participial phrase 'after analysing the data' must describe whoever did the analysing. Only the second version supplies that subject; in the others the inconsistencies appear to have analysed the data themselves."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version of the sentence is best written?",
   choices: [
     "The proposal was rejected on the grounds of it being too expensive.",
@@ -853,7 +853,7 @@ var Q = [
   explanation: "'In return for' signals an exchange: a lower price given in exchange for a longer contract. 'In place of' would mean substitution, and 'on account of' would mean the price change was caused by the contract, reversing the logic."
 },
 {
-  type: "sentence correction", d: 1,
+  type: "sentence correction", bonus: true, d: 1,
   prompt: "Which version is grammatically correct?",
   choices: [
     "The new hire is expected to manage the budget, coordinate with vendors, and reporting weekly.",
@@ -865,7 +865,7 @@ var Q = [
   explanation: "The three duties following 'expected to' must be parallel: 'manage', 'coordinate' and 'report' all share the single 'to'. The other options break parallelism by switching to a gerund, inserting 'to' before a gerund, or dropping the infinitive marker entirely."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version is grammatically correct?",
   choices: [
     "Having reviewed the proposal twice, several concerns were raised by the committee.",
@@ -877,7 +877,7 @@ var Q = [
   explanation: "The participle phrase 'having reviewed the proposal twice' must modify whoever did the reviewing. Only option 2 places 'the committee' immediately after the comma as that subject; in the others, the phrase wrongly attaches to 'concerns', which cannot review anything."
 },
 {
-  type: "sentence correction", d: 2,
+  type: "sentence correction", bonus: true, d: 2,
   prompt: "Which version is correctly punctuated?",
   choices: [
     "The forecast was revised downward, the board requested a full explanation.",
@@ -889,7 +889,7 @@ var Q = [
   explanation: "Two independent clauses need either a conjunction or a semicolon to join them correctly. Option 3 adds the coordinating conjunction 'so' after the comma. Option 1 is a comma splice, option 2 is a run-on with no punctuation, and option 4 misuses a semicolon before a conjunction."
 },
 {
-  type: "sentence correction", d: 1,
+  type: "sentence correction", bonus: true, d: 1,
   prompt: "Which version places the modifier correctly?",
   choices: [
     "The team almost finished all of the deliverables before the deadline.",
@@ -901,7 +901,7 @@ var Q = [
   explanation: "'Almost' should sit directly before the word it limits. The intended meaning is that nearly all deliverables were finished, so it belongs before 'all': 'finished almost all of the deliverables'. Option 1 wrongly suggests the team almost didn't finish at all."
 },
 {
-  type: "sentence correction", d: 1,
+  type: "sentence correction", bonus: true, d: 1,
   prompt: "Which sentence is free of redundancy?",
   choices: [
     "The two proposals were completely identical in every respect.",
@@ -913,7 +913,7 @@ var Q = [
   explanation: "'Identical' already means 'exactly the same', so adding 'completely', 'in every respect' or 'to one another' repeats the same idea. Option 2 states the fact once, without redundant qualifiers."
 },
 {
-  type: "sentence correction", d: 1,
+  type: "sentence correction", bonus: true, d: 1,
   prompt: "Which version expresses the idea most clearly and concisely?",
   choices: [
     "Due to the fact that the budget was reduced, the launch was postponed.",

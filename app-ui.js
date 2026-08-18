@@ -41,6 +41,7 @@ const T = {
   quickOne:{en:'One quick question', es:'Una pregunta rápida'},
   playbook:{en:'📘 The Playbook', es:'📘 La Guía'},
   playbookSub:{en:'techniques for every question type', es:'técnicas para cada tipo de pregunta'},
+  playAudio:{en:'Play audio', es:'Reproducir audio'},
   review:{en:'🔁 Review my mistakes', es:'🔁 Repasar mis errores'},
   reviewNone:{en:' — none due', es:' — ninguno pendiente'},
   examMenu:{en:'🕒 Exam modes', es:'🕒 Modos de examen'},
@@ -499,11 +500,19 @@ function renderQuestion(){
       '<div id="pacingHint"></div>'+
       (tableOf(q) ? '<div class="table-wrap">'+tableOf(q)+'</div>' : '')+
       (chartOf(q) ? '<div class="chart-wrap">'+chartOf(q)+'</div>' : '')+
-      '<div class="q-prompt">'+esc(promptOf(q))+'</div>'+
+      (q.type === 'listening'
+        ? '<div class="q-prompt">'+esc(q.question)+'</div>'
+        : '<div class="q-prompt">'+esc(promptOf(q))+'</div>')+
+      (q.type === 'listening' ? '<div class="listening-controls"><audio id="listeningAudio" style="display:none;"></audio><button class="btn-listen" id="playAudioBtn" onclick="playListeningAudio()">🔊 '+t('playAudio')+'</button></div>' : '')+
       '<div id="choicesWrap">'+
         view.choices.map((c,i)=>'<button class="choice" onclick="answerQuestion('+i+')">'+esc(c)+'</button>').join('')+
       '</div><div id="explanationWrap"></div>'+
     '</div>';
+
+  if(q.type === 'listening'){
+    var audio = document.getElementById('listeningAudio');
+    if(audio) audio.src = './audio/' + q.id + '.mp3';
+  }
 
   if(prefs.calcOpen && canCalc) renderCalc();
   session.qStartedAt = Date.now();
@@ -878,6 +887,20 @@ function importProgress(ev){
     }
   };
   rd.readAsText(f);
+}
+
+function extractAudioText(prompt){
+  if(!prompt) return '';
+  const match = prompt.match(/\[Audio text to be spoken:\]\s*([\s\S]*?)$/);
+  return match ? match[1].trim() : prompt;
+}
+
+function playListeningAudio(){
+  var audio = document.getElementById('listeningAudio');
+  if(!audio) return;
+  audio.currentTime = 0;
+  audio.playbackRate = 1.1;  // 10% más rápido
+  audio.play().catch(err => console.log('Audio play error:', err));
 }
 
 /* ==================== BOOT ==================== */

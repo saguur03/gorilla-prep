@@ -607,17 +607,21 @@ sections: [
     },
     {
       type:'reading', title:'Reading comprehension',
-      recognise:'A short passage followed by "which is best supported / most strongly implied".',
+      recognise:'A short passage followed by either "which is best supported / most strongly implied" (pick one of 4) or "True or False" (a single claim to verify).',
       steps:[
         'Read the QUESTION first so you know what to look for.',
         'Read the passage for structure — claim, evidence, qualification — not for detail.',
         'The answer must be provable from the passage. Locate the sentence that proves it.',
-        'Eliminate on four grounds: EXTREME language, OUT OF SCOPE, CONTRADICTS the text, or right idea but OVERREACHES.'
+        'Best-supported format: eliminate on four grounds — EXTREME language, OUT OF SCOPE, CONTRADICTS the text, or right idea but OVERREACHES.',
+        'True/False format: treat the statement as one single claim. Find the exact sentence(s) that confirm or deny it — do not reason from outside knowledge or what seems plausible.',
+        'True/False format: a statement with two parts is only True if BOTH parts are confirmed by the passage. One unconfirmed or contradicted part makes the whole statement False.'
       ],
       traps:[
         'Choosing an option that is true in the real world but absent from the passage.',
         'Turning a reported perception into a fact.',
-        'Accepting an option that is 90% right — the last clause is often what makes it wrong.'
+        'Accepting an option that is 90% right — the last clause is often what makes it wrong.',
+        'True/False: marking True because the first half of the statement matches the passage, without checking the second half.',
+        'True/False: marking False for a statement the passage never mentions at all — some tests use a third "Not given" option for this; if only True/False are offered, "not stated" still normally means False, since the claim is not supported.'
       ]
     },
     {

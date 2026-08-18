@@ -107,7 +107,13 @@ const BANK = window.QUESTION_BANK || {};
 Object.keys(CATEGORIES).forEach(k => {
   (BANK[k] || []).forEach((q,i) => { q.id = k + '-' + i; q.cat = k; });
 });
-function bankOf(k){ return BANK[k] || []; }
+/* Ids are assigned above over the RAW bank (by array position) before this filter runs, so
+   flagging a question `bonus:true` never shifts another question's id. Bonus questions are
+   GMAT-style "sentence correction" items that don't match TestGorilla's real format (confirmed
+   15 ago 2026 against a recording of the actual test) — excluded from every pool so they stop
+   diluting practice and stats, but kept in the source file rather than deleted in case they're
+   useful for a different kind of practice later. */
+function bankOf(k){ return (BANK[k] || []).filter(q => !q.bonus); }
 /* Mixed practice and the mistakes pool draw only on the four real modules; the optional
    judgment bank is reached deliberately, so it never dilutes exam preparation. */
 function allQuestions(){ return SECTION_ORDER.reduce((a,k) => a.concat(bankOf(k)), []); }
@@ -175,9 +181,16 @@ function loadStats(){
     const raw = localStorage.getItem(STORE_KEY);
     if(raw){
       const s = JSON.parse(raw), base = blankStats();
+      const byType = s.byType || {};
+      /* One-time cleanup (15 ago 2026): "sentence correction" was GMAT-style content mislabelled
+         as TestGorilla's "Sentence composition" — confirmed against a recording of the real test
+         and removed from every practice pool (see bankOf's bonus filter). Its accuracy bucket is
+         now permanently frozen and would keep showing a false weak area forever if left in, so it
+         is dropped here rather than left to rot. */
+      delete byType['sentence correction'];
       return Object.assign(base, s, {
         byCategory: Object.assign(base.byCategory, s.byCategory || {}),
-        byType: s.byType || {}, daily: s.daily || {},
+        byType: byType, daily: s.daily || {},
         questions: s.questions || {}, mocks: s.mocks || []
       });
     }

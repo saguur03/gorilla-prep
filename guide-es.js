@@ -605,17 +605,21 @@ sections: [
     },
     {
       type:'reading', title:'Comprensión de lectura',
-      recognise:'Un texto corto seguido de "which is best supported / most strongly implied".',
+      recognise:'Un texto corto seguido de "which is best supported / most strongly implied" (elegir 1 de 4) o de "True or False" (verificar una sola afirmación).',
       steps:[
         'Lee primero la PREGUNTA para saber qué buscar.',
         'Lee el texto por su estructura —afirmación, evidencia, matiz— no por el detalle.',
         'La respuesta debe demostrarse con el texto. Localiza la frase que la prueba.',
-        'Elimina por cuatro motivos: lenguaje EXTREMO, FUERA DE ALCANCE, CONTRADICE el texto, o idea correcta pero SE EXCEDE.'
+        'Formato "best supported": elimina por cuatro motivos: lenguaje EXTREMO, FUERA DE ALCANCE, CONTRADICE el texto, o idea correcta pero SE EXCEDE.',
+        'Formato True/False: trata la afirmación como una sola idea. Busca la(s) frase(s) exactas que la confirman o la niegan — no razones desde conocimiento externo ni desde lo que parece plausible.',
+        'Formato True/False: una afirmación con dos partes solo es True si AMBAS partes están confirmadas por el texto. Una parte no confirmada o contradicha vuelve falsa la afirmación completa.'
       ],
       traps:[
         'Escoger una opción cierta en el mundo real pero ausente del texto.',
         'Convertir una percepción reportada en un hecho.',
-        'Aceptar una opción correcta en un 90%: la última cláusula suele ser lo que la vuelve falsa.'
+        'Aceptar una opción correcta en un 90%: la última cláusula suele ser lo que la vuelve falsa.',
+        'True/False: marcar True porque la primera mitad de la afirmación coincide con el texto, sin revisar la segunda mitad.',
+        'True/False: marcar False para una afirmación que el texto simplemente no menciona; si solo hay True/False (sin "no se indica"), lo no confirmado normalmente cuenta como False, porque la afirmación no queda respaldada.'
       ]
     },
     {

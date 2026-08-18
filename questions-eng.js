@@ -265,7 +265,7 @@ window.QUESTION_BANK.eng = [
 
 /* ---------- SENTENCE CORRECTION ---------- */
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is grammatically correct?",
   choices: [
     "Walking into the office, the reports were already on the desk.",
@@ -277,7 +277,7 @@ window.QUESTION_BANK.eng = [
   explanation: "An introductory participial phrase must modify the subject that follows it. Only a person can walk into an office, so the subject must be 'I'. The other versions create dangling modifiers in which reports or a desk appear to be doing the walking."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is grammatically correct?",
   choices: [
     "The role requires analyzing data, preparing reports, and to present findings.",
@@ -289,7 +289,7 @@ window.QUESTION_BANK.eng = [
   explanation: "Items in a list must share the same grammatical form. Only the third version keeps all three in the gerund form (-ing). Mixing infinitives with gerunds breaks parallelism, one of the most heavily tested structures in sentence correction."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is grammatically correct?",
   choices: [
     "The revenue of Company A is higher than Company B.",
@@ -301,7 +301,7 @@ window.QUESTION_BANK.eng = [
   explanation: "Comparisons must be logically parallel: revenue must be compared with revenue, not with a company. The pronoun 'that' stands in for 'the revenue', producing a valid comparison. The first version illogically compares a revenue figure to an entire company."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is grammatically correct?",
   choices: [
     "The team not only completed the analysis but also the presentation.",
@@ -313,7 +313,7 @@ window.QUESTION_BANK.eng = [
   explanation: "'Not only... but also' must join grammatically equivalent elements. In the correct version both halves are verb phrases ('completed the analysis', 'prepared the presentation'). The first version pairs a verb phrase with a bare noun phrase, breaking the structure."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is grammatically correct?",
   choices: [
     "Having reviewed the contract, several issues were identified by the lawyer.",
@@ -325,7 +325,7 @@ window.QUESTION_BANK.eng = [
   explanation: "The opening phrase describes who did the reviewing, so the subject immediately after the comma must be the reviewer — the lawyer. The passive constructions in the other options leave the participle dangling, implying the issues reviewed the contract."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is correct?",
   choices: [
     "Our approach is different than the one used last year.",
@@ -337,7 +337,7 @@ window.QUESTION_BANK.eng = [
   explanation: "Standard written English, and the GMAT in particular, requires the idiom 'different from'. 'Different than' is common in informal American speech but is treated as incorrect in formal testing, and 'different to' is a British colloquialism."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is correct?",
   choices: [
     "The budget was divided between the four departments.",
@@ -349,7 +349,7 @@ window.QUESTION_BANK.eng = [
   explanation: "'Between' is used for two items; 'among' is used for three or more. With four departments, 'among' is required. The distinction is tested frequently and is easy to check by counting the items involved."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which sentence is free of redundancy?",
   choices: [
     "Please revert back to me once you have reviewed the file.",
@@ -361,7 +361,7 @@ window.QUESTION_BANK.eng = [
   explanation: "'Revert' already contains the sense of going back, so 'revert back' is redundant. The same applies to 'return back', 'repeat again', and 'advance forward' — each pairs a verb with a word that duplicates its built-in meaning."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is correct?",
   choices: [
     "The company's profits, which rose sharply, was reported yesterday.",
@@ -373,7 +373,7 @@ window.QUESTION_BANK.eng = [
   explanation: "The subject 'profits' is plural, so the main verb must be 'were'. The intervening relative clause does not affect agreement. The past tense is also required by 'yesterday', which rules out the present perfect and present forms."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is clearest and grammatically correct?",
   choices: [
     "When the manager met the director, he explained the new policy.",
@@ -385,7 +385,7 @@ window.QUESTION_BANK.eng = [
   explanation: "In the other versions 'he' could refer to either the manager or the director, leaving the sentence ambiguous. Naming the person explicitly removes the ambiguity. Clarity of reference outweighs the mild repetition it costs."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is correct?",
   choices: [
     "Neither the results nor the methodology were explained clearly.",
@@ -397,7 +397,7 @@ window.QUESTION_BANK.eng = [
   explanation: "With 'neither...nor', the verb agrees with the nearer subject. 'Methodology' is singular and sits closest to the verb, so 'was' is correct. Reversing the two nouns would make 'were' the right choice — the rule depends entirely on word order."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version is correct?",
   choices: [
     "The consultant recommended that the client reduces its overhead.",
@@ -614,14 +614,14 @@ window.QUESTION_BANK.eng = [
 /* ---------- SENTENCE ORDERING / COMPOSITION ----------
    TestGorilla lists "sentence composition" as a measured skill. */
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Arrange these fragments into a coherent sentence:\n\n(1) the board approved the acquisition\n(2) after reviewing the due diligence report\n(3) which had taken three months to complete",
   choices: ["1, 2, 3", "2, 3, 1", "2, 1, 3", "3, 2, 1"],
   answer: 1,
   explanation: "The relative clause 'which had taken three months' must sit immediately after 'the due diligence report', the noun it describes. That fixes 2 followed by 3, with the main clause 1 completing the sentence: 'After reviewing the due diligence report, which had taken three months to complete, the board approved the acquisition.'"
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version expresses the idea most clearly and concisely?",
   choices: [
     "Due to the fact that the deadline was moved forward, we were required to make the decision to reduce the scope.",
@@ -633,7 +633,7 @@ window.QUESTION_BANK.eng = [
   explanation: "The second version says the same thing in half the words, with an active verb and no padding. 'Due to the fact that' is always reducible to 'because', 'make the decision to' to 'decided to', and passive constructions like 'a decision was made by us' hide the actor for no benefit."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which sentence is correctly punctuated?",
   choices: [
     "The report was late, the client was informed immediately.",
@@ -645,7 +645,7 @@ window.QUESTION_BANK.eng = [
   explanation: "Two independent clauses cannot be joined by a comma alone — that is a comma splice, which the first option commits. A semicolon correctly links closely related independent clauses. The third option runs them together with no punctuation, and the fourth misuses a colon and omits the comma after 'however'."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which version correctly places the modifier?",
   choices: [
     "The consultant only presented three of the findings to the board.",
@@ -657,7 +657,7 @@ window.QUESTION_BANK.eng = [
   explanation: "'Only' should sit immediately before the element it limits. To convey that the number was limited to three, it belongs directly before 'three'. Version 1 suggests presenting was the sole thing the consultant did, version 3 limits who presented, and version 4 limits the audience — three different meanings from one word's position."
 },
 {
-  type: "sentence correction",
+  type: "sentence correction", bonus: true,
   prompt: "Which sentence maintains consistent verb tense?",
   choices: [
     "The team analysed the data, prepares the report and presented the findings.",
